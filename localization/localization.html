@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<script src=""></script>-->
+	<title>Crocotile 3D - Localization</title>
+	<META NAME="Description" CONTENT="Create 3d maps and models with 2d tilesets">
+	<META NAME="KEYWORDS" CONTENT="tile, 3d, pixel, map, tileset, tilemap, model, art">	
+	<meta charset="UTF-8">
+</head>
+<!--object-fit: cover; -->
+<style>
+
+.blockImage { height: 100%; width: 50%; 
+	/*image-rendering: pixelated !important;
+	image-rendering: -moz-crisp-edges !important;
+	image-rendering: crisp-edges !important;*/}
+.lineImage{
+	vertical-align: middle;
+	border-radius: 3px;
+	box-shadow: 2px 2px #9c7c1a;
+}
+	
+body {
+	font-family: system-ui;
+	font-size: 24px;
+	background: #c7ab33;
+	background-image: url('docImg/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+a {
+	text-decoration: none;
+}
+
+.pageBlock { 
+	margin: auto;
+	padding: 0;
+	width: 90%; 
+	border: 0px solid #faf270;
+}
+.block { 
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding: 32px;
+	background: #ded645;
+	border: 3px solid #faf270;
+	border-radius: 16px;
+	box-shadow: 6px 8px #9c7c1a;
+	line-height: 42px;
+    height:auto;
+    overflow:auto;
+}
+.blockHeader { 
+	display: inline-block;
+	margin-bottom: 16px;
+	padding: 4px 32px 4px 32px;
+	background: #3b7845;
+	border: 0px solid #faf270;
+	border-radius: 48px;
+	color: #faf270;
+	font-weight: bold;
+	font-size:48px;
+	line-height: 64px;
+}
+.blockLanguage { 
+	position: absolute;
+	right: 100px;
+	top: 94px;
+	margin-bottom: 16px;
+	padding: 4px 64px 4px 64px;
+	border: 0px solid #faf270;
+	color: #faf270;
+	font-weight: bold;
+	font-size:32px;
+	line-height: 38px;
+	background: linear-gradient(to right, transparent, rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), rgba(0,0,0,0.5), transparent 100%);
+}
+
+a:link {color:#3b7845;font-weight:bold;text-decoration: none;}      /* unvisited link */
+a:visited {color:#3b7845;font-weight:bold;text-decoration: none;}  /* visited link */
+a:hover {color:#faf270;font-weight:bold;text-decoration: underline;}  /* mouse over link */
+a:active {color:#c7ab33;font-weight:bold;text-decoration: none;}  /* selected link */
+hr{
+	border-top-color: #c7ab33;
+	border-bottom-color: #faf270;
+}
+.inset{
+	border-left: 2px ridge #faf270;
+	margin-left: 22px;
+	padding-left: 22px;
+}
+
+.languageBox{
+	font-size: 0;
+    position: fixed;
+    top: 0px;
+	right: 100px;
+	width: 260px; 
+	background: #3b7845;
+	border: 0px solid #faf270;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	padding: 5px 2px 5px 2px;
+	text-align: center;
+}
+.languageBox select{
+	border-radius: 32px;
+	border: 2px inset #4CAF50;
+	width: 100%; 
+}
+
+.languageBox button{
+	border-radius: 32px;
+	padding: 6px 12px 6px 12px;
+	margin: 0px 2px 0px 2px;
+	overflow: hidden;
+	/*text-overflow: ellipsis;*/
+	white-space: nowrap;
+	background: none;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+.languageBox button:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+
+.toolBox{
+	font-size: 0;
+    position: fixed;
+    left: 0px;
+	bottom: 100px;
+	width: 4.5%; 
+	background: #3b7845;
+	border: 0px solid #faf270;
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	padding: 5px 2px 5px 0px;
+}
+.toolButton {
+	width:90%;
+	border-top-right-radius: 32px;
+	border-bottom-right-radius: 32px;
+	padding: 6px 0px 6px 0px;
+	margin: 2px 0px 2px 0px;
+	overflow: hidden;
+	/*text-overflow: ellipsis;*/
+	white-space: nowrap;
+	background: none;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.toolButton:hover {
+	background-color: #4CAF50; /* Green */
+	color: white;
+}
+u{
+	border: 2px solid #c7ab33;
+	background: #faf270;
+	border-radius: 3px;
+	box-shadow: 2px 2px #9c7c1a;
+	text-decoration-color: #faf270;
+	margin: 0px 8px 0px 4px;
+	padding: 0px 8px 0px 8px;
+}
+h1{
+	color: #faf270;
+	text-shadow: 3px 5px #9c7c1a;
+}
+.video:hover{
+	text-shadow:1px 1px 10px #faf270, 1px 1px 10px #faf270;
+	text-decoration: none;
+}
+.bulletVideo{
+	position:absolute; left:-35px;
+}
+.bulletVideo:hover{
+	text-shadow:1px 1px 10px #faf270, 1px 1px 10px #faf270;
+	text-decoration: none;
+}
+.bulletDiv{
+	position:relative;
+}
+
+.menubarTable{
+	width:100%;
+}
+.menubarTable td{
+	vertical-align:top;
+}
+
+</style>
+<body>
+	<div class="blockLanguage">
+		<span id="languageName" contenteditable="true">
+			English
+		</span>
+	</div>
+	<div id="languageBox" class="languageBox">
+		<table width="100%"><tr><td align="left">
+		<select id="lang">
+		
+		</select>
+		</td><td align="right" width="120px">
+		<button type="button" id="save">Save</button>
+		<button type="button" onclick="document.getElementById('inputfile').click();">Load</button>
+		</td></tr></table>
+		<input type="file" name="inputfile" id="inputfile" style="display:none;"> 
+	</div>
+	
+	<div id="toolBox" class="toolBox" style="display:none;">
+		<button type="button" class="toolButton">Bold</button>
+		<button type="button" class="toolButton">Italic</button>
+		<button type="button" class="toolButton">Block</button>
+	</div>
+	
+	<div class="pageBlock">
+		<br>
+		
+		<h1><img src="docImg/cube.png" style="vertical-align: middle;"> Crocotile 3D</h1>
+			
+		<div class="block" style="width:25%;">
+			📝 <span id="translationNote" contenteditable="true">
+				Would you like to translate this document to another language? Your help would be appreciated! 
+			</span>
+			<div class="inset">
+				<span id="translationNote2" contenteditable="true">
+					To translate this document click on any text and replace it with your translation. Click <u>Save</u> at the top of the document to export the data. You can import the data you've previously saved by clicking <u>Load</u>.
+				</span>
+			</div>
+			<span id="translationNote3" contenteditable="true">
+				Place the saved translated file inside the localization folder and then run Crocotile. Open the About panel by going to Help > About, or press F2. Choose the translation from the Language drop down menu.
+			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<table class="menubarTable"><tr><td>
+				<h4>
+				<span id="menubarFile" contenteditable="true">
+					File
+				</span>
+				</h4>
+				
+				<ul>
+					<li id="menubarNewScene" contenteditable="true">New Scene</li>
+					<li id="menubarLoadScene" contenteditable="true">Load Scene</li>
+					<li id="menubarLoadRecentScene" contenteditable="true">Load Recent Scene</li>
+						<ul>
+							<li id="menubarClearRecent" contenteditable="true">Clear Recent</li>
+						</ul>
+					<hr>
+					<li id="menubarSaveScene" contenteditable="true">Save Scene</li>
+					<li id="menubarSaveSceneAs" contenteditable="true">Save Scene As...</li>
+					<hr>
+					<li id="menubarExportScene" contenteditable="true">Export Scene</li>
+					<li id="menubarExportObjects" contenteditable="true">Export Objects</li>
+					<hr>
+					<li id="menubarExit" contenteditable="true">Exit</li>
+				</ul>
+				
+			</td><td>
+				<h4>
+				<span id="menubarEdit" contenteditable="true">
+					Edit
+				</span>
+				</h4>
+				
+				<ul>
+					<li id="menubarUndo" contenteditable="true">Undo</li>
+					<li id="menubarRedo" contenteditable="true">Redo</li>
+					<hr>
+					<li id="menubarSettings" contenteditable="true">Settings</li>
+					<li id="menubarButtons" contenteditable="true">Buttons</li>
+					<hr>
+					<li id="menubarCamera" contenteditable="true">Camera</li>
+						<ul>
+							<li id="menubarPerspective" contenteditable="true">Perspective</li>
+							<li id="menubarOrthographic" contenteditable="true">Orthographic</li>
+						</ul>
+					<li id="menubarSkybox" contenteditable="true">Skybox</li>
+						<ul>
+							<li id="menubarSelectImage" contenteditable="true">Select Image</li>
+							<li id="menubarShowHide" contenteditable="true">Show/Hide</li>
+						</ul>
+					<li id="menubarRender" contenteditable="true">Render</li>
+						<ul>
+							<li id="menubarSpinGif" contenteditable="true">Spin Gif</li>
+						</ul>
+				</ul>
+				
+			</td><td>
+				<h4>
+				<span id="menubarHelp" contenteditable="true">
+					Help
+				</span>
+				</h4>
+				
+				<ul>
+					<li id="menubarHowTo" contenteditable="true">How To...</li>
+					<hr>
+					<li id="menubarAbout" contenteditable="true">About</li>
+				</ul>
+				
+			</td></tr></table>
+			
+		</div>
+		
+		
+		
+		<div class="block">
+			<span id="unsavedNewScene" contenteditable="true">
+				There are unsaved changes! Creating a new scene will cause you to lose these changes.
+			</span>
+			<hr>
+			<span id="unsavedLoadScene" contenteditable="true">
+				There are unsaved changes! Loading a new scene will cause you to lose these changes.
+			</span>
+			<hr>
+			<span id="unsavedExit" contenteditable="true">
+				There are unsaved changes! Are you sure you want to quit?
+			</span>
+			<hr>
+			<span id="recentWrongPath" contenteditable="true">
+				The path to this file is wrong. Has it been moved?
+			</span>
+			<hr>
+			<span id="exportNoTiles" contenteditable="true">
+				There are no tiles using the current tileset! Choose a tileset that has been used in the scene to export those tiles.
+			</span>
+			<hr>
+			<span id="exportNoObjects" contenteditable="true">
+				There are no objects to export!
+			</span>
+		</div>
+		
+		<div class="block">
+			<span id="selectLanguage" contenteditable="true">
+				Language
+			</span>
+			<br>
+			<span id="activationDetails" contenteditable="true">
+				Saving with more than 100 tiles and exporting requires an activation key. Enter your key to enable these features, or continue without them.
+			</span>
+			<br>
+			<span id="activationEmail" contenteditable="true">
+				Email
+			</span>
+			<br>
+			<span id="activationKey" contenteditable="true">
+				Key
+			</span>
+			<br>
+			<u><span id="registerButton" contenteditable="true">
+				Register
+			</span></u>
+			<br>
+			<u><span id="continueButton" contenteditable="true">
+				Continue
+			</span></u>
+			<br>
+			<span id="invalidKey" contenteditable="true">
+				License key is invalid.
+			</span>
+			<br>
+			<span id="activationSuccess" contenteditable="true">
+				Full version has been activated!
+			</span>
+			<br>
+			<span id="news" contenteditable="true">
+				News
+			</span>
+			<br>
+			<span id="updateReleased" contenteditable="true">
+				An update has been released.
+			</span>
+			<br>
+			<span id="version" contenteditable="true">
+				Version
+			</span>
+			<br>
+			<span id="isNowAvailable" contenteditable="true">
+				is now available.
+			</span>
+			<br>
+			<span id="dontRemindMe" contenteditable="true">
+				Don't remind me
+			</span>
+			<br>
+			<span id="okayButton" contenteditable="true">
+				Okay
+			</span>
+		</div>
+		
+		<div class="block">
+			<h4><span id="exportOptions" contenteditable="true">
+				Export Options
+			</span></h4>
+			
+			<span id="includeObjects" contenteditable="true">
+				Include objects
+			</span>
+			<hr>
+			<ul>
+				<li id="exportFileFormat" contenteditable="true">File Format</li>
+				<hr>
+				<li id="exportMergeVertices" contenteditable="true">Merge Vertices</li>
+				<hr>
+				<li id="exportVertexNormals" contenteditable="true">Vertex Normals</li>
+					<ul>
+						<li id="exportFlat" contenteditable="true">Flat</li>
+						<hr>
+						<li id="exportSmooth" contenteditable="true">Smooth</li>
+					</ul>
+				<hr>
+				<li id="exportAngleThreshold" contenteditable="true">Angle Threshold</li>
+				<hr>
+				<li id="exportEmbedTextures" contenteditable="true">Embed Textures</li>
+				<hr>
+				<li id="exportAllTextures" contenteditable="true">Export all textures/.mtl</li>
+				<hr>
+				<li id="exportTexturePrefix" contenteditable="true">Texture prefix</li>
+				<hr>
+				<li id="exportTileSpacing" contenteditable="true">Tile Spacing</li>
+				<hr>
+				<li id="exportPowerOfTwo" contenteditable="true">Use power of 2 textures</li>
+				<hr>
+				<li id="exportScale" contenteditable="true">Scale</li>
+			</ul>
+			<hr>
+			<u><span id="exportButton" contenteditable="true">
+				Export
+			</span></u>
+			<hr>
+			<u><span id="closeButton" contenteditable="true">
+				Close
+			</span></u>
+		</div>
+		
+		<div class="block">
+			<h4><span id="cameraSpin" contenteditable="true">
+				Camera Spin
+			</span></h4>
+			
+			<span id="cameraSpinFrames" contenteditable="true">
+				Frames
+			</span>
+			<br>
+			<span id="cameraSpinInvalidFrames" contenteditable="true">
+				Frames is an invalid number!
+			</span>
+			<hr>
+			<span id="cameraSpinFrameInterval" contenteditable="true">
+				Frame Interval  (milliseconds)
+			</span>
+			<br>
+			<span id="cameraSpinInvalidInterval" contenteditable="true">
+				Frame Interval is an invalid number!
+			</span>
+			<hr>
+			<span id="cameraSpinRotate" contenteditable="true">
+				Rotate
+			</span>
+			<hr>
+			<span id="cameraSpinInvalidNumber" contenteditable="true">
+				Rotate is an invalid number!
+			</span>
+			<hr>
+			<span id="cameraSpinRecording" contenteditable="true">
+				Recording
+			</span>
+			<hr>
+			<span id="cameraSpinProcessing" contenteditable="true">
+				Processing
+			</span>
+			<hr>
+			<span id="cameraSpinFinishedSaving" contenteditable="true">
+				Finished Saving!
+			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">			
+			<h2><span id="settings" contenteditable="true">
+				Settings
+			</span></h2>
+			
+			<u><span id="resetSettings" contenteditable="true">
+				Reset Settings
+			</span></u>
+			<br>
+			<span id="resetSettingsAlert" contenteditable="true">
+				Are you sure you want to reset the settings? This will set the program back to its default settings.
+			</span>
+			
+			<h4><span id="settingsGeneral" contenteditable="true">
+				General
+			</span></h4>
+			
+			<span id="settingsResolution" contenteditable="true">
+				Resolution
+			</span>
+			<br>
+			<span id="settingsWindow" contenteditable="true">
+				Window
+			</span>
+			<hr>
+			<span id="settingsFPS" contenteditable="true">
+				FPS
+			</span>
+			<hr>
+			<span id="settingsShowRuler" contenteditable="true">
+				Show Ruler
+			</span>
+			<br>
+			<span id="settingsLockCrosshair" contenteditable="true">
+				Lock Crosshair to the Grid
+			</span>
+			<br>
+			<span id="settingsWireframe" contenteditable="true">
+				Wireframe
+			</span>		
+			<span id="settingsWireframeColor" contenteditable="true">
+				Wireframe Color
+			</span>	
+			<hr>
+			<span id="settingsBackgroundColor" contenteditable="true">
+				Background Color
+			</span>
+			<br>
+			<span id="settingsBackgroundAlpha" contenteditable="true">
+				Background Transparency
+			</span>
+			<hr>
+			<span id="settingsScreenshotFolder" contenteditable="true">
+				Screenshot folder
+			</span>
+			<br>
+			<u><span id="settingsChoose" contenteditable="true">
+				Choose
+			</span></u>
+			<hr>
+			<span id="settingsUndoLimit" contenteditable="true">
+				Undo limit
+			</span>
+			
+			<h4><span id="settingsProject" contenteditable="true">
+				Project
+			</span></h4>
+			<span id="settingsBasePixelUnit" contenteditable="true">
+				Base Pixel Unit
+			</span>
+			<br>
+			<u><span id="editButton" contenteditable="true">
+				Edit
+			</span></u>
+			<hr>
+			<span id="settingsCurrentUnitScale" contenteditable="true">
+				Current unit scale
+			</span>
+			<br>
+			<span id="settingsNewUnitScale" contenteditable="true">
+				New unit scale
+			</span>
+			<br>
+			<span id="settingsPixelPerMeter" contenteditable="true">
+				pixels per meter
+			</span>
+			<br>
+			<span id="settingsResizeTheScene" contenteditable="true">
+				Resize the scene
+			</span>
+			<br>
+			<span id="settingsNotAValidNumber" contenteditable="true">
+				The values provided are not a valid number!
+			</span>
+			<br>
+			<u><span id="applyButton" contenteditable="true">
+				Apply
+			</span></u>
+			
+			
+			<h4><span id="settingsCamera" contenteditable="true">
+				Camera
+			</span></h4>
+			<span id="settingsFrustumPlane" contenteditable="true">
+				Camera Frustum Far Plane
+			</span>
+			<br>
+			<span id="settingsFOV" contenteditable="true">
+				Camera Field of View
+			</span>
+			
+			<h4><span id="settingsDrawMode" contenteditable="true">
+				Draw Mode
+			</span></h4>
+			<span id="settingsOverlapTilebrush" contenteditable="true">
+				Overlap Tilebrush
+			</span>
+			<br>
+			<span id="settingsAlignBrushToCrosshair" contenteditable="true">
+				Align Brush to Crosshair
+			</span>
+			
+			<h4><span id="settingsEditMode" contenteditable="true">
+				Edit Mode
+			</span></h4>
+			<span id="settingsCameraBasedSelection" contenteditable="true">
+				Camera Based Selection
+			</span>
+			<br>
+			<span id="settingsCrosshairArrows" contenteditable="true">
+				Crosshair Arrows
+			</span>
+			<br>
+			<span id="settingsObjectModeConstraint" contenteditable="true">
+				Object Mode Constraint
+			</span>
+			<br>
+			<span id="settingsVertexSize" contenteditable="true">
+				Vertex Size
+			</span>
+			
+			<h4><span id="settingsTilesets" contenteditable="true">
+				Tilesets
+			</span></h4>
+			<span id="settingsAutoRefreshTilesets" contenteditable="true">
+				Auto refresh Tilesets
+			</span>
+			<br>
+			<span id="settingsDragMultipleUVs" contenteditable="true">
+				Drag Multiple UVs
+			</span>
+			<br>
+			<span id="settingsCheckeredSize" contenteditable="true">
+				Checkered Size
+			</span>
+		</div>
+		
+		<div class="block">
+			<span id="statsIn" contenteditable="true">
+				in
+			</span>
+			<br>
+			<span id="statsScene" contenteditable="true">
+				scene
+			</span>
+			<br>
+			<span id="statsObjects" contenteditable="true">
+				objects
+			</span>
+			<br>
+			<span id="statsInstances" contenteditable="true">
+				instances
+			</span>
+		</div>
+		
+		<div class="block">
+			<span id="modeButton" contenteditable="true">
+				Draw/Edit Mode
+			</span>
+			<br>
+			<span id="cameraBasedSelectionButton" contenteditable="true">
+				Camera Based Selection (on/off)
+			</span>
+			<br>
+			<span id="arrowModeButton" contenteditable="true">
+				Crosshair Arrow Mode (move/rotate/scale)
+			</span>
+			<br>
+			<span id="arrowToggleButton" contenteditable="true">
+				Crosshair Arrow Toggle (on/off)
+			</span>
+			<br>
+			<span id="undoButton" contenteditable="true">
+				Undo
+			</span>
+			<br>
+			<span id="redoButton" contenteditable="true">
+				Redo
+			</span>
+			<br>
+			<span id="tile" contenteditable="true">
+				Tile
+			</span>
+			<br>
+			<span id="sticky" contenteditable="true">
+				Sticky
+			</span>
+			<br>
+			<span id="block" contenteditable="true">
+				Block
+			</span>
+			<hr>
+			<span id="centerToSelection" contenteditable="true">
+				Center to selection
+			</span>
+			<br>
+			<span id="cameraRotateRight" contenteditable="true">
+				Rotate right
+			</span>
+			<br>
+			<span id="cameraRotateLeft" contenteditable="true">
+				Rotate left
+			</span>
+			<br>
+			<span id="cameraRotateUp" contenteditable="true">
+				Rotate up
+			</span>
+			<br>
+			<span id="cameraRotateDown" contenteditable="true">
+				Rotate down
+			</span>
+			<br>
+			<span id="roundToGrid" contenteditable="true">
+				Round to Grid
+			</span>
+			<br>
+			<span id="vertices" contenteditable="true">
+				Vertices
+			</span>
+			<br>
+			<span id="alignVerticesToTheGrid" contenteditable="true">
+				Align vertices to the grid
+			</span>
+			<br>
+			<span id="selectVerticesXAxis" contenteditable="true">
+				Select vertices along crosshair's X-axis
+			</span>
+			<br>
+			<span id="selectVerticesYAxis" contenteditable="true">
+				Select vertices along crosshair's Y-axis
+			</span>
+			<br>
+			<span id="selectVerticesZAxis" contenteditable="true">
+				Select vertices along crosshair's Z-axis
+			</span>
+			<br>
+			<span id="faces" contenteditable="true">
+				Faces
+			</span>
+			<br>
+			<span id="flipEdge" contenteditable="true">
+				Flip edge
+			</span>
+			<br>
+			<span id="reverseFace" contenteditable="true">
+				Reverse face
+			</span>
+			<br>
+			<span id="copy" contenteditable="true">
+				Copy
+			</span>
+			<br>
+			<span id="paste" contenteditable="true">
+				Paste
+			</span>
+			<br>
+			<span id="split" contenteditable="true">
+				Split
+			</span>
+			<br>
+			<span id="subdivide" contenteditable="true">
+				Subdivide
+			</span>
+			<br>
+			<span id="columns" contenteditable="true">
+				Columns
+			</span>
+			<br>
+			<span id="rows" contenteditable="true">
+				Rows
+			</span>
+			<br>
+			<span id="createObject" contenteditable="true">
+				Create Object
+			</span>
+			<br>
+			<span id="selectAllObjects" contenteditable="true">
+				Select All Objects
+			</span>
+			<br>
+			<span id="deselectAllObjects" contenteditable="true">
+				Deselect All Objects
+			</span>
+			<br>
+			<span id="rotateClockwise" contenteditable="true">
+				Rotate clockwise
+			</span>
+			<br>
+			<span id="rotateCounterClockwise" contenteditable="true">
+				Rotate c-clockwise
+			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="tileset" contenteditable="true">
+				Tileset
+			</span></h2>
+			
+			<span id="addTileset" contenteditable="true">
+				Add Tileset
+			</span>
+			<br>
+			<span id="addBlankTileset" contenteditable="true">
+				Add Blank Tileset
+			</span>
+			<div class="inset">			
+				<b><span id="blankTileset" contenteditable="true">
+					Blank Tileset
+				</span></b>
+				<br>
+				<span id="tilesUppercase" contenteditable="true">
+					Tiles
+				</span>
+				<br>
+				<span id="tiles" contenteditable="true">
+					tiles
+				</span>
+				<br>
+				<span id="pixelsUppercase" contenteditable="true">
+					Pixels
+				</span>
+				<br>
+				<span id="pixels" contenteditable="true">
+					pixels
+				</span>
+				<br>
+				<span id="width" contenteditable="true">
+					Width
+				</span>
+				<br>
+				<span id="height" contenteditable="true">
+					Height
+				</span>
+				<br>
+				<span id="opaque" contenteditable="true">
+					Opaque
+				</span>
+				<br>
+				<span id="transparent" contenteditable="true">
+					Transparent
+				</span>
+				<br>
+				<span id="checkered" contenteditable="true">
+					Checkered
+				</span>
+				<br>
+				<span id="color" contenteditable="true">
+					Color
+				</span>
+				<br>
+				<u><span id="createButton" contenteditable="true">
+					Create
+				</span></u>
+			</div>
+			
+			<br>
+			<span id="addSelectedTilesToNewTileset" contenteditable="true">
+				Add selected tiles to new Tileset
+			</span>
+			<br>
+			<span id="replaceTileset" contenteditable="true">
+				Replace Tileset
+			</span>
+			<br>
+			<span id="removeTileset" contenteditable="true">
+				Remove Tileset
+			</span>
+			<br>
+			<span id="combineTileset" contenteditable="true">
+				Combine Tileset
+			</span>			
+			<div class="inset">			
+				<b><span id="combineTilesets" contenteditable="true">
+					Combine Tilesets
+				</span></b>
+				<br>
+				<span id="previousImage" contenteditable="true">
+					Previous Image
+				</span>
+				<br>
+				<span id="nextImage" contenteditable="true">
+					Next Image
+				</span>
+				<br>
+				<span id="mergeDown" contenteditable="true">
+					Merge down
+				</span>
+				<br>
+				<span id="discardBottom" contenteditable="true">
+					Discard Bottom
+				</span>
+				<br>
+				<span id="discardTop" contenteditable="true">
+					Discard Top
+				</span>
+				<br>
+				<span id="combineTilesetAlert" contenteditable="true">
+					There must be more than one tileset available before combining is possible.
+				</span>
+			</div>
+			
+			<br>
+			<span id="applyTilesetToTheSelectedFaces" contenteditable="true">
+				Apply Tileset to the selected Faces
+			</span>
+			<br>
+			<span id="resizeTileset" contenteditable="true">
+				Resize Tileset
+			</span>			
+			<div class="inset">
+				<span id="canvas" contenteditable="true">
+					Canvas
+				</span>
+				<br>
+				<span id="image" contenteditable="true">
+					Image
+				</span>
+				<br>
+				<span id="percent" contenteditable="true">
+					Percent
+				</span>
+				<br>
+				<span id="proportionate" contenteditable="true">
+					Proportionate
+				</span>
+			</div>
+			
+			<br>
+			<span id="exportTileset" contenteditable="true">
+				Export Tileset
+			</span>
+			
+			<hr>
+			
+			<span id="selectBasedOnTilebrush" contenteditable="true">
+				Select Tiles using Tilebrush's UVs
+			</span>
+			<br>
+			<span id="applyUVsToFaces" contenteditable="true">
+				Apply Tilebrush UVs to Faces
+			</span>
+			<br>
+			<span id="previousTileset" contenteditable="true">
+				Previous Tileset
+			</span>
+			<br>
+			<span id="selectTileset" contenteditable="true">
+				Select Tileset
+			</span>
+			<br>
+			<span id="nextTileset" contenteditable="true">
+				Next Tileset
+			</span>
+			<br>
+			<span id="wrappingClampToEdge" contenteditable="true">
+				Wrapping: Clamp to Edge
+			</span>
+			<br>
+			<span id="wrappingRepeat" contenteditable="true">
+				Wrapping: Repeat
+			</span>
+			<br>
+			<span id="wrappingMirroredRepeat" contenteditable="true">
+				Wrapping: Mirrored Repeat
+			</span>
+			<br>
+			<span id="decalModeOff" contenteditable="true">
+				Decal mode: off
+			</span>
+			<br>
+			<span id="decalModeOn" contenteditable="true">
+				Decal mode: on
+			</span>
+			<br>
+			<span id="refreshTilesets" contenteditable="true">
+				Refresh Tilesets
+			</span>
+			<br>
+			<span id="magnification" contenteditable="true">
+				Magnification
+			</span>
+			<br>
+			<span id="uvTilesize" contenteditable="true">
+				UV Tilesize
+			</span>
+			<br>
+			<span id="uvTileWidth" contenteditable="true">
+				Tile width
+			</span>
+			<br>
+			<span id="uvTileHeight" contenteditable="true">
+				Tile height
+			</span>
+			<br>
+			<span id="uvPadding" contenteditable="true">
+				UV Padding
+			</span>
+			<br>
+			<span id="leftPadding" contenteditable="true">
+				Left Padding
+			</span>
+			<br>
+			<span id="rightPadding" contenteditable="true">
+				Right Padding
+			</span>
+			<br>
+			<span id="topPadding" contenteditable="true">
+				Top Padding
+			</span>
+			<br>
+			<span id="bottomPadding" contenteditable="true">
+				Bottom Padding
+			</span>
+			<br>
+			<span id="tilescale3d" contenteditable="true">
+				3D Tilescale
+			</span>
+			<br>
+			<span id="tilescaleX" contenteditable="true">
+				Tile scale X
+			</span>
+			<br>
+			<span id="tilescaleY" contenteditable="true">
+				Tile scale Y
+			</span>
+			<br>
+			<span id="gridRounding" contenteditable="true">
+				Grid rounding
+			</span>
+			<br>
+			<span id="tileSplitting" contenteditable="true">
+				Tile splitting
+			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="uvs" contenteditable="true">
+				UVs
+			</span></h2>
+			
+			<span id="mirror" contenteditable="true">
+				Mirror
+			</span>
+			<br>
+			<span id="flip" contenteditable="true">
+				Flip
+			</span>
+			<br>
+			<span id="rotateLeft" contenteditable="true">
+				Rotate Left
+			</span>
+			<br>
+			<span id="rotateRight" contenteditable="true">
+				Rotate Right
+			</span>
+			<br>
+			<span id="selectSingleMultiple" contenteditable="true">
+				Select single/multiple
+			</span>
+			<br>
+			<span id="uvPrecision" contenteditable="true">
+				UV Precision
+			</span>
+			<br>
+			<span id="rotation" contenteditable="true">
+				Rotation
+			</span>
+			<br>
+			<span id="scale" contenteditable="true">
+				Scale
+			</span>
+			<br>
+			<span id="scaleX" contenteditable="true">
+				Scale X
+			</span>
+			<br>
+			<span id="scaleY" contenteditable="true">
+				Scale Y
+			</span>
+			<hr>
+			<span id="crosshair" contenteditable="true">
+				Crosshair
+			</span>
+			<br>
+			<span id="moveToMousePosition" contenteditable="true">
+				Move to Mouse position
+			</span>
+			<br>
+			<span id="centerOfSelection" contenteditable="true">
+				Center of selection
+			</span>
+			<br>
+			<span id="topOfSelection" contenteditable="true">
+				Top of selection
+			</span>
+			<br>
+			<span id="bottomOfSelection" contenteditable="true">
+				Bottom of selection
+			</span>
+			<br>
+			<span id="leftOfSelection" contenteditable="true">
+				Left of selection
+			</span>
+			<br>
+			<span id="rightOfSelection" contenteditable="true">
+				Right of selection
+			</span>
+			<br>
+			<span id="alignSelection" contenteditable="true">
+				Align Selection
+			</span>
+			<br>
+			<span id="centerOnCrosshair" contenteditable="true">
+				Center on crosshair
+			</span>
+			<br>
+			<span id="alignTopToCrosshair" contenteditable="true">
+				Align top to crosshair
+			</span>
+			<br>
+			<span id="alignBottomToCrosshair" contenteditable="true">
+				Align bottom to crosshair
+			</span>
+			<br>
+			<span id="alignLeftToCrosshair" contenteditable="true">
+				Align left to crosshair
+			</span>
+			<br>
+			<span id="alignRightToCrosshair" contenteditable="true">
+				Align right to crosshair
+			</span>
+			<br>
+			<span id="roundToNearestPixel" contenteditable="true">
+				Round to nearest pixel
+			</span>
+			<br>
+			<span id="setToTile" contenteditable="true">
+				Set to Tile
+			</span>
+			<br>
+			<span id="setToTileset" contenteditable="true">
+				Set to Tileset
+			</span>
+			<br>
+			<span id="paint" contenteditable="true">
+				Paint
+			</span>
+			<br>
+			<span id="traceSelected" contenteditable="true">
+				Trace selected
+			</span>
+			<br>
+			<span id="fillSolid" contenteditable="true">
+				Fill solid
+			</span>
+			<br>
+			<span id="fillCheckered" contenteditable="true">
+				Fill checkered
+			</span>
+			<br>
+			<span id="exportUVMapImage" contenteditable="true">
+				Export UV map image
+			</span>
+			<br>
+			<span id="selectAll" contenteditable="true">
+				Select All
+			</span>
+			<br>
+			<span id="deselectAll" contenteditable="true">
+				Deselect All
+			</span>
+			<br>
+			<span id="exportUVMap" contenteditable="true">
+				Export UV Map
+			</span>
+			<br>
+			<span id="lineColor" contenteditable="true">
+				Line color
+			</span>
+			<br>
+			<span id="canvasColor" contenteditable="true">
+				Canvas color
+			</span>
+			<br>
+			<span id="scaleInvalid" contenteditable="true">
+				Scale is an invalid number!
+			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="painting" contenteditable="true">
+				Painting
+			</span></h2>
+			
+			<span id="verticalSymmetry" contenteditable="true">
+				Vertical Symmetry
+			</span>
+			<br>
+			<span id="horizontalSymmetry" contenteditable="true">
+				Horizontal Symmetry
+			</span>
+			<br>
+			<span id="brush" contenteditable="true">
+				Brush
+			</span>
+			<br>
+			<span id="dither" contenteditable="true">
+				Dither
+			</span>
+			<br>
+			<span id="gridLines" contenteditable="true">
+				Grid Lines
+			</span>
+			<br>
+			<span id="pencil" contenteditable="true">
+				Pencil
+			</span>
+			<br>
+			<span id="eraser" contenteditable="true">
+				Eraser
+			</span>
+			<br>
+			<span id="eyedropper" contenteditable="true">
+				Eyedropper
+			</span>
+			<br>
+			<span id="paintBucket" contenteditable="true">
+				Paint Bucket
+			</span>
+			<br>
+			<span id="checkeredFill" contenteditable="true">
+				Checkered Fill
+			</span>
+			<br>
+			<span id="contiguous" contenteditable="true">
+				Contiguous
+			</span>
+			<br>
+			<span id="marquee" contenteditable="true">
+				Marquee
+			</span>
+			<br>
+			<span id="lasso" contenteditable="true">
+				Lasso
+			</span>
+			<br>
+			<span id="magicwand" contenteditable="true">
+				Magicwand
+			</span>
+			<br>
+			<span id="hand" contenteditable="true">
+				Hand
+			</span>
+			<br>
+			<span id="arrow" contenteditable="true">
+				Arrow
+			</span>
+			<br>
+			<span id="palette" contenteditable="true">
+				Palette
+			</span>
+			<br>
+			<span id="savePalette" contenteditable="true">
+				Save Palette
+			</span>
+			<br>
+			<span id="loadPalette" contenteditable="true">
+				Load Palette
+			</span>
+			<br>
+			<span id="emptyPalette" contenteditable="true">
+				Empty Palette
+			</span>
+			<br>
+			<span id="emptyPaletteAlert" contenteditable="true">
+				"Empty the palette?"
+			</span>
+			<br>
+			<span id="defaultPalette" contenteditable="true">
+				Default Palette
+			</span>
+			<br>
+			<span id="defaultPaletteAlert" contenteditable="true">
+				Replace current palette with the default palette?
+			</span>
+			<br>
+			<span id="removeDuplicates" contenteditable="true">
+				Remove Duplicates
+			</span>
+			<br>
+			<span id="hideShowPalette" contenteditable="true">
+				Hide/Show Palette
+			</span>
+			<br>
+			<span id="addColor" contenteditable="true">
+				Add Color
+			</span>
+			<br>
+			<span id="removeColor" contenteditable="true">
+				Remove Color
+			</span>
+			<br>
+			<span id="alphaApplication" contenteditable="true">
+				Alpha application (unique/mixed)
+			</span>
+			
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="transform" contenteditable="true">
+				Transform
+			</span></h2>
+			
+			<span id="metersUppercase" contenteditable="true">
+				Meters
+			</span>
+			<br>
+			<span id="axisRelativeToCamera" contenteditable="true">
+				Axis relative to Camera orientation (on/off)
+			</span>
+			<br>
+			<span id="rightUpBackward" contenteditable="true">
+				(right,up,backward)
+			</span>
+			<br>
+			<span id="translate" contenteditable="true">
+				Translate
+			</span>
+			<br>
+			<span id="resize" contenteditable="true">
+				Resize
+			</span>
+			<br>
+			<span id="rotate" contenteditable="true">
+				Rotate
+			</span>
+			<br>
+			<span id="align" contenteditable="true">
+				Align
+			</span>
+			<br>
+			<span id="push" contenteditable="true">
+				Push
+			</span>
+			<br>
+			<span id="center" contenteditable="true">
+				Center
+			</span>
+			<br>
+			<span id="pull" contenteditable="true">
+				Pull
+			</span>
+			<br>
+			<span id="moveSelection" contenteditable="true">
+				Move selection
+			</span>
+			<br>
+			<span id="get" contenteditable="true">
+				Get
+			</span>
+			<br>
+			<span id="set" contenteditable="true">
+				Set
+			</span>
+			<br>
+			<span id="position" contenteditable="true">
+				Position
+			</span>
+			<br>
+			<span id="translateCrosshair" contenteditable="true">
+				Translate Crosshair
+			</span>
+			<br>
+			<span id="camera" contenteditable="true">
+				Camera
+			</span>
+			<br>
+			<span id="lockAxis" contenteditable="true">
+				Lock axis
+			</span>
+			<br>
+			<span id="swivelPoint" contenteditable="true">
+				swivel point
+			</span>
+			<br>
+			<span id="lock" contenteditable="true">
+				Lock
+			</span>
+			<br>
+			<span id="swingCamera" contenteditable="true">
+				Swing camera
+			</span>
+			<br>
+			<span id="orientation" contenteditable="true">
+				Orientation
+			</span>
+			<br>
+			<span id="translateCameraPosition" contenteditable="true">
+				Translate Camera Position
+			</span>
+			<br>
+			<span id="cameraPosition" contenteditable="true">
+				Camera Position
+			</span>
+			<br>
+			<span id="cameraRotation" contenteditable="true">
+				Camera Rotation
+			</span>
+			<br>
+			<span id="rotateCamera" contenteditable="true">
+				Rotate Camera
+			</span>
+			<br>
+			<span id="zoomLevel" contenteditable="true">
+				Zoom level
+			</span>
+			<br>
+			<span id="zoom" contenteditable="true">
+				Zoom
+			</span>
+			<br>
+			<span id="cameraZoomLevel" contenteditable="true">
+				Camera Zoom Level
+			</span>
+			<br>
+			<span id="zoomCamera" contenteditable="true">
+				Zoom Camera
+			</span>
+			
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="scene" contenteditable="true">
+				Scene
+			</span></h2>
+			
+			<span id="addLayer" contenteditable="true">
+				Add Layer
+			</span>
+			<br>
+			<span id="importPrefabObject" contenteditable="true">
+				Import Prefab Object
+			</span>
+			<br>
+			<span id="movePointToCrosshair" contenteditable="true">
+				Move point to Crosshair
+			</span>
+			<br>
+			<span id="renamePoint" contenteditable="true">
+				Rename Point
+			</span>
+			<br>
+			<span id="addPoint" contenteditable="true">
+				Add point at Crosshair
+			</span>
+			<br>
+			<span id="removePoint" contenteditable="true">
+				Remove point
+			</span>
+			<br>
+			<span id="origin" contenteditable="true">
+				Origin
+			</span>
+			<br>
+			<span id="layer" contenteditable="true">
+				Layer
+			</span>
+			<br>
+			<span id="object" contenteditable="true">
+				Object
+			</span>
+			<br>
+			<span id="showHideLayer" contenteditable="true">
+				Show/Hide Layer
+			</span>
+			<br>
+			<span id="renameLayer" contenteditable="true">
+				Rename Layer
+			</span>
+			<br>
+			<span id="removeLayer" contenteditable="true">
+				Remove Layer
+			</span>
+			<br>
+			<span id="addToScene" contenteditable="true">
+				Add to Scene
+			</span>
+			<br>
+			<span id="renameObject" contenteditable="true">
+				Rename Object
+			</span>
+			<br>
+			<span id="properties" contenteditable="true">
+				Properties
+			</span>
+			<div class="inset">			
+				<span id="objectProperties" contenteditable="true">
+					Object Properties
+				</span>
+				<br>
+				<span id="objectGeneral" contenteditable="true">
+					General
+				</span>
+				<br>
+				<span id="objectName" contenteditable="true">
+					Name
+				</span>
+				<br>
+				<span id="objectBillboarding" contenteditable="true">
+					Billboarding
+				</span>
+				<br>
+				<span id="objectBillboardingEnabled" contenteditable="true">
+					Billboarding Enabled
+				</span>
+				<br>
+				<span id="objectLockToYAxis" contenteditable="true">
+					Lock to Y Axis
+				</span>
+				<br>
+				<span id="objectMirroring" contenteditable="true">
+					Mirroring
+				</span>
+				<br>
+				<span id="objectMirroringEnabled" contenteditable="true">
+					Mirroring Enabled
+				</span>
+				<br>
+				<span id="objectMirroringAxis" contenteditable="true">
+					Axis
+				</span>
+			</div>
+			<br>
+			<span id="hideShowAll" contenteditable="true">
+				Hide/Show All
+			</span>
+			<br>
+			<span id="cloneObject" contenteditable="true">
+				Clone Object
+			</span>
+			<br>
+			<span id="deleteObject" contenteditable="true">
+				Delete Object/Instances
+			</span>
+			<br>
+			<span id="exportInstanceData" contenteditable="true">
+				Export Instance Data
+			</span>
+			<br>
+			<span id="exportToObj" contenteditable="true">
+				Export to Obj
+			</span>
+			<br>
+			<span id="exportToPrefab" contenteditable="true">
+				Export to Prefab
+			</span>
+			<hr>
+			<span id="editObject" contenteditable="true">
+				Edit Object
+			</span>
+			<br>
+			<span id="moveCrosshairToInstance" contenteditable="true">
+				Move Crosshair to Instance
+			</span>
+			<br>
+			<span id="resetRotations" contenteditable="true">
+				Reset Rotation(s)
+			</span>
+			<br>
+			<span id="duplicateInstances" contenteditable="true">
+				Duplicate Instance(s)
+			</span>
+			<br>
+			<span id="removeInstance" contenteditable="true">
+				Remove Instance
+			</span>
+			<br>
+			<span id="deconstructObject" contenteditable="true">
+				Deconstruct Object
+			</span>
+			
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="keys" contenteditable="true">
+				Keys
+			</span></h2>
+			
+			<span id="saveKeyBindings" contenteditable="true">
+				Save Key Bindings
+			</span>
+			<br>
+			<span id="loadKeyBindings" contenteditable="true">
+				Load Key Bindings
+			</span>
+			<br>
+			<span id="resetBindings" contenteditable="true">
+				Reset Bindings
+			</span>
+			<br>
+			<span id="resetBindingsAlert" contenteditable="true">
+				Are you sure you want to reset the key bindings? This will set all controls back to their default settings.
+			</span>
+			<br>
+			<span id="toggleCameraMode" contenteditable="true">
+				Toggle camera mode
+			</span>
+			<br>
+			<span id="chooseKeygroup" contenteditable="true">
+				Choose a keygroup..
+			</span>
+			<br>
+			<span id="keyBinding" contenteditable="true">
+				Key binding
+			</span>
+			<br>
+			<span id="type" contenteditable="true">
+				Type
+			</span>
+			<br>
+			<u><span id="clearButton" contenteditable="true">
+				Clear
+			</span></u>
+			<br>
+			<span id="keyOnly" contenteditable="true">
+				Key only
+			</span>
+			<br>
+			<span id="mouseOnly" contenteditable="true">
+				Mouse only
+			</span>
+			<br>
+			<span id="keyOrMouse" contenteditable="true">
+				Key OR Mouse
+			</span>
+			<br>
+			<span id="keyAndMouse" contenteditable="true">
+				Key AND Mouse
+			</span>
+			<br>
+			<span id="leftMouse" contenteditable="true">
+				Left Mouse
+			</span>
+			<br>
+			<span id="middleMouse" contenteditable="true">
+				Middle Mouse
+			</span>
+			<br>
+			<span id="rightMouse" contenteditable="true">
+				Right Mouse
+			</span>
+			<hr>
+			
+			<span id="binding_close" contenteditable="true">Close Program</span><br>
+			<span id="binding_close_Desc" contenteditable="true">Close/Exit the program.</span><br>			
+			<span id="binding_config" contenteditable="true">Settings</span><br>
+			<span id="binding_config_Desc" contenteditable="true">Open/close the settings window.</span><br>			
+			<span id="binding_license" contenteditable="true">Info/License</span><br>
+			<span id="binding_license_Desc" contenteditable="true">Open/close the info/license window.</span><br>			
+			<span id="binding_keyConfig" contenteditable="true">Key Configuration</span><br>
+			<span id="binding_keyConfig_Desc" contenteditable="true">Open/close the key binding window.</span><br>
+			<span id="binding_fullscreen" contenteditable="true">Fullscreen</span><br>
+			<span id="binding_fullscreen_Desc" contenteditable="true">Toggle fullscreen mode.</span><br>
+			<span id="binding_screenshot" contenteditable="true">Screenshot</span><br>
+			<span id="binding_screenshot_Desc" contenteditable="true">Take a screenshot.</span><br>
+			<span id="binding_copy" contenteditable="true">Copy</span><br>
+			<span id="binding_copy_Desc" contenteditable="true">Copy the selected tiles/objects.</span><br>
+			<span id="binding_paste" contenteditable="true">Paste</span><br>
+			<span id="binding_paste_Desc" contenteditable="true">Paste the tiles/objects that were copied.</span><br>
+			<span id="binding_save" contenteditable="true">Save</span><br>
+			<span id="binding_save_Desc" contenteditable="true">Save the currently open scene.</span><br>
+			<span id="binding_saveAs" contenteditable="true">Save As</span><br>
+			<span id="binding_saveAs_Desc" contenteditable="true">Save the scene as a new file.</span><br>
+			<span id="binding_load" contenteditable="true">Load</span><br>
+			<span id="binding_load_Desc" contenteditable="true">Load a scene.</span><br>
+			<span id="binding_exportFile" contenteditable="true">Export File</span><br>
+			<span id="binding_exportFile_Desc" contenteditable="true">Export scene to .obj file.</span><br>
+			<span id="binding_undo" contenteditable="true">Undo</span><br>
+			<span id="binding_undo_Desc" contenteditable="true">Undo any actions recently made.</span><br>
+			<span id="binding_redo" contenteditable="true">Redo</span><br>
+			<span id="binding_redo_Desc" contenteditable="true">Redo any actions that were recently undone.</span><br>
+			<span id="binding_toggleOpacity" contenteditable="true">Toggle Opacity</span><br>
+			<span id="binding_toggleOpacity_Desc" contenteditable="true">Change the opacity of a texture.</span><br>
+			<span id="binding_toggleWireframe" contenteditable="true">Toggle Wireframe</span><br>
+			<span id="binding_toggleWireframe_Desc" contenteditable="true">Show or hide the wireframe on the tiles.</span><br>
+			<span id="binding_toggleCameraStyle" contenteditable="true">Toggle Camera Style</span><br>
+			<span id="binding_toggleCameraStyle_Desc" contenteditable="true">Switch between Perspective and Orthographic views.</span><br>
+			<span id="binding_showHelper" contenteditable="true">Show Helper</span><br>
+			<span id="binding_showHelper_Desc" contenteditable="true">Show or hide the axis and crosshair.</span><br>
+			<span id="binding_doubleSided" contenteditable="true">Double Sided</span><br>
+			<span id="binding_doubleSided_Desc" contenteditable="true">Toggle double-sided mode for the currently selected tileset (the active tileset in the tileset window).</span><br>
+			<span id="binding_removePart" contenteditable="true">Remove/Delete</span><br>
+			<span id="binding_removePart_Desc" contenteditable="true">Remove any highlighted tiles or objects.</span><br>
+			<span id="binding_deselectAll" contenteditable="true">Deselect All</span><br>
+			<span id="binding_deselectAll_Desc" contenteditable="true">Deselect all vertices. Press again to deselect all faces.</span><br>
+			<span id="binding_selectAll" contenteditable="true">Select All</span><br>
+			<span id="binding_selectAll_Desc" contenteditable="true">Select vertices of any highlighted tiles. Press again to select overlapping vertices of neighboring tiles.</span><br>
+			<span id="binding_deselectAllObjects" contenteditable="true">Deselect All Objects</span><br>
+			<span id="binding_deselectAllObjects_Desc" contenteditable="true">Deselect all object instances.</span><br>
+			<span id="binding_selectAllObjects" contenteditable="true">Select All Objects</span><br>
+			<span id="binding_selectAllObjects_Desc" contenteditable="true">Select all object instances.</span><br>
+			<span id="binding_toggleMode" contenteditable="true">Toggle Mode</span><br>
+			<span id="binding_toggleMode_Desc" contenteditable="true">Toggle between edit and draw modes.</span><br>
+			<span id="binding_snapCrosshair" contenteditable="true">Snap Crosshair</span><br>
+			<span id="binding_snapCrosshair_Desc" contenteditable="true">Snap the crosshair to the nearest vertex the mouse is hovering over.</span><br>
+			<span id="binding_moveSelectionUp" contenteditable="true">Move Selection Up</span><br>
+			<span id="binding_moveSelectionUp_Desc" contenteditable="true">Move the selection up.</span><br>
+			<span id="binding_moveSelectionDown" contenteditable="true">Move Selection Down</span><br>
+			<span id="binding_moveSelectionDown_Desc" contenteditable="true">Move the selection down.</span><br>
+			<span id="binding_moveSelectionLeft" contenteditable="true">Move Selection Left</span><br>
+			<span id="binding_moveSelectionLeft_Desc" contenteditable="true">Move the selection left.</span><br>
+			<span id="binding_moveSelectionRight" contenteditable="true">Move Selection Right</span><br>
+			<span id="binding_moveSelectionRight_Desc" contenteditable="true">Move the selection right.</span><br>
+			<span id="binding_moveSelectionForward" contenteditable="true">Move Selection Forward</span><br>
+			<span id="binding_moveSelectionForward_Desc" contenteditable="true">Move the selection forward.</span><br>
+			<span id="binding_moveSelectionBackward" contenteditable="true">Move Selection Backward</span><br>
+			<span id="binding_moveSelectionBackward_Desc" contenteditable="true">Move the selection backward.</span><br>
+			<span id="binding_moveCrosshairUp" contenteditable="true">Move Crosshair Up</span><br>
+			<span id="binding_moveCrosshairUp_Desc" contenteditable="true">Move crosshair up without moving selection.</span><br>
+			<span id="binding_moveCrosshairDown" contenteditable="true">Move Crosshair Down</span><br>
+			<span id="binding_moveCrosshairDown_Desc" contenteditable="true">Move crosshair down without moving selection.</span><br>
+			<span id="binding_moveCrosshairLeft" contenteditable="true">Move Crosshair Left</span><br>
+			<span id="binding_moveCrosshairLeft_Desc" contenteditable="true">Move crosshair left without moving selection.</span><br>
+			<span id="binding_moveCrosshairRight" contenteditable="true">Move Crosshair Right</span><br>
+			<span id="binding_moveCrosshairRight_Desc" contenteditable="true">Move crosshair right without moving selection.</span><br>
+			<span id="binding_moveCrosshairForward" contenteditable="true">Move Crosshair Forward</span><br>
+			<span id="binding_moveCrosshairForward_Desc" contenteditable="true">Move crosshair forward without moving selection.</span><br>
+			<span id="binding_moveCrosshairBackward" contenteditable="true">Move Crosshair Backward</span><br>
+			<span id="binding_moveCrosshairBackward_Desc" contenteditable="true">Move crosshair backward without moving selection.</span><br>
+			<span id="binding_roundCrosshair" contenteditable="true">Snap Crosshair to Grid</span><br>
+			<span id="binding_roundCrosshair_Desc" contenteditable="true">Snap the crosshair to the grid, based on the current grid-rounding value.</span><br>
+			<span id="binding_moveArrow" contenteditable="true">Crosshair Arrow Modifier</span><br>
+			<span id="binding_moveArrow_Desc" contenteditable="true">If crosshair arrows are enabled in settings, holding this key will move crosshair arrow without moving selection.</span><br>
+			<span id="binding_toggleTilt" contenteditable="true">Toggle Tilt Mode</span><br>
+			<span id="binding_toggleTilt_Desc" contenteditable="true">This mode enables the ability to tilt the grid space that is used when drawing tiles to the scene and moving vertices and faces.</span><br>
+			<span id="binding_setTiltAnchor" contenteditable="true">Set Tilt Anchor</span><br>
+			<span id="binding_setTiltAnchor_Desc" contenteditable="true">Hover the mouse over a tile and press this key. The Tilt Anchor will be positioned relative to the tile's nearest vertices.</span><br>
+			<span id="binding_zoomIn" contenteditable="true">Zoom In Tileset</span><br>
+			<span id="binding_zoomIn_Desc" contenteditable="true">Zoom in the tileset.</span><br>
+			<span id="binding_zoomOut" contenteditable="true">Zoom Out Tileset</span><br>
+			<span id="binding_zoomOut_Desc" contenteditable="true">Zoom out the tileset.</span><br>
+			<span id="binding_brushSizeUp" contenteditable="true">Brush Size Up</span><br>
+			<span id="binding_brushSizeUp_Desc" contenteditable="true">Increase paint brush size.</span><br>
+			<span id="binding_brushSizeDown" contenteditable="true">Brush Size Down</span><br>
+			<span id="binding_brushSizeDown_Desc" contenteditable="true">Decrease paint brush size.</span><br>
+			<span id="binding_roundingUp" contenteditable="true">Rounding Up</span><br>
+			<span id="binding_roundingUp_Desc" contenteditable="true">Adjust the grid rounding value.</span><br>
+			<span id="binding_roundingDown" contenteditable="true">Rounding Down</span><br>
+			<span id="binding_roundingDown_Desc" contenteditable="true">Adjust the grid rounding value.</span><br>
+			<span id="binding_tilesetUp" contenteditable="true">Next Tileset</span><br>
+			<span id="binding_tilesetUp_Desc" contenteditable="true">Select next Tileset.</span><br>
+			<span id="binding_tilesetDown" contenteditable="true">Previous Tileset</span><br>
+			<span id="binding_tilesetDown_Desc" contenteditable="true">Select previous Tileset.</span><br>
+			
+			<hr>
+
+			<span id="binding_cardinalButtons" contenteditable="true">Cardinal Buttons</span><br>
+			<span id="binding_cardinalButtons_Desc" contenteditable="true">Display buttons that can be used to rotate the camera towards one of the cardinal directions.</span><br>
+			<span id="binding_rotateScene" contenteditable="true">Rotate Scene</span><br>
+			<span id="binding_rotateScene_Desc" contenteditable="true">Rotate the camera.</span><br>
+			<span id="binding_zoomScene" contenteditable="true">Zoom Scene</span><br>
+			<span id="binding_zoomScene_Desc" contenteditable="true">Zoom the camera.</span><br>
+			<span id="binding_panScene" contenteditable="true">Pan Scene</span><br>
+			<span id="binding_panScene_Desc" contenteditable="true">Pan the camera.</span><br>
+			<span id="binding_dollyIn" contenteditable="true">Zoom In</span><br>
+			<span id="binding_dollyIn_Desc" contenteditable="true">Zoom in the camera.</span><br>
+			<span id="binding_dollyOut" contenteditable="true">Zoom Out</span><br>
+			<span id="binding_dollyOut_Desc" contenteditable="true">Zoom Out camera.</span><br>
+			<span id="binding_centerCamera" contenteditable="true">Center Camera</span><br>
+			<span id="binding_centerCamera_Desc" contenteditable="true">Center the camera on the selection.</span><br>
+			<span id="binding_moveCameraForward" contenteditable="true">Move Camera Forward</span><br>
+			<span id="binding_moveCameraForward_Desc" contenteditable="true">Move the camera forward.</span><br>
+			<span id="binding_moveCameraBackward" contenteditable="true">Move Camera Backward</span><br>
+			<span id="binding_moveCameraBackward_Desc" contenteditable="true">Move the camera backward.</span><br>
+			<span id="binding_moveCameraLeft" contenteditable="true">Move Camera Left</span><br>
+			<span id="binding_moveCameraLeft_Desc" contenteditable="true">Move/strafe the camera left.</span><br>
+			<span id="binding_moveCameraRight" contenteditable="true">Move Camera Right</span><br>
+			<span id="binding_moveCameraRight_Desc" contenteditable="true">Move/strafe the camera right.</span><br>
+
+			<hr>
+
+			<span id="binding_toggleCameraMode" contenteditable="true">Toggle Camera</span><br>
+			<span id="binding_toggleCameraMode_Desc" contenteditable="true">If camera toggle is enabled in settings, this will toggle camera mode.</span><br>
+			<span id="binding_toggleRotateScene" contenteditable="true">Toggle Rotate Scene</span><br>
+			<span id="binding_toggleRotateScene_Desc" contenteditable="true">Rotate the camera.</span><br>
+			<span id="binding_toggleZoomScene" contenteditable="true">Toggle Zoom Scene</span><br>
+			<span id="binding_toggleZoomScene_Desc" contenteditable="true">Zoom the camera.</span><br>
+			<span id="binding_togglePanScene" contenteditable="true">Toggle Pan Scene</span><br>
+			<span id="binding_togglePanScene_Desc" contenteditable="true">Pan the camera.</span><br>
+			
+			<hr>
+			
+			<span id="binding_eraseTile" contenteditable="true">Erase Tiles</span><br>
+			<span id="binding_eraseTile_Desc" contenteditable="true">Erase the tiles that the mouse is hovering over when you click.</span><br>
+			<span id="binding_erasePrefab" contenteditable="true">Erase Prefabs</span><br>
+			<span id="binding_erasePrefab_Desc" contenteditable="true">Erase the prefab objects that the mouse is hovering over when you click.</span><br>
+			<span id="binding_rotateUVRight" contenteditable="true">Rotate UVs Clockwise</span><br>
+			<span id="binding_rotateUVRight_Desc" contenteditable="true">Rotate the tile brush UVs clockwise.</span><br>
+			<span id="binding_rotateUVLeft" contenteditable="true">Rotate UVs Counter-Clockwise</span><br>
+			<span id="binding_rotateUVLeft_Desc" contenteditable="true">Rotate the tile brush UVs counter-clockwise.</span><br>
+			<span id="binding_rotatePrefabCWise" contenteditable="true">Rotate Prefab Clockwise</span><br>
+			<span id="binding_rotatePrefabCWise_Desc" contenteditable="true">Rotate the prefab brush clockwise.</span><br>
+			<span id="binding_rotatePrefabCCWise" contenteditable="true">Rotate Prefab Counter-Clockwise</span><br>
+			<span id="binding_rotatePrefabCCWise_Desc" contenteditable="true">Rotate the prefab brush counter-clockwise.</span><br>
+			<span id="binding_copyUV" contenteditable="true">Copy UV</span><br>
+			<span id="binding_copyUV_Desc" contenteditable="true">Eyedrop a tile in the scene, and apply the UVs to the brush.</span><br>
+			<span id="binding_applyUV" contenteditable="true">Apply UV</span><br>
+			<span id="binding_applyUV_Desc" contenteditable="true">Apply the current UVs of the brush to a tile in the scene without modifying the mesh.</span><br>
+			<span id="binding_flipUV" contenteditable="true">Flip UV</span><br>
+			<span id="binding_flipUV_Desc" contenteditable="true">Flip the tile brush UVs.</span><br>
+			<span id="binding_mirrorUV" contenteditable="true">Mirror UV</span><br>
+			<span id="binding_mirrorUV_Desc" contenteditable="true">Mirror the tile brush UVs.</span><br>
+			<span id="binding_drawToolTile" contenteditable="true">Select Tile Tool</span><br>
+			<span id="binding_drawToolTile_Desc" contenteditable="true">Select the Tile tool.</span><br>
+			<span id="binding_drawToolSticky" contenteditable="true">Select Sticky Tool</span><br>
+			<span id="binding_drawToolSticky_Desc" contenteditable="true">Select the Sticky tool.</span><br>
+			<span id="binding_drawToolBlock" contenteditable="true">Select Block Tool</span><br>
+			<span id="binding_drawToolBlock_Desc" contenteditable="true">Select the Block tool.</span><br>
+			<span id="binding_stickyScale" contenteditable="true">Scale to Fit Sticky</span><br>
+			<span id="binding_stickyScale_Desc" contenteditable="true">Scales the tile to the edge of existing tiles while using the Sticky tool.</span><br>
+			
+			<hr>
+			
+			<span id="binding_cameraBasedSelection" contenteditable="true">Camera-based Selection</span><br>
+			<span id="binding_cameraBasedSelection_Desc" contenteditable="true">Allow or disallow the selection of verts/faces behind other tiles.</span><br>
+			<span id="binding_toggleCrosshairArrows" contenteditable="true">Toggle Crosshair Arrows</span><br>
+			<span id="binding_toggleCrosshairArrows_Desc" contenteditable="true">Toggle the crosshair arrow helpers on and off.</span><br>
+			<span id="binding_toggleCrosshairMode" contenteditable="true">Toggle Crosshair Arrow Mode</span><br>
+			<span id="binding_toggleCrosshairMode_Desc" contenteditable="true">Toggle the crosshair arrow mode between Move, Rotate, and Resize.</span><br>
+			<span id="binding_centerCrosshair" contenteditable="true">Center Crosshair</span><br>
+			<span id="binding_centerCrosshair_Desc" contenteditable="true">Center the crosshair to the currently selected vertices, faces, and objects.</span><br>
+			<span id="binding_nearestVert" contenteditable="true">Select Nearest Vertex</span><br>
+			<span id="binding_nearestVert_Desc" contenteditable="true">Hold this key down and click on a tile. It will select the nearest vertex belonging to that tile.</span><br>
+			<span id="binding_vertSnap" contenteditable="true">Vertex Snapping</span><br>
+			<span id="binding_vertSnap_Desc" contenteditable="true">Hold this key when dragging a single vertex to snap it to nearby vertices.</span><br>
+			<span id="binding_hollowVert" contenteditable="true">Hollow Vertex</span><br>
+			<span id="binding_hollowVert_Desc" contenteditable="true">Hold this key and click a vertex to reposition the crosshair without the vertex being selected.</span><br>
+			<span id="binding_lassoFace" contenteditable="true">Select Marquee Quads</span><br>
+			<span id="binding_lassoFace_Desc" contenteditable="true">Selection marquee for tiles. Hold then click+drag to select.</span><br>
+			<span id="binding_lassoDeselectFace" contenteditable="true">Deselect Marquee Quads</span><br>
+			<span id="binding_lassoDeselectFace_Desc" contenteditable="true">Deselection marquee for tiles. Hold then click+drag to deselect faces.</span><br>
+			<span id="binding_lassoDeselect" contenteditable="true">Deselect Marquee Verts</span><br>
+			<span id="binding_lassoDeselect_Desc" contenteditable="true">Deselection marquee for vertices. Hold then click+drag to deselect vertices.</span><br>
+			<span id="binding_lassoObject" contenteditable="true">Select Marquee Objects</span><br>
+			<span id="binding_lassoObject_Desc" contenteditable="true">Selection marquee for object instances. Hold then click+drag to select.</span><br>
+			<span id="binding_lassoDeselectObject" contenteditable="true">Deselect Marquee Objects</span><br>
+			<span id="binding_lassoDeselectObject_Desc" contenteditable="true">Deselection marquee for object instances. Hold then click+drag to deselect faces.</span><br>
+			<span id="binding_rotatePartRight" contenteditable="true">Rotate Selection Right</span><br>
+			<span id="binding_rotatePartRight_Desc" contenteditable="true">Rotate the selection rightwards based on camera angle.</span><br>
+			<span id="binding_rotatePartLeft" contenteditable="true">Rotate Selection Left</span><br>
+			<span id="binding_rotatePartLeft_Desc" contenteditable="true">Rotate the selection leftwards based on camera angle.</span><br>
+			<span id="binding_rotatePartCWise" contenteditable="true">Rotate Selection Clockwise</span><br>
+			<span id="binding_rotatePartCWise_Desc" contenteditable="true">Rotate the selection clockwise based on camera angle.</span><br>
+			<span id="binding_rotatePartCCWise" contenteditable="true">Rotate Selection C-Clockwise</span><br>
+			<span id="binding_rotatePartCCWise_Desc" contenteditable="true">Rotate the selection counter-clockwise based on camera angle.</span><br>
+			<span id="binding_flipPart" contenteditable="true">Flip Selection</span><br>
+			<span id="binding_flipPart_Desc" contenteditable="true">Flip selection based on camera angle.</span><br>
+			<span id="binding_mirrorPart" contenteditable="true">Mirror Selection</span><br>
+			<span id="binding_mirrorPart_Desc" contenteditable="true">Mirror selection based on camera angle.</span><br>
+			<span id="binding_flipEdge" contenteditable="true">Flip Edge</span><br>
+			<span id="binding_flipEdge_Desc" contenteditable="true">Flip the edge of the tile(s).</span><br>
+			<span id="binding_reverseFace" contenteditable="true">Reverse Face</span><br>
+			<span id="binding_reverseFace_Desc" contenteditable="true">Reverse the faces of the tile(s).</span><br>
+			<span id="binding_splitFace" contenteditable="true">Split Face</span><br>
+			<span id="binding_splitFace_Desc" contenteditable="true">Split the face of the active tile where the yellow line is placed.</span><br>
+			<span id="binding_combineVerts" contenteditable="true">Combine Vertices</span><br>
+			<span id="binding_combineVerts_Desc" contenteditable="true">Moves all selected vertices to the crosshair position.</span><br>
+			<span id="binding_pushSelection" contenteditable="true">Push Selection</span><br>
+			<span id="binding_pushSelection_Desc" contenteditable="true">Push the selection towards the 3d crosshair plane so that it touches and aligns with it.</span><br>
+			<span id="binding_centerSelection" contenteditable="true">Center Selection</span><br>
+			<span id="binding_centerSelection_Desc" contenteditable="true">Center the selection on the 3d crosshair plane so that it aligns with it.</span><br>
+			<span id="binding_pullSelection" contenteditable="true">Pull Selection</span><br>
+			<span id="binding_pullSelection_Desc" contenteditable="true">Pull the selection towards the 3d crosshair plane so that it touches and aligns with it.</span><br>
+			<span id="binding_roundVertices" contenteditable="true">Align Vertices To Grid</span><br>
+			<span id="binding_roundVertices_Desc" contenteditable="true">Align the selected vertices to the grid based on the current grid-rounding value.</span><br>
+			<span id="binding_selectX" contenteditable="true">Select X Axis</span><br>
+			<span id="binding_selectX_Desc" contenteditable="true">Select vertices along the X axis of the 3d crosshair.</span><br>
+			<span id="binding_selectY" contenteditable="true">Select Y Axis</span><br>
+			<span id="binding_selectY_Desc" contenteditable="true">Select vertices along the Y axis of the 3d crosshair.</span><br>
+			<span id="binding_selectZ" contenteditable="true">Select Z Axis</span><br>
+			<span id="binding_selectZ_Desc" contenteditable="true">Select vertices along the Z axis of the 3d crosshair.</span><br>
+			<span id="binding_toggleObjectMode" contenteditable="true">Toggle Object Mode</span><br>
+			<span id="binding_toggleObjectMode_Desc" contenteditable="true">Toggle on/off Object mode.</span><br>
+			<span id="binding_toggleActiveMode" contenteditable="true">Toggle Active Mode</span><br>
+			<span id="binding_toggleActiveMode_Desc" contenteditable="true">Toggle on/off Active mode.</span><br>
+			<span id="binding_contextEditMenu" contenteditable="true">Context Edit Menu</span><br>
+			<span id="binding_contextEditMenu_Desc" contenteditable="true">Open a menu with a list of actions you can do while in Edit mode.</span><br>
+			<span id="binding_adjustVertexUVUp" contenteditable="true">Move Vertex UVs Up</span><br>
+			<span id="binding_adjustVertexUVUp_Desc" contenteditable="true">Shift UVs of selected vertices up.</span><br>
+			<span id="binding_adjustVertexUVDown" contenteditable="true">Move Vertex UVs Down</span><br>
+			<span id="binding_adjustVertexUVDown_Desc" contenteditable="true">Shift UVs of selected vertices down.</span><br>
+			<span id="binding_adjustVertexUVLeft" contenteditable="true">Move Vertex UVs Left</span><br>
+			<span id="binding_adjustVertexUVLeft_Desc" contenteditable="true">Shift UVs of selected vertices left.</span><br>
+			<span id="binding_adjustVertexUVRight" contenteditable="true">Move Vertex UVs Right</span><br>
+			<span id="binding_adjustVertexUVRight_Desc" contenteditable="true">Shift UVs of selected vertices right.</span><br>
+
+		</div>
+		
+	</div>
+	<br>
+	<div id="navigate" style="width:100%; text-align:center;"></div>
+	<br>
+	<div id="imageDiv" style="font-size: 0;">
+		<!--<div class="spotlight image" data-src="Whoacoder_dungeonGIF.gif" data-description="By Whoacoder"><img src="Whoacoder_dungeonGIF.gif"></div>-->
+	</div>
+	<br>
+</body>
+<script>
+
+
+
+var language = new languageData();
+function languageData(){
+	this.selectElem;
+	this.textElem;
+	this.currentIndex = 0;
+	this.data = [
+		{
+			'id':'English',
+			'value':null
+		},
+		{
+			'id':'Spanish',
+			'value':"[{\"id\":\"languageName\",\"value\":\"Spanish\"},{\"id\":\"translationNote\",\"value\":\"¿Te gustaría traducir este documento a otro idioma? ¡Tu ayuda es más que bienvenida!\"},{\"id\":\"translationNote2\",\"value\":\"Para traducir este documento, simplemente haz click sobre el texto y simplemente edítalo. Luego, presiona<u>Save</u> en el margen superior izquierdo para guardar la información. Puedes importar cualquier modificación previa que hayas hecho mediante el botón&nbsp;<u>Load</u>.\"},{\"id\":\"translationNote3\",\"value\":\"Coloca el archivo de idioma dentro de la carpeta \\\"Localization\\\" y luego ejecuta Crocotile. Abre el panel de \\\"Acerca de...\\\" en Ayuda&gt; Acerca de..., o presiona F2. Elige la traducción desde el menu de Idioma.\"},{\"id\":\"menubarFile\",\"value\":\"Archivo\"},{\"id\":\"menubarNewScene\",\"value\":\"Nueva Escena\"},{\"id\":\"menubarLoadScene\",\"value\":\"Abrir Escena\"},{\"id\":\"menubarLoadRecentScene\",\"value\":\"Abrir Escenas recientes\"},{\"id\":\"menubarClearRecent\",\"value\":\"Limpiar historial de Escenas\"},{\"id\":\"menubarSaveScene\",\"value\":\"Guardar Escena\"},{\"id\":\"menubarSaveSceneAs\",\"value\":\"Guardar Escena como...\"},{\"id\":\"menubarExportScene\",\"value\":\"Exportar Escena\"},{\"id\":\"menubarExportObjects\",\"value\":\"Exportar Objetos\"},{\"id\":\"menubarExit\",\"value\":\"Salir\"},{\"id\":\"menubarEdit\",\"value\":\"Editar\"},{\"id\":\"menubarUndo\",\"value\":\"Deshacer\"},{\"id\":\"menubarRedo\",\"value\":\"Rehacer\"},{\"id\":\"menubarSettings\",\"value\":\"Configuración\"},{\"id\":\"menubarButtons\",\"value\":\"Teclas asignadas\"},{\"id\":\"menubarCamera\",\"value\":\"Cámara\"},{\"id\":\"menubarPerspective\",\"value\":\"Perspectiva\"},{\"id\":\"menubarOrthographic\",\"value\":\"Ortográfica\"},{\"id\":\"menubarSkybox\",\"value\":\"Skybox\"},{\"id\":\"menubarSelectImage\",\"value\":\"Elegir Imagen\"},{\"id\":\"menubarShowHide\",\"value\":\"Mostrar/Ocultar\"},{\"id\":\"menubarRender\",\"value\":\"Render\"},{\"id\":\"menubarSpinGif\",\"value\":\"GIF Giratorio\"},{\"id\":\"menubarHelp\",\"value\":\"Ayuda\"},{\"id\":\"menubarHowTo\",\"value\":\"Tutorial\"},{\"id\":\"menubarAbout\",\"value\":\"Acerca de...\"},{\"id\":\"unsavedNewScene\",\"value\":\"¡Algunos cambios no se han guardado! Crear una nueva escena ocasionará la pérdida de las modificaciones.\"},{\"id\":\"unsavedLoadScene\",\"value\":\"¡Algunos cambios no se han guardado!&nbsp;Cargar una escena ocasionará la pérdida de las modificaciones.\"},{\"id\":\"unsavedExit\",\"value\":\"¡Algunos cambios no se han guardado!&nbsp;¿Estás seguro de que deseas salir?\"},{\"id\":\"recentWrongPath\",\"value\":\"El directorio de este archivo es incorrecto. ¿Ha sido movido a otra ubicación?\"},{\"id\":\"exportNoTiles\",\"value\":\"¡No existen tiles que utilicen el tileset actual! Elije un tileset que haya sido utilizado en esta escena para exportar los tiles.\"},{\"id\":\"exportNoObjects\",\"value\":\"¡No se encuentran objetos que exportar!\"},{\"id\":\"selectLanguage\",\"value\":\"Idioma\"},{\"id\":\"activationDetails\",\"value\":\"Guardar o exportar escenas con más de 100 tiles requiere una clave de licencia. Por favor, ingresa tu clave de licencia para activar&nbsp;esta característica, o continúa sin ella.\"},{\"id\":\"activationEmail\",\"value\":\"Email\"},{\"id\":\"activationKey\",\"value\":\"Clave\"},{\"id\":\"registerButton\",\"value\":\"Registrar\"},{\"id\":\"continueButton\",\"value\":\"Continuar\"},{\"id\":\"invalidKey\",\"value\":\"La clave de licencia es inválida.\"},{\"id\":\"activationSuccess\",\"value\":\"¡El software ha sido registrado!\"},{\"id\":\"exportOptions\",\"value\":\"Opciones de Exportado\"},{\"id\":\"includeObjects\",\"value\":\"Incluir Objetos\"},{\"id\":\"exportFileFormat\",\"value\":\"Formato de archivo\"},{\"id\":\"exportMergeVertices\",\"value\":\"Unir vértices\"},{\"id\":\"exportVertexNormals\",\"value\":\"Mapa de vértices (Normals)\"},{\"id\":\"exportFlat\",\"value\":\"Plano (Flat)\"},{\"id\":\"exportSmooth\",\"value\":\"Suavizado (Smooth)\"},{\"id\":\"exportAngleThreshold\",\"value\":\"Límite de ángulos\"},{\"id\":\"exportEmbedTextures\",\"value\":\"Insertar texturas\"},{\"id\":\"exportAllTextures\",\"value\":\"Exportar todas las texturas/.mtl\"},{\"id\":\"exportTexturePrefix\",\"value\":\"Prefijo de texturas\"},{\"id\":\"exportTileSpacing\",\"value\":\"Espaciado de tiles\"},{\"id\":\"exportPowerOfTwo\",\"value\":\"Utilizar \\\"Power of Two\\\" para las texturas\"},{\"id\":\"exportScale\",\"value\":\"Escalar\"},{\"id\":\"exportButton\",\"value\":\"Exportar\"},{\"id\":\"closeButton\",\"value\":\"Cerrar\"},{\"id\":\"cameraSpin\",\"value\":\"GIF Giratorio - Opciones de Cámara\"},{\"id\":\"cameraSpinFrames\",\"value\":\"Frames\"},{\"id\":\"cameraSpinInvalidFrames\",\"value\":\"¡La cantidad de Frames especificada es un número inválido!\"},{\"id\":\"cameraSpinFrameInterval\",\"value\":\"Intervalo de Frames (milisegundos)\"},{\"id\":\"cameraSpinInvalidInterval\",\"value\":\"¡El intervalo de Frames especificado es un número inválido!\"},{\"id\":\"cameraSpinRotate\",\"value\":\"Rotación\"},{\"id\":\"cameraSpinInvalidNumber\",\"value\":\"¡La Rotación especificada es un número inválido!\"},{\"id\":\"cameraSpinRecording\",\"value\":\"Grabando\"},{\"id\":\"cameraSpinProcessing\",\"value\":\"Procesando\"},{\"id\":\"cameraSpinFinishedSaving\",\"value\":\"¡El archivo ha sido guardado!\"},{\"id\":\"settings\",\"value\":\"Configuración\"},{\"id\":\"resetSettings\",\"value\":\"Restaurar valores\"},{\"id\":\"resetSettingsAlert\",\"value\":\"¿Estás seguro de esta acción? Esto devolverá el programa a su configuración por defecto.\"},{\"id\":\"settingsGeneral\",\"value\":\"General\"},{\"id\":\"settingsResolution\",\"value\":\"Resolución\"},{\"id\":\"settingsWindow\",\"value\":\"Ventana\"},{\"id\":\"settingsFPS\",\"value\":\"FPS\"},{\"id\":\"settingsShowRuler\",\"value\":\"Mostrar guía\"},{\"id\":\"settingsLockCrosshair\",\"value\":\"Bloquear cursor a la cuadrícula\"},{\"id\":\"settingsWireframe\",\"value\":\"Wireframe\"},{\"id\":\"settingsBackgroundColor\",\"value\":\"Color del fondo\"},{\"id\":\"settingsBackgroundAlpha\",\"value\":\"Transparencia del fondo\"},{\"id\":\"settingsScreenshotFolder\",\"value\":\"Carpeta de capturas\"},{\"id\":\"settingsChoose\",\"value\":\"Elegir\"},{\"id\":\"settingsUndoLimit\",\"value\":\"Límite de Deshacer\"},{\"id\":\"settingsProject\",\"value\":\"Proyecto\"},{\"id\":\"settingsBasePixelUnit\",\"value\":\"Cantidad de píxeles por unidad\"},{\"id\":\"editButton\",\"value\":\"Editar\"},{\"id\":\"settingsCurrentUnitScale\",\"value\":\"Escala de unidades actual\"},{\"id\":\"settingsNewUnitScale\",\"value\":\"Nueva escala de unidades\"},{\"id\":\"settingsPixelPerMeter\",\"value\":\"Píxeles por metro\"},{\"id\":\"settingsResizeTheScene\",\"value\":\"Redimensionar la escena\"},{\"id\":\"settingsNotAValidNumber\",\"value\":\"¡Los valores provistos no son un número valido!\"},{\"id\":\"applyButton\",\"value\":\"Aplicar\"},{\"id\":\"settingsCamera\",\"value\":\"Cámara\"},{\"id\":\"settingsFrustumPlane\",\"value\":\"Límite de representación\"},{\"id\":\"settingsFOV\",\"value\":\"Campo de visión (FOV)\"},{\"id\":\"settingsDrawMode\",\"value\":\"Modo Dibujo\"},{\"id\":\"settingsOverlapTilebrush\",\"value\":\"Superponer pincel de tiles\"},{\"id\":\"settingsAlignBrushToCrosshair\",\"value\":\"Alinear pincel al cursor\"},{\"id\":\"settingsEditMode\",\"value\":\"Modo Edición\"},{\"id\":\"settingsCameraBasedSelection\",\"value\":\"Selección basada en cámara\"},{\"id\":\"settingsCrosshairArrows\",\"value\":\"Flechas de cursor\"},{\"id\":\"settingsObjectModeConstraint\",\"value\":\"Restricción del modo Objeto\"},{\"id\":\"settingsVertexSize\",\"value\":\"Tamaño de los Vértices\"},{\"id\":\"settingsTilesets\",\"value\":\"Tilesets\"},{\"id\":\"settingsAutoRefreshTilesets\",\"value\":\"Auto refrescar Tilesets\"},{\"id\":\"settingsDragMultipleUVs\",\"value\":\"Arrastrar múltiples UVs\"},{\"id\":\"settingsCheckeredSize\",\"value\":\"Tamaño a cuadros\"},{\"id\":\"statsIn\",\"value\":\"en\"},{\"id\":\"statsScene\",\"value\":\"escena\"},{\"id\":\"statsObjects\",\"value\":\"objetos\"},{\"id\":\"statsInstances\",\"value\":\"instancias\"},{\"id\":\"modeButton\",\"value\":\"Modo Dibujo/Edición\"},{\"id\":\"cameraBasedSelectionButton\",\"value\":\"Selección basada en cámara (on/off)\"},{\"id\":\"arrowModeButton\",\"value\":\"Modo flechas de cursor&nbsp;(mover/rotar/escalar)\"},{\"id\":\"arrowToggleButton\",\"value\":\"Modo flechas de cursor&nbsp;(on/off)\"},{\"id\":\"undoButton\",\"value\":\"Deshacer\"},{\"id\":\"redoButton\",\"value\":\"Rehacer\"},{\"id\":\"centerToSelection\",\"value\":\"Centrar en selección\"},{\"id\":\"cameraRotateRight\",\"value\":\"Rotar a la derecha\"},{\"id\":\"cameraRotateLeft\",\"value\":\"Rotar a la izquierda\"},{\"id\":\"cameraRotateUp\",\"value\":\"Rotar hacia arriba\"},{\"id\":\"cameraRotateDown\",\"value\":\"Rotar hacia abajo\"},{\"id\":\"vertices\",\"value\":\"Vértices\"},{\"id\":\"alignVerticesToTheGrid\",\"value\":\"Alinear vértices a la cuadrícula\"},{\"id\":\"selectVerticesXAxis\",\"value\":\"Seleccionar vértices a lo largo del eje X del cursor\"},{\"id\":\"selectVerticesYAxis\",\"value\":\"Seleccionar vértices a lo largo del eje Y del cursor\"},{\"id\":\"selectVerticesZAxis\",\"value\":\"Seleccionar vértices a lo largo del eje z del cursor\"},{\"id\":\"faces\",\"value\":\"Caras\"},{\"id\":\"flipEdge\",\"value\":\"Voltear borde\"},{\"id\":\"reverseFace\",\"value\":\"Revertir cara\"},{\"id\":\"copy\",\"value\":\"Copiar\"},{\"id\":\"paste\",\"value\":\"Pegar\"},{\"id\":\"split\",\"value\":\"Separar\"},{\"id\":\"subdivide\",\"value\":\"Subdividir\"},{\"id\":\"columns\",\"value\":\"Columnas\"},{\"id\":\"rows\",\"value\":\"Hileras\"},{\"id\":\"createObject\",\"value\":\"Crear Objeto\"},{\"id\":\"selectAllObjects\",\"value\":\"Seleccionar todos los objetos\"},{\"id\":\"deselectAllObjects\",\"value\":\"Deseleccionar todos los objetos\"},{\"id\":\"rotateClockwise\",\"value\":\"Rotar en el sentido de las agujas del reloj\"},{\"id\":\"rotateCounterClockwise\",\"value\":\"Rotar en el sentido contrario a las agujas del reloj\"},{\"id\":\"tileset\",\"value\":\"Tileset\"},{\"id\":\"addTileset\",\"value\":\"Agregar Tileset\"},{\"id\":\"addBlankTileset\",\"value\":\"Agregar Tileset en blanco\"},{\"id\":\"blankTileset\",\"value\":\"Tileset en blanco\"},{\"id\":\"tilesUppercase\",\"value\":\"Tiles\"},{\"id\":\"tiles\",\"value\":\"tiles\"},{\"id\":\"pixelsUppercase\",\"value\":\"Píxeles\"},{\"id\":\"pixels\",\"value\":\"píxeles\"},{\"id\":\"width\",\"value\":\"Anchura\"},{\"id\":\"height\",\"value\":\"Altura\"},{\"id\":\"opaque\",\"value\":\"Opaco\"},{\"id\":\"transparent\",\"value\":\"Translúcido\"},{\"id\":\"checkered\",\"value\":\"A cuadros\"},{\"id\":\"color\",\"value\":\"Color\"},{\"id\":\"createButton\",\"value\":\"Crear\"},{\"id\":\"addSelectedTilesToNewTileset\",\"value\":\"Agregar tiles seleccionados a un nuevo Tileset\"},{\"id\":\"replaceTileset\",\"value\":\"Reemplazar Tileset\"},{\"id\":\"removeTileset\",\"value\":\"Eliminar Tileset\"},{\"id\":\"combineTileset\",\"value\":\"Combinar Tileset\"},{\"id\":\"combineTilesets\",\"value\":\"Combinar Tilesets\"},{\"id\":\"previousImage\",\"value\":\"Imagen anterior\"},{\"id\":\"nextImage\",\"value\":\"Siguiente imagen\"},{\"id\":\"mergeDown\",\"value\":\"Fusionar hacia abajo\"},{\"id\":\"discardBottom\",\"value\":\"Descartar el de abajo\"},{\"id\":\"discardTop\",\"value\":\"Descartar el de arriba\"},{\"id\":\"combineTilesetAlert\",\"value\":\"Debe haber más de un tileset disponible para poder combinarse.\"},{\"id\":\"applyTilesetToTheSelectedFaces\",\"value\":\"Aplicar Tileset a las Caras seleccionadas\"},{\"id\":\"resizeTileset\",\"value\":\"Redimensionar Tileset\"},{\"id\":\"canvas\",\"value\":\"Lienzo\"},{\"id\":\"image\",\"value\":\"Imagen\"},{\"id\":\"percent\",\"value\":\"Porcentaje\"},{\"id\":\"proportionate\",\"value\":\"Proporción\"},{\"id\":\"exportTileset\",\"value\":\"Exportar Tileset\"},{\"id\":\"previousTileset\",\"value\":\"Tileset previo\"},{\"id\":\"selectTileset\",\"value\":\"Seleccionar Tileset\"},{\"id\":\"nextTileset\",\"value\":\"Siguiente Tileset\"},{\"id\":\"wrappingClampToEdge\",\"value\":\"Wrapping: Fijar al borde\"},{\"id\":\"wrappingRepeat\",\"value\":\"Wrapping: Repetir\"},{\"id\":\"wrappingMirroredRepeat\",\"value\":\"Wrapping: Repetir en espejo\"},{\"id\":\"decalModeOff\",\"value\":\"Modo Decal: off\"},{\"id\":\"decalModeOn\",\"value\":\"Modo Decal: on\"},{\"id\":\"refreshTilesets\",\"value\":\"Actualizar Tilesets\"},{\"id\":\"magnification\",\"value\":\"Aumento\"},{\"id\":\"uvTilesize\",\"value\":\"Tamaño de UV de Tile\"},{\"id\":\"uvTileWidth\",\"value\":\"Ancho del Tile\"},{\"id\":\"uvTileHeight\",\"value\":\"Altura del Tile\"},{\"id\":\"uvPadding\",\"value\":\"Padding UV\"},{\"id\":\"leftPadding\",\"value\":\"Padding Izquierdo\"},{\"id\":\"rightPadding\",\"value\":\"Padding Derecho\"},{\"id\":\"topPadding\",\"value\":\"Padding Superior\"},{\"id\":\"bottomPadding\",\"value\":\"Padding Inferior\"},{\"id\":\"tilescale3d\",\"value\":\"Escala de Tile 3D\"},{\"id\":\"tilescaleX\",\"value\":\"Escala de Tile en X\"},{\"id\":\"tilescaleY\",\"value\":\"Escala de Tile en Y\"},{\"id\":\"gridRounding\",\"value\":\"Redondeo de cuadrícula\"},{\"id\":\"tileSplitting\",\"value\":\"Separación de Tile\"},{\"id\":\"uvs\",\"value\":\"UVs\"},{\"id\":\"mirror\",\"value\":\"Espejar\"},{\"id\":\"flip\",\"value\":\"Voltear\"},{\"id\":\"rotateLeft\",\"value\":\"Rotar hacia la izquierda\"},{\"id\":\"rotateRight\",\"value\":\"Rotar hacia la derecha\"},{\"id\":\"selectSingleMultiple\",\"value\":\"Selección simple/múltiple\"},{\"id\":\"uvPrecision\",\"value\":\"Precisión UV\"},{\"id\":\"scale\",\"value\":\"Escalar\"},{\"id\":\"scaleX\",\"value\":\"Escalar en X\"},{\"id\":\"scaleY\",\"value\":\"Escalar en Y\"},{\"id\":\"crosshair\",\"value\":\"Cursor\"},{\"id\":\"moveToMousePosition\",\"value\":\"Mover a la ubicación del Mouse\"},{\"id\":\"centerOfSelection\",\"value\":\"Centro de selección\"},{\"id\":\"topOfSelection\",\"value\":\"Parte superior de la selección\"},{\"id\":\"bottomOfSelection\",\"value\":\"Parte inferior de la selección\"},{\"id\":\"leftOfSelection\",\"value\":\"Lado izquierdo de la selección\"},{\"id\":\"rightOfSelection\",\"value\":\"Lado derecho de la selección\"},{\"id\":\"alignSelection\",\"value\":\"Alinear selección\"},{\"id\":\"centerOnCrosshair\",\"value\":\"Centrar en el cursor\"},{\"id\":\"alignTopToCrosshair\",\"value\":\"Alinear el tope al cursor\"},{\"id\":\"alignBottomToCrosshair\",\"value\":\"Alinear el fondo al cursor\"},{\"id\":\"alignLeftToCrosshair\",\"value\":\"Alinear la izquierda al cursor\"},{\"id\":\"alignRightToCrosshair\",\"value\":\"Alinear la derecha al cursor\"},{\"id\":\"roundToNearestPixel\",\"value\":\"Juntar con el píxel mas cercano\"},{\"id\":\"setToTile\",\"value\":\"Asignar a Tile\"},{\"id\":\"setToTileset\",\"value\":\"Asignar a Tileset\"},{\"id\":\"paint\",\"value\":\"Pintar\"},{\"id\":\"traceSelected\",\"value\":\"Marcar selección\"},{\"id\":\"fillSolid\",\"value\":\"Relleno sólido\"},{\"id\":\"fillCheckered\",\"value\":\"Relleno a cuadros\"},{\"id\":\"exportUVMapImage\",\"value\":\"Exportar mapa de imagen UV\"},{\"id\":\"selectAll\",\"value\":\"Seleccionar todo\"},{\"id\":\"deselectAll\",\"value\":\"Deseleccionar todo\"},{\"id\":\"exportUVMap\",\"value\":\"Exportar mapa UV\"},{\"id\":\"lineColor\",\"value\":\"Color de línea\"},{\"id\":\"canvasColor\",\"value\":\"Color del lienzo\"},{\"id\":\"scaleInvalid\",\"value\":\"¡La Escala introducida es un número o valor inválido!\"},{\"id\":\"painting\",\"value\":\"Pintar\"},{\"id\":\"verticalSymmetry\",\"value\":\"Simetría vertical\"},{\"id\":\"horizontalSymmetry\",\"value\":\"Simetría horizontal\"},{\"id\":\"brush\",\"value\":\"Pincel\"},{\"id\":\"dither\",\"value\":\"Dither\"},{\"id\":\"gridLines\",\"value\":\"Líneas de cuadrícula\"},{\"id\":\"pencil\",\"value\":\"Lápiz\"},{\"id\":\"eraser\",\"value\":\"Borrador\"},{\"id\":\"eyedropper\",\"value\":\"Cuentagotas\"},{\"id\":\"paintBucket\",\"value\":\"Bote de pintura\"},{\"id\":\"checkeredFill\",\"value\":\"Relleno a cuadros\"},{\"id\":\"contiguous\",\"value\":\"Contiguo\"},{\"id\":\"marquee\",\"value\":\"Marquesina\"},{\"id\":\"lasso\",\"value\":\"Lazo\"},{\"id\":\"magicwand\",\"value\":\"Varita mágica\"},{\"id\":\"hand\",\"value\":\"Mano\"},{\"id\":\"arrow\",\"value\":\"Flecha\"},{\"id\":\"palette\",\"value\":\"Paleta\"},{\"id\":\"savePalette\",\"value\":\"Guardar Paleta\"},{\"id\":\"loadPalette\",\"value\":\"Seleccionar Paleta\"},{\"id\":\"emptyPalette\",\"value\":\"Vaciar Paleta\"},{\"id\":\"emptyPaletteAlert\",\"value\":\"\\\"¿Está seguro de vaciar la paleta?\\\"\"},{\"id\":\"defaultPalette\",\"value\":\"Paleta por defecto\"},{\"id\":\"defaultPaletteAlert\",\"value\":\"¿Desea reemplazar la paleta actual con la paleta por defecto?\"},{\"id\":\"removeDuplicates\",\"value\":\"Remover colores duplicados\"},{\"id\":\"hideShowPalette\",\"value\":\"Mostrar/Ocultar Paleta\"},{\"id\":\"addColor\",\"value\":\"Agregar color\"},{\"id\":\"removeColor\",\"value\":\"Remover color\"},{\"id\":\"alphaApplication\",\"value\":\"Canal Alpha (único/mixto)\"},{\"id\":\"transform\",\"value\":\"Transformar\"},{\"id\":\"axisRelativeToCamera\",\"value\":\"Eje relativo a la orientación de Cámara (on/off)\"},{\"id\":\"rightUpBackward\",\"value\":\"(derecha,arriba,retroceso)\"},{\"id\":\"translate\",\"value\":\"Trasladar\"},{\"id\":\"resize\",\"value\":\"Redimensionar\"},{\"id\":\"rotate\",\"value\":\"Rotar\"},{\"id\":\"align\",\"value\":\"Alinear\"},{\"id\":\"push\",\"value\":\"Empujar\"},{\"id\":\"center\",\"value\":\"Centrar\"},{\"id\":\"pull\",\"value\":\"Jalar\"},{\"id\":\"moveSelection\",\"value\":\"Mover selección\"},{\"id\":\"get\",\"value\":\"Obtener\"},{\"id\":\"set\",\"value\":\"Setear\"},{\"id\":\"position\",\"value\":\"Posición\"},{\"id\":\"translateCrosshair\",\"value\":\"Trasladar cursor\"},{\"id\":\"camera\",\"value\":\"Cámara\"},{\"id\":\"lockAxis\",\"value\":\"Bloquear eje\"},{\"id\":\"swivelPoint\",\"value\":\"punto giratorio\"},{\"id\":\"lock\",\"value\":\"Bloquear\"},{\"id\":\"swingCamera\",\"value\":\"Balancear cámara\"},{\"id\":\"orientation\",\"value\":\"Orientación\"},{\"id\":\"translateCameraPosition\",\"value\":\"Trasladar posición de Cámara\"},{\"id\":\"cameraPosition\",\"value\":\"Posición de Cámara\"},{\"id\":\"cameraRotation\",\"value\":\"Rotación de Cámara\"},{\"id\":\"rotateCamera\",\"value\":\"Rotar Cámara\"},{\"id\":\"zoomLevel\",\"value\":\"Nivel de Zoom\"},{\"id\":\"zoom\",\"value\":\"Zoom\"},{\"id\":\"cameraZoomLevel\",\"value\":\"Nivel de Zoom de Cámara\"},{\"id\":\"zoomCamera\",\"value\":\"Zoom de Cámara\"},{\"id\":\"scene\",\"value\":\"Escena\"},{\"id\":\"addLayer\",\"value\":\"Agregar Capa\"},{\"id\":\"importPrefabObject\",\"value\":\"Importar Objeto prefabricado\"},{\"id\":\"movePointToCrosshair\",\"value\":\"Mover punto al cursor\"},{\"id\":\"renamePoint\",\"value\":\"Renombrar punto\"},{\"id\":\"addPoint\",\"value\":\"Agregar punto al cursor\"},{\"id\":\"removePoint\",\"value\":\"Remover punto\"},{\"id\":\"origin\",\"value\":\"Centro/Origen\"},{\"id\":\"layer\",\"value\":\"Capa\"},{\"id\":\"object\",\"value\":\"Objeto\"},{\"id\":\"showHideLayer\",\"value\":\"Mostrar/Ocultar Capa\"},{\"id\":\"renameLayer\",\"value\":\"Renombrar Capa\"},{\"id\":\"removeLayer\",\"value\":\"Remover Capa\"},{\"id\":\"addToScene\",\"value\":\"Agregar a la Escena\"},{\"id\":\"renameObject\",\"value\":\"Renombrar Objeto\"},{\"id\":\"properties\",\"value\":\"Propiedades\"},{\"id\":\"objectProperties\",\"value\":\"Propiedades de Objeto\"},{\"id\":\"objectGeneral\",\"value\":\"General\"},{\"id\":\"objectName\",\"value\":\"Nombre\"},{\"id\":\"objectBillboarding\",\"value\":\"Billboarding\"},{\"id\":\"objectBillboardingEnabled\",\"value\":\"Billboarding activo\"},{\"id\":\"objectLockToYAxis\",\"value\":\"Bloquear al eje Y&nbsp;\"},{\"id\":\"objectMirroring\",\"value\":\"Espejado\"},{\"id\":\"objectMirroringEnabled\",\"value\":\"Espejado activo\"},{\"id\":\"objectMirroringAxis\",\"value\":\"Eje\"},{\"id\":\"hideShowAll\",\"value\":\"Mostrar/Ocultar todo\"},{\"id\":\"cloneObject\",\"value\":\"Clonar Objeto\"},{\"id\":\"deleteObject\",\"value\":\"Borrar Objeto/Instancias\"},{\"id\":\"exportInstanceData\",\"value\":\"Exportar datos de Instancia\"},{\"id\":\"exportToObj\",\"value\":\"Exportar como .Obj\"},{\"id\":\"exportToPrefab\",\"value\":\"Exportar como Prefab\"},{\"id\":\"editObject\",\"value\":\"Editar Objeto\"},{\"id\":\"moveCrosshairToInstance\",\"value\":\"Mover cursor hacia la Instancia\"},{\"id\":\"resetRotations\",\"value\":\"Reiniciar Rotación(es)\"},{\"id\":\"duplicateInstances\",\"value\":\"Duplicar Instancia(s)\"},{\"id\":\"removeInstance\",\"value\":\"Remover Instancia\"},{\"id\":\"deconstructObject\",\"value\":\"Deconstruir Objeto\"},{\"id\":\"keys\",\"value\":\"Teclas\"},{\"id\":\"saveKeyBindings\",\"value\":\"Guardar asignación de teclas\"},{\"id\":\"loadKeyBindings\",\"value\":\"Cargar asignación de teclas\"},{\"id\":\"resetBindings\",\"value\":\"Reiniciar asignaciones\"},{\"id\":\"resetBindingsAlert\",\"value\":\"¿Estás seguro de querer reiniciar las asignaciones? Esto restaurará la configuración a sus valores por defecto.\"},{\"id\":\"toggleCameraMode\",\"value\":\"Alternar el modo de Cámara\"},{\"id\":\"chooseKeygroup\",\"value\":\"Elija un grupo de teclas...\"},{\"id\":\"keyBinding\",\"value\":\"Asignación de teclas\"},{\"id\":\"type\",\"value\":\"Tipo\"},{\"id\":\"clearButton\",\"value\":\"Limpiar\"},{\"id\":\"keyOnly\",\"value\":\"Solo teclas\"},{\"id\":\"mouseOnly\",\"value\":\"Sólo Mouse\"},{\"id\":\"keyOrMouse\",\"value\":\"Teclas O Mouse\"},{\"id\":\"keyAndMouse\",\"value\":\"Teclas Y Mouse\"},{\"id\":\"leftMouse\",\"value\":\"Botón izq. del Mouse\"},{\"id\":\"middleMouse\",\"value\":\"Botón med. del Mouse\"},{\"id\":\"rightMouse\",\"value\":\"Botón der. del Mouse\"},{\"id\":\"binding_close\",\"value\":\"Cerrar programa\"},{\"id\":\"binding_close_Desc\",\"value\":\"Cerrar/Salir del programa.\"},{\"id\":\"binding_config\",\"value\":\"Configuración\"},{\"id\":\"binding_config_Desc\",\"value\":\"Abrir/Cerrar la ventana de Configuración.\"},{\"id\":\"binding_license\",\"value\":\"Info/Licencia\"},{\"id\":\"binding_license_Desc\",\"value\":\"Abrir/Cerrar la ventana de Info/Licencia.\"},{\"id\":\"binding_keyConfig\",\"value\":\"Configuración de teclas\"},{\"id\":\"binding_keyConfig_Desc\",\"value\":\"Abrir/Cerrar la ventana de asignación de teclas.\"},{\"id\":\"binding_fullscreen\",\"value\":\"Pantalla completa\"},{\"id\":\"binding_fullscreen_Desc\",\"value\":\"Activar modo pantalla completa.\"},{\"id\":\"binding_screenshot\",\"value\":\"Captura de pantalla\"},{\"id\":\"binding_screenshot_Desc\",\"value\":\"Tomar captura de pantalla.\"},{\"id\":\"binding_copy\",\"value\":\"Copiar\"},{\"id\":\"binding_copy_Desc\",\"value\":\"Copiar las Tiles/Objetos seleccionados.\"},{\"id\":\"binding_paste\",\"value\":\"Pegar\"},{\"id\":\"binding_paste_Desc\",\"value\":\"Pegar las Tiles/Objects que fueron copiados.\"},{\"id\":\"binding_save\",\"value\":\"Guardar\"},{\"id\":\"binding_save_Desc\",\"value\":\"Guardar la Escena actualmente abierta.\"},{\"id\":\"binding_saveAs\",\"value\":\"Guardar Como\"},{\"id\":\"binding_saveAs_Desc\",\"value\":\"Guardar la Escena como un archivo nuevo.\"},{\"id\":\"binding_load\",\"value\":\"Abrir\"},{\"id\":\"binding_load_Desc\",\"value\":\"Abrir una Escena.\"},{\"id\":\"binding_exportFile\",\"value\":\"Exportar Archivo\"},{\"id\":\"binding_exportFile_Desc\",\"value\":\"Exportar Escena como archivo .Obj\"},{\"id\":\"binding_undo\",\"value\":\"Deshacer\"},{\"id\":\"binding_undo_Desc\",\"value\":\"Deshacer cualquier acción reciente.\"},{\"id\":\"binding_redo\",\"value\":\"Rehacer\"},{\"id\":\"binding_redo_Desc\",\"value\":\"Rehacer cualquier acción reciente que había sido deshecha.\"},{\"id\":\"binding_toggleOpacity\",\"value\":\"Activar Opacidad\"},{\"id\":\"binding_toggleOpacity_Desc\",\"value\":\"Ajustar la Opacidad de una textura.\"},{\"id\":\"binding_showHelper\",\"value\":\"Mostrar ayudante\"},{\"id\":\"binding_showHelper_Desc\",\"value\":\"Mostrar u ocultar el eje y el cursor.\"},{\"id\":\"binding_doubleSided\",\"value\":\"Doble faz\"},{\"id\":\"binding_doubleSided_Desc\",\"value\":\"Activa el modo doble faz para el Tileset actualmente utilizado (en la ventana de Tileset).\"},{\"id\":\"binding_removePart\",\"value\":\"Remover/Eliminar\"},{\"id\":\"binding_removePart_Desc\",\"value\":\"Remover cualquiera de los objetos o tile seleccionados.\"},{\"id\":\"binding_deselectAll\",\"value\":\"Deseleccionar todo\"},{\"id\":\"binding_deselectAll_Desc\",\"value\":\"Deseleccionar&nbsp;todos los vértices. Presiona nuevamente para deseleccionar todas las caras.\"},{\"id\":\"binding_selectAll\",\"value\":\"Seleccionar todo\"},{\"id\":\"binding_selectAll_Desc\",\"value\":\"Seleccionar los vértices de los tiles activos. Presiona nuevamente&nbsp;para seleccionar vértices superpuestos de tiles cercanos.\"},{\"id\":\"binding_deselectAllObjects\",\"value\":\"Deseleccionar&nbsp;todos los Objetos\"},{\"id\":\"binding_deselectAllObjects_Desc\",\"value\":\"Deseleccionar&nbsp;todas las&nbsp;instancias de Objeto.\"},{\"id\":\"binding_selectAllObjects\",\"value\":\"Seleccionar todos los Objetos\"},{\"id\":\"binding_selectAllObjects_Desc\",\"value\":\"Seleccionar todas las instancias de Objeto.\"},{\"id\":\"binding_toggleMode\",\"value\":\"Modo alterno\"},{\"id\":\"binding_toggleMode_Desc\",\"value\":\"Alternar entre modo Edición y modo Dibujo.\"},{\"id\":\"binding_moveSelectionUp\",\"value\":\"Mover selección hacia arriba\"},{\"id\":\"binding_moveSelectionUp_Desc\",\"value\":\"Mueve la selección hacia arriba.\"},{\"id\":\"binding_moveSelectionDown\",\"value\":\"Mover selección hacia abajo\"},{\"id\":\"binding_moveSelectionDown_Desc\",\"value\":\"Mueve la selección hacia abajo.\"},{\"id\":\"binding_moveSelectionLeft\",\"value\":\"Mover selección a la izquierda\"},{\"id\":\"binding_moveSelectionLeft_Desc\",\"value\":\"Mueve la selección&nbsp;hacia la izquierda.\"},{\"id\":\"binding_moveSelectionRight\",\"value\":\"Mover selección a la derecha\"},{\"id\":\"binding_moveSelectionRight_Desc\",\"value\":\"Mueve la selección&nbsp;hacia la derecha.\"},{\"id\":\"binding_moveSelectionForward\",\"value\":\"Mover selección hacia adelante\"},{\"id\":\"binding_moveSelectionForward_Desc\",\"value\":\"Mueve la selección&nbsp;hacia&nbsp;adelante.\"},{\"id\":\"binding_moveSelectionBackward\",\"value\":\"Mover selección hacia&nbsp;atrás\"},{\"id\":\"binding_moveSelectionBackward_Desc\",\"value\":\"Mueve la selección&nbsp;hacia&nbsp;atrás.\"},{\"id\":\"binding_moveCrosshairUp\",\"value\":\"Mover cursor arriba\"},{\"id\":\"binding_moveCrosshairUp_Desc\",\"value\":\"Mueve el cursor hacia arriba sin modificar la selección.\"},{\"id\":\"binding_moveCrosshairDown\",\"value\":\"Mover cursor&nbsp;abajo\"},{\"id\":\"binding_moveCrosshairDown_Desc\",\"value\":\"Mueve el cursor&nbsp;hacia abajo sin modificar la selección.\"},{\"id\":\"binding_moveCrosshairLeft\",\"value\":\"Mover cursor&nbsp;a la izquierda\"},{\"id\":\"binding_moveCrosshairLeft_Desc\",\"value\":\"Mueve el cursor&nbsp;hacia la izquierda sin modificar la selección.\"},{\"id\":\"binding_moveCrosshairRight\",\"value\":\"Mover cursor&nbsp;a la derecha\"},{\"id\":\"binding_moveCrosshairRight_Desc\",\"value\":\"Mueve el cursor&nbsp;hacia la derecha sin modificar la selección.\"},{\"id\":\"binding_moveCrosshairForward\",\"value\":\"Mover cursor hacia adelante\"},{\"id\":\"binding_moveCrosshairForward_Desc\",\"value\":\"Mueve el cursor&nbsp;hacia adelante sin modificar la selección.\"},{\"id\":\"binding_moveCrosshairBackward\",\"value\":\"Mover cursor&nbsp;hacia atrás\"},{\"id\":\"binding_moveCrosshairBackward_Desc\",\"value\":\"Mueve el cursor&nbsp;hacia atrás sin modificar la selección.\"},{\"id\":\"binding_roundCrosshair\",\"value\":\"Ajustar cursor a la cuadrícula\"},{\"id\":\"binding_roundCrosshair_Desc\",\"value\":\"Ajusta el cursor a la cuadrícula, basado en la configuración actual de redondeo de cuadrícula.\"},{\"id\":\"binding_moveArrow\",\"value\":\"Modificador de flechas de cursor\"},{\"id\":\"binding_moveArrow_Desc\",\"value\":\"Si las flechas de cursor se encuentran activadas, presionar esta tecla moverá la flecha de cursor sin modificar la selección.\"},{\"id\":\"binding_toggleTilt\",\"value\":\"Alternar modo de inclinación\"},{\"id\":\"binding_toggleTilt_Desc\",\"value\":\"Este modo activa la posibilidad de inclinar el espacio de cuadrícula que se utiliza para dibujar tiles en la escena, así como el desplazamiento de caras y vértices.\"},{\"id\":\"binding_setTiltAnchor\",\"value\":\"Establecer anclaje de inclinación\"},{\"id\":\"binding_setTiltAnchor_Desc\",\"value\":\"Desliza el mouse sobre un tile y presiona esta tecla. El anclaje de inclinación se fijará en relación al vértice más cercano del tile.\"},{\"id\":\"binding_zoomIn\",\"value\":\"Zoomear en el Tileset\"},{\"id\":\"binding_zoomIn_Desc\",\"value\":\"Hace zoom al tileset.\"},{\"id\":\"binding_zoomOut\",\"value\":\"Zoomear fuera del Tileset\"},{\"id\":\"binding_zoomOut_Desc\",\"value\":\"Aleja el zoom del tileset.\"},{\"id\":\"binding_brushSizeUp\",\"value\":\"Incrementar tamaño de pincel\"},{\"id\":\"binding_brushSizeUp_Desc\",\"value\":\"Incrementa el tamaño de trazo del pincel.\"},{\"id\":\"binding_brushSizeDown\",\"value\":\"Disminuir el tamaño del pincel\"},{\"id\":\"binding_brushSizeDown_Desc\",\"value\":\"Disminuye el tamaño de trazo del pincel.\"},{\"id\":\"binding_roundingUp\",\"value\":\"Redondear (incremento)\"},{\"id\":\"binding_roundingUp_Desc\",\"value\":\"Ajusta el valor de redondeo de cuadrícula (valor positivo).\"},{\"id\":\"binding_roundingDown\",\"value\":\"Redondear (disminución)\"},{\"id\":\"binding_roundingDown_Desc\",\"value\":\"Ajusta el valor de redondeo de cuadrícula (valor negativo).\"},{\"id\":\"binding_tilesetUp\",\"value\":\"Siguiente Tileset\"},{\"id\":\"binding_tilesetUp_Desc\",\"value\":\"Selecciona el siguiente Tileset.\"},{\"id\":\"binding_tilesetDown\",\"value\":\"Tileset previo\"},{\"id\":\"binding_tilesetDown_Desc\",\"value\":\"Selecciona el Tileset previo.\"},{\"id\":\"binding_cardinalButtons\",\"value\":\"Botones cardinales\"},{\"id\":\"binding_cardinalButtons_Desc\",\"value\":\"Muestra los botones que pueden emplearse para rotar la Cámara en el sentido de las direcciones cardinales.\"},{\"id\":\"binding_rotateScene\",\"value\":\"Rotar Escena\"},{\"id\":\"binding_rotateScene_Desc\",\"value\":\"Rota la Cámara.\"},{\"id\":\"binding_zoomScene\",\"value\":\"Zoomear Escena\"},{\"id\":\"binding_zoomScene_Desc\",\"value\":\"Hace zoom a la Cámara.\"},{\"id\":\"binding_panScene\",\"value\":\"Panear Escena\"},{\"id\":\"binding_panScene_Desc\",\"value\":\"Realiza una panorámica con la Cámara.\"},{\"id\":\"binding_dollyIn\",\"value\":\"Zoom (Acercar)\"},{\"id\":\"binding_dollyIn_Desc\",\"value\":\"Hace zoom con la Cámara..\"},{\"id\":\"binding_dollyOut\",\"value\":\"Zoom (Alejar)\"},{\"id\":\"binding_dollyOut_Desc\",\"value\":\"Aleja el zoom con la Cámara..\"},{\"id\":\"binding_centerCamera\",\"value\":\"Centrar Cámara\"},{\"id\":\"binding_centerCamera_Desc\",\"value\":\"Centra la cámara hacia la selección.\"},{\"id\":\"binding_moveCameraForward\",\"value\":\"Mover Cámara hacia adelante\"},{\"id\":\"binding_moveCameraForward_Desc\",\"value\":\"Mueve la cámara hacia adelante.\"},{\"id\":\"binding_moveCameraBackward\",\"value\":\"Mover Cámara hacia&nbsp;atrás\"},{\"id\":\"binding_moveCameraBackward_Desc\",\"value\":\"Mueve la cámara hacia&nbsp;atrás.\"},{\"id\":\"binding_moveCameraLeft\",\"value\":\"Mover Cámara hacia la izquierda\"},{\"id\":\"binding_moveCameraLeft_Desc\",\"value\":\"Mueve la cámara hacia&nbsp;la izquierda.\"},{\"id\":\"binding_moveCameraRight\",\"value\":\"Mover Cámara hacia la derecha\"},{\"id\":\"binding_moveCameraRight_Desc\",\"value\":\"Mueve la cámara hacia&nbsp;la derecha.\"},{\"id\":\"binding_toggleCameraMode\",\"value\":\"Alternar Cámara\"},{\"id\":\"binding_toggleCameraMode_Desc\",\"value\":\"Si activar cámara se encuentra activo en la configuración, esto activará el modo de alternación de cámara.\"},{\"id\":\"binding_toggleRotateScene\",\"value\":\"Activar Rotación de Escena\"},{\"id\":\"binding_toggleRotateScene_Desc\",\"value\":\"Rota la cámara.\"},{\"id\":\"binding_toggleZoomScene\",\"value\":\"Activar Zoom de Escena\"},{\"id\":\"binding_toggleZoomScene_Desc\",\"value\":\"Hace zoom a la cámara.\"},{\"id\":\"binding_togglePanScene\",\"value\":\"Activar Paneo de Escena\"},{\"id\":\"binding_togglePanScene_Desc\",\"value\":\"Hace un paneo de cámara.\"},{\"id\":\"binding_eraseTile\",\"value\":\"Borrar Tiles\"},{\"id\":\"binding_eraseTile_Desc\",\"value\":\"Borra las tiles sobre las que el cursor se desplace mientras hagas click.\"},{\"id\":\"binding_erasePrefab\",\"value\":\"Borrar Prefabricados\"},{\"id\":\"binding_erasePrefab_Desc\",\"value\":\"Borra los objetos prefab. sobre los que el cursor se desplace mientras hagas click.\"},{\"id\":\"binding_rotateUVRight\",\"value\":\"Rotar UVs en sentido de las agujas del reloj\"},{\"id\":\"binding_rotateUVRight_Desc\",\"value\":\"Rota el pincel UV del tile seleccionado en el sentido de las agujas del reloj.\"},{\"id\":\"binding_rotateUVLeft\",\"value\":\"Rotar UVs en contra de las agujas del reloj\"},{\"id\":\"binding_rotateUVLeft_Desc\",\"value\":\"Rota el pincel UV del tile seleccionado en el sentido contrario a las agujas del reloj.\"},{\"id\":\"binding_rotatePrefabCWise\",\"value\":\"Rotar Prefabricado en sentido de las agujas del reloj\"},{\"id\":\"binding_rotatePrefabCWise_Desc\",\"value\":\"Rota el pincel prefab. seleccionado en el sentido de las agujas del reloj.\"},{\"id\":\"binding_rotatePrefabCCWise\",\"value\":\"Rotar Prefabricado en contra de las agujas del reloj\"},{\"id\":\"binding_rotatePrefabCCWise_Desc\",\"value\":\"Rota el pincel prefab. seleccionado en el sentido contrario a las agujas del reloj.\"},{\"id\":\"binding_copyUV\",\"value\":\"Copiar UV\"},{\"id\":\"binding_copyUV_Desc\",\"value\":\"Utiliza el cuentagotas sobre un tile de la escena, aplicando sus UVs al pincel.\"},{\"id\":\"binding_applyUV\",\"value\":\"Aplicar UV\"},{\"id\":\"binding_applyUV_Desc\",\"value\":\"Aplica los UVs del pincel a un tile de la escena sin modificar su composición geométrica.\"},{\"id\":\"binding_flipUV\",\"value\":\"Voltear UV\"},{\"id\":\"binding_flipUV_Desc\",\"value\":\"Voltea el pincel de UVs de tiles.\"},{\"id\":\"binding_mirrorUV\",\"value\":\"Espejar UV\"},{\"id\":\"binding_mirrorUV_Desc\",\"value\":\"Espeja el pincel de UVs de tiles.\"},{\"id\":\"binding_cameraBasedSelection\",\"value\":\"Selección basada en la Cámara\"},{\"id\":\"binding_cameraBasedSelection_Desc\",\"value\":\"Anula o permite la selección de vértices/caras detrás de otros tiles.\"},{\"id\":\"binding_toggleCrosshairArrows\",\"value\":\"Activar flechas de cursor\"},{\"id\":\"binding_toggleCrosshairArrows_Desc\",\"value\":\"Activa o desactiva las flechas de cursor y las líneas de guía.\"},{\"id\":\"binding_toggleCrosshairMode\",\"value\":\"Activar modos de cursor-flecha\"},{\"id\":\"binding_toggleCrosshairMode_Desc\",\"value\":\"Alterna los modificadores de las flechas de cursor entre Mover, Rotar, y Redimensionar.\"},{\"id\":\"binding_centerCrosshair\",\"value\":\"Centrar Cursor\"},{\"id\":\"binding_centerCrosshair_Desc\",\"value\":\"Centra el cursor a los vértices, caras u objetos actualmente seleccionados.\"},{\"id\":\"binding_nearestVert\",\"value\":\"Seleccionar vértice más cercano\"},{\"id\":\"binding_nearestVert_Desc\",\"value\":\"Mantén presionada esta tecla y selecciona un tile. Automáticamente, seleccionará el vértice más cercano al tile (según el área de selección).\"},{\"id\":\"binding_vertSnap\",\"value\":\"Ajuste de vértice\"},{\"id\":\"binding_vertSnap_Desc\",\"value\":\"Mantén presionada esta tecla mientras arrastras un único vértice para pegarlo a sus vértices más cercanos.\"},{\"id\":\"binding_hollowVert\",\"value\":\"Soltar vértice\"},{\"id\":\"binding_hollowVert_Desc\",\"value\":\"Mantén presionada esta tecla y clickea en un vértice para reubicar el cursor sin modificar el vértice.\"},{\"id\":\"binding_lassoFace\",\"value\":\"Seleccionar quads (caras) de marquesina\"},{\"id\":\"binding_lassoFace_Desc\",\"value\":\"Selecciona una marquesina de tiles. Presiona la tecla y haz click+arrastre para crear la marquesina.\"},{\"id\":\"binding_lassoDeselectFace\",\"value\":\"Deseleccionar quads (caras) de marquesina\"},{\"id\":\"binding_lassoDeselectFace_Desc\",\"value\":\"Desarma una marquesina de tiles. Presiona la tecla y haz click+arrastre&nbsp;para remover las caras de la marquesina.\"},{\"id\":\"binding_lassoDeselect\",\"value\":\"Deseleccionar vértices de marquesina\"},{\"id\":\"binding_lassoDeselect_Desc\",\"value\":\"Deselecciona vértices de una marquesina. Presiona la tecla y haz click+arrastre&nbsp;para remover los vértices.\"},{\"id\":\"binding_lassoObject\",\"value\":\"Selecciona objetos para marquesina\"},{\"id\":\"binding_lassoObject_Desc\",\"value\":\"Selecciona una marquesina de objetos para una instancia. Presiona la tecla y haz click+arrastre para seleccionar.\"},{\"id\":\"binding_lassoDeselectObject\",\"value\":\"Deseleccionar objetos de marquesina\"},{\"id\":\"binding_lassoDeselectObject_Desc\",\"value\":\"Deselecciona una marquesina de objetos para una instancia. Presiona la tecla y haz click+arrastre para deseleccionar.\"},{\"id\":\"binding_rotatePartRight\",\"value\":\"Rotar selección hacia la derecha\"},{\"id\":\"binding_rotatePartRight_Desc\",\"value\":\"Rota la selección hacia la derecha basándose&nbsp;en el ángulo de cámara.\"},{\"id\":\"binding_rotatePartLeft\",\"value\":\"Rotar selección hacia la izquierda\"},{\"id\":\"binding_rotatePartLeft_Desc\",\"value\":\"Rota la selección hacia la izquierda basándose&nbsp;en el ángulo de cámara.\"},{\"id\":\"binding_rotatePartCWise\",\"value\":\"Rotar selección en el sentido de las agujas del reloj\"},{\"id\":\"binding_rotatePartCWise_Desc\",\"value\":\"Rota la selección en el sentido de las agujas del reloj&nbsp;basándose&nbsp;en el ángulo de cámara.\"},{\"id\":\"binding_rotatePartCCWise\",\"value\":\"Rotar selección en el sentido contrario a las agujas del reloj\"},{\"id\":\"binding_rotatePartCCWise_Desc\",\"value\":\"Rota la selección en el sentido contrario a las agujas del reloj basándose&nbsp;en el ángulo de cámara.\"},{\"id\":\"binding_flipPart\",\"value\":\"Voltear selección\"},{\"id\":\"binding_flipPart_Desc\",\"value\":\"Voltea la selección basándose&nbsp;en el ángulo de cámara.\"},{\"id\":\"binding_mirrorPart\",\"value\":\"Espejar selección\"},{\"id\":\"binding_mirrorPart_Desc\",\"value\":\"Espeja la selección basándose en el ángulo de cámara.\"},{\"id\":\"binding_flipEdge\",\"value\":\"Voltear borde\"},{\"id\":\"binding_flipEdge_Desc\",\"value\":\"Invierte el borde del/los tile(s).\"},{\"id\":\"binding_reverseFace\",\"value\":\"Invertir Cara\"},{\"id\":\"binding_reverseFace_Desc\",\"value\":\"Invierte la cara del/los tile(s).\"},{\"id\":\"binding_splitFace\",\"value\":\"Dividir Cara\"},{\"id\":\"binding_splitFace_Desc\",\"value\":\"Divide la cara de la selección activa una vez que la línea amarilla se posiciona sobre la misma.\"},{\"id\":\"binding_pushSelection\",\"value\":\"Empujar selección\"},{\"id\":\"binding_pushSelection_Desc\",\"value\":\"Empuja la selección activa hacia el punto 3D del cursor activo, alineándolo con éste.\"},{\"id\":\"binding_centerSelection\",\"value\":\"Centrar selección\"},{\"id\":\"binding_centerSelection_Desc\",\"value\":\"Centra la selección en el plano 3D del cursor activo, alineándola con éste.\"},{\"id\":\"binding_pullSelection\",\"value\":\"Halar selección\"},{\"id\":\"binding_pullSelection_Desc\",\"value\":\"Jala la selección activa hacia el plano 3D del cursor activo, alineándola con éste.\"},{\"id\":\"binding_roundVertices\",\"value\":\"Alinear vértices a la Cuadrícula\"},{\"id\":\"binding_roundVertices_Desc\",\"value\":\"Alinea los vértices seleccionados a la cuadrícula,&nbsp;basándose en el valor actual de redondeo de cuadrícula.\"},{\"id\":\"binding_selectX\",\"value\":\"Seleccionar eje X\"},{\"id\":\"binding_selectX_Desc\",\"value\":\"Selecciona vértices a lo largo del eje X del cursor 3D.\"},{\"id\":\"binding_selectY\",\"value\":\"Seleccionar eje Y\"},{\"id\":\"binding_selectY_Desc\",\"value\":\"Selecciona vértices a lo largo del eje X del cursor 3D.\"},{\"id\":\"binding_selectZ\",\"value\":\"Seleccionar eje Z\"},{\"id\":\"binding_selectZ_Desc\",\"value\":\"Selecciona vértices a lo largo del eje Z del cursor 3D.\"},{\"id\":\"binding_toggleObjectMode\",\"value\":\"Alternar modo de Objeto\"},{\"id\":\"binding_toggleObjectMode_Desc\",\"value\":\"Activa o desactiva el modo Objeto.\"},{\"id\":\"binding_toggleActiveMode\",\"value\":\"Alternar modo Activo\"},{\"id\":\"binding_toggleActiveMode_Desc\",\"value\":\"Activa o desactiva el modo Activo.\"},{\"id\":\"binding_contextEditMenu\",\"value\":\"Menu de contexto de Edición\"},{\"id\":\"binding_contextEditMenu_Desc\",\"value\":\"Abre un menú con un listado de acciones que puedes realizar durante el modo Edición.\"},{\"id\":\"binding_adjustVertexUVUp\",\"value\":\"Mover vértices UV hacia arriba\"},{\"id\":\"binding_adjustVertexUVUp_Desc\",\"value\":\"Desplaza el UV de los vértices seleccionados hacia arriba.\"},{\"id\":\"binding_adjustVertexUVDown\",\"value\":\"Mover vértices UV hacia abajo\"},{\"id\":\"binding_adjustVertexUVDown_Desc\",\"value\":\"Desplaza el UV de los vértices seleccionados hacia abajo.\"},{\"id\":\"binding_adjustVertexUVLeft\",\"value\":\"Mover vértices UV hacia la izquierda\"},{\"id\":\"binding_adjustVertexUVLeft_Desc\",\"value\":\"Desplaza el UV de los vértices seleccionados hacia la izquierda.\"},{\"id\":\"binding_adjustVertexUVRight\",\"value\":\"Mover vértices UV hacia la derecha\"},{\"id\":\"binding_adjustVertexUVRight_Desc\",\"value\":\"Desplaza el UV de los vértices seleccionados hacia la derecha.\"}]"
+		},
+		{
+			'id':'Custom',
+			'value':null
+		}
+	];
+
+	this.init = function(){		
+		this.textElem = document.querySelectorAll('[contenteditable=true]');
+		
+		var data = [];
+		var item = {};
+		var i;
+		for (i = 0; i < this.textElem.length; i++) {
+			item = { 'id': this.textElem[i].id, 'value': this.textElem[i].innerHTML.trim().replace(/(\r\n|\n|\r|\t)/gm,"") };
+			data.push(item);
+		}
+		
+		this.data[0].value = JSON.stringify(data);
+		this.data[this.data.length-1].value = JSON.stringify(data);
+		
+		this.selectElem = document.getElementById('lang');
+		
+		for (var i = 0; i < this.data.length; i++){
+			var opt = document.createElement('option');
+			opt.value = this.data[i].id;
+			opt.innerHTML = this.data[i].id;
+			this.selectElem.appendChild(opt);
+		}
+		
+		this.selectElem.addEventListener('change', (event) => {
+			var x = (event.target.value || event.target.options[event.target.selectedIndex].value);  //crossbrowser solution =)
+			//alert(x);			
+			
+			for (var index = 0; index < this.data.length; index++) {
+				if( this.data[index].id == x ){			
+					
+					//save any edited data of current language
+					var d = [];
+					for (i = 0; i < this.textElem.length; i++) {
+						item = { 'id': this.textElem[i].id, 'value': this.textElem[i].innerHTML.trim().replace(/(\r\n|\n|\r|\t)/gm,"") };
+						d.push(item);
+					}
+					this.data[this.currentIndex].value = JSON.stringify(d);
+					
+					//load the new data of the picked language
+					var data = JSON.parse(this.data[index].value);					
+					for (var i = 0; i < data.length; i++) {
+						document.getElementById(data[i].id).innerHTML = data[i].value;
+						
+						var glossary = document.getElementById("glossary"+data[i].id);
+						if(glossary) glossary.innerHTML = data[i].value;
+					}
+					//change the current index to the new index;
+					this.currentIndex = index;
+				}
+			}
+			
+		});
+		
+		//console.log(this.data);
+	}
+	
+	this.init();
+}
+
+	
+const toolBox = document.getElementById('toolBox');
+
+toolBox.addEventListener('click', (event) => {
+	const isButton = event.target.nodeName === 'BUTTON';
+	if (!isButton) {
+	return;
+	}
+	if(event.target.innerHTML == 'Bold') document.execCommand("bold");
+	else if(event.target.innerHTML == 'Italic') document.execCommand("italic");
+	else if(event.target.innerHTML == 'Block') document.execCommand("underline");
+
+	//console.dir(event.target.id);
+});
+/*
+document.addEventListener('click', function(e){
+	//if(e.target.tagName=="BUTTON"){
+	if(e.target.isContentEditable){
+		toolBox.style.display = '';
+	}else{
+		toolBox.style.display = 'none';
+	}
+});*/
+let elementsArray = document.querySelectorAll('[contenteditable=true]');
+
+elementsArray.forEach(function(elem) {
+    /*elem.addEventListener("focus", function() {
+        toolBox.style.display = '';
+    });
+    elem.addEventListener("blur", function() {
+        toolBox.style.display = 'none';
+    });*/
+});
+
+document.getElementById('inputfile').addEventListener('change', function() { 	  
+	var fr = new FileReader(); 
+	fr.onload = function(){ 
+		//document.getElementById('output').textContent=fr.result; 
+		//console.log(fr.result);
+		var name = "Translation_"+(language.data.length+1);
+		
+		var opt = document.createElement('option');
+		opt.value = name;
+		opt.innerHTML = name;
+		
+		language.data.push({'id': name,'value': fr.result});
+		language.currentIndex = language.data.length-1;
+		
+			
+		var data = JSON.parse(fr.result);
+		
+		for (var i = 0; i < data.length; i++) {
+			if(data[i].id == 'languageName'){
+				opt.value = data[i].value;
+				opt.innerHTML = data[i].value;
+				language.data[language.currentIndex].id = data[i].value;
+			}
+			
+			document.getElementById(data[i].id).innerHTML = data[i].value;
+			for (var i2 = 0; i2 < data.length; i2++) {
+				if( i2!==i && data[i].id == data[i2].id )console.log("duplicate: "+data[i2].id);
+			}
+			
+			var glossary = document.getElementById("glossary"+data[i].id);
+			if(glossary) glossary.innerHTML = data[i].value;
+		}
+		var dupe = 0;
+		for (var i = 0; i < language.selectElem.options.length; i++) {
+			if(language.selectElem.options[i].value.includes(language.data[language.currentIndex].id) ) dupe++;
+		}
+		if(dupe>0){
+			language.data[language.currentIndex].id += dupe;
+			opt.value += dupe;
+			opt.innerHTML += dupe;
+		}
+		language.selectElem.appendChild(opt);
+		language.selectElem.options[language.currentIndex].selected = 'selected';
+	} 
+	  
+	fr.readAsText(this.files[0]); 
+	this.value = '';	//reset the input value so we can load the same file again if we need to.
+});
+
+var textFile = null,
+makeTextFile = function () {
+
+	var data = [];
+	var item = {};
+	
+	var x = document.querySelectorAll('[contenteditable=true]');	//document.querySelectorAll(".croc");
+	var i;
+	for (i = 0; i < x.length; i++) {
+		item = { 'id': x[i].id, 'value': x[i].innerHTML.trim().replace(/(\r\n|\n|\r|\t)/gm,"") };
+		data.push(item);
+	}
+	
+	var saveData = new Blob([JSON.stringify(data)], {type: 'text/plain'});
+
+	// If we are replacing a previously generated file we need to
+	// manually revoke the object URL to avoid memory leaks.
+	if (textFile !== null) {
+		window.URL.revokeObjectURL(textFile);
+	}
+
+	textFile = window.URL.createObjectURL(saveData);
+
+	return textFile;
+};
+
+
+var saveFile = document.getElementById('save');
+
+saveFile.addEventListener('click', function () {
+	var link = document.createElement('a');
+	link.setAttribute('download', 'localization.txt');
+	link.href = makeTextFile();
+	document.body.appendChild(link);
+
+// wait for the link to be added to the document
+	window.requestAnimationFrame(function () {
+		var event = new MouseEvent('click');
+		link.dispatchEvent(event);
+		document.body.removeChild(link);
+	});
+
+}, false);
+ 
+
+
+</script>
+</html>
