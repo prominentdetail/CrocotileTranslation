@@ -231,6 +231,7 @@ h1{
 			<a id="glossaryobjects" href="#anchorobjects">Objects</a><br>
 			<a id="glossarylayers" href="#anchorlayers">Layers</a><br>
 			<a id="glossaryexport" href="#anchorexport">Exporting</a><br>
+			<a id="glossaryimport" href="#anchorimport">Importing</a><br>
 			<a id="glossaryactiveSelectionMode" href="#anchoractiveselectionmode">Active Selection Mode</a><br>
 		</div>
 		
@@ -594,7 +595,13 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>O</u> Realign the selected vertices/faces to the grid using the current grid-rounding value.</li></div>
 			</ul>
 			
-			<br clear="right">		
+			<a class="video" href="https://www.youtube.com/embed/ijYxLGE3los?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			
+			<span id="editModeTriangleDivideMerge" contenteditable="true">
+				Tiles can be divided into two triangle shaped tiles. Select the tiles you want to divide and then right-click in the scene and select <u>Triangle Divide</u> from the <u>Faces</u> submenu. Also triangular tiles can be merged together to form a single square tile.  Select <u>Triangle Merge</u> in the <u>Faces</u> context submenu while in Edit mode. This will merge pairs of triangles into single tiles. A pair of triangles must share two vertices together.
+			</span>
+			
+			<br><br clear="right">		
 			<hr>
 			
 			<span id="tilesetCommands" contenteditable="true">
@@ -763,6 +770,7 @@ h1{
 				<li id="settingsGeneralRuler" contenteditable="true"><u>Show Ruler</u><br>If enabled, visual guides extend from the 3d tilebrush to help measure distances.</li>
 				<li id="settingsGeneralLockCrosshair" contenteditable="true"><u>Lock Crosshair to the Grid</u><br>Keep the crosshair position rounded to the nearest grid point based on the grid-rounding value.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/oLl4HE9A-Ng?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsGeneralWireframe" contenteditable="true"><u>Wireframe</u><br>Toggle on/off the Wireframe. With this on, tiles will display their wireframe in the 3d scene.</li></div>
+				<li id="settingsGeneralWireframeColor" contenteditable="true"><u>Wireframe Color</u><br>This will set the wireframe color</li>
 				<li id="settingsGeneralBackgroundColor" contenteditable="true"><u>Background Color</u><br>This will set the background color of the scene</li>
 				<li id="settingsGeneralBackgroundTransparency" contenteditable="true"><u>Background Transparency</u><br>This will make the background become more or less opaque. A value of 1 is fully opaque, while a value of 0 is fully transparent. When taking screenshots, it will use this value to determine the transparency of the background in the images.</li>
 				<li id="settingsGeneralScreenshotFolder" contenteditable="true"><u>Screenshot folder</u><br>This specifies where the screenshots get saved. Press <u>F12</u> to take a screenshot.</li>
@@ -1180,13 +1188,13 @@ h1{
 				</ul>
 				<li id="uvsContextMenuTransform" contenteditable="true">Transform</li>
 				<ul>
-					<li id="uvsContextMenuTransformRound" contenteditable="true">Round to nearest pixel</li>
+					<li id="uvsContextMenuTransformRound" contenteditable="true"><u>O</u> Round to nearest pixel</li>
 					<div class="inset">
 						<span id="uvsContextMenuTransformRoundDesc" contenteditable="true">
 							Round the coordinates to the nearest pixel position.
 						</span>
 					</div>
-					<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/3C0QLDxLJis?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="uvsContextMenuTransformFlatten" contenteditable="true">Flatten</li></div>
+					<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/3C0QLDxLJis?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="uvsContextMenuTransformFlatten" contenteditable="true"><u>N</u> Flatten</li></div>
 					<div class="inset">
 						<span id="uvsContextMenuTransformRoundDesc" contenteditable="true">
 							Takes the shape of the selected tile in the 3d scene and flattens it onto the UV map.
@@ -2044,6 +2052,33 @@ h1{
 
 		</div>
 				
+		<br><br>
+		
+		<div class="block">
+			<div class="blockHeader">
+				<a id="anchorimport"></a>
+				<span id="import" contenteditable="true">
+					Importing
+				</span>
+			</div>
+			
+			<br>
+			
+			<span id="importContent" contenteditable="true">
+				You can import .obj , .gltf , .glb , and .fbx files. This allows you to take models that have been made in other programs and continue working with them in Crocotile.
+			</span>
+			
+			<br><br>
+					
+			<ol>
+				<li id="importStep1" contenteditable="true">Click <u>File</u> on the menubar and select <u>Import Model</u></li>		
+				<li id="importStep2" contenteditable="true">Select the file you want to import and then click open.</li>			
+				<li id="importStep3" contenteditable="true">The model will import into your project and a new prefab object will be created in the Scene tab.</li>			
+				<li id="importStep4" contenteditable="true">Click on the prefab object listed in the Scene tab, and while in Draw mode, add it to your scene!</li>	
+			</ol>
+		
+		</div>
+		
 		<br><br>
 		
 		<div class="block">
