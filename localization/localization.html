@@ -425,6 +425,14 @@ h1{
 				<hr>
 				<li id="exportAngleThreshold" contenteditable="true">Angle Threshold</li>
 				<hr>
+				<li id="exportPolygonType" contenteditable="true">Polygon Type</li>
+				<hr>
+				<li id="exportTriangles" contenteditable="true">Triangles</li>
+				<hr>
+				<li id="exportQuads" contenteditable="true">Quads</li>
+				<hr>
+				<li id="exportUseGroups" contenteditable="true">Use Groups</li>
+				<hr>
 				<li id="exportEmbedTextures" contenteditable="true">Embed Textures</li>
 				<hr>
 				<li id="exportAllTextures" contenteditable="true">Export all textures/.mtl</li>
@@ -445,6 +453,20 @@ h1{
 			<u><span id="closeButton" contenteditable="true">
 				Close
 			</span></u>
+		</div>
+		
+		<div class="block">
+			<h4><span id="renderCamera" contenteditable="true">
+				Render Camera
+			</span></h4>
+			<span id="defaultCamera" contenteditable="true">
+				Default Camera
+			</span>
+			<br>
+			<span id="selectCameraAlert" contenteditable="true">
+				Select one or more cameras to render!
+			</span>
+			<br>
 		</div>
 		
 		<div class="block">
@@ -520,6 +542,18 @@ h1{
 				FPS
 			</span>
 			<hr>
+			<span id="colorTheme" contenteditable="true">
+				Color Theme
+			</span>
+			<br>
+			<span id="light" contenteditable="true">
+				Light
+			</span>
+			<br>
+			<span id="dark" contenteditable="true">
+				Dark
+			</span>
+			<br>
 			<span id="settingsShowRuler" contenteditable="true">
 				Show Ruler
 			</span>
@@ -551,6 +585,10 @@ h1{
 				Choose
 			</span></u>
 			<hr>
+			<span id="settingsBackupLimit" contenteditable="true">
+				Backup limit
+			</span>
+			<br>
 			<span id="settingsUndoLimit" contenteditable="true">
 				Undo limit
 			</span>
@@ -560,6 +598,22 @@ h1{
 			</span></h4>
 			<span id="settingsBasePixelUnit" contenteditable="true">
 				Base Pixel Unit
+			</span>
+			<br>
+			<span id="settingsSkyboxShape" contenteditable="true">
+				Skybox Shape
+			</span>
+			<br>
+			<span id="box" contenteditable="true">
+				Box
+			</span>
+			<br>
+			<span id="cylinder" contenteditable="true">
+				Cylinder
+			</span>
+			<br>
+			<span id="Sphere" contenteditable="true">
+				Sphere
 			</span>
 			<br>
 			<u><span id="editButton" contenteditable="true">
@@ -594,8 +648,16 @@ h1{
 			<h4><span id="settingsCamera" contenteditable="true">
 				Camera
 			</span></h4>
+			<span id="nearPlane" contenteditable="true">
+				Camera Frustum Near Plane
+			</span>
+			<br>
 			<span id="settingsFrustumPlane" contenteditable="true">
 				Camera Frustum Far Plane
+			</span>
+			<br>
+			<span id="aspectRatio" contenteditable="true">
+				Camera Aspect Ratio
 			</span>
 			<br>
 			<span id="settingsFOV" contenteditable="true">
@@ -671,6 +733,20 @@ h1{
 		</div>
 		
 		<div class="block">
+			<span id="switchSides" contenteditable="true">
+				Switch sides
+			</span>
+			<br>
+			<span id="dock" contenteditable="true">
+				Dock
+			</span>
+			<br>
+			<span id="undock" contenteditable="true">
+				Undock
+			</span>
+		</div>
+		
+		<div class="block">
 			<span id="modeButton" contenteditable="true">
 				Draw/Edit Mode
 			</span>
@@ -711,6 +787,10 @@ h1{
 				Center to selection
 			</span>
 			<br>
+			<span id="lookAtCrosshair" contenteditable="true">
+				Look at Crosshair
+			</span>
+			<br>
 			<span id="cameraRotateRight" contenteditable="true">
 				Rotate right
 			</span>
@@ -737,6 +817,10 @@ h1{
 			<br>
 			<span id="alignVerticesToTheGrid" contenteditable="true">
 				Align vertices to the grid
+			</span>
+			<br>
+			<span id="moveVerticesToTheCrosshair" contenteditable="true">
+				Move vertices to the crosshair
 			</span>
 			<br>
 			<span id="selectVerticesXAxis" contenteditable="true">
@@ -779,6 +863,10 @@ h1{
 				Subdivide
 			</span>
 			<br>
+			<span id="allSelectedTiles" contenteditable="true">
+				All selected tiles
+			</span>
+			<br>
 			<span id="triangleDivide" contenteditable="true">
 				Triangle Divide
 			</span>
@@ -797,6 +885,10 @@ h1{
 			<br>
 			<span id="createObject" contenteditable="true">
 				Create Object
+			</span>
+			<br>
+			<span id="createObjectAlert" contenteditable="true">
+				There are no selected tiles to make an object!
 			</span>
 			<br>
 			<span id="selectAllObjects" contenteditable="true">
@@ -961,6 +1053,18 @@ h1{
 			
 			<span id="selectBasedOnTilebrush" contenteditable="true">
 				Select Tiles using Tilebrush's UVs
+			</span>
+			<br>
+			<span id="deselectBasedOnTilebrush" contenteditable="true">
+				Deselect Tiles using Tilebrush's UVs
+			</span>
+			<br>
+			<span id="selectTilesUsingTileset" contenteditable="true">
+				Select Tiles using current Tileset
+			</span>
+			<br>
+			<span id="deselectTilesUsingTileset" contenteditable="true">
+				Deselect Tiles using current Tileset
 			</span>
 			<br>
 			<span id="applyUVsToFaces" contenteditable="true">
@@ -1304,7 +1408,7 @@ h1{
 			</span>
 			<br>
 			<span id="emptyPaletteAlert" contenteditable="true">
-				"Empty the palette?"
+				Empty the palette?
 			</span>
 			<br>
 			<span id="defaultPalette" contenteditable="true">
@@ -1473,6 +1577,22 @@ h1{
 				Add Layer
 			</span>
 			<br>
+			<span id="addCamera" contenteditable="true">
+				Add Camera
+			</span>
+			<br>
+			<span id="removeSelectedItem" contenteditable="true">
+				Remove selected item
+			</span>
+			<br>
+			<span id="moveUp" contenteditable="true">
+				Move up
+			</span>
+			<br>
+			<span id="moveDown" contenteditable="true">
+				Move down
+			</span>
+			<br>
 			<span id="importPrefabObject" contenteditable="true">
 				Import Prefab Object
 			</span>
@@ -1499,6 +1619,22 @@ h1{
 			<br>
 			<span id="layer" contenteditable="true">
 				Layer
+			</span>
+			<br>
+			<span id="switchToCamera" contenteditable="true">
+				Switch to this Camera
+			</span>
+			<br>
+			<span id="renameCamera" contenteditable="true">
+				Rename Camera
+			</span>
+			<br>
+			<span id="resetCamera" contenteditable="true">
+				Reset Camera
+			</span>
+			<br>
+			<span id="removeCamera" contenteditable="true">
+				Remove Camera
 			</span>
 			<br>
 			<span id="object" contenteditable="true">
@@ -1529,6 +1665,26 @@ h1{
 				Properties
 			</span>
 			<div class="inset">			
+				<span id="cameraProperties" contenteditable="true">
+					Camera Properties
+				</span>	
+				<br>
+				<span id="left" contenteditable="true">
+					Left
+				</span>
+				<br>
+				<span id="right" contenteditable="true">
+					Right
+				</span>
+				<br>
+				<span id="top" contenteditable="true">
+					Top
+				</span>
+				<br>
+				<span id="bottom" contenteditable="true">
+					Bottom
+				</span>
+				<br>
 				<span id="objectProperties" contenteditable="true">
 					Object Properties
 				</span>
@@ -1639,12 +1795,24 @@ h1{
 				Are you sure you want to reset the key bindings? This will set all controls back to their default settings.
 			</span>
 			<br>
+			<span id="resetPins" contenteditable="true">
+				Reset Pins
+			</span>
+			<br>
+			<span id="resetBindingsAlert" contenteditable="true">
+				Are you sure you want to reset the pins? This will remove all the pinned actions.
+			</span>
+			<br>
 			<span id="toggleCameraMode" contenteditable="true">
 				Toggle camera mode
 			</span>
 			<br>
 			<span id="chooseKeygroup" contenteditable="true">
 				Choose a keygroup..
+			</span>
+			<br>
+			<span id="pinned" contenteditable="true">
+				Pinned
 			</span>
 			<br>
 			<span id="keyBinding" contenteditable="true">
@@ -1799,10 +1967,10 @@ h1{
 			<span id="binding_zoomScene_Desc" contenteditable="true">Zoom the camera.</span><br>
 			<span id="binding_panScene" contenteditable="true">Pan Scene</span><br>
 			<span id="binding_panScene_Desc" contenteditable="true">Pan the camera.</span><br>
-			<span id="binding_dollyIn" contenteditable="true">Zoom In</span><br>
-			<span id="binding_dollyIn_Desc" contenteditable="true">Zoom in the camera.</span><br>
-			<span id="binding_dollyOut" contenteditable="true">Zoom Out</span><br>
-			<span id="binding_dollyOut_Desc" contenteditable="true">Zoom Out camera.</span><br>
+			<span id="binding_dollyIn" contenteditable="true">Zoom Out</span><br>
+			<span id="binding_dollyIn_Desc" contenteditable="true">Zoom out the camera.</span><br>
+			<span id="binding_dollyOut" contenteditable="true">Zoom In</span><br>
+			<span id="binding_dollyOut_Desc" contenteditable="true">Zoom in camera.</span><br>
 			<span id="binding_centerCamera" contenteditable="true">Center Camera</span><br>
 			<span id="binding_centerCamera_Desc" contenteditable="true">Center the camera on the selection.</span><br>
 			<span id="binding_moveCameraForward" contenteditable="true">Move Camera Forward</span><br>
@@ -1900,6 +2068,8 @@ h1{
 			<span id="binding_reverseFace_Desc" contenteditable="true">Reverse the faces of the tile(s).</span><br>
 			<span id="binding_splitFace" contenteditable="true">Split Face</span><br>
 			<span id="binding_splitFace_Desc" contenteditable="true">Split the face of the active tile where the yellow line is placed.</span><br>
+			<span id="binding_subdivideFace" contenteditable="true">Subdivide Face</span><br>
+			<span id="binding_subdivideFace_Desc" contenteditable="true">Subdivide the face of the active tile.</span><br>
 			<span id="binding_combineVerts" contenteditable="true">Combine Vertices</span><br>
 			<span id="binding_combineVerts_Desc" contenteditable="true">Moves all selected vertices to the crosshair position.</span><br>
 			<span id="binding_pushSelection" contenteditable="true">Push Selection</span><br>
@@ -1930,6 +2100,83 @@ h1{
 			<span id="binding_adjustVertexUVLeft_Desc" contenteditable="true">Shift UVs of selected vertices left.</span><br>
 			<span id="binding_adjustVertexUVRight" contenteditable="true">Move Vertex UVs Right</span><br>
 			<span id="binding_adjustVertexUVRight_Desc" contenteditable="true">Shift UVs of selected vertices right.</span><br>
+			
+			<hr>
+			
+			<span id="binding_panTileset" contenteditable="true">Pan Tileset</span><br>
+			<span id="binding_panTileset_Desc" contenteditable="true">Pan the tileset.</span><br>
+			
+			<hr>
+			
+			<span id="binding_uvs_CenterCrosshair" contenteditable="true">Center Crosshair</span><br>
+			<span id="binding_uvs_CenterCrosshair_Desc" contenteditable="true">Center the crosshair to the selected UVs</span><br>
+			<span id="binding_uvs_Mirror" contenteditable="true">Mirror</span><br>
+			<span id="binding_uvs_Mirror_Desc" contenteditable="true">Mirror the selected UVs</span><br>
+			<span id="binding_uvs_Flip" contenteditable="true">Flip</span><br>
+			<span id="binding_uvs_Flip_Desc" contenteditable="true">Flip the selected UVs</span><br>
+			<span id="binding_uvs_RotateLeft" contenteditable="true">Rotate Left</span><br>
+			<span id="binding_uvs_RotateLeft_Desc" contenteditable="true">Rotate the selected UVs counter-clockwise.</span><br>
+			<span id="binding_uvs_RotateRight" contenteditable="true">Rotate Right</span><br>
+			<span id="binding_uvs_RotateRight_Desc" contenteditable="true">Rotate the selected UVs clockwise.</span><br>
+			<span id="binding_uvs_SelectAll" contenteditable="true">Select All</span><br>
+			<span id="binding_uvs_SelectAll_Desc" contenteditable="true">Select all the UVs.</span><br>
+			<span id="binding_uvs_DeselectAll" contenteditable="true">Deselect All</span><br>
+			<span id="binding_uvs_DeselectAll_Desc" contenteditable="true">Deselect all the UVs.</span><br>
+			<span id="binding_uvs_MoveLeft" contenteditable="true">Move Left</span><br>
+			<span id="binding_uvs_MoveLeft_Desc" contenteditable="true">Move the UVs left a number of pixels based on the UV Precision value.</span><br>
+			<span id="binding_uvs_MoveRight" contenteditable="true">Move Right</span><br>
+			<span id="binding_uvs_MoveRight_Desc" contenteditable="true">Move the UVs right a number of pixels based on the UV Precision value.</span><br>
+			<span id="binding_uvs_MoveUp" contenteditable="true">Move Up</span><br>
+			<span id="binding_uvs_MoveUp_Desc" contenteditable="true">Move the UVs up a number of pixels based on the UV Precision value.</span><br>
+			<span id="binding_uvs_MoveDown" contenteditable="true">Move Down</span><br>
+			<span id="binding_uvs_MoveDown_Desc" contenteditable="true">Move the UVs down a number of pixels based on the UV Precision value.</span><br>
+			<span id="binding_uvs_ToggleMultiple" contenteditable="true">Toggle Multiple</span><br>
+			<span id="binding_uvs_ToggleMultiple_Desc" contenteditable="true">Select one or multiple overlapping UVs.</span><br>
+			<span id="binding_uvs_SetFlat" contenteditable="true">Flatten UVs</span><br>
+			<span id="binding_uvs_SetFlat_Desc" contenteditable="true">Flatten the selected UVs of a tile or tiles so that their pixels are not stretched (Must have all four UVs of the tiles selected).</span><br>
+			<span id="binding_uvs_SetPixel" contenteditable="true">Round to Pixel</span><br>
+			<span id="binding_uvs_SetPixel_Desc" contenteditable="true">Round the UV coordinates to the nearest pixel.</span><br>
+			
+			<hr>
+			
+			<span id="binding_painting_Eraser" contenteditable="true">Eraser</span><br>
+			<span id="binding_painting_Eraser_Desc" contenteditable="true">Switch to the Eraser tool.</span><br>
+			<span id="binding_painting_Pencil" contenteditable="true">Pencil</span><br>
+			<span id="binding_painting_Pencil_Desc" contenteditable="true">Switch to the Pencil tool.</span><br>
+			<span id="binding_painting_Eyedropper" contenteditable="true">Eyedropper</span><br>
+			<span id="binding_painting_Eyedropper_Desc" contenteditable="true">Switch to the Eyedropper tool.</span><br>
+			<span id="binding_painting_Paintbucket" contenteditable="true">Paintbucket</span><br>
+			<span id="binding_painting_Paintbucket_Desc" contenteditable="true">Switch to the Paintbucket tool.</span><br>
+			<span id="binding_painting_Marquee" contenteditable="true">Marquee</span><br>
+			<span id="binding_painting_Marquee_Desc" contenteditable="true">Switch to the Marquee tool.</span><br>
+			<span id="binding_painting_Lasso" contenteditable="true">Lasso</span><br>
+			<span id="binding_painting_Lasso_Desc" contenteditable="true">Switch to the Lasso tool.</span><br>
+			<span id="binding_painting_Magicwand" contenteditable="true">Magicwand</span><br>
+			<span id="binding_painting_Magicwand_Desc" contenteditable="true">Switch to the Magicwand tool.</span><br>
+			<span id="binding_painting_Hand" contenteditable="true">Hand</span><br>
+			<span id="binding_painting_Hand_Desc" contenteditable="true">Switch to the Hand tool.</span><br>
+			<span id="binding_painting_Arrow" contenteditable="true">Arrow</span><br>
+			<span id="binding_painting_Arrow_Desc" contenteditable="true">Switch to the Arrow tool.</span><br>
+			<span id="binding_painting_Deselect" contenteditable="true">Deselect</span><br>
+			<span id="binding_painting_Deselect_Desc" contenteditable="true">Deselect the selection.</span><br>
+			<span id="binding_painting_Cut" contenteditable="true">Cut</span><br>
+			<span id="binding_painting_Cut_Desc" contenteditable="true">Cut out the selection from the canvas.</span><br>
+			<span id="binding_painting_Copy" contenteditable="true">Copy</span><br>
+			<span id="binding_painting_Copy_Desc" contenteditable="true">Copy the selected area of the canvas.</span><br>
+			<span id="binding_painting_Paste" contenteditable="true">Paste</span><br>
+			<span id="binding_painting_Paste_Desc" contenteditable="true">Paste the copied piece of the canvas or clipboard.</span><br>
+			<span id="binding_painting_SwitchColors" contenteditable="true">Switch Colors</span><br>
+			<span id="binding_painting_SwitchColors_Desc" contenteditable="true">Swap the primary and secondary colors.</span><br>
+			<span id="binding_painting_MoveLeft" contenteditable="true">Move Left</span><br>
+			<span id="binding_painting_MoveLeft_Desc" contenteditable="true">Move the selection left.</span><br>
+			<span id="binding_painting_MoveRight" contenteditable="true">Move Right</span><br>
+			<span id="binding_painting_MoveRight_Desc" contenteditable="true">Move the selection right.</span><br>
+			<span id="binding_painting_MoveUp" contenteditable="true">Move Up</span><br>
+			<span id="binding_painting_MoveUp_Desc" contenteditable="true">Move the selection up.</span><br>
+			<span id="binding_painting_MoveDown" contenteditable="true">Move Down</span><br>
+			<span id="binding_painting_MoveDown_Desc" contenteditable="true">Move the selection down.</span><br>
+			<span id="binding_painting_Delete" contenteditable="true">Delete</span><br>
+			<span id="binding_painting_Delete_Desc" contenteditable="true">Delete the selection.</span><br>
 
 		</div>
 		

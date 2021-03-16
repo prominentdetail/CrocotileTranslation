@@ -229,6 +229,7 @@ h1{
 			<a id="glossarypainting" href="#anchorpainting">Painting</a><br>
 			<a id="glossarytransforms" href="#anchortransforms">Transforms</a><br>
 			<a id="glossaryobjects" href="#anchorobjects">Objects</a><br>
+			<a id="glossarycameras" href="#anchorcameras">Cameras</a><br>
 			<a id="glossarylayers" href="#anchorlayers">Layers</a><br>
 			<a id="glossaryexport" href="#anchorexport">Exporting</a><br>
 			<a id="glossaryimport" href="#anchorimport">Importing</a><br>
@@ -582,6 +583,7 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/TXNRPOfpUWg?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeCtrlP" contenteditable="true"><u>Ctrl+P</u> Pull and align selected vertices and faces against the crosshair plane</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/TXNRPOfpUWg?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeP" contenteditable="true"><u>P</u> Center the selected vertices and faces on the crosshair plane</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ohnYAk4ycNU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeAltS" contenteditable="true"><u>Alt+S</u> Split a tile along the yellow line while in active mode.</li></div>
+				<li id="editModeAltD" contenteditable="true"><u>Alt+D</u> Sybdivide a tile while in active mode.</li>
 				<li id="editModeCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy quads</li>
 				<li id="editModeCtrlV" contenteditable="true"><u>Ctrl+V</u> Paste quads</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/X75lH5G0FHk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1&amp;t=46" target="_blank">🐊</a><li id="editModeCtrlD" contenteditable="true"><u>Ctrl+D</u> Deselect verts/faces (press key once for verts, second press for faces)</li></div>
@@ -767,6 +769,7 @@ h1{
 				<li id="settingsGeneralResolution" contenteditable="true"><u>Resolution</u><br>The resolution of the 3d scene can be adjusted by specifying width and height values that can be either in pixels or a percentage of the window size. Close the settings to apply the changes.</li>
 				<li id="settingsGeneralWindowSize" contenteditable="true"><u>Window Size</u><br>Setting these values will adjust the size of the main window. Close the settings to apply the changes.</li>
 				<li id="settingsGeneralFPS" contenteditable="true"><u>FPS</u><br>The value you set here will determine how many frames get rendered per second. A higher FPS will make the scene appear smoother when moving around the scene.</li>
+				<li id="settingsGeneralColorTheme" contenteditable="true"><u>Color Theme</u><br>Select between a Light or Dark color theme for the interface.</li>
 				<li id="settingsGeneralRuler" contenteditable="true"><u>Show Ruler</u><br>If enabled, visual guides extend from the 3d tilebrush to help measure distances.</li>
 				<li id="settingsGeneralLockCrosshair" contenteditable="true"><u>Lock Crosshair to the Grid</u><br>Keep the crosshair position rounded to the nearest grid point based on the grid-rounding value.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/oLl4HE9A-Ng?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsGeneralWireframe" contenteditable="true"><u>Wireframe</u><br>Toggle on/off the Wireframe. With this on, tiles will display their wireframe in the 3d scene.</li></div>
@@ -774,6 +777,7 @@ h1{
 				<li id="settingsGeneralBackgroundColor" contenteditable="true"><u>Background Color</u><br>This will set the background color of the scene</li>
 				<li id="settingsGeneralBackgroundTransparency" contenteditable="true"><u>Background Transparency</u><br>This will make the background become more or less opaque. A value of 1 is fully opaque, while a value of 0 is fully transparent. When taking screenshots, it will use this value to determine the transparency of the background in the images.</li>
 				<li id="settingsGeneralScreenshotFolder" contenteditable="true"><u>Screenshot folder</u><br>This specifies where the screenshots get saved. Press <u>F12</u> to take a screenshot.</li>
+				<li id="settingsGeneralBackupStates" contenteditable="true"><u>Backup states</u><br>This value defines how many backup files to save. These are saved to the Crocotile folder and saved every 5 minutes if changes have been made.</li>
 				<li id="settingsGeneralUndoStates" contenteditable="true"><u>Undo states</u><br>This value defines how many undo and redo states to allow. A low value is recommended.</li>
 			</ul>
 			
@@ -783,6 +787,7 @@ h1{
 			
 			<ul>
 				<li id="settingsProjectBasePixelUnit" contenteditable="true"><u>Base Pixel Unit</u><br>The base pixel unit defines how many pixels per meter there are. One 3d unit equates to 1 meter. Since some older projects may not have a base pixel unit defined, there is an option to specify the current unit when changing the value. When resizing the scene, it will compare the current unit with the new unit to determine the amount to scale the scene. The ratio to multiply the scene by is calculated as: (1 / new) / (1 / current).</li>
+				<li id="settingsProjectSkyboxShape" contenteditable="true"><u>Skybox Shape</u><br>Select either a Box, Cylinder, or Sphere for the shape of the skybox. Skybox .png files for each can be found in the misc folder in your Crocotile folder.</li>
 			</ul>
 			
 			<span id="settingsCamera" contenteditable="true">
@@ -888,6 +893,7 @@ h1{
 			</span>
 
 			<ul>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/YsIkN3pJeeU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="configRenderCamera" contenteditable="true"><u>Camera</u><br>Render out images from the cameras that have been placed into the scene. Check the Cameras section in this documentation for more information on how to add cameras and render!</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/SAerAfmr0M4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="configRenderSpinGif" contenteditable="true"><u>Spin Gif</u><br>Create a gif animation where the camera rotates around in the scene. Specify the frames, frame interval, and rotation amount. Click Export, choose a filename and then it will begin creating the gif animation. Consider changing the window size to be smaller, as gif animations can create large filesizes the more frames they have and the larger the image dimensions are.</li></div>
 			</ul>
 
@@ -1037,13 +1043,29 @@ h1{
 			<img src="docImg/tilesetContext.png" class="blockImage" align="right" hspace="16" vspace="16">
 			
 			<ul>
-				<li id="tilesetsContextMenuSelectTilebrushUVs" contenteditable="true">Select Tiles using Tilebrush's</li>
+				<li id="tilesetsContextMenuSelectTilebrushUVs" contenteditable="true">Select Tiles using Tilebrush's UVs</li>
 				<ul>
-					<li id="tilesetsContextMenuSelectTilebrushUVsDesc" contenteditable="true">Selects any faces in the scene that have the same UVs as the Tilebrush's.</li>
+					<li id="tilesetsContextMenuSelectTilebrushUVsDesc" contenteditable="true">Selects any faces in the scene that have the same UVs as the Tilebrush's and is using the same Tileset.</li>
+				</ul>
+				<li id="tilesetsContextMenuDeselectTilebrushUVs" contenteditable="true">Deselect Tiles using Tilebrush's UVs</li>
+				<ul>
+					<li id="tilesetsContextMenuDeselectTilebrushUVsDesc" contenteditable="true">Deselects any faces in the scene that have the same UVs as the Tilebrush's and is using the same Tileset.</li>
 				</ul>
 				<li id="tilesetsContextMenuApplyTilebrushUVs" contenteditable="true">Apply Tilebrush UVs to Faces</li>
 				<ul>
 					<li id="tilesetsContextMenuApplyTilebrushUVsDesc" contenteditable="true">Applies the UVs of the Tilebrush to any selected faces in the scene.</li>
+				</ul>
+				<li id="tilesetsContextMenuSelectTilesUsingTileset" contenteditable="true">Select Tiles using current Tileset</li>
+				<ul>
+					<li id="tilesetsContextMenuSelectTilesUsingTilesetDesc" contenteditable="true">Selects any faces in the scene that is using the currently selected Tileset.</li>
+				</ul>
+				<li id="tilesetsContextMenuDeselectTilesUsingTileset" contenteditable="true">Deselect Tiles using current Tileset</li>
+				<ul>
+					<li id="tilesetsContextMenuDeselectTilesUsingTilesetDesc" contenteditable="true">Deselects any faces in the scene that is using the currently selected Tileset.</li>
+				</ul>
+				<li id="tilesetsContextMenuApplyTilesetToTiles" contenteditable="true">Apply Tileset to the selected Faces</li>
+				<ul>
+					<li id="tilesetsContextMenuApplyTilesetToTilesDesc" contenteditable="true">Applies the tileset to the currently selected Faces in the scene. This is useful if you want to swap the tileset that specific tiles are using.</li>
 				</ul>
 			</ul>
 			
@@ -1670,7 +1692,7 @@ h1{
 				<div class="inset">
 					<img src="docImg/createobject.png" class="blockImage" align="right" hspace="16" vspace="16">
 					<span id="objectsCreatingDesc" contenteditable="true">
-						To create an object, you must first highlight the tiles that will be grouped together while in Edit mode. Once highlighted, you can right click to open the context menu, then select the Create Object menu item within the Faces menu. Doing so will remove the tiles and replace them with an instance of the newly created object. Instances can be selected like tiles, moved, and rotated. The new object will also be listed in the Scene tab, and can be dragged into a layer to help organize your list of objects. When you create an object, its origin point will be placed relative to where the crosshair is located. Check the <u>Object Points</u> section below on how you can change this position.
+						To create an object, you must first highlight the tiles that will be grouped together while in Edit mode. Once highlighted, you can right click to open the context menu, then select the Create Object menu item within the Faces menu. You can also click the Create Object button in the Scene tab. Doing so will remove the tiles and replace them with an instance of the newly created object. Instances can be selected like tiles, moved, and rotated. The new object will also be listed in the Scene tab, and can be dragged into a layer to help organize your list of objects. When you create an object, its origin point will be placed relative to where the crosshair is located. Check the <u>Object Points</u> section below on how you can change this position.
 					</span>
 					<br clear="right">
 				</div>
@@ -1916,6 +1938,148 @@ h1{
 		
 		<div class="block">
 			<div class="blockHeader">
+				<a id="anchorcameras"></a>
+				<span id="cameras" contenteditable="true">
+					Cameras
+				</span>
+			</div>
+			
+			<br>
+			<a class="video" href="https://www.youtube.com/embed/YsIkN3pJeeU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			
+			<span id="camerasContent" contenteditable="true">
+				Cameras are used when rendering out images of the scene. You can pick which camera(s) to render an image from by going to Edit > Render > Camera. Cameras can be either Perspective or Othographic. You can add cameras to the scene by clicking the Add Camera button in the Scene tab.
+			</span>				
+			<img src="docImg/addCamera.png" class="lineImage">
+			<span id="camerasContent2" contenteditable="true">
+				When clicked, a camera will be added to the scene at the current location and angle being viewed. You can reset this position and orientation and also specify whether it is perspective or orthographic.
+			</span>
+			
+			<hr>
+
+			<span id="camerasMenu" contenteditable="true">
+				<h2>Camera Context Menu</h2>
+			</span>
+
+			<span id="camerasMenuContent" contenteditable="true">
+				This menu allows you to perform various operations related to a camera. To open the menu, go to the Scene tab and right-click a camera that is listed. See below for more information regarding the various menu choices.
+			</span>
+			
+			<br>
+			<img src="docImg/cameramenu.png" class="blockImage" align="right" hspace="16" vspace="16">
+			
+			<ul>
+				<li id="camerasMenuSwitchToThis" contenteditable="true"><u>Switch to this Camera</u></li>
+				<div class="inset">
+					<span id="camerasMenuSwitchToThisDesc" contenteditable="true">
+						This will set the current view in the 3d scene to this camera's location and orientation.
+					</span>	
+				</div>
+				<li id="camerasMenuRename" contenteditable="true"><u>Rename Camera</u></li>
+				<div class="inset">
+					<span id="camerasMenuRenameDesc" contenteditable="true">
+						This will show an input box to type in the new name for the camera. Another way is to simply double-click the camera name.
+					</span>	
+				</div>
+				<li id="camerasMenuProperties" contenteditable="true"><u>Properties</u></li>
+				<div class="inset">
+					<span id="camerasMenuPropertiesDesc" contenteditable="true">
+						This will open the Properties panel for a camera. From there you can switch between Perspective and Orthographic mode as well as set properties for those. Alternatively you can Double-click the listed camera (to the side of the name) to open the properties.
+					</span>	
+				</div>
+				<li id="camerasMenuReset" contenteditable="true"><u>Reset Camera</u></li>
+				<div class="inset">
+					<span id="camerasMenuResetDesc" contenteditable="true">
+						This will reset the camera's position and orientation to the current view in the 3d scene. It will also set the camera mode either to Perspective or Orthographic depending on the current mode used in the 3d scene.
+					</span>	
+				</div>
+				<li id="camerasMenuRemove" contenteditable="true"><u>Remove Camera</u></li>
+				<div class="inset">
+					<span id="camerasMenuRemoveDesc" contenteditable="true">
+						This will remove the camera from the scene!
+					</span>	
+				</div>
+			</ul>
+		
+			<hr>
+
+			<span id="camerasProperties" contenteditable="true">
+				<h2>Properties</h2>
+			</span>
+
+			<span id="camerasPropertiesContent" contenteditable="true">
+				Right-click a camera listed in the Scene tab and choose Properties. Alternatively you can Double-click the space to the side of its name to open the Properties. This will open a panel with special options such as Perspective and Orthographic where specific properties for the camera can be set. You can also Reset the Camera to set these properties to the current view in the 3d scene.
+			</span>
+			
+			<ul>
+				<li id="camerasPropertiesPerspective" contenteditable="true"><u>Perspective</u></li>
+				<div class="inset">
+					<img src="docImg/perspectiveproperties.png" class="blockImage" align="right" hspace="16" vspace="16">
+					<span id="camerasPropertiesPerspectiveDesc" contenteditable="true">
+						The Aspect Ratio by default is the width divided by the height of the viewport (width/height) when the camera was created. You can adjust this value if you like. The Field of View specifies the span of the angle vertically that the camera can see. The Frustum Near and Far specify the range or depth that the camera renders from itself. Anything outside that range won't be rendered. The Zoom specifies how magnified or zoomed in or out the render will be.
+					</span>
+					<br clear="right">
+				</div>
+				<li id="camerasPropertiesOrthographic" contenteditable="true"><u>Orthographic</u></li>
+				<div class="inset">
+					<img src="docImg/orthographicproperties.png" class="blockImage" align="right" hspace="16" vspace="16">
+					<span id="camerasPropertiesOrthographicDesc" contenteditable="true">
+						The Frustum Near and Far specify the range or depth that the camera renders from itself. Anything outside that range won't be rendered. The Left, Right, Top, and Bottom properties control the camera's frustum. It determines the rectangular area that the camera can see and will default to the current view when the camera was created. The Zoom specifies how magnified or zoomed in or out the render will be.
+					</span>	
+					<br clear="right">
+				</div>
+			</ul>
+			
+			<hr>
+
+			<span id="camerasRendering" contenteditable="true">
+				<h2>Rendering</h2>
+			</span>
+
+			<span id="camerasRenderingContent" contenteditable="true">
+				You can pick which camera(s) to render an image from by going to Edit > Render > Camera. A panel will open with a list of cameras that are in the scene. Select which cameras you want to render. You can hold down Ctrl and click more than one camera, and when you render it will render them all at once. This may be useful in cases where you want to get multiple angles of something, for example, such as an isometric object that will be rendered into a 2d asset.
+			</span>
+			<a class="video" href="https://www.youtube.com/embed/Ic-ePYqHgas?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			<span id="camerasRenderingContent" contenteditable="true">
+				There are various properties you can set when you render your images. 
+			</span>
+			
+			<br>
+			<img src="docImg/rendercamera.png" class="blockImage" align="right" hspace="16" vspace="16">
+			
+			<ul>
+				<li id="camerasRenderingResolution" contenteditable="true"><u>Resolution</u></li>
+				<div class="inset">
+					<span id="camerasRenderingResolutionDesc" contenteditable="true">
+						The resolution controls the width and height of the rendered images. This is useful if you need a specific size.
+					</span>
+				</div>
+				<li id="camerasRenderingBackgroundColor" contenteditable="true"><u>Background Color</u></li>
+				<div class="inset">
+					<span id="camerasRenderingBackgroundColorDesc" contenteditable="true">
+						If the skybox is not rendered, this property will specify the color of the background.
+					</span>	
+				</div>
+				<li id="camerasRenderingBackgroundTransparency" contenteditable="true"><u>Background Transparency</u></li>
+				<div class="inset">
+					<span id="camerasRenderingBackgroundTransparencyDesc" contenteditable="true">
+						If the skybox isn't rendered, this property controls how transparent or opaque the background is. This value can be a floating point number between 0 (transparent) and 1 (opaque).
+					</span>	
+				</div>
+				<li id="camerasRenderingSkybox" contenteditable="true"><u>Skybox</u></li>
+				<div class="inset">
+					<span id="camerasRenderingSkybox" contenteditable="true">
+						This property determines if the skybox will be rendered.
+					</span>	
+				</div>
+			</ul>
+			
+		</div>
+				
+		<br><br>
+		
+		<div class="block">
+			<div class="blockHeader">
 				<a id="anchorlayers"></a>
 				<span id="layers" contenteditable="true">
 					Layers
@@ -1926,7 +2090,7 @@ h1{
 			<a class="video" href="https://www.youtube.com/embed/TFgOzqVWW4U?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
 			
 			<span id="layersContent" contenteditable="true">
-				Layers allow you to organize your object list inside the Scene tab. You can drag objects into and out of layers and label them to help you when sorting through them. To add a layer, simply click the + button near the top of the window while the Scene tab is open.
+				Layers allow you to organize your object list inside the Scene tab. You can drag objects into and out of layers and label them to help you when sorting through them. You can even have nested layers! To add a layer, simply click the layer button near the top of the window while the Scene tab is open.
 			</span>				
 			<img src="docImg/addlayer.png" class="lineImage">
 			<span id="layersContent2" contenteditable="true">
@@ -2017,13 +2181,31 @@ h1{
 				<li id="exportMergeVertices" contenteditable="true"><u>Merge Vertices</u></li>
 				<div class="inset">
 					<span id="exportMergeVerticesDesc" contenteditable="true">
-						If this option is selected, any vertices that are overlapping will be merged together to create just one vertex.
+						If this option is selected, any vertices that are overlapping will be merged together to create just one vertex. The UVs of the vertices must also be the same for them to be merged as there can only be one UV coordinate per vertex. If the UVs are different, then the vertices won't merge even though they have the same position in 3d space.
 					</span>
 				</div>
 				<li id="exportVertexNormals" contenteditable="true"><u>Vertex Normals</u></li>
 				<div class="inset">
 					<span id="exportVertexNormalsDesc" contenteditable="true">
-						You can choose between flat or smooth normals. Flat will set all vertex normals to be the same as the face normal. This will give the impression of sharp edges to each polygon. Smooth will average the vertex normals based on all polygon faces connected to that vertex. With Smooth selected you can specify the angle threshold to control which face normals affect the vertex normals. Specify the angle in degrees. If the angle between surfaces are within this angle, the vertex normals will be averaged betweeen them. (Note: a value of 90 produces strange results, so use 89 instead).
+						You can choose between flat or smooth normals. Flat will set all vertex normals to be the same as the face normal. This will give the impression of sharp edges to each polygon. Smooth will average the vertex normals based on all polygon faces connected to that vertex. With Smooth selected you can specify the angle threshold to control which face normals affect the vertex normals. Specify the angle in degrees. If the angle between surfaces are within this angle, the vertex normals will be averaged betweeen them.
+					</span>
+				</div>
+				<li id="exportPolygonType" contenteditable="true"><u>Polygon Type</u></li>
+				<div class="inset">
+					<span id="exportPolygonTypeDesc" contenteditable="true">
+						Polygon type only applies to .obj files. You can choose to export your tiles as Triangles or Quads. Triangles are three-sided polygons and Quads are four-sided polygons.
+					</span>
+				</div>
+				<li id="exportUseGroups" contenteditable="true"><u>Use Groups</u></li>
+				<div class="inset">
+					<span id="exportUseGroupsDesc" contenteditable="true">
+						Use Groups only applies to .obj files. This option will organize the tiles of each instance to their corresponding object group. This may effect how your .obj gets imported into other programs. Some programs will separate each group into their own objects upon import. So if you need the tiles split up into their corresponding objects then you will select this, otherwise everything will be treated as a single object.
+					</span>
+				</div>
+				<li id="exportEmbedTextures" contenteditable="true"><u>Embed Textures</u></li>
+				<div class="inset">
+					<span id="exportEmbedTexturesDesc" contenteditable="true">
+						Embed Textures only applies to .gltf and .glb files. This option will embed the texture data with the rest of the data so that there is only one file.
 					</span>
 				</div>
 				<li id="exportTileSpacing" contenteditable="true"><u>Tile Spacing</u></li>
