@@ -319,13 +319,21 @@ h1{
 				<br><br>
 			</span>
 			
-			<img src="docImg/arrows.png" class="blockImage" align="right" hspace="16" vspace="16">
+			<img src="docImg/gizmo.png" class="blockImage" align="right" hspace="16" vspace="16">
 			
 			<span id="gettingStartedContent5" contenteditable="true">
-				There are other ways of moving the selected vertices and faces. One way is to drag the arrows that appear when you hover the mouse over the 3d crosshair. You can turn off these arrows by pressing <u>X</u> or by clicking the Arrow toggle button at the top.
+				There are other ways of moving the selected vertices and faces. One way is to interact with the 3d Gizmo that appears when a selection is made. The Gizmo allows you to translate, rotate, and scale your selection by clicking one or more of its axes and dragging them. You can turn off the 3d Gizmo by pressing <u>X</u> or by clicking the Gizmo toggle button at the top. 
 			</span>
 				
 			<img src="docImg/arrowtoggle.png" class="lineImage">
+			
+			<span id="gettingStartedContent5b" contenteditable="true">
+				You can press <u>Shift+X</u> to toggle between the transform, rotate, and scale modes, or you can click the button to the left of the Gizmo toggle button.
+			</span>
+			
+			<img src="docImg/arrowmode.png" class="lineImage">
+			
+			<br><br>
 			
 			<span id="gettingStartedContent6" contenteditable="true">
 				Another way to move vertices is by clicking and dragging them directly with the mouse. You can hold <u>Shift</u> while you drag a vertex to snap it onto another vertex.
@@ -433,15 +441,6 @@ h1{
 			<img src="docImg/gridrounding.png" class="lineImage">
 			<br><br>
 			
-			<img src="docImg/arrows.png" class="blockImage" align="right" hspace="16" vspace="16">
-			
-			<span id="crosshairControlsArrows" contenteditable="true">
-				Hovering the mouse over a crosshair line will cause a yellow arrow helper to appear. These can be clicked and dragged to move the crosshair as well. You can also click the crosshair toggle button at the top of the scene or press <u>X</u> to toggle the helper arrows on/off.
-			</span>
-			
-			<img src="docImg/arrowtoggle.png" class="lineImage">
-			
-			<br><br clear="right">
 			
 			<span id="crosshairControlsArrows2" contenteditable="true">
 				You can also Tilt the crosshair. This allows you to draw and edit tiles at angles other than the default x,y,z.
@@ -457,28 +456,56 @@ h1{
 				<li id="crosshairAltC" contenteditable="true"><u>Alt+C</u> Snap the crosshair to the nearest vertex that the mouse is hovering over.</li>
 				<li id="crosshair[" contenteditable="true"><u>[</u> Decrease grid rounding size</li>
 				<li id="crosshair]" contenteditable="true"><u>]</u> Increase grid rounding size</li>
-				<li id="crosshairX" contenteditable="true"><u>X</u> Toggle crosshair arrows on/off</li>
-				<li id="crosshairShiftX" contenteditable="true"><u>Shift+X</u> Toggle crosshair arrow mode (move, rotate, resize)</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/XX3TFJ2IzHY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="crosshairShiftC" contenteditable="true"><u>Shift+C</u> Center crosshair to the selection (in Edit mode)</li></div>
-				<li id="crosshairAltC" contenteditable="true"><u>Alt+C</u> Snap the crosshair to the grid (rounds its position based on grid-rounding value).</li>
+				<li id="crosshairAltC" contenteditable="true"><u>Alt+O</u> Snap the crosshair to the grid (rounds its position based on grid-rounding value).</li>
 				<li id="crosshairShiftT" contenteditable="true"><u>Shift+T</u> Hover over edge of a tile and press these keys to set an Anchor point relative to the tile's edge. The anchor represents your tilted orientation.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/0SVVXeJsBuI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="crosshairT" contenteditable="true"><u>T</u> Toggle the Tilt mode for your 3d crosshair. It will match the orientation of the anchor point you have set.</li></div>
 			</ul>
-				
-			<a class="video" href="https://www.youtube.com/embed/R7xxfpSGDD4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
 			
-			<img src="docImg/arrowrotate.png" class="blockImage" align="right" hspace="16" vspace="16">
+			<br><br clear="right">			
+			<hr>
+			
+			<span id="gizmoControls" contenteditable="true">
+				<h4>Gizmo Controls</h4>
+			</span>	
+			
+			<a class="video" href="https://www.youtube.com/embed/NVgCs3pc2hc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
 			
 			<span id="crosshairControlsArrows3" contenteditable="true">
-				The crosshair arrows have three modes (move, rotate, and resize). You can toggle between them by pressing the corresponding button located at the top of the scene
+				The 3d Gizmo has three modes (move, rotate, and resize). You can toggle between them by pressing the corresponding button located at the top of the scene
 			</span>
 				
 			<img src="docImg/arrowmode.png" class="lineImage">
 				
 			<span id="crosshairControlsArrows4" contenteditable="true">
-				, or by pressing <u>Shift + X</u>. By clicking and dragging the crosshair helpers, you can move, rotate, or resize the selected faces and vertices in the scene. Adjusting the Grid Rounding value will effect how fine or coarse the changes are.
+				, or by pressing <u>Shift + X</u>. By clicking and dragging the Gizmo's lines representing the X,Y, and Z axes, you can move, rotate, or resize the selected faces and vertices in the scene. Adjusting the Grid Rounding value will effect how fine or coarse the changes are. You can also set the Rotation Interval value to rotate at specific intervals.
 			</span>
 			
+			<br><br clear="right">	
+			
+			<img src="docImg/gizmorotate.png" class="blockImage" align="right" hspace="16" vspace="16">
+			
+			<span id="gizmoControlsGizmo" contenteditable="true">
+				The 3d Gizmo will become visible when you select some vertices or instances. You can click the Gizmo toggle button at the top of the scene or press <u>X</u> to toggle the 3d Gizmo on/off.
+			</span>
+			
+			<img src="docImg/arrowtoggle.png" class="lineImage">
+			
+			<span id="gizmoControlsGizmo2" contenteditable="true">
+				Pressing <u>Shift+X</u> will cycle through the translation, rotation, scale modes.
+				<br><br>
+				Pressing <u>Alt+X</u> will position the Gizmo to the nearest vertex that the mouse is hovering over, or to the 3d crosshair. You can toggle between vert location and crosshair location by pressing it again.
+			</span>
+			
+			<br><br clear="right">
+			
+			<li id="gizmoX" contenteditable="true"><u>X</u> Toggle the Gizmo on/off.</li>
+			<li id="gizmoShiftX" contenteditable="true"><u>Shift+X</u> Toggle between the Translate, Rotate, Scale modes for the Gizmo.</li>
+			<li id="gizmoAltX" contenteditable="true"><u>Alt+X</u> Snap the gizmo to the nearest vertex that the mouse is hovering over, or the 3d crosshair (press twice).</li>
+			<li id="gizmoShiftAltX" contenteditable="true"><u>Shift+Alt+X</u> Snap the gizmo to the center of the selection.</li>
+			<li id="gizmoShift" contenteditable="true"><u>Shift</u> Move the Gizmo without moving the selection.</li>
+			<li id="gizmoAlt" contenteditable="true"><u>Alt</u> Transform the Crosshair relative to the Gizmo. This allows you to move and rotate the Crosshair via the mouse.</li>
+				
 			<br><br clear="right">			
 			<hr>
 			
@@ -594,7 +621,8 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/Wal6akWzvLY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftClickDragVertex" contenteditable="true"><u>Shift+Click drag Vertex</u> Snap dragged vertex to another vertex</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/V_r2I8I2BiQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeB" contenteditable="true"><u>B</u> Toggle camera-based selection</li></div>
 				<li id="editMode8" contenteditable="true"><u>8</u> Select vertices along the x,y,z axis. You can customize the key-bindings for each axis in the buttons settings.</li>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>O</u> Realign the selected vertices/faces to the grid using the current grid-rounding value.</li></div>
+				<li id="editModeOPixel" contenteditable="true"><u>O</u> Realign the selected vertices/faces to the nearest pixel (equal to a grid-rounding value of one).</li>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>Ctrl+O</u> Realign the selected vertices/faces to the grid using the current grid-rounding value.</li></div>
 			</ul>
 			
 			<a class="video" href="https://www.youtube.com/embed/ijYxLGE3los?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
@@ -1599,7 +1627,7 @@ h1{
 			<img src="docImg/relativebutton.png" class="lineImage">
 			
 			<span id="transformsContent3" contenteditable="true">
-				This allows you to toggle between (x,y,z) and (right,up,backward). The first option will treat the transforms as normal, however the second option will treat the transforms relative to the camera orientation.
+				This allows you to toggle between (x,y,z) and (right,up,backward). The first option will treat the transforms as normal, however the second option will treat the transforms relative to the camera orientation. If the <u>Gizmo</u> option is selected, transformations will be relative to the Gizmo.
 			</span>
 			
 			<ul>
@@ -1631,6 +1659,12 @@ h1{
 			<span id="transformsCrosshairContent" contenteditable="true">
 				These allow you to retrieve the current crosshair position by hitting <u>Get</u>. Pressing <u>Set</u> will move the crosshair to the specified x,y,z position. If the <u>move selection</u> option is checked, it will also move the selected geometry along with the crosshair. There is also a translate option as well to shift the crosshair relative its current position.
 			</span>
+
+			<ul>
+				<li id="transformsCrosshairRotationTilt" contenteditable="true"><u>Tilt</u> This option will toggle on/off a tilted orientation.</li>			
+				<li id="transformsCrosshairRotationOrientation" contenteditable="true"><u>Orientation</u> You can retrieve the orientation of the crosshair by clicking <u>Get</u>. You can apply the orientation by clicking <u>Set</u>.</li>			
+				<li id="transformsCrosshairRotationRotate" contenteditable="true"><u>Rotate</u> You can apply a rotation to the crosshair. Clicking <u>Apply</u> will add the amount specified in the x, y, and z input boxes. You can supply negative numbers as well.</li>			
+			</ul>
 
 			<hr>
 
@@ -1926,7 +1960,7 @@ h1{
 				<div class="inset">
 					<img src="docImg/mirrorproperties.png" class="blockImage" align="right" hspace="16" vspace="16">
 					<span id="objectsPropertiesMirroringDesc" contenteditable="true">
-						Enabling Mirror mode will cause all the tiles within an object to have a mirrored version of itself. Any changes to a tile will be updated in the mirrored version. This may be useful if you want to create a symmetrical object- you can create one side and as you are creating it, the other side will be auto-generated. It will mirror across the origin point of the object. Check the Object section of this document to learn how to reposition the origin point.
+						Enabling Mirror mode will cause all the tiles within an object to have a mirrored version of itself. Any changes to a tile will be updated in the mirrored version. This may be useful if you want to create a symmetrical object- you can create one side and as you are creating it, the other side will be auto-generated. It will retain symmetry across the origin point of the object. Check the Object section of this document to learn how to reposition the origin point.
 					</span>	
 					<br clear="right">
 				</div>

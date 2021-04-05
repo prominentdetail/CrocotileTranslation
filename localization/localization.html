@@ -693,6 +693,10 @@ h1{
 			<span id="settingsVertexSize" contenteditable="true">
 				Vertex Size
 			</span>
+			<br>
+			<span id="settingsSelectedFaceColor" contenteditable="true">
+				Selected Face Color
+			</span>
 			
 			<h4><span id="settingsTilesets" contenteditable="true">
 				Tilesets
@@ -813,6 +817,10 @@ h1{
 			<br>
 			<span id="vertices" contenteditable="true">
 				Vertices
+			</span>
+			<br>
+			<span id="alignVerticesToThePixel" contenteditable="true">
+				Align vertices to the nearest pixel
 			</span>
 			<br>
 			<span id="alignVerticesToTheGrid" contenteditable="true">
@@ -1095,6 +1103,10 @@ h1{
 				Wrapping: Mirrored Repeat
 			</span>
 			<br>
+			<span id="singleDoubleSided" contenteditable="true">
+				Single/Double Sided
+			</span>
+			<br>
 			<span id="decalModeOff" contenteditable="true">
 				Decal mode: off
 			</span>
@@ -1157,6 +1169,10 @@ h1{
 			<br>
 			<span id="gridRounding" contenteditable="true">
 				Grid rounding
+			</span>
+			<br>
+			<span id="rotateInterval" contenteditable="true">
+				Rotate interval
 			</span>
 			<br>
 			<span id="tileSplitting" contenteditable="true">
@@ -1460,6 +1476,10 @@ h1{
 				(right,up,backward)
 			</span>
 			<br>
+			<span id="gizmo" contenteditable="true">
+				Gizmo
+			</span>
+			<br>
 			<span id="translate" contenteditable="true">
 				Translate
 			</span>
@@ -1506,6 +1526,18 @@ h1{
 			<br>
 			<span id="translateCrosshair" contenteditable="true">
 				Translate Crosshair
+			</span>
+			<br>
+			<span id="crosshairRotation" contenteditable="true">
+				Crosshair Rotation
+			</span>
+			<br>
+			<span id="rotateCrosshair" contenteditable="true">
+				Rotate Crosshair
+			</span>
+			<br>
+			<span id="tilt" contenteditable="true">
+				Tilt
 			</span>
 			<br>
 			<span id="camera" contenteditable="true">
@@ -1581,6 +1613,10 @@ h1{
 				Add Camera
 			</span>
 			<br>
+			<span id="addActor" contenteditable="true">
+				Add Actor
+			</span>
+			<br>
 			<span id="removeSelectedItem" contenteditable="true">
 				Remove selected item
 			</span>
@@ -1591,6 +1627,10 @@ h1{
 			<br>
 			<span id="moveDown" contenteditable="true">
 				Move down
+			</span>
+			<br>
+			<span id="lockUnlockItem" contenteditable="true">
+				Lock/Unlock Item
 			</span>
 			<br>
 			<span id="importPrefabObject" contenteditable="true">
@@ -1769,6 +1809,18 @@ h1{
 			<span id="deconstructObject" contenteditable="true">
 				Deconstruct Object
 			</span>
+			<br>
+			<span id="objectIsLocked" contenteditable="true">
+				This object is locked!
+			</span>
+			<br>
+			<span id="layerIsLocked" contenteditable="true">
+				This layer is locked!
+			</span>
+			<br>
+			<span id="cameraIsLocked" contenteditable="true">
+				This camera is locked!
+			</span>
 			
 		</div>
 		
@@ -1906,8 +1958,16 @@ h1{
 			<span id="binding_selectAllObjects_Desc" contenteditable="true">Select all object instances.</span><br>
 			<span id="binding_toggleMode" contenteditable="true">Toggle Mode</span><br>
 			<span id="binding_toggleMode_Desc" contenteditable="true">Toggle between edit and draw modes.</span><br>
-			<span id="binding_snapCrosshair" contenteditable="true">Snap Crosshair</span><br>
+			<span id="binding_snapCrosshair" contenteditable="true">Snap Crosshair to Vertex</span><br>
 			<span id="binding_snapCrosshair_Desc" contenteditable="true">Snap the crosshair to the nearest vertex the mouse is hovering over.</span><br>
+			<span id="binding_snapGizmo" contenteditable="true">Snap Gizmo to Vertex</span><br>
+			<span id="binding_snapGizmo_Desc" contenteditable="true">Snap the gizmo to the nearest vertex the mouse is hovering over.</span><br>
+			<span id="binding_centerGizmo" contenteditable="true">Center Gizmo to Selection</span><br>
+			<span id="binding_centerGizmo_Desc" contenteditable="true">Center the gizmo to the selection.</span><br>
+			<span id="binding_gizmoModifier" contenteditable="true">Gizmo Modifier</span><br>
+			<span id="binding_gizmoModifier_Desc" contenteditable="true">If the Gizmo is enabled, holding this key will move the Gizmo without moving the selection.</span><br>
+			<span id="binding_gizmoCrosshairModifier" contenteditable="true">Gizmo Crosshair Modifier</span><br>
+			<span id="binding_gizmoCrosshairModifier_Desc" contenteditable="true">If the Gizmo is enabled, holding this key will move/rotate the Crosshair relative to the Gizmo.</span><br>
 			<span id="binding_moveSelectionUp" contenteditable="true">Move Selection Up</span><br>
 			<span id="binding_moveSelectionUp_Desc" contenteditable="true">Move the selection up.</span><br>
 			<span id="binding_moveSelectionDown" contenteditable="true">Move Selection Down</span><br>
