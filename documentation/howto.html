@@ -370,6 +370,8 @@ h1{
 				<li id="generalCtrl9" contenteditable="true"><u>Ctrl+9</u> Toggle wireframe mode</li>
 				<li id="generalAlt9" contenteditable="true"><u>Alt+9</u> Toggle Camera Style</li>
 				<li id="general0" contenteditable="true"><u>0</u> Hide/Show origin,crosshair lines</li>
+				<li id="generalEsc" contenteditable="true"><u>Esc</u> Close opened panels</li>
+				<li id="generalAltF4" contenteditable="true"><u>Alt+F4</u> Exit the program</li>
 			</ul>
 			
 			<span id="generalHotkeys" contenteditable="true">
@@ -453,12 +455,12 @@ h1{
 				<li id="crosshairShiftWASD" contenteditable="true"><u>Shift+W,A,S,D</u> Move the 3d crosshair without moving selection.</li>
 				<li id="crosshairSpaceWS" contenteditable="true"><u>Space+W,S</u> Move crosshair/selection towards/away from camera.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/g_TMIadYjkQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="crosshairVertex" contenteditable="true"><u>Click vertex</u> Move crosshair to location of vertex.</li></div>
-				<li id="crosshairAltC" contenteditable="true"><u>Alt+C</u> Snap the crosshair to the nearest vertex that the mouse is hovering over.</li>
+				<li id="crosshairAltC" contenteditable="true"><u>Alt+C</u> Snap the crosshair to the nearest vertex, object or any other entity that the mouse is hovering over.</li>
 				<li id="crosshair[" contenteditable="true"><u>[</u> Decrease grid rounding size</li>
 				<li id="crosshair]" contenteditable="true"><u>]</u> Increase grid rounding size</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/XX3TFJ2IzHY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="crosshairShiftC" contenteditable="true"><u>Shift+C</u> Center crosshair to the selection (in Edit mode)</li></div>
 				<li id="crosshairAltC" contenteditable="true"><u>Alt+O</u> Snap the crosshair to the grid (rounds its position based on grid-rounding value).</li>
-				<li id="crosshairShiftT" contenteditable="true"><u>Shift+T</u> Hover over edge of a tile and press these keys to set an Anchor point relative to the tile's edge. The anchor represents your tilted orientation.</li>
+				<li id="crosshairShiftT" contenteditable="true"><u>Shift+T</u> Hover over edge of a tile and press these keys to set an Anchor point relative to the tile's edge. The anchor represents your tilted orientation. Press twice to hide/show it.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/0SVVXeJsBuI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="crosshairT" contenteditable="true"><u>T</u> Toggle the Tilt mode for your 3d crosshair. It will match the orientation of the anchor point you have set.</li></div>
 			</ul>
 			
@@ -494,17 +496,17 @@ h1{
 			<span id="gizmoControlsGizmo2" contenteditable="true">
 				Pressing <u>Shift+X</u> will cycle through the translation, rotation, scale modes.
 				<br><br>
-				Pressing <u>Alt+X</u> will position the Gizmo to the nearest vertex that the mouse is hovering over, or to the 3d crosshair. You can toggle between vert location and crosshair location by pressing it again.
+				Pressing <u>Alt+X</u> will position the Gizmo to the nearest vertex, object or any other entity that the mouse is hovering over, or to the 3d crosshair. You can toggle between vert,object,entity location and crosshair location by pressing it again.
 			</span>
 			
 			<br><br clear="right">
 			
 			<li id="gizmoX" contenteditable="true"><u>X</u> Toggle the Gizmo on/off.</li>
 			<li id="gizmoShiftX" contenteditable="true"><u>Shift+X</u> Toggle between the Translate, Rotate, Scale modes for the Gizmo.</li>
-			<li id="gizmoAltX" contenteditable="true"><u>Alt+X</u> Snap the gizmo to the nearest vertex that the mouse is hovering over, or the 3d crosshair (press twice).</li>
+			<li id="gizmoAltX" contenteditable="true"><u>Alt+X</u> Snap the gizmo to the nearest vertex, object or any other entity that the mouse is hovering over, or the 3d crosshair (press twice).</li>
 			<li id="gizmoShiftAltX" contenteditable="true"><u>Shift+Alt+X</u> Snap the gizmo to the center of the selection.</li>
 			<li id="gizmoShift" contenteditable="true"><u>Shift</u> Move the Gizmo without moving the selection.</li>
-			<li id="gizmoAlt" contenteditable="true"><u>Alt</u> Transform the Crosshair relative to the Gizmo. This allows you to move and rotate the Crosshair via the mouse.</li>
+			<li id="gizmoAlt" contenteditable="true"><u>Alt</u> Transform the Crosshair relative to the Gizmo. This allows you to move and rotate the Crosshair via the mouse. This will activate Tilt mode. You can press <u>T</u> to deactivate Tilt mode.</li>
 				
 			<br><br clear="right">			
 			<hr>
@@ -621,8 +623,9 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/Wal6akWzvLY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftClickDragVertex" contenteditable="true"><u>Shift+Click drag Vertex</u> Snap dragged vertex to another vertex</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/V_r2I8I2BiQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeB" contenteditable="true"><u>B</u> Toggle camera-based selection</li></div>
 				<li id="editMode8" contenteditable="true"><u>8</u> Select vertices along the x,y,z axis. You can customize the key-bindings for each axis in the buttons settings.</li>
-				<li id="editModeOPixel" contenteditable="true"><u>O</u> Realign the selected vertices/faces to the nearest pixel (equal to a grid-rounding value of one).</li>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>Ctrl+O</u> Realign the selected vertices/faces to the grid using the current grid-rounding value.</li></div>
+				<li id="editModeOPixel" contenteditable="true"><u>O</u> Realign the selected vertices/faces/objects or any other entity to the nearest pixel (equal to a grid-rounding value of one).</li>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>Ctrl+O</u> Realign the selected vertices/faces/objects or any other entity to the grid using the current grid-rounding value.</li></div>
+				<li id="editModeDisableVertSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select vertices.</li>
 			</ul>
 			
 			<a class="video" href="https://www.youtube.com/embed/ijYxLGE3los?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
@@ -842,9 +845,13 @@ h1{
 			
 			<ul>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/V_r2I8I2BiQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeCameraBasedSelection" contenteditable="true"><u>Camera-based Selection</u><br>If enabled, only vertices and faces that are visible from the camera's perspective will be selected. If disabled, vertices and faces behind each other will also be selected. You can also press <u>B</u> to toggle this setting on/off.</li></div>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/R7xxfpSGDD4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeCrosshairArrows" contenteditable="true"><u>Crosshair Arrows</u><br>If enabled, this can be used to help move vertices and faces in the scene. Arrows will display along the 3d crosshair in the scene that can be clicked and dragged. You can also press <u>X</u> to toggle this setting on/off.</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/NVgCs3pc2hc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeGizmo" contenteditable="true"><u>Gizmo</u><br>If enabled, this can be used to help move,rotate, and scale vertices and faces in the scene. Arrows will display in the scene when a selection is made and these can be clicked and dragged. You can also press <u>X</u> to toggle this setting on/off. Check the Gizmo section of this document for more details.</li></div>
+				<li id="settingsEditwModePrioritizeGizmo" contenteditable="true"><u>Prioritize Gizmo</u><br>Sometimes a vertex may be under the mouse when clicking the Gizmo. If enabled, the Gizmo will take priority when clicking. If disabled, vertices will take priority.</li>
+				<!--<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/R7xxfpSGDD4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeCrosshairArrows" contenteditable="true"><u>Crosshair Arrows</u><br>If enabled, this can be used to help move vertices and faces in the scene. Arrows will display along the 3d crosshair in the scene that can be clicked and dragged. You can also press <u>X</u> to toggle this setting on/off.</li></div>-->
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/AnSh9meR4XI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeObjectModeConstraint" contenteditable="true"><u>Object mode constraint</u><br>If toggled on, this will prevent editing tiles outside of a prefab object while you are editing an instance.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/CTGhR4LcCac?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeVertexSize" contenteditable="true"><u>Vertex Size</u><br>Adjust the size of the vertices.</li></div>
+				<li id="settingsEditwModeDisableVertexSelection" contenteditable="true"><u>Disable Vertex Selection</u><br>Disables the ability to select vertices.</li>
+				<li id="settingsEditwModeSelectedFaceColor" contenteditable="true"><u>Selected Face Color</u><br>Sets the color of selected faces.</li>
 			</ul>
 			
 			<span id="settingsTilesets" contenteditable="true">
@@ -855,6 +862,8 @@ h1{
 				<li id="settingsTilesetsAutoRefreshTilesets" contenteditable="true"><u>Auto-refresh Tilesets</u><br>If enabled, tilesets will be refreshed every couple of minutes if their corresponding image file has been modified outside of the program, or refreshed immediately when returning to the program.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1DcOkEg5gvc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsTilesetsDragMultipleUVs" contenteditable="true"><u>Drag multiple UVs</u><br>If toggled on, this will allow you to drag multiple UVs that are overlapping or sharing a coordinate in the UVs panel.</li></div>
 				<li id="settingsTilesetsCheckeredSize" contenteditable="true"><u>Checkered Size</u><br>This controls the size of the squares when drawing a checkered pattern to a tileset.</li>
+				<li id="settingsTilesetsSubtractPadding" contenteditable="true"><u>Subtract Padding from Tilebrush</u><br>If using UV Padding, this will ensure that the Tilebrush is scaled accurately when selecting tiles from the Tileset.</li>
+				<li id="settingsTilesetsMultiplyPadding" contenteditable="true"><u>Multiply Padding by Tile selection</u><br>If using UV Padding, this will keep the Tilebrush size correct when selecting multiple rows/columns in the Tileset.</li>
 			</ul>
 
 			<br clear="right">		
@@ -961,7 +970,7 @@ h1{
 			<ul>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/3SMVaoOS4Og?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesetsUVTilesize" contenteditable="true"><u>UV Tilesize</u><br>These values define the width and height of the tiles that you can select on your image.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1DcOkEg5gvc?start=121&amp;rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesetsUVPrecision" contenteditable="true"><u>UV Precision</u><br>When adjusting the UVs of a tile in a scene, these values define how many pixels to move by.</li></div>
-				<li id="tilesetsUVPadding" contenteditable="true"><u>UV Padding</u><br>When you select tiles from the tileset the corresponding UVs that get generated will be padded inwards by the amount set in the input boxes (left, right, top, bottom). This may be useful to prevent pixels bleeding across the edges of tiles.</li>
+				<li id="tilesetsUVPadding" contenteditable="true"><u>UV Padding</u><br>When you select tiles from the tileset the corresponding UVs that get generated will be padded inwards by the amount set in the input boxes (left, right, top, bottom). This may be useful to prevent pixels bleeding across the edges of tiles. There are also a couple options in the Settings that apply to UV Padding. Check the Settings section for those details.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/3SMVaoOS4Og?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesets3dTilescale" contenteditable="true"><u>3D Tilescale</u><br>This value will set the default size of the 3d tile in the scene. Setting it to 2 will make the tile twice as large for example.</li></div>
 			</ul>
 
@@ -1650,6 +1659,22 @@ h1{
 			
 			<hr>
  
+			<span id="transformsProperty" contenteditable="true">
+				<h4>Property</h4>
+			</span>
+
+			<span id="transformsPropertyContent" contenteditable="true">
+				When selecting an Object, Camera, or other entity, these properties will display the current values of that selected element. Modifying these properties while the element is selected will update the element with the new values. Beware that you can have multiple elements selected and they will ALL be updated with the new value that you input!
+			</span>
+
+			<ul>
+				<li id="transformsPropertyPosition" contenteditable="true"><u>Position</u> The position of the selected element.</li>			
+				<li id="transformsPropertyRotation" contenteditable="true"><u>Rotation</u> The rotation of the selected element.</li>			
+				<li id="transformsPropertyScale" contenteditable="true"><u>Scale</u> The scale of the selected element.</li>			
+			</ul>
+			
+			<hr>
+ 
 			<span id="transformsCrosshair" contenteditable="true">
 				<h4>Crosshair</h4>
 			</span>
@@ -1986,7 +2011,7 @@ h1{
 			</span>				
 			<img src="docImg/addCamera.png" class="lineImage">
 			<span id="camerasContent2" contenteditable="true">
-				When clicked, a camera will be added to the scene at the current location and angle being viewed. You can reset this position and orientation and also specify whether it is perspective or orthographic.
+				When clicked, a camera will be added to the scene at the current location and angle being viewed. You can reset this position and orientation and also specify whether it is perspective or orthographic. By default the camera will always point towards its target position with its local up vector pointing up, however you can disable this in the properties if you prefer.
 			</span>
 			
 			<hr>
@@ -2046,6 +2071,13 @@ h1{
 			</span>
 			
 			<ul>
+				<li id="camerasPropertiesGeneral" contenteditable="true"><u>General</u></li>
+				<div class="inset">
+					<span id="camerasPropertiesGeneralDesc" contenteditable="true">
+						Here you can choose the type of camera, either Perspective of Orthographic. You can also choose whether the camera automatically looks at the target, and if enabled it will make the camera's target visible and the camera will be kept orientated towards it with its local up vector pointing up. When enabled, you can select the target and move it like you would any other selection and the camera will automatically oreientate itself towards it.
+					</span>
+					<br clear="right">
+				</div>
 				<li id="camerasPropertiesPerspective" contenteditable="true"><u>Perspective</u></li>
 				<div class="inset">
 					<img src="docImg/perspectiveproperties.png" class="blockImage" align="right" hspace="16" vspace="16">
@@ -2222,6 +2254,12 @@ h1{
 				<div class="inset">
 					<span id="exportVertexNormalsDesc" contenteditable="true">
 						You can choose between flat or smooth normals. Flat will set all vertex normals to be the same as the face normal. This will give the impression of sharp edges to each polygon. Smooth will average the vertex normals based on all polygon faces connected to that vertex. With Smooth selected you can specify the angle threshold to control which face normals affect the vertex normals. Specify the angle in degrees. If the angle between surfaces are within this angle, the vertex normals will be averaged betweeen them.
+					</span>
+				</div>
+				<li id="exportDecalOffset" contenteditable="true"><u>Decal Offset</u></li>
+				<div class="inset">
+					<span id="exportDecalOffsetDesc" contenteditable="true">
+						This will offset any decals by the provided amount to avoid z-fighting. Usually this is handled by a shader, but if that is not a option you can bake it into the geometry by providing a value other than 0. Use a small fraction like 0.01.
 					</span>
 				</div>
 				<li id="exportPolygonType" contenteditable="true"><u>Polygon Type</u></li>

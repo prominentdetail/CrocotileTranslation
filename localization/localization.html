@@ -296,6 +296,7 @@ h1{
 					<li id="menubarRender" contenteditable="true">Render</li>
 						<ul>
 							<li id="menubarSpinGif" contenteditable="true">Spin Gif</li>
+							<li id="movie" contenteditable="true">Movie</li>
 						</ul>
 				</ul>
 				
@@ -444,6 +445,8 @@ h1{
 				<li id="exportPowerOfTwo" contenteditable="true">Use power of 2 textures</li>
 				<hr>
 				<li id="exportScale" contenteditable="true">Scale</li>
+				<hr>
+				<li id="exportDecalOffset" contenteditable="true">Decal Offset</li>
 			</ul>
 			<hr>
 			<u><span id="exportButton" contenteditable="true">
@@ -509,6 +512,27 @@ h1{
 			<span id="cameraSpinFinishedSaving" contenteditable="true">
 				Finished Saving!
 			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h4><span id="renderMovie" contenteditable="true">
+				Render Movie
+			</span></h4>
+			
+			<span id="framerate" contenteditable="true">
+				Framerate
+			</span>
+			<br>
+			<span id="quality" contenteditable="true">
+				Quality
+			</span>
+			<br>
+			<span id="selectActAlert" contenteditable="true">
+				Select one or more Acts to render!
+			</span>
+			<br>
 		</div>
 		
 		<br><br>
@@ -686,12 +710,24 @@ h1{
 				Crosshair Arrows
 			</span>
 			<br>
+			<span id="settingsGizmo" contenteditable="true">
+				Gizmo
+			</span>
+			<br>
+			<span id="settingsPrioritizeGizmo" contenteditable="true">
+				Prioritize Gizmo
+			</span>
+			<br>
 			<span id="settingsObjectModeConstraint" contenteditable="true">
 				Object Mode Constraint
 			</span>
 			<br>
 			<span id="settingsVertexSize" contenteditable="true">
 				Vertex Size
+			</span>
+			<br>
+			<span id="settingsDisableVertexSelection" contenteditable="true">
+				Disable Vertex Selection
 			</span>
 			<br>
 			<span id="settingsSelectedFaceColor" contenteditable="true">
@@ -707,6 +743,14 @@ h1{
 			<br>
 			<span id="settingsDragMultipleUVs" contenteditable="true">
 				Drag Multiple UVs
+			</span>
+			<br>
+			<span id="settingsSubtractPadding" contenteditable="true">
+				Subtract Padding from Tilebrush
+			</span>
+			<br>
+			<span id="settingsMultiplyPadding" contenteditable="true">
+				Multiply Padding by Tile selection
 			</span>
 			<br>
 			<span id="settingsCheckeredSize" contenteditable="true">
@@ -1113,6 +1157,14 @@ h1{
 			<br>
 			<span id="decalModeOn" contenteditable="true">
 				Decal mode: on
+			</span>
+			<br>
+			<span id="depthwritingOff" contenteditable="true">
+				Depthwriting: off
+			</span>
+			<br>
+			<span id="depthwritingOn" contenteditable="true">
+				Depthwriting: on
 			</span>
 			<br>
 			<span id="refreshTilesets" contenteditable="true">
@@ -1595,6 +1647,7 @@ h1{
 			<span id="zoomCamera" contenteditable="true">
 				Zoom Camera
 			</span>
+			<br>
 			
 		</div>
 		
@@ -1609,12 +1662,32 @@ h1{
 				Add Layer
 			</span>
 			<br>
+			<span id="addLight" contenteditable="true">
+				Add Light
+			</span>
+			<br>
+			<span id="pointLight" contenteditable="true">
+				Point Light
+			</span>
+			<br>
+			<span id="spotlight" contenteditable="true">
+				Spotlight
+			</span>
+			<br>
+			<span id="directionalLight" contenteditable="true">
+				Directional Light
+			</span>
+			<br>
 			<span id="addCamera" contenteditable="true">
 				Add Camera
 			</span>
 			<br>
 			<span id="addActor" contenteditable="true">
 				Add Actor
+			</span>
+			<br>
+			<span id="addBone" contenteditable="true">
+				Add Bone
 			</span>
 			<br>
 			<span id="removeSelectedItem" contenteditable="true">
@@ -1669,6 +1742,10 @@ h1{
 				Rename Camera
 			</span>
 			<br>
+			<span id="renameLight" contenteditable="true">
+				Rename Light
+			</span>
+			<br>
 			<span id="resetCamera" contenteditable="true">
 				Reset Camera
 			</span>
@@ -1677,8 +1754,52 @@ h1{
 				Remove Camera
 			</span>
 			<br>
+			<span id="removeLight" contenteditable="true">
+				Remove Light
+			</span>
+			<br>
 			<span id="object" contenteditable="true">
 				Object
+			</span>
+			<br>
+			<span id="entity" contenteditable="true">
+				Entity
+			</span>
+			<br>
+			<span id="property" contenteditable="true">
+				Property
+			</span>
+			<br>
+			<span id="showHideActor" contenteditable="true">
+				Show/Hide Actor
+			</span>
+			<br>
+			<span id="renameActor" contenteditable="true">
+				Rename Actor
+			</span>
+			<br>
+			<span id="removeActor" contenteditable="true">
+				Remove Actor
+			</span>
+			<br>
+			<span id="showHideBone" contenteditable="true">
+				Show/Hide Bone
+			</span>
+			<br>
+			<span id="showHideCamera" contenteditable="true">
+				Show/Hide Camera
+			</span>
+			<br>
+			<span id="showHideLight" contenteditable="true">
+				Show/Hide Light
+			</span>
+			<br>
+			<span id="renameBone" contenteditable="true">
+				Rename Bone
+			</span>
+			<br>
+			<span id="removeBone" contenteditable="true">
+				Remove Bone
 			</span>
 			<br>
 			<span id="showHideLayer" contenteditable="true">
@@ -1705,9 +1826,17 @@ h1{
 				Properties
 			</span>
 			<div class="inset">			
+				<span id="lightProperties" contenteditable="true">
+					Light Properties
+				</span>	
+				<br>	
 				<span id="cameraProperties" contenteditable="true">
 					Camera Properties
 				</span>	
+				<br>
+				<span id="lookAtTarget" contenteditable="true">
+					Look at Target
+				</span>
 				<br>
 				<span id="left" contenteditable="true">
 					Left
@@ -1818,9 +1947,88 @@ h1{
 				This layer is locked!
 			</span>
 			<br>
+			<span id="actorIsLocked" contenteditable="true">
+				This actor is locked!
+			</span>
+			<br>
+			<span id="boneIsLocked" contenteditable="true">
+				This bone is locked!
+			</span>
+			<br>
 			<span id="cameraIsLocked" contenteditable="true">
 				This camera is locked!
 			</span>
+			<br>
+			<span id="lightIsLocked" contenteditable="true">
+				This light is locked!
+			</span>
+			
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2><span id="animation" contenteditable="true">
+				Animation
+			</span></h2>
+			
+			<span id="backToBeginning" contenteditable="true">
+				Back to the Beginning
+			</span>
+			<br>
+			<span id="play" contenteditable="true">
+				Play
+			</span>
+			<br>
+			<span id="pause" contenteditable="true">
+				Pause
+			</span>
+			<br>
+			<span id="stop" contenteditable="true">
+				Stop
+			</span>
+			<br>
+			<span id="previousKeyframe" contenteditable="true">
+				Previous Keyframe
+			</span>
+			<br>
+			<span id="nextKeyframe" contenteditable="true">
+				Next Keyframe
+			</span>
+			<br>
+		
+			<h2><span id="theatre" contenteditable="true">
+				Theatre
+			</span></h2>
+			
+			<span id="configure" contenteditable="true">
+				Configure
+			</span>
+			<br>
+			<span id="renameAct" contenteditable="true">
+				Rename Act
+			</span>
+			<br>
+			<span id="addAct" contenteditable="true">
+				Add Act
+			</span>
+			<br>
+			<span id="removeAct" contenteditable="true">
+				Remove Act
+			</span>
+			<br>
+			<span id="add" contenteditable="true">
+				Add
+			</span>
+			<br>
+			<span id="enableDisable" contenteditable="true">
+				Enable/Disable
+			</span>
+			<br>
+			<span id="loop" contenteditable="true">
+				Loop
+			</span>
+			<br>
 			
 		</div>
 		
@@ -1909,7 +2117,9 @@ h1{
 			<hr>
 			
 			<span id="binding_close" contenteditable="true">Close Program</span><br>
-			<span id="binding_close_Desc" contenteditable="true">Close/Exit the program.</span><br>			
+			<span id="binding_close_Desc" contenteditable="true">Close/Exit the program.</span><br>	
+			<span id="binding_closePanel" contenteditable="true">Close Panel</span><br>
+			<span id="binding_closePanel_Desc" contenteditable="true">Close a panel that is open.</span><br>			
 			<span id="binding_config" contenteditable="true">Settings</span><br>
 			<span id="binding_config_Desc" contenteditable="true">Open/close the settings window.</span><br>			
 			<span id="binding_license" contenteditable="true">Info/License</span><br>
@@ -2100,6 +2310,8 @@ h1{
 			<span id="binding_vertSnap_Desc" contenteditable="true">Hold this key when dragging a single vertex to snap it to nearby vertices.</span><br>
 			<span id="binding_hollowVert" contenteditable="true">Hollow Vertex</span><br>
 			<span id="binding_hollowVert_Desc" contenteditable="true">Hold this key and click a vertex to reposition the crosshair without the vertex being selected.</span><br>
+			<span id="binding_disableVertexSelection" contenteditable="true">Disable Vertex Selection</span><br>
+			<span id="binding_disableVertexSelection_Desc" contenteditable="true">Toggle the ability to select vertices.</span><br>
 			<span id="binding_lassoFace" contenteditable="true">Select Marquee Quads</span><br>
 			<span id="binding_lassoFace_Desc" contenteditable="true">Selection marquee for tiles. Hold then click+drag to select.</span><br>
 			<span id="binding_lassoDeselectFace" contenteditable="true">Deselect Marquee Quads</span><br>
