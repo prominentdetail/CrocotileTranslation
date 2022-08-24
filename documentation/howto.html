@@ -378,6 +378,8 @@ h1{
 				<li id="general0" contenteditable="true"><u>0</u> Hide/Show origin,crosshair lines</li>
 				<li id="generalEsc" contenteditable="true"><u>Esc</u> Close opened panels</li>
 				<li id="generalAltF4" contenteditable="true"><u>Alt+F4</u> Exit the program</li>
+				<li id="generalfocus3d" contenteditable="true"><u>`</u> Focuses the 3d viewport.</li>
+				<li id="generalonly3d" contenteditable="true"><u>Shift+`</u> Only show 3d viewport. This will hide/show the sidebars.</li>
 			</ul>
 			
 			<span id="generalHotkeys" contenteditable="true">
@@ -421,7 +423,7 @@ h1{
 				<li id="cameraSpaceG" contenteditable="true"><u>Spacebar+G</u> Move left</li>
 				<li id="cameraSpaceJ" contenteditable="true"><u>Spacebar+J</u> Move right</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1V-EnNKM4Bg?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="cameraC" contenteditable="true"><u>C</u> Center camera to selection, or crosshair (if no selection)</li></div>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/JwEjozfp79A?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="cameraCardinal" contenteditable="true"><u></u> White outer buttons Rotate camera towards cardinal direction</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/JwEjozfp79A?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="cameraCardinal" contenteditable="true"><u>Spacebar</u> White outer buttons Rotate camera towards cardinal direction</li></div>
 				<li id="cameraMinus" contenteditable="true"><u>Minus</u> Zoom out scene</li>
 				<li id="cameraPlus" contenteditable="true"><u>Plus</u> Zoom in scene</li>
 				<li id="cameraCardinalRotateLeft" contenteditable="true"><u>Unassigned</u> Cardinal Rotate Left. Rotate left towards the nearest cardinal direction.</li>
@@ -685,7 +687,7 @@ h1{
 				<li id="editModeCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy quads</li>
 				<li id="editModeCtrlV" contenteditable="true"><u>Ctrl+V</u> Paste quads</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/X75lH5G0FHk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1&amp;t=46" target="_blank">🐊</a><li id="editModeCtrlD" contenteditable="true"><u>Ctrl+D</u> Deselect verts/faces (press key once for verts, second press for faces)</li></div>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/X75lH5G0FHk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1&amp;t=46" target="_blank">🐊</a><li id="editModeCtrlA" contenteditable="true"><u>Ctrl+A</u> Select all verts (once for highlighted face verts, again to select overlapping verts). If no faces or verts selected, it will select all faces in the scene.</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/X75lH5G0FHk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1&amp;t=46" target="_blank">🐊</a><li id="editModeCtrlA" contenteditable="true"><u>Ctrl+A</u> Select all verts (once for highlighted face/edge verts, again to select overlapping verts). If no faces, edges or verts selected, it will select all faces in the scene.</li></div>
 				<li id="editModeCtrlShiftD" contenteditable="true"><u>Ctrl+Shift+D</u> Deselect all object instances</li>
 				<li id="editModeCtrlShiftA" contenteditable="true"><u>Ctrl+Shift+A</u> Select all object instances</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/Wal6akWzvLY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeClickDragVertex" contenteditable="true"><u>Click drag Vertex</u> Drag/move a vertex with mouse</li></div>
@@ -697,7 +699,13 @@ h1{
 				<li id="editModeDisableFaceSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select faces.</li>
 				<li id="editModeDisableVertSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select vertices.</li>
 				<li id="editModeDisableEdgeSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select edges.</li>
+				<li id="editModeEdgeLoop" contenteditable="true"><u>Unassigned</u> Select Edge Loop. Select any open edges that connect with the currently selected edges.</li>
+				<li id="editVertexFace" contenteditable="true"><u>Unassigned</u> Select faces connected to currently selected vertices.</li>
+				<li id="editVertexFace2" contenteditable="true"><u>Unassigned</u> Deselect faces connected to currently selected vertices.</li>
+				<li id="editFaceVertex" contenteditable="true"><u>Unassigned</u> Select vertices connected to currently selected faces.</li>
+				<li id="editFaceVertex2" contenteditable="true"><u>Unassigned</u> Deselect vertices connected to currently selected faces.</li>
 				<li id="editModeHideShowTiles" contenteditable="true"><u>Unassigned</u> Hide or Show the selected tiles. This can also be accessed in the context-menu; Faces > Hide, Show.</li>
+				<li id="editModeMoveOriginToCrosshair" contenteditable="true"><u>Unassigned</u> Take the Origin point of a selected Object or an Object being edited and move it to the current position of the 3d crosshair.</li>
 			</ul>
 			
 			<a class="video" href="https://www.youtube.com/embed/ijYxLGE3los?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
@@ -716,6 +724,12 @@ h1{
 			
 			<span id="editModeSelectEdgeLoop" contenteditable="true">
 				You can select a series of edges that connect end to end by using the <u>Select Edge Loop</u> action from the context-menu. It is located within the sub-menu of <u>Edges</u> when you right-click the 3d scene. You must have at least one edge already selected for it to select connected edges.
+			</span>
+			
+			<br><br clear="right">		
+			
+			<span id="editModeMergeEdges" contenteditable="true">
+				You can merge tiles together by using the <u>Merge Edges</u> actions from the context-menu. This will remove the edges between two tiles and combine the tiles into one single tile. This action is located within the sub-menu of <u>Edges</u> when you right-click the 3d scene. There is a <u>safe</u> merge and a <u>forced</u> merged. The safe merge requires that the UV coordinates match where two tiles touch. The forced merge will merge them regardless.
 			</span>
 			
 			<br><br clear="right">		
@@ -829,6 +843,10 @@ h1{
 				<li id="paintCommandsCtrlX" contenteditable="true"><u>Ctrl+X</u> Cut Selection</li>
 				<li id="paintCommandsCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy Selection</li>
 				<li id="paintCommandsCtrlV" contenteditable="true"><u>Ctrl+V</u> Paste Selection</li>
+				<li id="paintCommandsR" contenteditable="true"><u>R</u> Mirror Selection</li>
+				<li id="paintCommandsF" contenteditable="true"><u>F</u> Flip Selection</li>
+				<li id="paintCommandsRotateLeft" contenteditable="true"><u>Unassigned</u> Rotate the selection counter-clockwise</li>
+				<li id="paintCommandsRotateRight" contenteditable="true"><u>Unassigned</u> Rotate the selection clockwise</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/tnXMic06CBo?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="paintCommandsAltPencil" contenteditable="true"><u>Alt+Pencil</u> Eyedrop a color</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/tnXMic06CBo?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="paintCommandsAltPaintBucket" contenteditable="true"><u>Alt+Paint bucket</u> Eyedrop a color</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/HC6i6H4D6NM?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="paintCommandsSpaceClickDrag" contenteditable="true"><u>Space+Mouse Click & Drag</u> Pan the tileset viewport</li></div>
@@ -888,15 +906,16 @@ h1{
 				<li id="settingsGeneralWindowSize" contenteditable="true"><u>Window Size</u><br>Setting these values will adjust the size of the main window. Close the settings to apply the changes.</li>
 				<li id="settingsGeneralFPS" contenteditable="true"><u>FPS</u><br>The value you set here will determine how many frames get rendered per second. A higher FPS will make the scene appear smoother when moving around the scene.</li>
 				<li id="settingsGeneralColorTheme" contenteditable="true"><u>Color Theme</u><br>Select between a Light or Dark color theme for the interface.</li>
-				<li id="settingsGeneralRuler" contenteditable="true"><u>Show Ruler</u><br>If enabled, visual guides extend from the 3d tilebrush to help measure distances.</li>
-				<li id="settingsGeneralLockCrosshair" contenteditable="true"><u>Lock Crosshair to the Grid</u><br>Keep the crosshair position rounded to the nearest grid point based on the grid-rounding value.</li>
+				<li id="settingsGeneralBackupStates" contenteditable="true"><u>Backup states</u><br>This value defines how many backup files to save. These are saved to the Crocotile folder and saved every 5 minutes if changes have been made.</li>
+				<li id="settingsGeneralUndoStates" contenteditable="true"><u>Undo states</u><br>This value defines how many undo and redo states to allow. A low value is recommended.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/oLl4HE9A-Ng?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsGeneralWireframe" contenteditable="true"><u>Wireframe</u><br>Toggle on/off the Wireframe. With this on, tiles will display their wireframe in the 3d scene.</li></div>
 				<li id="settingsGeneralWireframeColor" contenteditable="true"><u>Wireframe Color</u><br>This will set the wireframe color</li>
 				<li id="settingsGeneralBackgroundColor" contenteditable="true"><u>Background Color</u><br>This will set the background color of the scene</li>
 				<li id="settingsGeneralBackgroundTransparency" contenteditable="true"><u>Background Transparency</u><br>This will make the background become more or less opaque. A value of 1 is fully opaque, while a value of 0 is fully transparent. When taking screenshots, it will use this value to determine the transparency of the background in the images.</li>
 				<li id="settingsGeneralScreenshotFolder" contenteditable="true"><u>Screenshot folder</u><br>This specifies where the screenshots get saved. Press <u>F12</u> to take a screenshot.</li>
-				<li id="settingsGeneralBackupStates" contenteditable="true"><u>Backup states</u><br>This value defines how many backup files to save. These are saved to the Crocotile folder and saved every 5 minutes if changes have been made.</li>
-				<li id="settingsGeneralUndoStates" contenteditable="true"><u>Undo states</u><br>This value defines how many undo and redo states to allow. A low value is recommended.</li>
+				<li id="settingsGeneralRuler" contenteditable="true"><u>Show Ruler</u><br>If enabled, visual guides extend from the 3d tilebrush to help measure distances.</li>
+				<li id="settingsGeneralLockCrosshair" contenteditable="true"><u>Lock Crosshair to the Grid</u><br>Keep the crosshair position rounded to the nearest grid point based on the grid-rounding value.</li>
+				<li id="settingsGeneralIncrementGridRoundingCustom" contenteditable="true"><u>Increment Grid-Rounding Custom</u><br>The amount to increment/decrement the grid-rounding value when pressing <u>Shift+[</u> or <u>Shift+]</u>.</li>
 			</ul>
 			
 			<span id="settingsProject" contenteditable="true">
@@ -939,6 +958,8 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/V_r2I8I2BiQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeCameraBasedSelection" contenteditable="true"><u>Camera-based Selection</u><br>If enabled, only vertices and faces that are visible from the camera's perspective will be selected. If disabled, vertices and faces behind each other will also be selected. You can also press <u>B</u> to toggle this setting on/off.</li></div>
 				<li id="settingsEditwModeDeselectWhenClicked" contenteditable="true"><u>Deselect when clicked nothing</u><br>Deselect everything if you click on nothing in the scene.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/NVgCs3pc2hc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeGizmo" contenteditable="true"><u>Gizmo</u><br>If enabled, this can be used to help move,rotate, and scale vertices and faces in the scene. Arrows will display in the scene when a selection is made and these can be clicked and dragged. You can also press <u>X</u> to toggle this setting on/off. Check the Gizmo section of this document for more details.</li></div>
+				<li id="settingsEditwModeGroupWASDUndos" contenteditable="true"><u>Group WASD Undos</u><br>This will reduce the number of undo states when moving a selection of vertices, objects, with the WASD keys. If this is disabled, it will store an undo state for each step in the movement.</li>
+				<li id="settingsEditwModeReverseWithMirrorFlip" contenteditable="true"><u>Reverse faces with Mirror/Flip</u><br>When mirroring or flipping selected faces, it will automatically reverse the direction of the faces.</li>
 				<li id="settingsEditwModePrioritizeGizmo" contenteditable="true"><u>Prioritize Gizmo</u><br>Sometimes a vertex may be under the mouse when clicking the Gizmo. If enabled, the Gizmo will take priority when clicking. If disabled, vertices will take priority.</li>
 				<!--<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/R7xxfpSGDD4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeCrosshairArrows" contenteditable="true"><u>Crosshair Arrows</u><br>If enabled, this can be used to help move vertices and faces in the scene. Arrows will display along the 3d crosshair in the scene that can be clicked and dragged. You can also press <u>X</u> to toggle this setting on/off.</li></div>-->
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/AnSh9meR4XI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeObjectModeConstraint" contenteditable="true"><u>Object mode constraint</u><br>If toggled on, this will prevent editing tiles outside of a prefab object while you are editing an instance.</li></div>
@@ -957,12 +978,15 @@ h1{
 			</span>
 			
 			<ul>
+				<li id="settingsTilesetsMaxDimensions" contenteditable="true"><u>Max Tileset Dimensions</u><br>The maximum dimensions for any tilesets. The default is 4096x4096 pxels. Setting this higher may cause the program to crash, or cause broken tilesets if your hardware can't support it.</li>
+				<li id="settingsTilesetsMargins" contenteditable="true"><u>Tileset Margins</u><br>The amount of blank space surrounding tilesets in the Tileset, UVs, and Painting panels.</li>
 				<li id="settingsTilesetsAutoRefreshTilesets" contenteditable="true"><u>Auto-refresh Tilesets</u><br>If enabled, tilesets will be refreshed every couple of minutes if their corresponding image file has been modified outside of the program, or refreshed immediately when returning to the program.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1DcOkEg5gvc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsTilesetsDragMultipleUVs" contenteditable="true"><u>Drag multiple UVs</u><br>If toggled on, this will allow you to drag multiple UVs that are overlapping or sharing a coordinate in the UVs panel.</li></div>
 				<li id="settingsTilesetsRestrictUVsToActive" contenteditable="true"><u>Hide UVs of non-active Tilesets</u><br>You can choose to hide UVs belonging to other tilesets and display only the UVs belonging to the currently selected Tileset. Or you can choose to display any UVs regardless of with Tileset is active.</li>
 				<li id="settingsTilesetsCheckeredSize" contenteditable="true"><u>Checkered Size</u><br>This controls the size of the squares when drawing a checkered pattern to a tileset.</li>
 				<li id="settingsTilesetsSubtractPadding" contenteditable="true"><u>Subtract Padding from Tilebrush</u><br>If using UV Padding, this will ensure that the Tilebrush is scaled accurately when selecting tiles from the Tileset.</li>
 				<li id="settingsTilesetsMultiplyPadding" contenteditable="true"><u>Multiply Padding by Tile selection</u><br>If using UV Padding, this will keep the Tilebrush size correct when selecting multiple rows/columns in the Tileset.</li>
+				<li id="settingsTilesetsShowEntireTileset" contenteditable="true"><u>Show entire Tileset in Painting panel</u><br>If this is enabled the entire tileset will be visible when the Painting panel is open. Otherwise, only the section of the tileset selected from the Tileset panel will be visible.</li>
 			</ul>
 
 			<br clear="right">		
@@ -1108,13 +1132,6 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/sA6Qqa_W6gA?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesetsMenuCombineTileset" contenteditable="true"><u>Combine Tileset</u><br>If you have duplicate tilesets, you can use this to combine them into one. Tiles and objects that use a tileset being combined, will then use the one after being combined. There is an option to merge the tileset down (the top tileset selected will be over the bottom tileset selected). There is also a choice of whether to discard the bottom tileset or the top tileset, which may be important if you aren't merging them.</li></div>
 			</ul>
 
-			<img src="docImg/tilesetdropdown.png" class="blockImage" align="right" hspace="16" vspace="16">
-			
-			<span id="tilesetsMenuDropdownSelect" contenteditable="true">
-				There is also a button between the buttons with arrow icons. Clicking it will show a dropdown list of all your tilesets. This is a way to easily select another tileset. You can also press <u>Ctrl+[</u> and <u>Ctrl+]</u> to cycle through them, or click the arrow buttons.
-			</span>
-			
-			<br><br clear="right">
 			<hr>
 			
 			<span id="tilesetsMenuApplySelectedFaces" contenteditable="true">
@@ -1159,6 +1176,19 @@ h1{
 			
 			<span id="tilesetsMenuExportTilesetContent" contenteditable="true">
 				If you make any changes to your Tileset, such as resizing it or painting on it, you can export the image in png format by selecting this menu item.
+			</span>
+			
+			<br><br clear="right">
+			<hr>
+			
+			<img src="docImg/tilesetdropdown.png" class="blockImage" align="right" hspace="16" vspace="16">
+			
+			<span id="tilesetsMenuTilesetList" contenteditable="true">
+				<h2>Tileset List</h2>
+			</span>
+			
+			<span id="tilesetsMenuDropdownSelect" contenteditable="true">
+				There is also a button between the buttons with arrow icons. Clicking it will toggle on/off a list of all your tilesets. This is a way to easily select another tileset. You can also press <u>Ctrl+[</u> and <u>Ctrl+]</u> to cycle through them, or click the arrow buttons. You can reorder the tilesets by clicking and dragging them to a new position in the list.
 			</span>
 			
 			<br><br clear="right">
@@ -1487,8 +1517,8 @@ h1{
 				<li id="uvsContextMenuCtrlD" contenteditable="true"><u>Ctrl+D</u> Deselect all</li>
 				<li id="uvsContextMenuCrosshair" contenteditable="true">Crosshair</li>
 				<ul>
-					<li id="uvsContextMenuCrosshairMoveToMouse" contenteditable="true">Move to mouse position</li>
-					<li id="uvsContextMenuCrosshairC" contenteditable="true"><u>C</u> Center of selection</li>
+					<li id="uvsContextMenuCrosshairMoveToMouse" contenteditable="true"><u>C</u> Move to mouse position</li>
+					<li id="uvsContextMenuCrosshairC" contenteditable="true"><u>Shift+C</u> Center of selection</li>
 					<li id="uvsContextMenuCrosshairTopCenter" contenteditable="true">Top Center of selection</li>
 					<li id="uvsContextMenuCrosshairBottom" contenteditable="true">Bottom of selection</li>
 					<li id="uvsContextMenuCrosshairLeft" contenteditable="true">Left of selection</li>
@@ -1659,7 +1689,7 @@ h1{
 			</span>
 
 			<span id="uvsCrosshairContent" contenteditable="true">
-				There is a small crosshair that becomes visible when you select UV coordinates. It automatically centers itself on the selection unless you begin to manually move it. Pressing C will recenter it again.
+				There is a small crosshair that becomes visible when you select UV coordinates. It automatically centers itself on the selection unless you begin to manually move it. Pressing C will recenter it again. You can also completely lock/unlock the crosshair by clicking the <u>Lock/Unlock Crosshair</u> button at the top of the UVs panel. Locking the crosshair will prevent it from being moved.
 			</span>
 			
 			<br><br>
@@ -1872,10 +1902,27 @@ h1{
 				To demonstrate how to work with this data, a Godot project has been created using this data to animate UVs of a 3d model. Godot is a free and open-source program for developing games, and it is an excellent engine for importing your Crocotile work into if you are comfortable with more technical processes. You can just as easily do this with other engines, such as Unity, if you like. Watch the video for a demonstration on how to import your animated scenes into Godot!
 			</span>
 			
-			<br><br>
+			<br>
 			
 			<ul>
 				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DTileAnimationGodot.zip">Godot 3.4.2 Project (Crocotile3DTileAnimationGodot.zip) 532 kb</a></li>
+			</ul>
+			
+			<a id="godotSpriteAnimation"></a>
+			<span id="animatedTilesSpriteAnimations" contenteditable="true">
+				<h4>Export Sprite Animations</h4>
+			</span>
+			
+			<a class="video" href="https://www.youtube.com/embed/qIgPLpT-1z4?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			
+			<span id="animatedTilesSpriteAnimationsGodot" contenteditable="true">
+				If you setup sprite sheets in Crocotile you can use the uvAnimation data to construct sprite animations in your game projects. This video demonstrates how to do this in Godot. You can also download the Godot project files.
+			</span>
+			
+			<br>
+			
+			<ul>
+				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DSpriteAnimationGodot.zip">Godot 3.4.2 Project (Crocotile3DSpriteAnimationGodot.zip) 186 kb</a></li>
 			</ul>
 			
 		</div>
@@ -2522,6 +2569,26 @@ h1{
 </span></u></pre>
 					</ul>
 				</div>
+				<li id="objectsMenuExportMisc" contenteditable="true"><u>Export Misc</u></li>
+				<div class="inset">
+					<span id="objectsMenuExportMiscDesc" contenteditable="true">
+						Miscellaneous data that can be exported.
+					</span>
+					<ul>
+						<li id="objectsMenuExportGridMap" contenteditable="true"><u>Export Grid Map</u></li>
+						<div class="inset">
+							<span id="objectsMenuExportGridMapDesc" contenteditable="true">
+								This exports data corresponding to a 3d grid and is useful for defining cells for collisions or similar cases. More details as well as an example can be found in the Export section of this document.
+							</span>
+						</div>
+						<li id="objectsMenuExportLines" contenteditable="true"><u>Export Line Data</u></li>
+						<div class="inset">
+							<span id="objectsMenuExportLinesDesc" contenteditable="true">
+								This exports line data. Each line consists of a start position and an end position. Each tile will make four lines that define its edges.
+							</span>
+						</div>
+					</ul>
+				</div>
 				<li id="objectsMenuNormalMap" contenteditable="true"><u>Generate NormalMap</u></li>
 				<div class="inset">
 					<span id="objectsMenuNormalMapDesc" contenteditable="true">
@@ -2648,6 +2715,12 @@ h1{
 						Any selected instances will have their rotations reset.
 					</span>	
 				</div>
+				<li id="scene3dContextMenuMoveOriginToCrosshair" contenteditable="true"><u>Move Origin to Crosshair</u></li>
+				<div class="inset">
+					<span id="scene3dContextMenuMoveOriginToCrosshairDesc" contenteditable="true">
+						Moves the Origin point of the selected Object to the current position of the 3d crosshair.
+					</span>	
+				</div>
 				<li id="scene3dContextMenuDuplicateInstances" contenteditable="true"><u>Duplicate Instance(s)</u></li>
 				<div class="inset">
 					<span id="scene3dContextMenuDuplicateInstancesDesc" contenteditable="true">
@@ -2710,6 +2783,17 @@ h1{
 					<img src="docImg/mirrorproperties.png" class="blockImage" align="right" hspace="16" vspace="16">
 					<span id="objectsPropertiesMirroringDesc" contenteditable="true">
 						Enabling Mirror mode will cause all the tiles within an object to have a mirrored version of itself. Any changes to a tile will be updated in the mirrored version. This may be useful if you want to create a symmetrical object- you can create one side and as you are creating it, the other side will be auto-generated. It will retain symmetry across the origin point of the object. Check the Object section of this document to learn how to reposition the origin point.
+					</span>	
+					<br>
+					<span id="objectsPropertiesMirroringDesc2" contenteditable="true">
+						There is also an option to "Merge to Object." This will merge the mirrored tiles into the Object and deactivate mirroring. This essentially converts the mirrored tiles into normal tiles that you can then edit.
+					</span>	
+					<br clear="right">
+				</div>
+				<li id="objectsPropertiesShadows" contenteditable="true"><u>Shadows</u></li>
+				<div class="inset">
+					<span id="objectsPropertiesShadowsDesc" contenteditable="true">
+						If you are using Lights in the scene that cast shadows, you can control which objects cast shadows and receive shadows. By default objects will cast and receive shadows, but you can disable this in the object's properties. See the Lights and Shadows section below for more information on how to setup lights and shadows in your scenes.
 					</span>	
 					<br clear="right">
 				</div>
@@ -2855,6 +2939,12 @@ h1{
 				<div class="inset">
 					<span id="camerasRenderingBackgroundColorDesc" contenteditable="true">
 						If the skybox is not rendered, this property will specify the color of the background.
+					</span>	
+				</div>
+				<li id="camerasRenderingUsePaintColor" contenteditable="true"><u>Use Paint Color</u></li>
+				<div class="inset">
+					<span id="camerasRenderingUsePaintColorDesc" contenteditable="true">
+						If this is enabled, the background color will use the currently selected color in the Painting panel.
 					</span>	
 				</div>
 				<li id="camerasRenderingBackgroundTransparency" contenteditable="true"><u>Background Transparency</u></li>
@@ -3313,7 +3403,7 @@ h1{
 			<br><br>
 			 
 			<span id="animationAnimationContent3" contenteditable="true">
-				When Keyframes have been added, they will become listed below, and you will be able to select them and reposition them by clicking and dragging. You can select multiple keyframes and drag multiple. You can also double-click the timeline to deselect everything. You can press <u>Delete</u> to remove selected keyframes.
+				When Keyframes have been added, they will become listed below, and you will be able to select them and reposition them by clicking and dragging. You can select multiple keyframes and drag multiple. You can also double-click the timeline to deselect everything. You can press <u>Delete</u> to remove selected keyframes. There is a <u>Key Menu</u> button to the right side of the Action bar. Within this menu there are options to Copy the selected keyframes from the action, or Paste keyframes into the action. This way keyframes can be copied from one action/object and pasted into another.
 			</span>
 			
 			<span id="animationTheatre" contenteditable="true">
@@ -3335,7 +3425,7 @@ h1{
 			</span>
 			
 			<span id="animationTheatreWeightsContent" contenteditable="true">
-				Every Action has a default Weight added along with it. These display as a rectangle box with a small dot inside. You can reposition them just like you can with the segments. Weights control the blending of Actions that affect the same object. If you have two or more actions affecting the same object, you can control which segment has more influence. Basically, the Weights determine how much of an influence the segment has on the object. By hovering the mouse over a Weight and using the mouse-wheel, you can increase or decrease the Weight, controlling the amount of influence the Action has on the object. To add more Weights, right-click the segment you want to add a Weight to, and a context-menu will appear. In the Add Weight sub-menu, you can select the type of Weight to add; Discrete, Linear, Ease in cubic, Ease out cubic, Ease in out cubic.
+				Every Action has a default Weight added along with it. These display as a rectangle box with a small dot inside. You can reposition them just like you can with the segments. Weights control the blending of Actions that affect the same object. If you have two or more actions affecting the same object, you can control which segment has more influence. Basically, the Weights determine how much of an influence the segment has on the object. By hovering the mouse over a Weight and using the mouse-wheel, you can increase or decrease the Weight, controlling the amount of influence the Action has on the object. To add more Weights, right-click the segment you want to add a Weight to, and a context-menu will appear. In the Add Weight sub-menu, you can select the type of Weight to add; Discrete, Linear, Ease in cubic, Ease out cubic, Ease in out cubic. You can also change the type for any selected weights by right-clicking and choosing a new type from the Apply Interpolation context-menu.
 			</span>
 			
 			<span id="animationTheatreMarkers" contenteditable="true">
@@ -3592,6 +3682,12 @@ h1{
 						Use Groups only applies to .obj files. This option will organize the tiles of each instance to their corresponding object group. This may effect how your .obj gets imported into other programs. Some programs will separate each group into their own objects upon import. So if you need the tiles split up into their corresponding objects then you will select this, otherwise everything will be treated as a single object.
 					</span>
 				</div>
+				<li id="exportUseSingleMesh" contenteditable="true"><u>Use single mesh</u></li>
+				<div class="inset">
+					<span id="exportUseSingleMeshDesc" contenteditable="true">
+						This option does not apply to .obj files. If this option is checked, it will combine everything into one mesh. If it isn't checked, the scene hierarchy will be retained with correct instance parenting as well as animations.
+					</span>
+				</div>
 				<li id="exportUnlit" contenteditable="true"><u>Unlit</u></li>
 				<div class="inset">
 					<span id="exportUnlitDesc" contenteditable="true">
@@ -3611,13 +3707,13 @@ h1{
 					</span>
 					<br>
 					<span id="exportTileSpacingDesc2" contenteditable="true">
-						This tile spacing implementation only works if you keep all your uvs square with the same dimensions (one tile size per tileset).
+						This tile spacing implementation only works if you keep all your uvs square with the same dimensions (one tile size per tileset). The wrapping mode of the tileset must also be set to "Clamp to Edge".
 					</span>
 				</div>
 				<li id="exportPowerOfTwo" contenteditable="true"><u>Power of Two</u></li>
 				<div class="inset">
 					<span id="exportPowerOfTwoDesc" contenteditable="true">
-						With power of two option enabled, the tilesets will resize the canvas (it will add empty space) up to a power of two dimension if they aren't already. This may be necessary for some engines to render your textures correctly. For instance, if your textures look blurry, it may be due to tilesets not being power of two dimensions.
+						With power of two option enabled, the tilesets will resize the canvas (it will add empty space) up to a power of two dimension if they aren't already. This may be necessary for some engines to render your textures correctly. For instance, if your textures look blurry, it may be due to tilesets not being power of two dimensions. The wrapping mode of the tileset must also be set to "Clamp to Edge" otherwise it won't resize the canvas.
 					</span>
 				</div>
 				<li id="exportLimitExportTileset" contenteditable="true"><u>Limit export to currently selected tileset</u></li>
@@ -3653,14 +3749,14 @@ h1{
 			
 			<img src="docImg/sceneMenu.png" class="lineImage">
 			
-			<span id="exportSceneDataContent" contenteditable="true">
-				This will export object and instance data as a json formatted text document.
+			<span id="exportSceneDataContent2" contenteditable="true">
+				This will export object and instance data as a json formatted text document. It will also include Light and Camera data if you have any in the scene.
 			</span>
 			
 			
 			<div class="inset">
 				<ul>
-					<pre><u><span id="objectsMenuInstanceDataDesc4" contenteditable="true">{
+					<pre><u><span id="exportSceneDataFormat" contenteditable="true">{
 "objects":[ {
 	"name":"Object 1",
 	"points":[ {
@@ -3696,11 +3792,113 @@ h1{
 			"value":	"hi"
 			} ...]
 		}, ...]
+	}, ...],
+"lights":[ {
+	"name":		"Point Light",
+	"pos":		{"x":0,"y":0,"z":0},
+	"rot":		{"x":0,"y":0,"z":0,"order":"XYZ"},
+	"sca":		{"x":0,"y":0,"z":0},
+	"color":		{"r":1,"g":1,"b":1},
+	"intensity":		1,
+	"distance":		100,
+	"decay":		1,
+	"angle":		30,
+	"penumbra":		0,
+	"castShadow":		true,
+	"shadow": {
+		"bias":		-0.001,
+		"mapSize":		{"x":512,"y":512},
+		"camera":		{"near":0.5,"far":500,"left":-10,"right":10,"top":10,"bottom":-10},
+		"valueType":	"number",
+		"value":	25
+		},
+	}, ...],
+"cameras":[ {
+	"name":		"Camera 123",
+	"cameraZoom":	1.22773766,
+	"zoom":		1,
+	"cameraType":	"PerspectiveCamera",
+	"perspective": {
+		"pos":		{"x":0,"y":0,"z":0},
+		"rot":		{"x":0,"y":0,"z":0,"order":"XYZ"},
+		"sca":		{"x":0,"y":0,"z":0},
+		"zoom":		1,
+		"near":		0.01,
+		"far":		500,
+		"aspect":	1.3132530120481927,
+		"fov":		50,
+		},
+	"orthographic": {
+		"pos":		{"x":0,"y":0,"z":0},
+		"rot":		{"x":0,"y":0,"z":0,"order":"XYZ"},
+		"sca":		{"x":0,"y":0,"z":0},
+		"zoom":		1,
+		"near":		0.01,
+		"far":		500,
+		"left":		-10,
+		"right":	10,
+		"top":		10,
+		"bottom":	-10,
+		},
 	}, ...]
 }
 </span></u></pre>
 				</ul>
 			</div>
+			
+			<br>
+			<hr>
+			
+			<span id="exportGridMap" contenteditable="true">
+				<h2>Export Grid Map</h2>
+			</span>
+			
+			<span id="exportGridMapContent" contenteditable="true">
+				Each tile placed inside an Prefab Object can correspond to a grid cell in a grid map. The tile index in the tilemap also gets saved to each grid cell when exported. Grid maps are useful for defining a three-dimensional map of cells. You can decide what these cells represent, but the most common use would be for defining collideable areas.
+			</span>
+			
+			<br><br>
+			
+			<span id="exportGridMapContent2" contenteditable="true">
+				You can export Grid Map data by going to the Scene panel, right-clicking on a listed Prefab Object and selecting <u>Export Grid Map</u> from within the <u>Export Misc</u> section of the context-menu. The Grid Map panel will pop up with inputs for specifying the Cell Size. The Cell Size defines the dimensions of each cell and is measured in Pixels. When exported, it will be converted to Meters.
+			</span>
+			
+			<br><br>
+			
+			<span id="exportGridMapContent3" contenteditable="true">
+				When you click Export, it will cycle through every tile in the Prefab Object and check the position immediately behind/under it. It will determine the location of the cell relative to the Object's origin point and store the x,y,z position as well as the tile index inside an array. The tile index is useful if you want to differentiate your cells; you can have one tile correspond with sloped collision cells for example. Tile indices begin with 0 at the top left corner of a tileset, and will be based on the Tilesize or the Tileset's Unique Tilesize if it is set.
+			</span>
+			
+			<br><br>
+			
+			<span id="exportGridMapFormatDesc" contenteditable="true">
+				Below is an example of some Grid Map data exported as a json formatted text document.
+			</span>
+						
+			<div class="inset">
+				<ul>
+					<pre><u><span id="exportGridMapFormat" contenteditable="true">{
+"size":{"x":1,"y":1,"z":1},
+"cells":[ [2,-1,0,0],[3,-1,0,0],[4,-1,0,0], ...],
+"dimensions":{"x":10,"y":10,"z":10},
+"min":{"x":-5,"y":-5,"z":-5},
+"max":{"x":5,"y":5,"z":5}
+}
+</span></u></pre>
+				</ul>
+			</div>
+			
+			
+			<a name="godotGridMap"></a>
+			<a class="video" href="https://www.youtube.com/embed/K26d1xgrgdE?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			
+			<span id="animatedTilesExportGodot" contenteditable="true">
+				To demonstrate how to work with this data, a Godot project has been created that uses a Grid Map to define the collidable areas of a level. Godot is a free and open-source program for developing games, and it is an excellent engine for importing your Crocotile work into if you are comfortable with more technical processes. You can use the data in other engines, such as Unity, if you like. Watch the video to see how this data can be used in Godot!
+			</span>
+			
+			<ul>
+				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DGridMapGodot.zip">Godot 3.4.2 Project (Crocotile3DGridMapGodot.zip) 205 kb</a></li>
+			</ul>
 			
 		</div>
 				

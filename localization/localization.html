@@ -257,6 +257,10 @@ h1{
 						<ul>
 							<li id="menubarClearRecent" contenteditable="true">Clear Recent</li>
 						</ul>
+					<li id="menubarLoadPinnedScene" contenteditable="true">Load Pinned Scene</li>
+						<ul>
+							<li id="menubarPinUnpinScene" contenteditable="true">Pin/Unpin Scene</li>
+						</ul>
 					<hr>
 					<li id="menubarSaveScene" contenteditable="true">Save Scene</li>
 					<li id="menubarSaveSceneAs" contenteditable="true">Save Scene As...</li>
@@ -446,6 +450,8 @@ h1{
 				<hr>
 				<li id="exportUseGroups" contenteditable="true">Use Groups</li>
 				<hr>
+				<li id="exportSingleMesh" contenteditable="true">Use single mesh</li>
+				<hr>
 				<li id="exportUnlit" contenteditable="true">Unlit</li>
 				<hr>
 				<li id="exportEmbedTextures" contenteditable="true">Embed Textures</li>
@@ -582,6 +588,10 @@ h1{
 			<span id="cameraSpinFinishedSaving" contenteditable="true">
 				Finished Saving!
 			</span>
+			<hr>
+			<span id="reset" contenteditable="true">
+				Reset
+			</span>
 		</div>
 		
 		<br><br>
@@ -665,6 +675,10 @@ h1{
 			<hr>
 			<span id="settingsBackgroundColor" contenteditable="true">
 				Background Color
+			</span>
+			<br>
+			<span id="settingsUsePaintColor" contenteditable="true">
+				Use Paint Color
 			</span>
 			<br>
 			<span id="settingsBackgroundAlpha" contenteditable="true">
@@ -800,6 +814,14 @@ h1{
 				Crosshair Arrows
 			</span>
 			<br>
+			<span id="settingsReverseWithMirrorFlip" contenteditable="true">
+				Reverse with Mirror/Flip
+			</span>
+			<br>
+			<span id="settingsGroupWASDUndos" contenteditable="true">
+				Group WASD Undos
+			</span>
+			<br>
 			<span id="settingsGizmo" contenteditable="true">
 				Gizmo
 			</span>
@@ -853,6 +875,18 @@ h1{
 			<br>
 			<span id="settingsMultiplyPadding" contenteditable="true">
 				Multiply Padding by Tile selection
+			</span>
+			<br>
+			<span id="settingsShowEntireTileset" contenteditable="true">
+				Show entire Tileset in Painting panel
+			</span>
+			<br>
+			<span id="settingsTilesetDimensions" contenteditable="true">
+				Max Tileset Dimensions
+			</span>
+			<br>
+			<span id="settingsTilesetMargins" contenteditable="true">
+				Tileset Margins
 			</span>
 			<br>
 			<span id="settingsCheckeredSize" contenteditable="true">
@@ -1043,6 +1077,18 @@ h1{
 			<br>
 			<span id="uppercaseEdges" contenteditable="true">
 				Edges
+			</span>
+			<br>
+			<span id="selectEdgeLoop" contenteditable="true">
+				Select Edge Loop
+			</span>
+			<br>
+			<span id="mergeEdgesSafe" contenteditable="true">
+				Merge Edges (safe)
+			</span>
+			<br>
+			<span id="mergeEdgesForced" contenteditable="true">
+				Merge Edges (forced)
 			</span>
 			<br>
 			<span id="vertex" contenteditable="true">
@@ -1548,6 +1594,10 @@ h1{
 			<br>
 			<span id="selectSingleMultiple" contenteditable="true">
 				Select single/multiple
+			</span>
+			<br>
+			<span id="lockUnlockCrosshair" contenteditable="true">
+				Lock/Unlock Crosshair
 			</span>
 			<br>
 			<span id="uvPrecision" contenteditable="true">
@@ -2113,6 +2163,14 @@ h1{
 				Import Prefab Object
 			</span>
 			<br>
+			<span id="purgeUnusedObjects" contenteditable="true">
+				Purge (all) unused objects
+			</span>
+			<br>
+			<span id="confirmPurgeObjects" contenteditable="true">
+				Are you sure you want to remove all of the unused Objects?
+			</span>
+			<br>
 			<span id="amount" contenteditable="true">
 				Amount
 			</span>
@@ -2281,6 +2339,14 @@ h1{
 					Cast Shadows
 				</span>	
 				<br>		
+				<span id="receiveShadows" contenteditable="true">
+					Receive Shadows
+				</span>
+				<br>		
+				<span id="shadows" contenteditable="true">
+					Shadows
+				</span>	
+				<br>		
 				<span id="shadowBias" contenteditable="true">
 					Shadow Bias
 				</span>	
@@ -2357,6 +2423,10 @@ h1{
 					Axis
 				</span>
 				<br>
+				<span id="objectMirroredTiles" contenteditable="true">
+					Mirrored Tiles
+				</span>
+				<br>
 				<span id="objectSkin" contenteditable="true">
 					Skin
 				</span>
@@ -2388,6 +2458,10 @@ h1{
 			<br>
 			<span id="exportInstanceData" contenteditable="true">
 				Export Instance Data
+			</span>
+			<br>
+			<span id="exportMisc" contenteditable="true">
+				Export Misc
 			</span>
 			<br>
 			<span id="exportToObj" contenteditable="true">
@@ -2424,6 +2498,10 @@ h1{
 			<br>
 			<span id="resetRotations" contenteditable="true">
 				Reset Rotation(s)
+			</span>
+			<br>
+			<span id="originToCrosshair" contenteditable="true">
+				Move Origin to Crosshair
 			</span>
 			<br>
 			<span id="duplicateInstances" contenteditable="true">
@@ -2503,6 +2581,26 @@ h1{
 				Next Keyframe
 			</span>
 			<br>
+			<span id="addNewAction" contenteditable="true">
+				Add New Action
+			</span>
+			<br>
+			<span id="removeAction" contenteditable="true">
+				Remove Action
+			</span>
+			<br>
+			<span id="renameAction" contenteditable="true">
+				Rename Action
+			</span>
+			<br>
+			<span id="copyAction" contenteditable="true">
+				Copy Action
+			</span>
+			<br>
+			<span id="pasteAction" contenteditable="true">
+				Paste Action
+			</span>
+			<br>
 		
 			<h2><span id="theatre" contenteditable="true">
 				Theatre
@@ -2526,6 +2624,14 @@ h1{
 			<br>
 			<span id="add" contenteditable="true">
 				Add
+			</span>
+			<br>
+			<span id="addMultiple" contenteditable="true">
+				Add Multiple
+			</span>
+			<br>
+			<span id="menu" contenteditable="true">
+				Menu
 			</span>
 			<br>
 			<span id="enableDisable" contenteditable="true">
@@ -2586,6 +2692,23 @@ h1{
 			<br>
 			<span id="action" contenteditable="true">
 				Action
+			</span>
+			<br>
+			
+			<h2><span id="timeline" contenteditable="true">
+				Timeline
+			</span></h2>
+			
+			<span id="keyMenu" contenteditable="true">
+				Key Menu
+			</span>
+			<br>
+			<span id="copyKeyframes" contenteditable="true">
+				Copy Keyframes
+			</span>
+			<br>
+			<span id="pasteKeyframes" contenteditable="true">
+				Paste Keyframes
 			</span>
 			<br>
 			
@@ -2697,10 +2820,16 @@ h1{
 			<span id="binding_save_Desc" contenteditable="true">Save the currently open scene.</span><br>
 			<span id="binding_saveAs" contenteditable="true">Save As</span><br>
 			<span id="binding_saveAs_Desc" contenteditable="true">Save the scene as a new file.</span><br>
+			<span id="binding_newScene" contenteditable="true">New Scene</span><br>
+			<span id="binding_newScene_Desc" contenteditable="true">Create a new scene.</span><br>
 			<span id="binding_load" contenteditable="true">Load</span><br>
 			<span id="binding_load_Desc" contenteditable="true">Load a scene.</span><br>
-			<span id="binding_exportFile" contenteditable="true">Export File</span><br>
-			<span id="binding_exportFile_Desc" contenteditable="true">Export scene to .obj file.</span><br>
+			<span id="binding_importModel" contenteditable="true">Import Model</span><br>
+			<span id="binding_importModel_Desc" contenteditable="true">Import a model (.c3dp, .obj, .gltf, .glb, .dae).</span><br>
+			<span id="binding_exportFile" contenteditable="true">Export Scene</span><br>
+			<span id="binding_exportFile_Desc" contenteditable="true">Export scene to .obj, .gltf, .glb, or .dae file.</span><br>
+			<span id="binding_exportObjects" contenteditable="true">Export Objects</span><br>
+			<span id="binding_exportObjects_Desc" contenteditable="true">Export objects to .obj, .gltf, .glb, or .dae file.</span><br>
 			<span id="binding_undo" contenteditable="true">Undo</span><br>
 			<span id="binding_undo_Desc" contenteditable="true">Undo any actions recently made.</span><br>
 			<span id="binding_redo" contenteditable="true">Redo</span><br>
@@ -2729,6 +2858,14 @@ h1{
 			<span id="binding_selectAllObjects_Desc" contenteditable="true">Select all object instances.</span><br>
 			<span id="binding_selectEdgeLoop" contenteditable="true">Select Edge Loop</span><br>
 			<span id="binding_selectEdgeLoop_Desc" contenteditable="true">Select any open edges that connect with the currently selected edges.</span><br>
+			<span id="binding_selectVertexFace" contenteditable="true">Select Faces connected to Vertices</span><br>
+			<span id="binding_selectVertexFace_Desc" contenteditable="true">Select any faces that connect with the currently selected vertices. First time selects only faces that belong to the same tile. Second time selects any faces that do not belong to the same tile.</span><br>
+			<span id="binding_deselectVertexFace" contenteditable="true">Deselect Faces connected to Vertices</span><br>
+			<span id="binding_deselectVertexFace_Desc" contenteditable="true">Deselect any faces that connect with the currently selected vertices. First time deselects only faces that belong to the same tile. Second time deselects any faces that do not belong to the same tile.</span><br>
+			<span id="binding_selectFaceVertex" contenteditable="true">Select Vertices connected to Faces</span><br>
+			<span id="binding_selectFaceVertex_Desc" contenteditable="true">Select any vertices that connect with the currently selected faces. First time selects only vertices that belong to the same tile. Second time selects any vertices that do not belong to the same tile.</span><br>
+			<span id="binding_deselectFaceVertex" contenteditable="true">Deselect Vertices connected to Faces</span><br>
+			<span id="binding_deselectFaceVertex_Desc" contenteditable="true">Deselect any vertices that connect with the currently selected faces. First time deselects only vertices that belong to the same tile. Second time deselects any vertices that do not belong to the same tile.</span><br>
 			<span id="binding_triangleDivide" contenteditable="true">Triangle Divide</span><br>
 			<span id="binding_triangleDivide_Desc" contenteditable="true">Divide selected faces into two triangular tiles. Each tile will still consist of two triangles, however, one will be collapsed onto itself.</span><br>
 			<span id="binding_applyTilebrushToFaces" contenteditable="true">Apply Tilebrush UVs to Faces</span><br>
@@ -2737,6 +2874,8 @@ h1{
 			<span id="binding_toggleMode_Desc" contenteditable="true">Toggle between edit and draw modes.</span><br>
 			<span id="binding_focus3d" contenteditable="true">Focus 3d Panel</span><br>
 			<span id="binding_focus3d_Desc" contenteditable="true">Focus the 3d panel.</span><br>
+			<span id="binding_only3d" contenteditable="true">Only show 3d Panel</span><br>
+			<span id="binding_only3d_Desc" contenteditable="true">Only show the 3d panel. Toggles the sidebar off/on.</span><br>
 			<span id="binding_snapCrosshair" contenteditable="true">Snap Crosshair to Vertex</span><br>
 			<span id="binding_snapCrosshair_Desc" contenteditable="true">Snap the crosshair to the nearest vertex the mouse is hovering over.</span><br>
 			<span id="binding_snapGizmo" contenteditable="true">Snap Gizmo to Vertex</span><br>
@@ -2799,6 +2938,10 @@ h1{
 			<span id="binding_roundingUp_Desc" contenteditable="true">Adjust the grid rounding value.</span><br>
 			<span id="binding_roundingDown" contenteditable="true">Rounding Down</span><br>
 			<span id="binding_roundingDown_Desc" contenteditable="true">Adjust the grid rounding value.</span><br>
+			<span id="binding_roundingUpCustom" contenteditable="true">Rounding Up Custom</span><br>
+			<span id="binding_roundingUpCustom_Desc" contenteditable="true">Adjust the grid rounding value by a custom amount (defined in the settings).</span><br>
+			<span id="binding_roundingDownCustom" contenteditable="true">Rounding Down Custom</span><br>
+			<span id="binding_roundingDownCustom_Desc" contenteditable="true">Adjust the grid rounding value by a custom amount (defined in the settings).</span><br>
 			<span id="binding_tilesetUp" contenteditable="true">Next Tileset</span><br>
 			<span id="binding_tilesetUp_Desc" contenteditable="true">Select next Tileset.</span><br>
 			<span id="binding_tilesetDown" contenteditable="true">Previous Tileset</span><br>
@@ -2862,6 +3005,10 @@ h1{
 			<span id="binding_rotatePrefabCWise_Desc" contenteditable="true">Rotate the prefab brush clockwise.</span><br>
 			<span id="binding_rotatePrefabCCWise" contenteditable="true">Rotate Prefab Counter-Clockwise</span><br>
 			<span id="binding_rotatePrefabCCWise_Desc" contenteditable="true">Rotate the prefab brush counter-clockwise.</span><br>
+			<span id="binding_cyclePrefabPrev" contenteditable="true">Previous Prefab</span><br>
+			<span id="binding_cyclePrefabPrev_Desc" contenteditable="true">Select the previous prefab in the list.</span><br>
+			<span id="binding_cyclePrefabNext" contenteditable="true">Next Prefab</span><br>
+			<span id="binding_cyclePrefabNext_Desc" contenteditable="true">Select the next prefab in the list.</span><br>
 			<span id="binding_copyUV" contenteditable="true">Copy UV</span><br>
 			<span id="binding_copyUV_Desc" contenteditable="true">Eyedrop a tile in the scene, and apply the UVs to the brush.</span><br>
 			<span id="binding_applyUV" contenteditable="true">Apply UV</span><br>
@@ -2945,6 +3092,12 @@ h1{
 			<span id="binding_splitFace_Desc" contenteditable="true">Split the face of the active tile where the yellow line is placed.</span><br>
 			<span id="binding_subdivideFace" contenteditable="true">Subdivide Face</span><br>
 			<span id="binding_subdivideFace_Desc" contenteditable="true">Subdivide the face of the active tile.</span><br>
+			<span id="binding_extrude" contenteditable="true">Extrude</span><br>
+			<span id="binding_extrude_Desc" contenteditable="true">Extrude the faces or the edges of tiles.</span><br>
+			<span id="binding_hideTiles" contenteditable="true">Hide Tiles</span><br>
+			<span id="binding_hideTiles_Desc" contenteditable="true">Hide the selected tiles from view.</span><br>
+			<span id="binding_showTiles" contenteditable="true">Show Tiles</span><br>
+			<span id="binding_showTiles_Desc" contenteditable="true">Reveal any hidden tiles.</span><br>
 			<span id="binding_combineVerts" contenteditable="true">Combine Vertices</span><br>
 			<span id="binding_combineVerts_Desc" contenteditable="true">Moves all selected vertices to the crosshair position.</span><br>
 			<span id="binding_alignAgainst" contenteditable="true">Push Against</span><br>
@@ -2999,6 +3152,8 @@ h1{
 			<span id="binding_deconstructInstance_Desc" contenteditable="true">Deconstruct the selected object instance into separate tiles.</span><br>
 			<span id="binding_duplicateInstances" contenteditable="true">Duplicate Instances</span><br>
 			<span id="binding_duplicateInstances_Desc" contenteditable="true">Duplicate the selected object instances.</span><br>
+			<span id="binding_originToCrosshair" contenteditable="true">Move Origin to Crosshair</span><br>
+			<span id="binding_originToCrosshair_Desc" contenteditable="true">Moves the Origin point of the selected Object to the current position of the 3d crosshair.</span><br>
 			
 			<hr>
 			
@@ -3065,6 +3220,8 @@ h1{
 			<span id="binding_uvs_CopyFrames_Desc" contenteditable="true">Copy the selected frames of the UV animation.</span><br>
 			<span id="binding_uvs_PasteFrames" contenteditable="true">Paste Frames</span><br>
 			<span id="binding_uvs_PasteFrames_Desc" contenteditable="true">Paste the copied frames to currently selected UV animation.</span><br>
+			<span id="binding_uvs_RemoveFrames" contenteditable="true">Remove Frames</span><br>
+			<span id="binding_uvs_RemoveFrames_Desc" contenteditable="true">Remove the selected frames from the currently selected UV animation.</span><br>
 			
 			<hr>
 			
@@ -3086,6 +3243,14 @@ h1{
 			<span id="binding_painting_Hand_Desc" contenteditable="true">Switch to the Hand tool.</span><br>
 			<span id="binding_painting_Arrow" contenteditable="true">Arrow</span><br>
 			<span id="binding_painting_Arrow_Desc" contenteditable="true">Switch to the Arrow tool.</span><br>
+			<span id="binding_painting_Mirror" contenteditable="true">Mirror</span><br>
+			<span id="binding_painting_Mirror_Desc" contenteditable="true">Mirror the selection.</span><br>
+			<span id="binding_painting_Flip" contenteditable="true">Flip</span><br>
+			<span id="binding_painting_Flip_Desc" contenteditable="true">Flip the selection.</span><br>
+			<span id="binding_painting_RotateLeft" contenteditable="true">Rotate Left</span><br>
+			<span id="binding_painting_RotateLeft_Desc" contenteditable="true">Rotate the selection counter-clockwise.</span><br>
+			<span id="binding_painting_RotateRight" contenteditable="true">Rotate Right</span><br>
+			<span id="binding_painting_RotateRight_Desc" contenteditable="true">Rotate the selection clockwise.</span><br>
 			<span id="binding_painting_Deselect" contenteditable="true">Deselect</span><br>
 			<span id="binding_painting_Deselect_Desc" contenteditable="true">Deselect the selection.</span><br>
 			<span id="binding_painting_Cut" contenteditable="true">Cut</span><br>
@@ -3106,6 +3271,15 @@ h1{
 			<span id="binding_painting_MoveDown_Desc" contenteditable="true">Move the selection down.</span><br>
 			<span id="binding_painting_Delete" contenteditable="true">Delete</span><br>
 			<span id="binding_painting_Delete_Desc" contenteditable="true">Delete the selection.</span><br>
+			
+			<hr> 
+			
+			<span id="binding_timeline_Delete" contenteditable="true">Delete</span><br>
+			<span id="binding_timeline_Delete_Desc" contenteditable="true">Delete the selection.</span><br>
+			<span id="binding_timeline_Copy" contenteditable="true">Copy</span><br>
+			<span id="binding_timeline_Copy_Desc" contenteditable="true">Copy the selection.</span><br>
+			<span id="binding_timeline_Paste" contenteditable="true">Paste</span><br>
+			<span id="binding_timeline_Paste_Desc" contenteditable="true">Paste the selection.</span><br>
 
 		</div>
 		

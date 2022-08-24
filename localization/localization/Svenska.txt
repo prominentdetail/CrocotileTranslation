@@ -1,0 +1,4238 @@
+[
+  {
+    "id": "languageName",
+    "value": "English"
+  },
+  {
+    "id": "translationNote",
+    "value": "Would you like to translate this document to another language? Your help would be appreciated!"
+  },
+  {
+    "id": "translationNote2",
+    "value": "To translate this document click on any text and replace it with your translation. Click <u>Save</u> at the top of the document to export the data. You can import the data you've previously saved by clicking <u>Load</u>."
+  },
+  {
+    "id": "translationNote3",
+    "value": "Place the saved translated file inside the localization folder and then run Crocotile. Open the About panel by going to Help &gt; About, or press F2. Choose the translation from the Language drop down menu."
+  },
+  {
+    "id": "menubarFile",
+    "value": "Fil"
+  },
+  {
+    "id": "menubarNewScene",
+    "value": "Ny Scen"
+  },
+  {
+    "id": "menubarLoadScene",
+    "value": "Öppna Scen"
+  },
+  {
+    "id": "menubarLoadRecentScene",
+    "value": "Öppna Senaste Scen"
+  },
+  {
+    "id": "menubarClearRecent",
+    "value": "Töm Senaste"
+  },
+  {
+    "id": "menubarLoadPinnedScene",
+    "value": "Öppna Fäst Scen"
+  },
+  {
+    "id": "menubarPinUnpinScene",
+    "value": "Fäst/Avlägsna Scen"
+  },
+  {
+    "id": "menubarSaveScene",
+    "value": "Spara Scen"
+  },
+  {
+    "id": "menubarSaveSceneAs",
+    "value": "Spara Scen Som..."
+  },
+  {
+    "id": "menubarImportModel",
+    "value": "Importera Modell"
+  },
+  {
+    "id": "menubarExportScene",
+    "value": "Exportera Scen"
+  },
+  {
+    "id": "menubarExportObjects",
+    "value": "Exportera Objekt"
+  },
+  {
+    "id": "menubarExit",
+    "value": "Avsluta"
+  },
+  {
+    "id": "menubarEdit",
+    "value": "Ändra"
+  },
+  {
+    "id": "menubarUndo",
+    "value": "Ångra"
+  },
+  {
+    "id": "menubarRedo",
+    "value": "Gör om"
+  },
+  {
+    "id": "menubarSettings",
+    "value": "Inställningar"
+  },
+  {
+    "id": "menubarButtons",
+    "value": "Knappar"
+  },
+  {
+    "id": "menubarCamera",
+    "value": "Kamera"
+  },
+  {
+    "id": "menubarPerspective",
+    "value": "Perspektiv"
+  },
+  {
+    "id": "menubarOrthographic",
+    "value": "Ortografisk "
+  },
+  {
+    "id": "menubarSkybox",
+    "value": "Skybox"
+  },
+  {
+    "id": "menubarSelectImage",
+    "value": "Välj Bild"
+  },
+  {
+    "id": "menubarShowHide",
+    "value": "Visa/Göm"
+  },
+  {
+    "id": "menubarRender",
+    "value": "Rendera"
+  },
+  {
+    "id": "menubarSpinGif",
+    "value": "Roterande Gif"
+  },
+  {
+    "id": "movie",
+    "value": "Film"
+  },
+  {
+    "id": "menubarHelp",
+    "value": "Hjälp"
+  },
+  {
+    "id": "menubarHowTo",
+    "value": "Hur..."
+  },
+  {
+    "id": "menubarAbout",
+    "value": "Om"
+  },
+  {
+    "id": "unsavedNewScene",
+    "value": "Det finns ändringar som inte har sparats! Ändringarna kommer gå förlorade om du skapar en ny scen."
+  },
+  {
+    "id": "unsavedLoadScene",
+    "value": "Det finns ändringar som inte har sparats! Ändringarna kommer gå förlorade om du öppnar en ny scen."
+  },
+  {
+    "id": "unsavedExit",
+    "value": "Det finns ändringar som inte har sparats! Är du säker på att du vill avsluta?"
+  },
+  {
+    "id": "recentWrongPath",
+    "value": "Sökvägen är ogiltig. Har filen flyttat?"
+  },
+  {
+    "id": "exportNoTiles",
+    "value": "Det finns inga tiles som använder nuvarande tileset! Välj ett tileset som har använts i scenen för att exportera dessa tiles."
+  },
+  {
+    "id": "exportNoObjects",
+    "value": "Det finns inga objekt att exportera!"
+  },
+  {
+    "id": "selectLanguage",
+    "value": "Språk"
+  },
+  {
+    "id": "activationDetails",
+    "value": "Att spara över 100 tiles och exportera kräver aktiveringsyckel. Skriv in din aktiveringsnyckel för att få tillgång till dessa funktioner eller fortsätt utan dessa."
+  },
+  {
+    "id": "activationEmail",
+    "value": "Epost"
+  },
+  {
+    "id": "activationKey",
+    "value": "nyckel"
+  },
+  {
+    "id": "registerButton",
+    "value": "Registera"
+  },
+  {
+    "id": "continueButton",
+    "value": "Fortsätt"
+  },
+  {
+    "id": "invalidKey",
+    "value": "Aktiveringsnyckel är ej giltig."
+  },
+  {
+    "id": "activationFailed",
+    "value": "Aktivering misslyckades: Kontrollera att allt är inskrivet rätt. Om problemet kvarstår, kontakta support."
+  },
+  {
+    "id": "activationAttempts",
+    "value": "För många aktiveringsförsök! kontakta support och försök igen senare."
+  },
+  {
+    "id": "failedCode",
+    "value": "Felaktig nyckel: Kontrollera att allt är inskrivet rätt.."
+  },
+  {
+    "id": "activationSuccess",
+    "value": "Full version har aktiverats!"
+  },
+  {
+    "id": "news",
+    "value": "Nyheter"
+  },
+  {
+    "id": "updateReleased",
+    "value": "Nya uppdateringar finns tillgängliga."
+  },
+  {
+    "id": "version",
+    "value": "Version"
+  },
+  {
+    "id": "isNowAvailable",
+    "value": "är nu tillgänglig."
+  },
+  {
+    "id": "dontRemindMe",
+    "value": "Påminn mig inte."
+  },
+  {
+    "id": "okayButton",
+    "value": "Okej"
+  },
+  {
+    "id": "exportOptions",
+    "value": "Inställningar för Export"
+  },
+  {
+    "id": "includeObjects",
+    "value": "Inkludera objekt"
+  },
+  {
+    "id": "exportFileFormat",
+    "value": "Filformat"
+  },
+  {
+    "id": "exportMergeVertices",
+    "value": "Kombinera Vertices"
+  },
+  {
+    "id": "exportVertexNormals",
+    "value": "Vertex Normals"
+  },
+  {
+    "id": "exportFlat",
+    "value": "Platt"
+  },
+  {
+    "id": "exportSmooth",
+    "value": "Slät"
+  },
+  {
+    "id": "exportAngleThreshold",
+    "value": "Gränsvinkel"
+  },
+  {
+    "id": "exportPolygonType",
+    "value": "Polygon Typ"
+  },
+  {
+    "id": "exportTriangles",
+    "value": "Triangles"
+  },
+  {
+    "id": "exportQuads",
+    "value": "Quads"
+  },
+  {
+    "id": "exportUseGroups",
+    "value": "Använd Grupper"
+  },
+  {
+    "id": "exportSingleMesh",
+    "value": "Använd gemensam mesh"
+  },
+  {
+    "id": "exportUnlit",
+    "value": "Ej Belyst"
+  },
+  {
+    "id": "exportEmbedTextures",
+    "value": "Bädda in texturer"
+  },
+  {
+    "id": "exportAllTextures",
+    "value": "Exportera alla textures/.mtl"
+  },
+  {
+    "id": "exportTexturePrefix",
+    "value": "Textur prefix"
+  },
+  {
+    "id": "exportTileSpacing",
+    "value": "Tile Mellanrum"
+  },
+  {
+    "id": "exportPowerOfTwo",
+    "value": "Använd upphöjt till 2 texturer"
+  },
+  {
+    "id": "exportUVAnimations",
+    "value": "Exportera UV Animationer"
+  },
+  {
+    "id": "exportScale",
+    "value": "Skala"
+  },
+  {
+    "id": "exportDecalOffset",
+    "value": "Dekal Avstånd"
+  },
+  {
+    "id": "exportButton",
+    "value": "Exportera"
+  },
+  {
+    "id": "closeButton",
+    "value": "Stäng"
+  },
+  {
+    "id": "effects",
+    "value": "Effekter"
+  },
+  {
+    "id": "fog",
+    "value": "Dimma"
+  },
+  {
+    "id": "near",
+    "value": "Nära"
+  },
+  {
+    "id": "far",
+    "value": "Långt bort"
+  },
+  {
+    "id": "bloom",
+    "value": "Bloom"
+  },
+  {
+    "id": "strength",
+    "value": "Styrka"
+  },
+  {
+    "id": "radius",
+    "value": "Radie"
+  },
+  {
+    "id": "threshold",
+    "value": "Gräns"
+  },
+  {
+    "id": "depthOfField",
+    "value": "Depth of Field"
+  },
+  {
+    "id": "focus",
+    "value": "Fokus"
+  },
+  {
+    "id": "aperture",
+    "value": "Apertur"
+  },
+  {
+    "id": "maxBlur",
+    "value": "Max Suddighet"
+  },
+  {
+    "id": "enable",
+    "value": "Aktivera"
+  },
+  {
+    "id": "renderCamera",
+    "value": "Rendera Kamera"
+  },
+  {
+    "id": "defaultCamera",
+    "value": "Standard Kamera"
+  },
+  {
+    "id": "selectCameraAlert",
+    "value": "Välj en eĺler fler kameror att rendera!"
+  },
+  {
+    "id": "cameraSpin",
+    "value": "Roterande Kamera"
+  },
+  {
+    "id": "cameraSpinFrames",
+    "value": "Bilder"
+  },
+  {
+    "id": "cameraSpinInvalidFrames",
+    "value": "Antal bilder har inte ett giltigt nummer!"
+  },
+  {
+    "id": "cameraSpinFrameInterval",
+    "value": "Bildfrekvens (millisekunder)"
+  },
+  {
+    "id": "cameraSpinInvalidInterval",
+    "value": "Bildfrekvens har inte ett giltigt nummer!"
+  },
+  {
+    "id": "cameraSpinRotate",
+    "value": "Rotera"
+  },
+  {
+    "id": "cameraSpinInvalidNumber",
+    "value": "Rotera har inte ett giltigt nummer!"
+  },
+  {
+    "id": "cameraSpinRecording",
+    "value": "Spela in"
+  },
+  {
+    "id": "cameraSpinProcessing",
+    "value": "Jobbar"
+  },
+  {
+    "id": "cameraSpinFinishedSaving",
+    "value": "Sparning Färdig!"
+  },
+  {
+    "id": "renderMovie",
+    "value": "Rendera Film"
+  },
+  {
+    "id": "framerate",
+    "value": "Bildfrekvens"
+  },
+  {
+    "id": "quality",
+    "value": "Kvalitet"
+  },
+  {
+    "id": "selectActAlert",
+    "value": "Välj en eller flera Acts att rendera!"
+  },
+  {
+    "id": "settings",
+    "value": "Inställningar"
+  },
+  {
+    "id": "resetSettings",
+    "value": "Återställ Inställningar"
+  },
+  {
+    "id": "resetSettingsAlert",
+    "value": "Är du säker på att du vill återställa inställningarna? Detta kommer ställa om programmet till standard-instänningarna."
+  },
+  {
+    "id": "settingsGeneral",
+    "value": "Generella"
+  },
+  {
+    "id": "settingsResolution",
+    "value": "Upplösning"
+  },
+  {
+    "id": "settingsWindow",
+    "value": "Fönster"
+  },
+  {
+    "id": "settingsFPS",
+    "value": "FPS"
+  },
+  {
+    "id": "colorTheme",
+    "value": "Färgtema"
+  },
+  {
+    "id": "light",
+    "value": "Ljust"
+  },
+  {
+    "id": "dark",
+    "value": "Mörkt"
+  },
+  {
+    "id": "settingsShowRuler",
+    "value": "Visa Linjal"
+  },
+  {
+    "id": "settingsLockCrosshair",
+    "value": "Lås Sikte till Rutnät"
+  },
+  {
+    "id": "settingsWireframe",
+    "value": "Wireframe"
+  },
+  {
+    "id": "settingsWireframeColor",
+    "value": "Wireframe Färg"
+  },
+  {
+    "id": "settingsBackgroundColor",
+    "value": "Bakgrundsfärg"
+  },
+  {
+    "id": "settingsBackgroundAlpha",
+    "value": "Bakgrundstransparens"
+  },
+  {
+    "id": "colorIsTransparent",
+    "value": "Färg är transparent"
+  },
+  {
+    "id": "settingsScreenshotFolder",
+    "value": "Mapp för skärmdumpar"
+  },
+  {
+    "id": "settingsChoose",
+    "value": "Välj"
+  },
+  {
+    "id": "settingsBackupLimit",
+    "value": "Max antal backuper"
+  },
+  {
+    "id": "settingsUndoLimit",
+    "value": "Max antal ångra"
+  },
+  {
+    "id": "settingsProject",
+    "value": "Projekt"
+  },
+  {
+    "id": "settingsBasePixelUnit",
+    "value": "Grundenhet för Pixlar"
+  },
+  {
+    "id": "settingsSkyboxShape",
+    "value": "Skybox Form"
+  },
+  {
+    "id": "box",
+    "value": "Låda"
+  },
+  {
+    "id": "cylinder",
+    "value": "Cylinder"
+  },
+  {
+    "id": "Sphere",
+    "value": "Sfär"
+  },
+  {
+    "id": "editButton",
+    "value": "Ändra"
+  },
+  {
+    "id": "settingsCurrentUnitScale",
+    "value": "Nuvarande enhetlig skala"
+  },
+  {
+    "id": "settingsNewUnitScale",
+    "value": "Ny enhetlig skala"
+  },
+  {
+    "id": "settingsPixelPerMeter",
+    "value": "pixlar per meter"
+  },
+  {
+    "id": "settingsResizeTheScene",
+    "value": "Ändra storlek på scenen"
+  },
+  {
+    "id": "settingsNotAValidNumber",
+    "value": "Dessa värden innehåller ej giltiga nummer!"
+  },
+  {
+    "id": "applyButton",
+    "value": "Tillämpa"
+  },
+  {
+    "id": "settingsCamera",
+    "value": "Kamera"
+  },
+  {
+    "id": "nearPlane",
+    "value": "Camera Frustum Near Plane"
+  },
+  {
+    "id": "settingsFrustumPlane",
+    "value": "Camera Frustum Far Plane"
+  },
+  {
+    "id": "aspectRatio",
+    "value": "Camera Aspect Ratio"
+  },
+  {
+    "id": "settingsFOV",
+    "value": "Camera Field of View"
+  },
+  {
+    "id": "settingsCameraUpVector",
+    "value": "Kamera Up Vektor"
+  },
+  {
+    "id": "settingsDrawMode",
+    "value": "Rita-läge"
+  },
+  {
+    "id": "settingsOverlapTilebrush",
+    "value": "Överlappa Tilebrush"
+  },
+  {
+    "id": "settingsAlignBrushToCrosshair",
+    "value": "Justera Pensel till Sikte"
+  },
+  {
+    "id": "settingsOrientPrefabToCamera",
+    "value": "Vänd Prefab Pensel mot Kamera"
+  },
+  {
+    "id": "settingsStickyEdgeProportionate",
+    "value": "Klistra Kant Proportionellt"
+  },
+  {
+    "id": "settingsEditMode",
+    "value": "Ändra-läge"
+  },
+  {
+    "id": "settingsCameraBasedSelection",
+    "value": "Kamera-baserad Markering"
+  },
+  {
+    "id": "settingsDeselectWithClick",
+    "value": "Avmarkera vid klick på tom plats"
+  },
+  {
+    "id": "settingsCrosshairArrows",
+    "value": "Sikte med Pilar"
+  },
+  {
+    "id": "settingsReverseWithMirrorFlip",
+    "value": "Vänd med Spegla/Vänd"
+  },
+  {
+    "id": "settingsGroupWASDUndos",
+    "value": "Gruppera WASD inom Ångra"
+  },
+  {
+    "id": "settingsGizmo",
+    "value": "Gizmo"
+  },
+  {
+    "id": "settingsPrioritizeGizmo",
+    "value": "Prioritera Gizmo"
+  },
+  {
+    "id": "settingsObjectModeConstraint",
+    "value": "Objekt-läge Begränsning"
+  },
+  {
+    "id": "settingsVertexSize",
+    "value": "Vertex Storlek"
+  },
+  {
+    "id": "settingsDisableVertexSelection",
+    "value": "Stäng av Vertex valmöjlighet"
+  },
+  {
+    "id": "settingsSelectedFaceColor",
+    "value": "Färg för vald sida"
+  },
+  {
+    "id": "settingsSelectedFaceAlpha",
+    "value": "Vald sida's transparens"
+  },
+  {
+    "id": "activeEditSelectedFaceColor",
+    "value": "Aktiv ändring av vald sidas färg"
+  },
+  {
+    "id": "activeEditSelectedFaceAlpha",
+    "value": "Aktiv ändrig av vald sidas transparens"
+  },
+  {
+    "id": "settingsTilesets",
+    "value": "Tilesets"
+  },
+  {
+    "id": "settingsAutoRefreshTilesets",
+    "value": "Automatisk uppdatering av  Tilesets"
+  },
+  {
+    "id": "settingsDragMultipleUVs",
+    "value": "Dra flera UVs"
+  },
+  {
+    "id": "settingsSubtractPadding",
+    "value": "Minska marginal från Tilebrush"
+  },
+  {
+    "id": "settingsMultiplyPadding",
+    "value": "Multiplicera marginal av markerade Tiles"
+  },
+  {
+    "id": "settingsShowEntireTileset",
+    "value": "Visa hela Tileset i Måla-panelen"
+  },
+  {
+    "id": "settingsTilesetDimensions",
+    "value": "Max Tileset Dimensioner"
+  },
+  {
+    "id": "settingsTilesetMargins",
+    "value": "Tileset Marginaler"
+  },
+  {
+    "id": "settingsCheckeredSize",
+    "value": "Storlek på Schackmönster"
+  },
+  {
+    "id": "statsIn",
+    "value": "i"
+  },
+  {
+    "id": "statsScene",
+    "value": "scen"
+  },
+  {
+    "id": "statsObjects",
+    "value": "objekt"
+  },
+  {
+    "id": "statsInstances",
+    "value": "instanser"
+  },
+  {
+    "id": "edges",
+    "value": "kanter"
+  },
+  {
+    "id": "statsVertices",
+    "value": "vertices"
+  },
+  {
+    "id": "switchSides",
+    "value": "Byt sidor"
+  },
+  {
+    "id": "dock",
+    "value": "Fäst"
+  },
+  {
+    "id": "undock",
+    "value": "Lossa"
+  },
+  {
+    "id": "modeButton",
+    "value": "Rita/Ändra-läge"
+  },
+  {
+    "id": "cameraBasedSelectionButton",
+    "value": "Kamera-baserad markering (på/av)"
+  },
+  {
+    "id": "gizmoModeButton",
+    "value": "Gizmo-läge (flytta/rotera/skala)"
+  },
+  {
+    "id": "gizmoAlignmentButton",
+    "value": "Gizmo Justera (värld/objekt)"
+  },
+  {
+    "id": "gizmoToggleButton",
+    "value": "Använd Gizmo (ja/nej)"
+  },
+  {
+    "id": "undoButton",
+    "value": "Ångra"
+  },
+  {
+    "id": "redoButton",
+    "value": "Gör om"
+  },
+  {
+    "id": "tile",
+    "value": "Tile"
+  },
+  {
+    "id": "sticky",
+    "value": "Klistra"
+  },
+  {
+    "id": "block",
+    "value": "Block"
+  },
+  {
+    "id": "vertexColor",
+    "value": "Vertex Färg"
+  },
+  {
+    "id": "vertexColors",
+    "value": "Vertex Färger"
+  },
+  {
+    "id": "centerToSelection",
+    "value": "Centrera på markering"
+  },
+  {
+    "id": "centerToSelectionBounds",
+    "value": "Centrera från markeringens ytterkanter"
+  },
+  {
+    "id": "lookAtCrosshair",
+    "value": "Kika i siktet"
+  },
+  {
+    "id": "cameraRotateRight",
+    "value": "Rotera höger"
+  },
+  {
+    "id": "cameraRotateLeft",
+    "value": "Rotera vänster"
+  },
+  {
+    "id": "cameraRotateUp",
+    "value": "Rotera upp"
+  },
+  {
+    "id": "cameraRotateDown",
+    "value": "Rotera ner"
+  },
+  {
+    "id": "roundToGrid",
+    "value": "Avrunda till Rutnät"
+  },
+  {
+    "id": "vertices",
+    "value": "Vertices"
+  },
+  {
+    "id": "alignVerticesToThePixel",
+    "value": "Justera vertices till närmaste pixel"
+  },
+  {
+    "id": "alignVerticesToTheGrid",
+    "value": "Justera vertices till Rutnät"
+  },
+  {
+    "id": "moveVerticesToTheCrosshair",
+    "value": "Flytta vertices till siktet"
+  },
+  {
+    "id": "straightenRelativeToTiles",
+    "value": "Räta upp relativt till egna tiles"
+  },
+  {
+    "id": "selectVerticesXAxis",
+    "value": "Välj vertices längs med siktets X-axel"
+  },
+  {
+    "id": "selectVerticesYAxis",
+    "value": "Välj vertices längs med siktets Y-axel"
+  },
+  {
+    "id": "selectVerticesZAxis",
+    "value": "Välj vertices längs med siktets Z-axel"
+  },
+  {
+    "id": "paintVertexColors",
+    "value": "Applicera nuvarande färg på valda vertices"
+  },
+  {
+    "id": "eraseVertexColors",
+    "value": "Ta bort färg från valda vertices"
+  },
+  {
+    "id": "selectVertexColors",
+    "value": "Markera vertices med nuvarande färg"
+  },
+  {
+    "id": "deselectVertexColors",
+    "value": "Avmarkera vertices med nuvarande färg"
+  },
+  {
+    "id": "faceDirection",
+    "value": "Riktining: Sida"
+  },
+  {
+    "id": "edgeDirection",
+    "value": "Riktining: Kant"
+  },
+  {
+    "id": "edge",
+    "value": "Kant"
+  },
+  {
+    "id": "uppercaseEdges",
+    "value": "Kanter"
+  },
+  {
+    "id": "selectEdgeLoop",
+    "value": "Välj anslutna kanter"
+  },
+  {
+    "id": "mergeEdgesSafe",
+    "value": "Kombinera Kanter (metod: säker)"
+  },
+  {
+    "id": "mergeEdgesForced",
+    "value": "Kombinera Kanter (metod: tvingad)"
+  },
+  {
+    "id": "vertex",
+    "value": "Vertex"
+  },
+  {
+    "id": "face",
+    "value": "Sida"
+  },
+  {
+    "id": "faces",
+    "value": "Sidor"
+  },
+  {
+    "id": "flipEdge",
+    "value": "Vänd kant"
+  },
+  {
+    "id": "reverseFace",
+    "value": "Vänd sida"
+  },
+  {
+    "id": "hide",
+    "value": "Göm"
+  },
+  {
+    "id": "show",
+    "value": "Visa"
+  },
+  {
+    "id": "copy",
+    "value": "Kopiera"
+  },
+  {
+    "id": "paste",
+    "value": "Klistra in"
+  },
+  {
+    "id": "split",
+    "value": "Dela"
+  },
+  {
+    "id": "subdivide",
+    "value": "Subdivide"
+  },
+  {
+    "id": "allSelectedTiles",
+    "value": "Alla valda tiles"
+  },
+  {
+    "id": "triangleDivide",
+    "value": "Triangle Divide"
+  },
+  {
+    "id": "triangleMerge",
+    "value": "Triangle Merge"
+  },
+  {
+    "id": "safe",
+    "value": "säker"
+  },
+  {
+    "id": "forced",
+    "value": "tvingad"
+  },
+  {
+    "id": "columns",
+    "value": "Kolumner"
+  },
+  {
+    "id": "rows",
+    "value": "Rader"
+  },
+  {
+    "id": "createObject",
+    "value": "Skapa Objekt"
+  },
+  {
+    "id": "createObjectAlert",
+    "value": "Inga tiles har valts för att skapa ett objekt!"
+  },
+  {
+    "id": "selectAllObjects",
+    "value": "Markera Alla Objekt"
+  },
+  {
+    "id": "deselectAllObjects",
+    "value": "Avmarkera Alla Objekts"
+  },
+  {
+    "id": "rotateClockwise",
+    "value": "Rotera medsols"
+  },
+  {
+    "id": "rotateCounterClockwise",
+    "value": "Rotera motsols"
+  },
+  {
+    "id": "tileset",
+    "value": "Tileset"
+  },
+  {
+    "id": "addTileset",
+    "value": "Lägg till Tileset"
+  },
+  {
+    "id": "addBlankTileset",
+    "value": "Lägg till Tomt Tileset"
+  },
+  {
+    "id": "blankTileset",
+    "value": "Tomt Tileset"
+  },
+  {
+    "id": "tilesUppercase",
+    "value": "Tiles"
+  },
+  {
+    "id": "tiles",
+    "value": "tiles"
+  },
+  {
+    "id": "pixelsUppercase",
+    "value": "Pixlar"
+  },
+  {
+    "id": "pixels",
+    "value": "pixlar"
+  },
+  {
+    "id": "width",
+    "value": "Bredd"
+  },
+  {
+    "id": "height",
+    "value": "Höjd"
+  },
+  {
+    "id": "opaque",
+    "value": "Ogenomskinlig"
+  },
+  {
+    "id": "transparent",
+    "value": "Transparent"
+  },
+  {
+    "id": "checkered",
+    "value": "Schackmönstrad"
+  },
+  {
+    "id": "color",
+    "value": "Färg"
+  },
+  {
+    "id": "createButton",
+    "value": "Skapa"
+  },
+  {
+    "id": "addSelectedTilesToNewTileset",
+    "value": "Lägg till valda tiles i nytt Tileset"
+  },
+  {
+    "id": "tilesetMaterialSettings",
+    "value": "Tileset Material Inställningar"
+  },
+  {
+    "id": "emissive",
+    "value": "Emissive"
+  },
+  {
+    "id": "specular",
+    "value": "Specular"
+  },
+  {
+    "id": "shininess",
+    "value": "Shininess"
+  },
+  {
+    "id": "addLightToScene",
+    "value": "*Lägg till ljuskälla för att lysa upp detta material!"
+  },
+  {
+    "id": "replaceTileset",
+    "value": "Ersätt Tileset"
+  },
+  {
+    "id": "removeTileset",
+    "value": "Ta Bort Tileset"
+  },
+  {
+    "id": "combineTileset",
+    "value": "Kombinera Tileset"
+  },
+  {
+    "id": "combineTilesets",
+    "value": "Kombinera Tilesets"
+  },
+  {
+    "id": "previousImage",
+    "value": "Föregående Bild"
+  },
+  {
+    "id": "nextImage",
+    "value": "Nästa Bild"
+  },
+  {
+    "id": "mergeDown",
+    "value": "Kombinera nedåt"
+  },
+  {
+    "id": "discardBottom",
+    "value": "Ersätt underliggande"
+  },
+  {
+    "id": "discardTop",
+    "value": "Ersätt ovanpåliggande"
+  },
+  {
+    "id": "combineTilesetAlert",
+    "value": "Det måste finnas mer än ett tileset tillgängligt innan kombinering är tillgänglig."
+  },
+  {
+    "id": "applyTilesetToTheSelectedFaces",
+    "value": "Applicera Tileset på de valda Sidorna"
+  },
+  {
+    "id": "resizeTileset",
+    "value": "Ändra storlek på Tileset"
+  },
+  {
+    "id": "canvas",
+    "value": "Canvas"
+  },
+  {
+    "id": "image",
+    "value": "Bild"
+  },
+  {
+    "id": "percent",
+    "value": "Procent"
+  },
+  {
+    "id": "proportionate",
+    "value": "Proportionell"
+  },
+  {
+    "id": "exportTileset",
+    "value": "Exportera Tileset"
+  },
+  {
+    "id": "selectTiles",
+    "value": "Markera Tiles"
+  },
+  {
+    "id": "deselectTiles",
+    "value": "Avmarkera Tiles"
+  },
+  {
+    "id": "selectWithinTileSelection",
+    "value": "Välj Tiles inom markerad Tile "
+  },
+  {
+    "id": "selectTouchingTileSelection",
+    "value": "Välj Tiles som nuddar markerad Tile"
+  },
+  {
+    "id": "deselectWithinTileSelection",
+    "value": "Välj bort Tiles inom markerad Tile"
+  },
+  {
+    "id": "deselectTouchingTileSelection",
+    "value": "Välj bort Tiles som nuddar markerad Tile"
+  },
+  {
+    "id": "selectBasedOnTilebrush",
+    "value": "Välj Tiles som använder nuvarande Tilebrush UVs"
+  },
+  {
+    "id": "deselectBasedOnTilebrush",
+    "value": "Välj Bort Tiles som använder nuvarande Tilebrush UVs"
+  },
+  {
+    "id": "selectTilesUsingTileset",
+    "value": "Välj Tiles som använder nuvarande Tileset"
+  },
+  {
+    "id": "deselectTilesUsingTileset",
+    "value": "Välj Bort Tiles som använder nuvarande Tileset"
+  },
+  {
+    "id": "applyUVsToFaces",
+    "value": "Applicera Tilebrush UVs på Sidor"
+  },
+  {
+    "id": "previousTileset",
+    "value": "Föregående Tileset"
+  },
+  {
+    "id": "selectTileset",
+    "value": "Välj Tileset"
+  },
+  {
+    "id": "nextTileset",
+    "value": "Nästa Tileset"
+  },
+  {
+    "id": "wrappingClampToEdge",
+    "value": "Wrapping: Clamp to Edge"
+  },
+  {
+    "id": "wrappingRepeat",
+    "value": "Wrapping: Repeat"
+  },
+  {
+    "id": "wrappingMirroredRepeat",
+    "value": "Wrapping: Mirrored Repeat"
+  },
+  {
+    "id": "singleDoubleSided",
+    "value": "Enkel/Dubbel-Sidig"
+  },
+  {
+    "id": "decalModeOff",
+    "value": "Dekal mode: av"
+  },
+  {
+    "id": "decalModeOn",
+    "value": "Dekal mode: på"
+  },
+  {
+    "id": "depthwritingOff",
+    "value": "Depthwriting: off"
+  },
+  {
+    "id": "depthwritingOn",
+    "value": "Depthwriting: on"
+  },
+  {
+    "id": "transparencyOff",
+    "value": "Transparens: av"
+  },
+  {
+    "id": "transparencyOn",
+    "value": "Transparens: på"
+  },
+  {
+    "id": "refreshTilesets",
+    "value": "uppdatera Tilesets"
+  },
+  {
+    "id": "magnification",
+    "value": "Förstora"
+  },
+  {
+    "id": "uvTilesize",
+    "value": "UV Tilesize"
+  },
+  {
+    "id": "uvTileWidth",
+    "value": "Tile bredd"
+  },
+  {
+    "id": "uvTileHeight",
+    "value": "Tile höjd"
+  },
+  {
+    "id": "uniqueOff",
+    "value": "Unik: av"
+  },
+  {
+    "id": "uniqueOn",
+    "value": "Unik: på"
+  },
+  {
+    "id": "uvPadding",
+    "value": "UV Padding"
+  },
+  {
+    "id": "leftPadding",
+    "value": "Vänster Padding"
+  },
+  {
+    "id": "rightPadding",
+    "value": "Höger Padding"
+  },
+  {
+    "id": "topPadding",
+    "value": "Top Padding"
+  },
+  {
+    "id": "bottomPadding",
+    "value": "Bottom Padding"
+  },
+  {
+    "id": "tilescale3d",
+    "value": "3D Tile skala"
+  },
+  {
+    "id": "tilescaleX",
+    "value": "Tile skala X"
+  },
+  {
+    "id": "tilescaleY",
+    "value": "Tile skala Y"
+  },
+  {
+    "id": "gridRounding",
+    "value": "Rutnätet's avrundning"
+  },
+  {
+    "id": "rotateInterval",
+    "value": "Roterings-intervall"
+  },
+  {
+    "id": "tileSplitting",
+    "value": "Tile delning"
+  },
+  {
+    "id": "tilePalette",
+    "value": "Tile Palett"
+  },
+  {
+    "id": "addSelectedTilesToTilePalette",
+    "value": "Lägg till tiles i vald Tile Palett"
+  },
+  {
+    "id": "addTiles",
+    "value": "Lägg till Tiles"
+  },
+  {
+    "id": "removeTiles",
+    "value": "Ta Bort Tiles"
+  },
+  {
+    "id": "editWeights",
+    "value": "Ändra Vikter"
+  },
+  {
+    "id": "addPalette",
+    "value": "Lägg till Palett"
+  },
+  {
+    "id": "clearPalette",
+    "value": "Töm Palett"
+  },
+  {
+    "id": "removePalette",
+    "value": "Ta bort Palett"
+  },
+  {
+    "id": "resetPaletteWeights",
+    "value": "Återställ Palettens vikter"
+  },
+  {
+    "id": "paletteMode",
+    "value": "Palett-läge"
+  },
+  {
+    "id": "random",
+    "value": "Slumpmässig"
+  },
+  {
+    "id": "sequence",
+    "value": "Sekvens"
+  },
+  {
+    "id": "uvs",
+    "value": "UVs"
+  },
+  {
+    "id": "mirror",
+    "value": "Spegla"
+  },
+  {
+    "id": "flip",
+    "value": "Vänd"
+  },
+  {
+    "id": "rotateLeft",
+    "value": "Rotera Vänster"
+  },
+  {
+    "id": "rotateRight",
+    "value": "Rotera Höger"
+  },
+  {
+    "id": "selectSingleMultiple",
+    "value": "Välj en/flera"
+  },
+  {
+    "id": "uvPrecision",
+    "value": "UV Precision"
+  },
+  {
+    "id": "rotation",
+    "value": "Rotation"
+  },
+  {
+    "id": "scale",
+    "value": "Skala"
+  },
+  {
+    "id": "scaleX",
+    "value": "Skala X"
+  },
+  {
+    "id": "scaleY",
+    "value": "Skala Y"
+  },
+  {
+    "id": "crosshair",
+    "value": "Sikte"
+  },
+  {
+    "id": "moveToMousePosition",
+    "value": "Flytta till muspekarens position"
+  },
+  {
+    "id": "centerOfSelection",
+    "value": "Centrum av markering"
+  },
+  {
+    "id": "topOfSelection",
+    "value": "Överst av markering"
+  },
+  {
+    "id": "bottomOfSelection",
+    "value": "Underst av markering"
+  },
+  {
+    "id": "leftOfSelection",
+    "value": "Vänster från markering"
+  },
+  {
+    "id": "rightOfSelection",
+    "value": "Höger från markering"
+  },
+  {
+    "id": "alignSelection",
+    "value": "Justera markering"
+  },
+  {
+    "id": "centerOnCrosshair",
+    "value": "Centrera på siktet"
+  },
+  {
+    "id": "alignTopToCrosshair",
+    "value": "Justera ovanpå siktet"
+  },
+  {
+    "id": "alignBottomToCrosshair",
+    "value": "Justera under siktet"
+  },
+  {
+    "id": "alignLeftToCrosshair",
+    "value": "Justera vänster om siktet"
+  },
+  {
+    "id": "alignRightToCrosshair",
+    "value": "Justera höger om siktet"
+  },
+  {
+    "id": "roundToNearestPixel",
+    "value": "Avrunda till närmaste pixel"
+  },
+  {
+    "id": "setToCrosshair",
+    "value": "Set to crosshair"
+  },
+  {
+    "id": "setToTile",
+    "value": "Set to Tile"
+  },
+  {
+    "id": "setToTileset",
+    "value": "Set to Tileset"
+  },
+  {
+    "id": "paint",
+    "value": "Måla"
+  },
+  {
+    "id": "traceSelected",
+    "value": "Spåra valda"
+  },
+  {
+    "id": "fillSolid",
+    "value": "Fyll med solid"
+  },
+  {
+    "id": "fillCheckered",
+    "value": "Fyll med schackmönster"
+  },
+  {
+    "id": "exportUVMapImage",
+    "value": "Exportera UV map bild"
+  },
+  {
+    "id": "menu3d",
+    "value": "3d"
+  },
+  {
+    "id": "deselectTilesUvsSelected",
+    "value": "Välj bort tiles (UVs markerade)"
+  },
+  {
+    "id": "deselectTilesUvsUnselected",
+    "value": "Välj bort tiles (UVs avmarkerade)"
+  },
+  {
+    "id": "selectAll",
+    "value": "Välj Alla"
+  },
+  {
+    "id": "deselectAll",
+    "value": "Välj Bort Alla"
+  },
+  {
+    "id": "exportUVMap",
+    "value": "Export UV Map"
+  },
+  {
+    "id": "lineColor",
+    "value": "Linje Färg"
+  },
+  {
+    "id": "canvasColor",
+    "value": "Canvas Färg"
+  },
+  {
+    "id": "scaleInvalid",
+    "value": "Skalan är satt till ogiltigt nummer!"
+  },
+  {
+    "id": "uvAnimation",
+    "value": "Animera UV"
+  },
+  {
+    "id": "addAnimation",
+    "value": "Lägg till Animering"
+  },
+  {
+    "id": "addFrame",
+    "value": "Lägg till bild"
+  },
+  {
+    "id": "addFrames",
+    "value": "Lägg till bildsekvens"
+  },
+  {
+    "id": "removeFrames",
+    "value": "Ta bort bildsekvens"
+  },
+  {
+    "id": "clearFrames",
+    "value": "Rensa bildsekvens"
+  },
+  {
+    "id": "copyFrames",
+    "value": "Kopiera bildsekvens"
+  },
+  {
+    "id": "pasteFrames",
+    "value": "Klistra in bildsekvens"
+  },
+  {
+    "id": "removeAnimation",
+    "value": "Ta bort Animering"
+  },
+  {
+    "id": "frameDuration",
+    "value": "Tid per bild"
+  },
+  {
+    "id": "setFrameDuration",
+    "value": "Ändra tid för bild"
+  },
+  {
+    "id": "hideShowAnimations",
+    "value": "Göm/Visa Animeringar"
+  },
+  {
+    "id": "start",
+    "value": "Starta"
+  },
+  {
+    "id": "seconds",
+    "value": "Sekunder"
+  },
+  {
+    "id": "painting",
+    "value": "Målning"
+  },
+  {
+    "id": "verticalSymmetry",
+    "value": "Vertikal Symmetri"
+  },
+  {
+    "id": "horizontalSymmetry",
+    "value": "Horisontell Symmetri"
+  },
+  {
+    "id": "brush",
+    "value": "Pensel"
+  },
+  {
+    "id": "dither",
+    "value": "Dither"
+  },
+  {
+    "id": "gridLines",
+    "value": "Rutnätets Linjer"
+  },
+  {
+    "id": "pencil",
+    "value": "Penna"
+  },
+  {
+    "id": "eraser",
+    "value": "Radera"
+  },
+  {
+    "id": "eyedropper",
+    "value": "Pipett"
+  },
+  {
+    "id": "paintBucket",
+    "value": "Färghink"
+  },
+  {
+    "id": "checkeredFill",
+    "value": "Fyll med schackmönster"
+  },
+  {
+    "id": "contiguous",
+    "value": "Global"
+  },
+  {
+    "id": "marquee",
+    "value": "Markera"
+  },
+  {
+    "id": "lasso",
+    "value": "Lasso"
+  },
+  {
+    "id": "magicwand",
+    "value": "Trollspö"
+  },
+  {
+    "id": "hand",
+    "value": "Hand"
+  },
+  {
+    "id": "arrow",
+    "value": "Pil"
+  },
+  {
+    "id": "palette",
+    "value": "Palett"
+  },
+  {
+    "id": "savePalette",
+    "value": "Spara Palett"
+  },
+  {
+    "id": "loadPalette",
+    "value": "Öppna Palett"
+  },
+  {
+    "id": "emptyPalette",
+    "value": "Töm Palett"
+  },
+  {
+    "id": "emptyPaletteAlert",
+    "value": "Töm paletten?"
+  },
+  {
+    "id": "defaultPalette",
+    "value": "Standard Palett"
+  },
+  {
+    "id": "defaultPaletteAlert",
+    "value": "Ersätt nuvarande palett med standard-paletten?"
+  },
+  {
+    "id": "removeDuplicates",
+    "value": "Ta bort identiska"
+  },
+  {
+    "id": "hideShowPalette",
+    "value": "Göm/Visa Palett"
+  },
+  {
+    "id": "addColor",
+    "value": "Lägg till färg"
+  },
+  {
+    "id": "removeColor",
+    "value": "Ta bort färg"
+  },
+  {
+    "id": "alphaApplication",
+    "value": "Applicera med transparens (unik/blanda)"
+  },
+  {
+    "id": "transform",
+    "value": "Transformera"
+  },
+  {
+    "id": "metersUppercase",
+    "value": "Meter"
+  },
+  {
+    "id": "axisRelativeToCamera",
+    "value": "Axel relativ till kameravy (på/av)"
+  },
+  {
+    "id": "rightUpBackward",
+    "value": "(höger,upp,bakåt)"
+  },
+  {
+    "id": "gizmo",
+    "value": "Gizmo"
+  },
+  {
+    "id": "translate",
+    "value": "Flytta"
+  },
+  {
+    "id": "resize",
+    "value": "Ändra storlek"
+  },
+  {
+    "id": "rotate",
+    "value": "Rotera"
+  },
+  {
+    "id": "align",
+    "value": "Justera"
+  },
+  {
+    "id": "push",
+    "value": "Putta"
+  },
+  {
+    "id": "center",
+    "value": "Centrum"
+  },
+  {
+    "id": "pull",
+    "value": "Drag"
+  },
+  {
+    "id": "flatten",
+    "value": "Platta till"
+  },
+  {
+    "id": "point",
+    "value": "Punkt"
+  },
+  {
+    "id": "against",
+    "value": "Mot"
+  },
+  {
+    "id": "moveSelection",
+    "value": "Flytta markering"
+  },
+  {
+    "id": "get",
+    "value": "Get"
+  },
+  {
+    "id": "set",
+    "value": "Set"
+  },
+  {
+    "id": "position",
+    "value": "Position"
+  },
+  {
+    "id": "translateCrosshair",
+    "value": "Flytta Sikte"
+  },
+  {
+    "id": "crosshairRotation",
+    "value": "Sikte Rotera"
+  },
+  {
+    "id": "rotateCrosshair",
+    "value": "Rotera Sikte"
+  },
+  {
+    "id": "tilt",
+    "value": "Lutning"
+  },
+  {
+    "id": "camera",
+    "value": "Kamera"
+  },
+  {
+    "id": "lockAxis",
+    "value": "Lås axel"
+  },
+  {
+    "id": "swivelPoint",
+    "value": "svängingspunkt"
+  },
+  {
+    "id": "lock",
+    "value": "Lås"
+  },
+  {
+    "id": "swingCamera",
+    "value": "Svinga kamera"
+  },
+  {
+    "id": "orientation",
+    "value": "Orientering"
+  },
+  {
+    "id": "translateCameraPosition",
+    "value": "Flytta Kamera Position"
+  },
+  {
+    "id": "cameraPosition",
+    "value": "Kamera Position"
+  },
+  {
+    "id": "cameraRotation",
+    "value": "Kamera Rotering"
+  },
+  {
+    "id": "rotateCamera",
+    "value": "Rotera Kamera"
+  },
+  {
+    "id": "zoomLevel",
+    "value": "Zoom-nivå"
+  },
+  {
+    "id": "zoom",
+    "value": "Zoom"
+  },
+  {
+    "id": "cameraZoomLevel",
+    "value": "Kamera's Zoom-nivå"
+  },
+  {
+    "id": "zoomCamera",
+    "value": "Zooma Kamera"
+  },
+  {
+    "id": "extrude",
+    "value": "Extrudera"
+  },
+  {
+    "id": "extrudeUVs",
+    "value": "Extrudera UVs"
+  },
+  {
+    "id": "distance",
+    "value": "Distans"
+  },
+  {
+    "id": "scene",
+    "value": "Scen"
+  },
+  {
+    "id": "exportSceneData",
+    "value": "Exportera Scen-Data"
+  },
+  {
+    "id": "addLayer",
+    "value": "Lägg till Lager"
+  },
+  {
+    "id": "addLight",
+    "value": "Lägg till ljuskälla"
+  },
+  {
+    "id": "ambientLight",
+    "value": "Bakgrundsbelysning"
+  },
+  {
+    "id": "pointLight",
+    "value": "Punkt Ljus"
+  },
+  {
+    "id": "spotlight",
+    "value": "Spotlight"
+  },
+  {
+    "id": "directionalLight",
+    "value": "Riktat Ljus"
+  },
+  {
+    "id": "toggleLights",
+    "value": "Belysning På/Av"
+  },
+  {
+    "id": "addCamera",
+    "value": "Lägg till kamera"
+  },
+  {
+    "id": "addActor",
+    "value": "Lägg till Actor"
+  },
+  {
+    "id": "addBody",
+    "value": "Lägg till Kropp"
+  },
+  {
+    "id": "addBone",
+    "value": "Lägg till Ben"
+  },
+  {
+    "id": "removeSelectedItem",
+    "value": "Ta bort vald sak"
+  },
+  {
+    "id": "moveUp",
+    "value": "Flytta upp"
+  },
+  {
+    "id": "moveDown",
+    "value": "Flytta ner"
+  },
+  {
+    "id": "lockUnlockItem",
+    "value": "Lås/Lås Upp sak"
+  },
+  {
+    "id": "importPrefabObject",
+    "value": "Importera Prefab Objekt"
+  },
+  {
+    "id": "amount",
+    "value": "Mängd"
+  },
+  {
+    "id": "spacing",
+    "value": "Mellanrum"
+  },
+  {
+    "id": "points",
+    "value": "Punkter"
+  },
+  {
+    "id": "movePointToCrosshair",
+    "value": "Flytta punkt till siktet"
+  },
+  {
+    "id": "renamePoint",
+    "value": "Ändra namn på punkt"
+  },
+  {
+    "id": "addPoint",
+    "value": "Lägg till punkt vid siktet"
+  },
+  {
+    "id": "removePoint",
+    "value": "Ta bort punkt"
+  },
+  {
+    "id": "origin",
+    "value": "Utgångspunkt"
+  },
+  {
+    "id": "worldSpace",
+    "value": "Värld space"
+  },
+  {
+    "id": "localSpace",
+    "value": "Local space"
+  },
+  {
+    "id": "layer",
+    "value": "Lager"
+  },
+  {
+    "id": "switchToCamera",
+    "value": "Byt till denna Kamera"
+  },
+  {
+    "id": "renameCamera",
+    "value": "Byt namn på Kamera"
+  },
+  {
+    "id": "renameLight",
+    "value": "Byt namn på ljuskälla"
+  },
+  {
+    "id": "resetCamera",
+    "value": "Återställ Kamera"
+  },
+  {
+    "id": "removeCamera",
+    "value": "Ta bort Kamera"
+  },
+  {
+    "id": "removeLight",
+    "value": "Ta bort Ljuskälla"
+  },
+  {
+    "id": "object",
+    "value": "Objekt"
+  },
+  {
+    "id": "entity",
+    "value": "Entity"
+  },
+  {
+    "id": "property",
+    "value": "Egenskap"
+  },
+  {
+    "id": "showHideActor",
+    "value": "Visa/Göm Actor"
+  },
+  {
+    "id": "renameActor",
+    "value": "Byt namn på Actor"
+  },
+  {
+    "id": "removeActor",
+    "value": "Ta bort Actor"
+  },
+  {
+    "id": "showHideBone",
+    "value": "Visa/Göm Ben"
+  },
+  {
+    "id": "showHideCamera",
+    "value": "Visa/Göm Kamera"
+  },
+  {
+    "id": "showHideLight",
+    "value": "Visa/Göm Ljuskälla"
+  },
+  {
+    "id": "renameBone",
+    "value": "Byt namn på Ben"
+  },
+  {
+    "id": "removeBone",
+    "value": "Ta Bort Ben"
+  },
+  {
+    "id": "showHideLayer",
+    "value": "Visa/Göm Lager"
+  },
+  {
+    "id": "renameLayer",
+    "value": "Byt namn på Lager"
+  },
+  {
+    "id": "centerCrosshairToLayerBounds",
+    "value": "Centrera siktet på Lager Bounds"
+  },
+  {
+    "id": "setAllObjectsOrigin",
+    "value": "Ändra alla Objekts Utgångspunkt till siktet"
+  },
+  {
+    "id": "removeLayer",
+    "value": "Ta Bort Lager"
+  },
+  {
+    "id": "addToScene",
+    "value": "Lägg till i Scen"
+  },
+  {
+    "id": "renameObject",
+    "value": "Byt namn på Objekt"
+  },
+  {
+    "id": "applyNameToInstances",
+    "value": "Sätt namn på Instanser"
+  },
+  {
+    "id": "properties",
+    "value": "Egenskaper"
+  },
+  {
+    "id": "lightProperties",
+    "value": "ljuskällans Egenskaper"
+  },
+  {
+    "id": "angle",
+    "value": "Vinkel"
+  },
+  {
+    "id": "penumbra",
+    "value": "Penumbra"
+  },
+  {
+    "id": "shadow",
+    "value": "Skugga"
+  },
+  {
+    "id": "castShadows",
+    "value": "Kasta Skuggor"
+  },
+  {
+    "id": "shadowBias",
+    "value": "Skuggans Bias"
+  },
+  {
+    "id": "shadowMapWidth",
+    "value": "Skuggans Map Bredd"
+  },
+  {
+    "id": "shadowMapHeight",
+    "value": "Skuggans Map Höjd"
+  },
+  {
+    "id": "cameraProperties",
+    "value": "Kamerans Egenskaper"
+  },
+  {
+    "id": "lookAtTarget",
+    "value": "Titta på mål"
+  },
+  {
+    "id": "left",
+    "value": "Vänster"
+  },
+  {
+    "id": "right",
+    "value": "Höger"
+  },
+  {
+    "id": "top",
+    "value": "Topp"
+  },
+  {
+    "id": "bottom",
+    "value": "Botten"
+  },
+  {
+    "id": "objectProperties",
+    "value": "Objektet's Egenskaper"
+  },
+  {
+    "id": "instanceProperties",
+    "value": "Instansens Egenskaper"
+  },
+  {
+    "id": "objectGeneral",
+    "value": "Generella"
+  },
+  {
+    "id": "objectName",
+    "value": "Namn"
+  },
+  {
+    "id": "objectBillboarding",
+    "value": "Skyltning"
+  },
+  {
+    "id": "objectBillboardingEnabled",
+    "value": "Skyltning Aktiverad"
+  },
+  {
+    "id": "objectLockToYAxis",
+    "value": "Lås till Y Axel"
+  },
+  {
+    "id": "objectMirroring",
+    "value": "Spegling"
+  },
+  {
+    "id": "objectMirroringEnabled",
+    "value": "Spegling Aktiverad"
+  },
+  {
+    "id": "objectMirroringAxis",
+    "value": "Axel"
+  },
+  {
+    "id": "objectSkin",
+    "value": "Skinn"
+  },
+  {
+    "id": "objectSkinEnabled",
+    "value": "Skinned Mesh"
+  },
+  {
+    "id": "custom",
+    "value": "Egen"
+  },
+  {
+    "id": "instances",
+    "value": "Instanser"
+  },
+  {
+    "id": "hideShowAll",
+    "value": "Göm/Visa Allt"
+  },
+  {
+    "id": "cloneObject",
+    "value": "Klona Objekt"
+  },
+  {
+    "id": "deleteObject",
+    "value": "Ta bort Objekt/instanser"
+  },
+  {
+    "id": "exportInstanceData",
+    "value": "Exportera Instans-Data"
+  },
+  {
+    "id": "exportMisc",
+    "value": "Exportera Övrigt"
+  },
+  {
+    "id": "exportToObj",
+    "value": "Exportera till Obj"
+  },
+  {
+    "id": "exportToPrefab",
+    "value": "Exportera till Prefab"
+  },
+  {
+    "id": "editObject",
+    "value": "Ändra Objekt"
+  },
+  {
+    "id": "renameInstance",
+    "value": "Byt namn på Instans"
+  },
+  {
+    "id": "select",
+    "value": "Välj"
+  },
+  {
+    "id": "deselect",
+    "value": "Välj Bort"
+  },
+  {
+    "id": "deleteInstance",
+    "value": "Ta bort Instans"
+  },
+  {
+    "id": "moveCrosshairToInstance",
+    "value": "Flytta sikte till Instans"
+  },
+  {
+    "id": "resetRotations",
+    "value": "Återställ Rotering"
+  },
+  {
+    "id": "duplicateInstances",
+    "value": "Skapa kopia av Instans(er)"
+  },
+  {
+    "id": "duplicateInstancesArea",
+    "value": "Skapa kopia av Instans(er) inom Area"
+  },
+  {
+    "id": "duplicate",
+    "value": "Skapa kopia"
+  },
+  {
+    "id": "removeInstance",
+    "value": "Ta bort Instans"
+  },
+  {
+    "id": "deconstructObject",
+    "value": "Montera ned Objekt"
+  },
+  {
+    "id": "objectIsLocked",
+    "value": "Detta objekt är låst!"
+  },
+  {
+    "id": "layerIsLocked",
+    "value": "Detta Lager är låst!"
+  },
+  {
+    "id": "actorIsLocked",
+    "value": "Denna actor är låst!"
+  },
+  {
+    "id": "boneIsLocked",
+    "value": "Detta ben är låst!"
+  },
+  {
+    "id": "cameraIsLocked",
+    "value": "Denna kamera är låst!"
+  },
+  {
+    "id": "lightIsLocked",
+    "value": "Denna ljuskälla är låst!"
+  },
+  {
+    "id": "animation",
+    "value": "Animering"
+  },
+  {
+    "id": "backToBeginning",
+    "value": "Börja om från början"
+  },
+  {
+    "id": "play",
+    "value": "Spela upp"
+  },
+  {
+    "id": "pause",
+    "value": "Pausa"
+  },
+  {
+    "id": "stop",
+    "value": "Stoppa"
+  },
+  {
+    "id": "previousKeyframe",
+    "value": "Föregående Keyframe"
+  },
+  {
+    "id": "nextKeyframe",
+    "value": "Nästa Keyframe"
+  },
+  {
+    "id": "theatre",
+    "value": "Teater"
+  },
+  {
+    "id": "configure",
+    "value": "Konfigurera"
+  },
+  {
+    "id": "renameAct",
+    "value": "Byt namn på Act"
+  },
+  {
+    "id": "addAct",
+    "value": "Lägg till Act"
+  },
+  {
+    "id": "removeAct",
+    "value": "Ta bort Act"
+  },
+  {
+    "id": "add",
+    "value": "Lägg till"
+  },
+  {
+    "id": "enableDisable",
+    "value": "Aktivera/Inaktivera"
+  },
+  {
+    "id": "loop",
+    "value": "Repetera"
+  },
+  {
+    "id": "enabled",
+    "value": "Aktiverad"
+  },
+  {
+    "id": "addWeight",
+    "value": "Lägg till Vikt"
+  },
+  {
+    "id": "applyInterpolation",
+    "value": "Lägg till Interpolation"
+  },
+  {
+    "id": "rightOfPlayhead",
+    "value": "Höger om Playhead"
+  },
+  {
+    "id": "leftOfPlayhead",
+    "value": "Vänster om Playhead"
+  },
+  {
+    "id": "rightOfCursor",
+    "value": "Höger om muspekaren"
+  },
+  {
+    "id": "leftOfCursor",
+    "value": "Vänster om muspekaren"
+  },
+  {
+    "id": "discrete",
+    "value": "Diskret"
+  },
+  {
+    "id": "linear",
+    "value": "Linjär"
+  },
+  {
+    "id": "easeInCubic",
+    "value": "Ease In Cubic"
+  },
+  {
+    "id": "easeOutCubic",
+    "value": "Ease Out Cubic"
+  },
+  {
+    "id": "easeInOutCubic",
+    "value": "Ease In Out Cubic"
+  },
+  {
+    "id": "action",
+    "value": "Action"
+  },
+  {
+    "id": "keys",
+    "value": "Kortkommandon"
+  },
+  {
+    "id": "saveKeyBindings",
+    "value": "Spara Kortkommandon"
+  },
+  {
+    "id": "loadKeyBindings",
+    "value": "Hämta Kortkommandon"
+  },
+  {
+    "id": "resetBindings",
+    "value": "Återställ Kortkommandon"
+  },
+  {
+    "id": "resetBindingsAlert",
+    "value": "Är du säker på att du vill återställa ALLA Kortkommandon till standard-instänningarna?"
+  },
+  {
+    "id": "resetPins",
+    "value": "Återställ Pins"
+  },
+  {
+    "id": "resetPinsAlert",
+    "value": "Är du säker på att du vill återställa pins? This will remove all the pinned actions."
+  },
+  {
+    "id": "toggleCameraMode",
+    "value": "Byt kamera-läge"
+  },
+  {
+    "id": "chooseKeygroup",
+    "value": "Välj en grupp Kortkommandon.."
+  },
+  {
+    "id": "pinned",
+    "value": "Pinned"
+  },
+  {
+    "id": "keyBinding",
+    "value": "Kortkommandon"
+  },
+  {
+    "id": "type",
+    "value": "Typ"
+  },
+  {
+    "id": "clearButton",
+    "value": "Återställ"
+  },
+  {
+    "id": "keyOnly",
+    "value": "Endast Tangent!"
+  },
+  {
+    "id": "mouseOnly",
+    "value": "Endast Mus!"
+  },
+  {
+    "id": "keyOrMouse",
+    "value": "Mus eller Tangentbord"
+  },
+  {
+    "id": "keyAndMouse",
+    "value": "Mus och Tangentbord"
+  },
+  {
+    "id": "leftMouse",
+    "value": "Vänster musknapp"
+  },
+  {
+    "id": "middleMouse",
+    "value": "Mitten-klick"
+  },
+  {
+    "id": "rightMouse",
+    "value": "Höger musknapp"
+  },
+  {
+    "id": "binding_close",
+    "value": "Stäng Program"
+  },
+  {
+    "id": "binding_close_Desc",
+    "value": "Stäng/Avsluta programmet."
+  },
+  {
+    "id": "binding_closePanel",
+    "value": "Stäng Panel"
+  },
+  {
+    "id": "binding_closePanel_Desc",
+    "value": "Stäng en panel som är öppen."
+  },
+  {
+    "id": "binding_config",
+    "value": "Inställningar"
+  },
+  {
+    "id": "binding_config_Desc",
+    "value": "Öppna/Stäng fönster för inställningar."
+  },
+  {
+    "id": "binding_license",
+    "value": "Info/Licens"
+  },
+  {
+    "id": "binding_license_Desc",
+    "value": "Öppna/Stäng licens-fönstret."
+  },
+  {
+    "id": "binding_keyConfig",
+    "value": "Knapp-Inställningar"
+  },
+  {
+    "id": "binding_keyConfig_Desc",
+    "value": "Öppna/stäng fönstret för Kortkommandon."
+  },
+  {
+    "id": "binding_fullscreen",
+    "value": "Helskärm"
+  },
+  {
+    "id": "binding_fullscreen_Desc",
+    "value": "Visa Helskärm"
+  },
+  {
+    "id": "binding_screenshot",
+    "value": "Skärmdump"
+  },
+  {
+    "id": "binding_screenshot_Desc",
+    "value": "Tag en skärmdump."
+  },
+  {
+    "id": "binding_copy",
+    "value": "Kopiera"
+  },
+  {
+    "id": "binding_copy_Desc",
+    "value": "Kopiera valda tiles/objekt."
+  },
+  {
+    "id": "binding_paste",
+    "value": "Klistra in"
+  },
+  {
+    "id": "binding_paste_Desc",
+    "value": "Klistra in tiles/objekt som har Kopierats."
+  },
+  {
+    "id": "binding_save",
+    "value": "Spara"
+  },
+  {
+    "id": "binding_save_Desc",
+    "value": "Spara nuvarande Scen."
+  },
+  {
+    "id": "binding_saveAs",
+    "value": "Spara Som"
+  },
+  {
+    "id": "binding_saveAs_Desc",
+    "value": "Spara scen som ny fil."
+  },
+  {
+    "id": "binding_newScene",
+    "value": "Ny Scen"
+  },
+  {
+    "id": "binding_newScene_Desc",
+    "value": "Skapa en ny Scen."
+  },
+  {
+    "id": "binding_load",
+    "value": "Öppna"
+  },
+  {
+    "id": "binding_load_Desc",
+    "value": "Öppna en scen."
+  },
+  {
+    "id": "binding_importModel",
+    "value": "Importera Modell"
+  },
+  {
+    "id": "binding_importModel_Desc",
+    "value": "Importera en modell (.c3dp, .obj, .gltf, .glb, .dae)."
+  },
+  {
+    "id": "binding_exportFile",
+    "value": "Exportera Scen"
+  },
+  {
+    "id": "binding_exportFile_Desc",
+    "value": "Exportera scen som .obj, .gltf, .glb, eller .dae fil."
+  },
+  {
+    "id": "binding_exportObjects",
+    "value": "Exportera Objekt"
+  },
+  {
+    "id": "binding_exportObjects_Desc",
+    "value": "Exportera objekt som .obj, .gltf, .glb, or .dae fil."
+  },
+  {
+    "id": "binding_undo",
+    "value": "Ångra"
+  },
+  {
+    "id": "binding_undo_Desc",
+    "value": "Ångra ändringar som nyligen gjorts."
+  },
+  {
+    "id": "binding_redo",
+    "value": "Gör Om"
+  },
+  {
+    "id": "binding_redo_Desc",
+    "value": "Gör om tidigare ångrade ändringar."
+  },
+  {
+    "id": "binding_toggleOpacity",
+    "value": "Gör Genomskinlig"
+  },
+  {
+    "id": "binding_toggleOpacity_Desc",
+    "value": "Ändra Genomskinlighet på textur."
+  },
+  {
+    "id": "binding_toggleWireframe",
+    "value": "Visa Wireframe"
+  },
+  {
+    "id": "binding_toggleWireframe_Desc",
+    "value": "Visa eller göm wireframe på tiles."
+  },
+  {
+    "id": "binding_toggleCameraStyle",
+    "value": "Toggle Camera Style"
+  },
+  {
+    "id": "binding_toggleCameraStyle_Desc",
+    "value": "Byt mellan perspektiv-vy och  ortografisk projektionsvy."
+  },
+  {
+    "id": "binding_toggleRenderTexture",
+    "value": "Toggle Render Texture"
+  },
+  {
+    "id": "binding_toggleRenderTexture_Desc",
+    "value": "Show or hide the texture of a tilset. Useful for seeing vertex colors clearly."
+  },
+  {
+    "id": "binding_showHelper",
+    "value": "Visa Hjälpmedel"
+  },
+  {
+    "id": "binding_showHelper_Desc",
+    "value": "Show or hide the axis and crosshair."
+  },
+  {
+    "id": "binding_doubleSided",
+    "value": "Dubbelsidig"
+  },
+  {
+    "id": "binding_doubleSided_Desc",
+    "value": "Toggle double-sided mode for the currently selected tileset (the active tileset in the tileset window)."
+  },
+  {
+    "id": "binding_removePart",
+    "value": "Ta bort"
+  },
+  {
+    "id": "binding_removePart_Desc",
+    "value": "Ta bort valda tiles eller objekt."
+  },
+  {
+    "id": "binding_deselectAll",
+    "value": "Avmarkera Alla"
+  },
+  {
+    "id": "binding_deselectAll_Desc",
+    "value": "Avmarkera alla vertices. Klicka igen för att avmarkera alla sidor."
+  },
+  {
+    "id": "binding_selectAll",
+    "value": "Välj Alla"
+  },
+  {
+    "id": "binding_selectAll_Desc",
+    "value": "Välj vertices från markerade tiles. Klicka igen för att välja Överlappande vertices av närliggande tiles."
+  },
+  {
+    "id": "binding_deselectAllObjects",
+    "value": "Avmarkera Alla Objekt"
+  },
+  {
+    "id": "binding_deselectAllObjects_Desc",
+    "value": "Avmarkera Alla instanser av objektet."
+  },
+  {
+    "id": "binding_selectAllObjects",
+    "value": "Välj Alla Objekt"
+  },
+  {
+    "id": "binding_selectAllObjects_Desc",
+    "value": "Välj Alla instanser av objektet."
+  },
+  {
+    "id": "binding_selectEdgeLoop",
+    "value": "Välj ytterkanter"
+  },
+  {
+    "id": "binding_selectEdgeLoop_Desc",
+    "value": "Välj öppna kanter som är kopplade till markerade ytterkanter."
+  },
+  {
+    "id": "binding_selectVertexFace",
+    "value": "Välj Sidor kopplade till Vertices"
+  },
+  {
+    "id": "binding_selectVertexFace_Desc",
+    "value": "Välj sidor som kopplats till markerade vertices. Första gången väljs bara sidor som tillhör samma tile. Andra gången väljs sidor som inte tillhör samma tile."
+  },
+  {
+    "id": "binding_triangleDivide",
+    "value": "Triangle Divide"
+  },
+  {
+    "id": "binding_triangleDivide_Desc",
+    "value": "Divide selected faces into two triangular tiles. Each tile will still consist of two triangles, however, one will be collapsed onto itself."
+  },
+  {
+    "id": "binding_applyTilebrushToFaces",
+    "value": "Apply Tilebrush UVs to Faces"
+  },
+  {
+    "id": "binding_applyTilebrushToFaces_Desc",
+    "value": "Applies the Tilebrush UVs onto any selected faces."
+  },
+  {
+    "id": "binding_toggleMode",
+    "value": "Byt Läge"
+  },
+  {
+    "id": "binding_toggleMode_Desc",
+    "value": "Byt mellan Ändra och Rita-läge."
+  },
+  {
+    "id": "binding_focus3d",
+    "value": "Fokusera 3d Panel"
+  },
+  {
+    "id": "binding_focus3d_Desc",
+    "value": "Fokusera 3d panelen."
+  },
+  {
+    "id": "binding_only3d",
+    "value": "Visa bara 3d Panelen"
+  },
+  {
+    "id": "binding_only3d_Desc",
+    "value": "Visa bara 3d panelen. Gömmer/Visar sidopanelen."
+  },
+  {
+    "id": "binding_snapCrosshair",
+    "value": "Flytta siktet till Vertex"
+  },
+  {
+    "id": "binding_snapCrosshair_Desc",
+    "value": "Flytta siktet till närmaste vertex som muspekaren svävar över."
+  },
+  {
+    "id": "binding_snapGizmo",
+    "value": "Flytta Gizmo till Vertex"
+  },
+  {
+    "id": "binding_snapGizmo_Desc",
+    "value": "Flytta gizmo till närmaste vertex som muspekaren svävar över."
+  },
+  {
+    "id": "binding_centerGizmo",
+    "value": "Centrera Gizmo på markering"
+  },
+  {
+    "id": "binding_centerGizmo_Desc",
+    "value": "Centrera gizmo på markering."
+  },
+  {
+    "id": "binding_gizmoModifier",
+    "value": "Gizmo Modifier"
+  },
+  {
+    "id": "binding_gizmoModifier_Desc",
+    "value": "Om Gizmo är aktiverad, när denna knapp hålls inne så kan Gizmo flyttas utan att flytta på nuvarande markering."
+  },
+  {
+    "id": "binding_gizmoCrosshairModifier",
+    "value": "Gizmo Crosshair Modifier"
+  },
+  {
+    "id": "binding_gizmoCrosshairModifier_Desc",
+    "value": "Om Gizmo är Aktiverad, när denna knapp hålls inne så kan siktet flyttas/rotera relativt till Gizmo."
+  },
+  {
+    "id": "binding_moveSelectionUp",
+    "value": "Flytta markering Upp"
+  },
+  {
+    "id": "binding_moveSelectionUp_Desc",
+    "value": "Flytta Markering Upp."
+  },
+  {
+    "id": "binding_moveSelectionDown",
+    "value": "Flytta markering Ner"
+  },
+  {
+    "id": "binding_moveSelectionDown_Desc",
+    "value": "Flytta markering Ner."
+  },
+  {
+    "id": "binding_moveSelectionLeft",
+    "value": "Flytta markering Vänster"
+  },
+  {
+    "id": "binding_moveSelectionLeft_Desc",
+    "value": "Flytta markering Vänster."
+  },
+  {
+    "id": "binding_moveSelectionRight",
+    "value": "Flytta markering Höger"
+  },
+  {
+    "id": "binding_moveSelectionRight_Desc",
+    "value": "Flytta markering Höger."
+  },
+  {
+    "id": "binding_moveSelectionForward",
+    "value": "Flytta markering Frammåt"
+  },
+  {
+    "id": "binding_moveSelectionForward_Desc",
+    "value": "Flytta markering Frammåt."
+  },
+  {
+    "id": "binding_moveSelectionBackward",
+    "value": "Flytta markering Bakåt"
+  },
+  {
+    "id": "binding_moveSelectionBackward_Desc",
+    "value": "Flytta markering Bakåt."
+  },
+  {
+    "id": "binding_moveCrosshairUp",
+    "value": "Flytta siktet Upp"
+  },
+  {
+    "id": "binding_moveCrosshairUp_Desc",
+    "value": "Flytta siktet upp utan att påverka markering."
+  },
+  {
+    "id": "binding_moveCrosshairDown",
+    "value": "Flytta siktet Ner"
+  },
+  {
+    "id": "binding_moveCrosshairDown_Desc",
+    "value": "Flytta siktet ner utan att påverka markering"
+  },
+  {
+    "id": "binding_moveCrosshairLeft",
+    "value": "Flytta siktet Vänster"
+  },
+  {
+    "id": "binding_moveCrosshairLeft_Desc",
+    "value": "Flytta siktet vänster utan att påverka markering."
+  },
+  {
+    "id": "binding_moveCrosshairRight",
+    "value": "Flytta siktet Höger"
+  },
+  {
+    "id": "binding_moveCrosshairRight_Desc",
+    "value": "Flytta siktet höger utan att påverka markering."
+  },
+  {
+    "id": "binding_moveCrosshairForward",
+    "value": "Flytta siktet Frammåt"
+  },
+  {
+    "id": "binding_moveCrosshairForward_Desc",
+    "value": "Flytta siktet Frammåt utan att påverka markering."
+  },
+  {
+    "id": "binding_moveCrosshairBackward",
+    "value": "Flytta siktet Bakåt"
+  },
+  {
+    "id": "binding_moveCrosshairBackward_Desc",
+    "value": "Flytta siktet bakåt utan att påverka markering."
+  },
+  {
+    "id": "binding_roundCrosshair",
+    "value": "Flytta Siktet till Rutnätet"
+  },
+  {
+    "id": "binding_roundCrosshair_Desc",
+    "value": "Flytta siktet till rutnätet, baserat på rutnätet's valda avrundning."
+  },
+  {
+    "id": "binding_planeCrosshair",
+    "value": "Flytta siktet till muspekaren."
+  },
+  {
+    "id": "binding_planeCrosshair_Desc",
+    "value": "Positions the crosshair where the mouse is located along the invisible brushplane that faces the camera."
+  },
+  {
+    "id": "binding_planeX",
+    "value": "Lås Plan till X Orientation"
+  },
+  {
+    "id": "binding_planeX_Desc",
+    "value": "Låser det osynliga planet till X orientation."
+  },
+  {
+    "id": "binding_planeY",
+    "value": "Lås Plan till Y Orientation"
+  },
+  {
+    "id": "binding_planeY_Desc",
+    "value": "Lås det osynliga planet till Y orientation."
+  },
+  {
+    "id": "binding_planeZ",
+    "value": "Lås Plan till Z Orientation"
+  },
+  {
+    "id": "binding_planeZ_Desc",
+    "value": "Lås det osynliga planet till Z orientation."
+  },
+  {
+    "id": "binding_moveArrow",
+    "value": "Crosshair Arrow Modifier"
+  },
+  {
+    "id": "binding_moveArrow_Desc",
+    "value": "Om siktets pilar är aktiverade under inställningar så kommer siktet kunna flyttas utan att påverka nuvarande markering medans denna knapp hålls inne."
+  },
+  {
+    "id": "binding_toggleTilt",
+    "value": "Aktivera Lutnings-läge"
+  },
+  {
+    "id": "binding_toggleTilt_Desc",
+    "value": "Detta läge gör att rutnätet kan lutas medans tiles läggs till i scenen och/eller vertices och/eller sidor manipuleras."
+  },
+  {
+    "id": "binding_setTiltAnchor",
+    "value": "Placera ankare för Lutning"
+  },
+  {
+    "id": "binding_setTiltAnchor_Desc",
+    "value": "Håll muspekaren över en tile och tryck på denna knapp. Ankare för Lutning kommer placeras relavtivt till tile's närmaste vertices."
+  },
+  {
+    "id": "binding_zoomIn",
+    "value": "Zooma In Tileset"
+  },
+  {
+    "id": "binding_zoomIn_Desc",
+    "value": "Zooma in tileset."
+  },
+  {
+    "id": "binding_zoomOut",
+    "value": "Zooma Out Tileset"
+  },
+  {
+    "id": "binding_zoomOut_Desc",
+    "value": "Zoom out tileset."
+  },
+  {
+    "id": "binding_brushSizeUp",
+    "value": "Öka Penselns Storlek"
+  },
+  {
+    "id": "binding_brushSizeUp_Desc",
+    "value": "Öka Penselns Storlek."
+  },
+  {
+    "id": "binding_brushSizeDown",
+    "value": "Minska Penselns Storlek"
+  },
+  {
+    "id": "binding_brushSizeDown_Desc",
+    "value": "Minska Penselns Storlek."
+  },
+  {
+    "id": "binding_roundingUp",
+    "value": "Runda av uppåt"
+  },
+  {
+    "id": "binding_roundingUp_Desc",
+    "value": "Justera rutnätet's avrundningsvärde uppåt."
+  },
+  {
+    "id": "binding_roundingDown",
+    "value": "Runda av nedåt"
+  },
+  {
+    "id": "binding_roundingDown_Desc",
+    "value": "Justera rutnätet's avrundningsvärde nedåt."
+  },
+  {
+    "id": "binding_tilesetUp",
+    "value": "Nästa Tileset"
+  },
+  {
+    "id": "binding_tilesetUp_Desc",
+    "value": "Välj Nästa Tileset."
+  },
+  {
+    "id": "binding_tilesetDown",
+    "value": "Föregående Tileset"
+  },
+  {
+    "id": "binding_tilesetDown_Desc",
+    "value": "Välj Föregående Tileset."
+  },
+  {
+    "id": "binding_cardinalButtons",
+    "value": "Cardinal Knappar"
+  },
+  {
+    "id": "binding_cardinalButtons_Desc",
+    "value": "Visa knappar som kan användas för att rotera kameran längs med en av cardinal riktning."
+  },
+  {
+    "id": "binding_cardinalRotateLeft",
+    "value": "Cardinal Rotera Vänster"
+  },
+  {
+    "id": "binding_cardinalRotateLeft_Desc",
+    "value": "Rotera vänster mot närmaste cardinal riktning."
+  },
+  {
+    "id": "binding_cardinalRotateRight",
+    "value": "Cardinal Rotera Höger"
+  },
+  {
+    "id": "binding_cardinalRotateRight_Desc",
+    "value": "Rotera höger mot närmaste cardinal riktning."
+  },
+  {
+    "id": "binding_cardinalRotateUp",
+    "value": "Cardinal Rotera Upp"
+  },
+  {
+    "id": "binding_cardinalRotateUp_Desc",
+    "value": "Rotera upp mot närmaste cardinal riktning."
+  },
+  {
+    "id": "binding_cardinalRotateDown",
+    "value": "Cardinal Rotera Ned"
+  },
+  {
+    "id": "binding_cardinalRotateDown_Desc",
+    "value": "Rotera ned mod närmaste cardinal riktning."
+  },
+  {
+    "id": "binding_rotateScene",
+    "value": "Rotera Scen"
+  },
+  {
+    "id": "binding_rotateScene_Desc",
+    "value": "Rotera kamera."
+  },
+  {
+    "id": "binding_zoomScene",
+    "value": "Zooma Scen"
+  },
+  {
+    "id": "binding_zoomScene_Desc",
+    "value": "Zooma kamera."
+  },
+  {
+    "id": "binding_panScene",
+    "value": "Pan Scene"
+  },
+  {
+    "id": "binding_panScene_Desc",
+    "value": "Pan the camera."
+  },
+  {
+    "id": "binding_dollyIn",
+    "value": "Zooma in"
+  },
+  {
+    "id": "binding_dollyIn_Desc",
+    "value": "Zooma ut kameran."
+  },
+  {
+    "id": "binding_dollyOut",
+    "value": "Zooma ut"
+  },
+  {
+    "id": "binding_dollyOut_Desc",
+    "value": "Zooma ut kamera."
+  },
+  {
+    "id": "binding_centerCamera",
+    "value": "Centrera Kamera"
+  },
+  {
+    "id": "binding_centerCamera_Desc",
+    "value": "Centrera kameran på markering."
+  },
+  {
+    "id": "binding_moveCameraForward",
+    "value": "Flytta Kamera Frammåt"
+  },
+  {
+    "id": "binding_moveCameraForward_Desc",
+    "value": "Flytta Kamera Frammåt."
+  },
+  {
+    "id": "binding_moveCameraBackward",
+    "value": "Flytta Kamera Bakåt"
+  },
+  {
+    "id": "binding_moveCameraBackward_Desc",
+    "value": "Flytta Kamera Bakåt."
+  },
+  {
+    "id": "binding_moveCameraLeft",
+    "value": "Flytta Kamera Vänster"
+  },
+  {
+    "id": "binding_moveCameraLeft_Desc",
+    "value": "Flytta Kamera Vänster."
+  },
+  {
+    "id": "binding_moveCameraRight",
+    "value": "Flytta Kamera Höger"
+  },
+  {
+    "id": "binding_moveCameraRight_Desc",
+    "value": "Flytta Kamera Höger."
+  },
+  {
+    "id": "binding_toggleCameraMode",
+    "value": "Toggle Camera"
+  },
+  {
+    "id": "binding_toggleCameraMode_Desc",
+    "value": "If camera toggle is enabled in settings, this will toggle camera mode."
+  },
+  {
+    "id": "binding_toggleRotateScene",
+    "value": "Toggle Rotate Scene"
+  },
+  {
+    "id": "binding_toggleRotateScene_Desc",
+    "value": "Rotera kameran."
+  },
+  {
+    "id": "binding_toggleZoomScene",
+    "value": "Toggle Zoom Scene"
+  },
+  {
+    "id": "binding_toggleZoomScene_Desc",
+    "value": "Zooma kameran."
+  },
+  {
+    "id": "binding_togglePanScene",
+    "value": "Toggle Pan Scene"
+  },
+  {
+    "id": "binding_togglePanScene_Desc",
+    "value": "Pan the camera."
+  },
+  {
+    "id": "binding_eraseTile",
+    "value": "Radera Tiles"
+  },
+  {
+    "id": "binding_eraseTile_Desc",
+    "value": "Raderar tiles som muspekaren svävar över när du klickar."
+  },
+  {
+    "id": "binding_erasePrefab",
+    "value": "Radera Prefabs"
+  },
+  {
+    "id": "binding_erasePrefab_Desc",
+    "value": "Radera det prefab objekt som muspekaren svävar över när du klickar."
+  },
+  {
+    "id": "binding_rotateUVRight",
+    "value": "Rotera UVs medsols"
+  },
+  {
+    "id": "binding_rotateUVRight_Desc",
+    "value": "Rotera tilebrush UVs medsols."
+  },
+  {
+    "id": "binding_rotateUVLeft",
+    "value": "Rotera UVs motsols"
+  },
+  {
+    "id": "binding_rotateUVLeft_Desc",
+    "value": "Rotera tilebrush UVs motsols."
+  },
+  {
+    "id": "binding_rotatePrefabCWise",
+    "value": "Rotera Prefab medsols"
+  },
+  {
+    "id": "binding_rotatePrefabCWise_Desc",
+    "value": "Rotera prefab pensel medsols."
+  },
+  {
+    "id": "binding_rotatePrefabCCWise",
+    "value": "Rotera Prefab motsols"
+  },
+  {
+    "id": "binding_rotatePrefabCCWise_Desc",
+    "value": "Rotera prefab pensel motsols."
+  },
+  {
+    "id": "binding_cyclePrefabPrev",
+    "value": "Föregående Prefab"
+  },
+  {
+    "id": "binding_cyclePrefabPrev_Desc",
+    "value": "Välj föregående prefab i listan."
+  },
+  {
+    "id": "binding_cyclePrefabNext",
+    "value": "Nästa Prefab"
+  },
+  {
+    "id": "binding_cyclePrefabNext_Desc",
+    "value": "Välj nästa prefab i listan."
+  },
+  {
+    "id": "binding_copyUV",
+    "value": "Kopiera UV"
+  },
+  {
+    "id": "binding_copyUV_Desc",
+    "value": "Eyedrop a tile in the scene, and apply the UVs to the brush."
+  },
+  {
+    "id": "binding_applyUV",
+    "value": "Applicera UV"
+  },
+  {
+    "id": "binding_applyUV_Desc",
+    "value": "Applicera nuvarande UVs från penseln på en tile i scenen utan att ändra dess mesh."
+  },
+  {
+    "id": "binding_flipUV",
+    "value": "Vänd UV"
+  },
+  {
+    "id": "binding_flipUV_Desc",
+    "value": "Vänd tilebrush UVs."
+  },
+  {
+    "id": "binding_mirrorUV",
+    "value": "Spegla UV"
+  },
+  {
+    "id": "binding_mirrorUV_Desc",
+    "value": "Spegla tilebrush UVs."
+  },
+  {
+    "id": "binding_drawToolTile",
+    "value": "Välj Tile Verktyg"
+  },
+  {
+    "id": "binding_drawToolTile_Desc",
+    "value": "Välj Tile verktyg."
+  },
+  {
+    "id": "binding_drawToolSticky",
+    "value": "Välj Klistra Verktyg"
+  },
+  {
+    "id": "binding_drawToolSticky_Desc",
+    "value": "Välj Klistra Verktyg."
+  },
+  {
+    "id": "binding_drawToolBlock",
+    "value": "Välj Block Verktyg"
+  },
+  {
+    "id": "binding_drawToolBlock_Desc",
+    "value": "Välj Block Verktyg."
+  },
+  {
+    "id": "binding_stickyScale",
+    "value": "Skala för att passa Klistra"
+  },
+  {
+    "id": "binding_stickyScale_Desc",
+    "value": "Scalar tile till kanten på existerande tiles medans verktyget Klistra används."
+  },
+  {
+    "id": "binding_cameraBasedSelection",
+    "value": "Kamera-baserad markering"
+  },
+  {
+    "id": "binding_cameraBasedSelection_Desc",
+    "value": "Aktivera/Inaktivera markering av vertices/sidor bakom andra tiles."
+  },
+  {
+    "id": "binding_toggleGizmo",
+    "value": "Toggle Gizmo"
+  },
+  {
+    "id": "binding_toggleGizmo_Desc",
+    "value": "Toggle the Gizmo on and off."
+  },
+  {
+    "id": "binding_toggleGizmoMode",
+    "value": "Toggle Gizmo Mode"
+  },
+  {
+    "id": "binding_toggleGizmoMode_Desc",
+    "value": "Byt läge på Gizmo mellan Flytta, Rotera och Ändra Storlek."
+  },
+  {
+    "id": "binding_gizmoTranslate",
+    "value": "Gizmo Flytta-läge"
+  },
+  {
+    "id": "binding_gizmoTranslate_Desc",
+    "value": "Ändra Gizmo till Flytta-läge."
+  },
+  {
+    "id": "binding_gizmoRotate",
+    "value": "Gizmo Rotera-läge"
+  },
+  {
+    "id": "binding_gizmoRotate_Desc",
+    "value": "Ändra Gizmo till Rotera-läge."
+  },
+  {
+    "id": "binding_gizmoScale",
+    "value": "Gizmo Skala-läge"
+  },
+  {
+    "id": "binding_gizmoScale_Desc",
+    "value": "Ändra Gizmo till Skala-läge."
+  },
+  {
+    "id": "binding_toggleGizmoAlignment",
+    "value": "Toggle Gizmo Alignment"
+  },
+  {
+    "id": "binding_toggleGizmoAlignment_Desc",
+    "value": "Toggle the Gizmo alignment between World, and Object."
+  },
+  {
+    "id": "binding_centerCrosshair",
+    "value": "Centrera siktet"
+  },
+  {
+    "id": "binding_centerCrosshair_Desc",
+    "value": "Centrera siktet till valda vertices, faces, and objects."
+  },
+  {
+    "id": "binding_centerCrosshairBounds",
+    "value": "Center Crosshair Bounds"
+  },
+  {
+    "id": "binding_centerCrosshairBounds_Desc",
+    "value": "Centrera siktet från ytterkanter från valda vertices, sidor, och objekt."
+  },
+  {
+    "id": "binding_nearestVert",
+    "value": "Välj närmaste Vertex"
+  },
+  {
+    "id": "binding_nearestVert_Desc",
+    "value": "Håll inne denna knapp och klicka på en tile. Den närmaste vertex som tillhör denna tile kommer väljas."
+  },
+  {
+    "id": "binding_vertSnap",
+    "value": "Vertex Snapping"
+  },
+  {
+    "id": "binding_vertSnap_Desc",
+    "value": "Hold this key when dragging a single vertex to snap it to nearby vertices."
+  },
+  {
+    "id": "binding_hollowVert",
+    "value": "Hollow Vertex"
+  },
+  {
+    "id": "binding_hollowVert_Desc",
+    "value": "Hold this key and click a vertex to reposition the crosshair without the vertex being selected."
+  },
+  {
+    "id": "binding_disableFaceSelection",
+    "value": "Inaktivera markering av sidor"
+  },
+  {
+    "id": "binding_disableVertexSelection",
+    "value": "Inaktivera markering av Vertices"
+  },
+  {
+    "id": "binding_disableEdgeSelection",
+    "value": "Inaktivera markering av kanter"
+  },
+  {
+    "id": "binding_disableFaceSelection_Desc",
+    "value": "Inaktivera markering av sidor."
+  },
+  {
+    "id": "binding_disableVertexSelection_Desc",
+    "value": "Inaktivera markering av Vertices."
+  },
+  {
+    "id": "binding_disableEdgeSelection_Desc",
+    "value": "Inaktivera markering av kanter."
+  },
+  {
+    "id": "binding_spotSelectFace",
+    "value": "Spot Select Faces"
+  },
+  {
+    "id": "binding_spotSelectFace_Desc",
+    "value": "Select tiles by hovering the mouse pointer over them. Hold the keys down and then click+drag to select."
+  },
+  {
+    "id": "binding_spotDeselectFace",
+    "value": "Spot Deselect Faces"
+  },
+  {
+    "id": "binding_spotDeselectFace_Desc",
+    "value": "Deselect tiles by hovering the mouse pointer over them. Hold the keys down and then click+drag to deselect."
+  },
+  {
+    "id": "binding_lassoFace",
+    "value": "Select Marquee Quads"
+  },
+  {
+    "id": "binding_lassoFace_Desc",
+    "value": "Selection marquee for tiles. Hold then click+drag to select."
+  },
+  {
+    "id": "binding_lassoDeselectFace",
+    "value": "Deselect Marquee Quads"
+  },
+  {
+    "id": "binding_lassoDeselectFace_Desc",
+    "value": "Deselection marquee for tiles. Hold then click+drag to deselect faces."
+  },
+  {
+    "id": "binding_lassoDeselect",
+    "value": "Deselect Marquee Verts"
+  },
+  {
+    "id": "binding_lassoDeselect_Desc",
+    "value": "Deselection marquee for vertices. Hold then click+drag to deselect vertices."
+  },
+  {
+    "id": "binding_lassoObject",
+    "value": "Select Marquee Objects"
+  },
+  {
+    "id": "binding_lassoObject_Desc",
+    "value": "Selection marquee for object instances. Hold then click+drag to select."
+  },
+  {
+    "id": "binding_lassoDeselectObject",
+    "value": "Deselect Marquee Objects"
+  },
+  {
+    "id": "binding_lassoDeselectObject_Desc",
+    "value": "Deselection marquee for object instances. Hold then click+drag to deselect faces."
+  },
+  {
+    "id": "binding_rotatePartRight",
+    "value": "Rotera markering Höger"
+  },
+  {
+    "id": "binding_rotatePartRight_Desc",
+    "value": "Rotera markering åt höger, baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_rotatePartLeft",
+    "value": "Rotera markering Vänster"
+  },
+  {
+    "id": "binding_rotatePartLeft_Desc",
+    "value": "Rotera markering åt vänster, baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_rotatePartCWise",
+    "value": "Rotera markering medsols"
+  },
+  {
+    "id": "binding_rotatePartCWise_Desc",
+    "value": "Rotera markering medsols, baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_rotatePartCCWise",
+    "value": "Rotera markering motsols"
+  },
+  {
+    "id": "binding_rotatePartCCWise_Desc",
+    "value": "Rotera markering motsols, baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_flipPart",
+    "value": "Vänd markering"
+  },
+  {
+    "id": "binding_flipPart_Desc",
+    "value": "Vänd markering baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_mirrorPart",
+    "value": "Spegla markering"
+  },
+  {
+    "id": "binding_mirrorPart_Desc",
+    "value": "Spegla markering baserat på kamerans vinkel."
+  },
+  {
+    "id": "binding_flipEdge",
+    "value": "Vänd Kant"
+  },
+  {
+    "id": "binding_flipEdge_Desc",
+    "value": "Vänd kanten på valda tile(s)."
+  },
+  {
+    "id": "binding_reverseFace",
+    "value": "Reverse Face"
+  },
+  {
+    "id": "binding_reverseFace_Desc",
+    "value": "Reverse the faces of the tile(s)."
+  },
+  {
+    "id": "binding_splitFace",
+    "value": "Split Face"
+  },
+  {
+    "id": "binding_splitFace_Desc",
+    "value": "Split the face of the active tile where the yellow line is placed."
+  },
+  {
+    "id": "binding_subdivideFace",
+    "value": "Subdivide Face"
+  },
+  {
+    "id": "binding_subdivideFace_Desc",
+    "value": "Subdivide the face of the active tile."
+  },
+  {
+    "id": "binding_combineVerts",
+    "value": "Kombinera Vertices"
+  },
+  {
+    "id": "binding_combineVerts_Desc",
+    "value": "Flytta alla valda vertices till siktets position."
+  },
+  {
+    "id": "binding_alignAgainst",
+    "value": "Knuffa Mot"
+  },
+  {
+    "id": "binding_alignAgainst_Desc",
+    "value": "Knuffa valda vertices och objkt mot existerande tiles i scen, längs med den cardinal riktning som kameran är vänd mot."
+  },
+  {
+    "id": "binding_straightenVertTiles",
+    "value": "Räta ut relativt till dess tiles"
+  },
+  {
+    "id": "binding_straightenVertTiles_Desc",
+    "value": "Rätar ut vertices relativt till dess tiles som de tillhör. It straightens to the opposite triangle\\'s face normal, or the average if both vertices are selected. Detta resulterar i platta tiles."
+  },
+  {
+    "id": "binding_flattenSelection",
+    "value": "Platta till markering"
+  },
+  {
+    "id": "binding_flattenSelection_Desc",
+    "value": "Plattar till markering på 3d siktets nuvarange plan."
+  },
+  {
+    "id": "binding_pushSelection",
+    "value": "Knuffa markering"
+  },
+  {
+    "id": "binding_pushSelection_Desc",
+    "value": "Knuffa markering mot 3d siktets nuvarande plan så det nuddar och justeras till detta."
+  },
+  {
+    "id": "binding_centerSelection",
+    "value": "Centera Markering"
+  },
+  {
+    "id": "binding_centerSelection_Desc",
+    "value": "Centera markering på 3d siktets plan så denna nuddar och justeras till detta."
+  },
+  {
+    "id": "binding_pullSelection",
+    "value": "Dra Markering"
+  },
+  {
+    "id": "binding_pullSelection_Desc",
+    "value": "Drag markering mot 3d siktets plan så denna nuddar och justeras till detta."
+  },
+  {
+    "id": "binding_roundVertices",
+    "value": "Justera Vertices Till Rutnätet"
+  },
+  {
+    "id": "binding_roundVertices_Desc",
+    "value": "Justerar valda vertices till rutnätet baserat på nuvarande avrundningsvärde."
+  },
+  {
+    "id": "binding_selectX",
+    "value": "Välj X Axel"
+  },
+  {
+    "id": "binding_selectX_Desc",
+    "value": "Välj vertices längs med X-axeln av 3d siktet."
+  },
+  {
+    "id": "binding_selectY",
+    "value": "Välj Y Axel"
+  },
+  {
+    "id": "binding_selectY_Desc",
+    "value": "Välj vertices längs med Y-axeln av 3d siktet."
+  },
+  {
+    "id": "binding_selectZ",
+    "value": "Välj Z Axel"
+  },
+  {
+    "id": "binding_selectZ_Desc",
+    "value": "Välj vertices längs med Z-axeln av 3d siktet."
+  },
+  {
+    "id": "binding_paintSelectedVertexColors",
+    "value": "Måla valda Vertex färger"
+  },
+  {
+    "id": "binding_paintSelectedVertexColors_Desc",
+    "value": "Måla de valda vertices med nuvarande vald färg."
+  },
+  {
+    "id": "binding_eraseSelectedVertexColors",
+    "value": "Radera valda Vertex färger"
+  },
+  {
+    "id": "binding_eraseSelectedVertexColors_Desc",
+    "value": "Radera de valda vertex fäger på de markerade vertices."
+  },
+  {
+    "id": "binding_toggleObjectMode",
+    "value": "Toggle Object Mode"
+  },
+  {
+    "id": "binding_toggleObjectMode_Desc",
+    "value": "Toggle på/av Object mode."
+  },
+  {
+    "id": "binding_toggleActiveMode",
+    "value": "Toggle Active Mode"
+  },
+  {
+    "id": "binding_toggleActiveMode_Desc",
+    "value": "Toggle on/off Active mode."
+  },
+  {
+    "id": "binding_contextEditMenu",
+    "value": "Context Edit Menu"
+  },
+  {
+    "id": "binding_contextEditMenu_Desc",
+    "value": "Open a menu with a list of actions you can do while in Edit mode."
+  },
+  {
+    "id": "binding_adjustVertexUVUp",
+    "value": "Flytta Vertex UVs Upp"
+  },
+  {
+    "id": "binding_adjustVertexUVUp_Desc",
+    "value": "Shift UVs of selected vertices up."
+  },
+  {
+    "id": "binding_adjustVertexUVDown",
+    "value": "Flytta Vertex UVs Ned"
+  },
+  {
+    "id": "binding_adjustVertexUVDown_Desc",
+    "value": "Shift UVs of selected vertices down."
+  },
+  {
+    "id": "binding_adjustVertexUVLeft",
+    "value": "Flytta Vertex UVs Vänster"
+  },
+  {
+    "id": "binding_adjustVertexUVLeft_Desc",
+    "value": "Shift UVs of selected vertices left."
+  },
+  {
+    "id": "binding_adjustVertexUVRight",
+    "value": "Flyta Vertex UVs Höger"
+  },
+  {
+    "id": "binding_adjustVertexUVRight_Desc",
+    "value": "Shift UVs of selected vertices right."
+  },
+  {
+    "id": "binding_adjustVertexUVUpOne",
+    "value": "Flytta Vertex UVs Upp en Pixel"
+  },
+  {
+    "id": "binding_adjustVertexUVUpOne_Desc",
+    "value": "Shift UVs of selected vertices up a pixel."
+  },
+  {
+    "id": "binding_adjustVertexUVDownOne",
+    "value": "Flytta Vertex UVs Ned en Pixel"
+  },
+  {
+    "id": "binding_adjustVertexUVDownOne_Desc",
+    "value": "Shift UVs of selected vertices down a pixel."
+  },
+  {
+    "id": "binding_adjustVertexUVLeftOne",
+    "value": "Flytta Vertex UVs Vänster en Pixel"
+  },
+  {
+    "id": "binding_adjustVertexUVLeftOne_Desc",
+    "value": "Shift UVs of selected vertices left a pixel."
+  },
+  {
+    "id": "binding_adjustVertexUVRightOne",
+    "value": "Flytta Vertex UVs Höger en Pixel"
+  },
+  {
+    "id": "binding_adjustVertexUVRightOne_Desc",
+    "value": "Shift UVs of selected vertices right a pixel."
+  },
+  {
+    "id": "binding_createObject",
+    "value": "Skapa Objekt"
+  },
+  {
+    "id": "binding_createObject_Desc",
+    "value": "Gruppera de valda  tiles som eget Objekt."
+  },
+  {
+    "id": "binding_deconstructInstance",
+    "value": "Montera ned Instans"
+  },
+  {
+    "id": "binding_deconstructInstance_Desc",
+    "value": "Monterar ned den valda instansen till till separata tiles."
+  },
+  {
+    "id": "binding_duplicateInstances",
+    "value": "Klona Instans"
+  },
+  {
+    "id": "binding_duplicateInstances_Desc",
+    "value": "Klonar de valda instanserna."
+  },
+  {
+    "id": "binding_panTileset",
+    "value": "Pan Tileset"
+  },
+  {
+    "id": "binding_panTileset_Desc",
+    "value": "Pan the tileset."
+  },
+  {
+    "id": "binding_tileset_MoveLeft",
+    "value": "Flytta Markering Vänster"
+  },
+  {
+    "id": "binding_tileset_MoveLeft_Desc",
+    "value": "Flytta markerad tile vänster ett antal pixelar baserat på värdet UV Precision."
+  },
+  {
+    "id": "binding_tileset_MoveRight",
+    "value": "Flytta markering Höger"
+  },
+  {
+    "id": "binding_tileset_MoveRight_Desc",
+    "value": "Flytta markerad tile höger ett antal pixelar baserat på UV värdet Precision."
+  },
+  {
+    "id": "binding_tileset_MoveUp",
+    "value": "Flytta markering Upp"
+  },
+  {
+    "id": "binding_tileset_MoveUp_Desc",
+    "value": "Flytta markerad tile upp ett antal pixelar baserat på värdet UV Precision."
+  },
+  {
+    "id": "binding_tileset_MoveDown",
+    "value": "Flytta markering Ned"
+  },
+  {
+    "id": "binding_tileset_MoveDown_Desc",
+    "value": "Flytta markerad tile ned ett antal pixelar baserat på värdet UV Precision."
+  },
+  {
+    "id": "binding_tileset_MoveLeftOne",
+    "value": "Flytta markering en pixel åt vänster"
+  },
+  {
+    "id": "binding_tileset_MoveLeftOne_Desc",
+    "value": "Flyttar markering en pixel åt vänster."
+  },
+  {
+    "id": "binding_tileset_MoveRightOne",
+    "value": "Flytta markering en pixel åt höger"
+  },
+  {
+    "id": "binding_tileset_MoveRightOne_Desc",
+    "value": "Flyttar markering en pixel åt höger."
+  },
+  {
+    "id": "binding_tileset_MoveUpOne",
+    "value": "Flytta markering en pixel uppåt"
+  },
+  {
+    "id": "binding_tileset_MoveUpOne_Desc",
+    "value": "Flyttar markering en pixel uppåt."
+  },
+  {
+    "id": "binding_tileset_MoveDownOne",
+    "value": "Flytta markering en pixel nedåt"
+  },
+  {
+    "id": "binding_tileset_MoveDownOne_Desc",
+    "value": "Flyttar markering en pixel nedåt."
+  },
+  {
+    "id": "binding_uvs_CenterCrosshair",
+    "value": "Centrera Sikte"
+  },
+  {
+    "id": "binding_uvs_CenterCrosshair_Desc",
+    "value": "Centrera siktet till valda UVs"
+  },
+  {
+    "id": "binding_uvs_Mirror",
+    "value": "Spegla"
+  },
+  {
+    "id": "binding_uvs_Mirror_Desc",
+    "value": "Spegla valda UVs"
+  },
+  {
+    "id": "binding_uvs_Flip",
+    "value": "Vänd"
+  },
+  {
+    "id": "binding_uvs_Flip_Desc",
+    "value": "Vänd valda UVs"
+  },
+  {
+    "id": "binding_uvs_RotateLeft",
+    "value": "Rotera Vänster"
+  },
+  {
+    "id": "binding_uvs_RotateLeft_Desc",
+    "value": "Rotera de valda UVs åt vänster."
+  },
+  {
+    "id": "binding_uvs_RotateRight",
+    "value": "Rotera Höger"
+  },
+  {
+    "id": "binding_uvs_RotateRight_Desc",
+    "value": "Rotera de valda UVs åt höger."
+  },
+  {
+    "id": "binding_uvs_SelectAll",
+    "value": "Välj Alla"
+  },
+  {
+    "id": "binding_uvs_SelectAll_Desc",
+    "value": "Markera alla UVs."
+  },
+  {
+    "id": "binding_uvs_DeselectAll",
+    "value": "Avmarkera Alla"
+  },
+  {
+    "id": "binding_uvs_DeselectAll_Desc",
+    "value": "Avmarkera alla UVs."
+  },
+  {
+    "id": "binding_uvs_MoveLeft",
+    "value": "Flytta Vänster"
+  },
+  {
+    "id": "binding_uvs_MoveLeft_Desc",
+    "value": "Flytta valda UVs åt vänster ett antal pixlar baserat på UV Precision value."
+  },
+  {
+    "id": "binding_uvs_MoveRight",
+    "value": "Flytta Höger"
+  },
+  {
+    "id": "binding_uvs_MoveRight_Desc",
+    "value": "Flytta valda UVs åt höger ett antal pixlar baserat på UV Precision value."
+  },
+  {
+    "id": "binding_uvs_MoveUp",
+    "value": "Flytta Uppåt"
+  },
+  {
+    "id": "binding_uvs_MoveUp_Desc",
+    "value": "Flytta valda UVs uppåt ett antal pixlar baserat på UV Precision value."
+  },
+  {
+    "id": "binding_uvs_MoveDown",
+    "value": "Flytta Nedåt"
+  },
+  {
+    "id": "binding_uvs_MoveDown_Desc",
+    "value": "Flytta valda UVs nedåt ett antal pixlar baserat på UV Precision value"
+  },
+  {
+    "id": "binding_uvs_MoveLeftOne",
+    "value": "Flytta en Pixel åt Vänster"
+  },
+  {
+    "id": "binding_uvs_MoveLeftOne_Desc",
+    "value": "Flytta UVs Vänster en Pixel ."
+  },
+  {
+    "id": "binding_uvs_MoveRightOne",
+    "value": "Flytta en Pixel åt Höger"
+  },
+  {
+    "id": "binding_uvs_MoveRightOne_Desc",
+    "value": "Flytta UVs Höger en Pixel ."
+  },
+  {
+    "id": "binding_uvs_MoveUpOne",
+    "value": "Flytta en Pixel uppåt"
+  },
+  {
+    "id": "binding_uvs_MoveUpOne_Desc",
+    "value": "Flytta UVs uppåt en Pixel."
+  },
+  {
+    "id": "binding_uvs_MoveDownOne",
+    "value": "Flytta en Pixel nedåt"
+  },
+  {
+    "id": "binding_uvs_MoveDownOne_Desc",
+    "value": "Flytta UVs nedåt en Pixel ."
+  },
+  {
+    "id": "binding_uvs_ToggleMultiple",
+    "value": "Toggle Multiple"
+  },
+  {
+    "id": "binding_uvs_ToggleMultiple_Desc",
+    "value": "Välj en eller flera överlappande UVs."
+  },
+  {
+    "id": "binding_uvs_SetFlat",
+    "value": "Platta till UVs"
+  },
+  {
+    "id": "binding_uvs_SetFlat_Desc",
+    "value": "Plattar till de valda UVs av en/flera tile(s) så att deras pixlar inte är sträckta (Måste välja alla fyra UVs av de markerade tiles)."
+  },
+  {
+    "id": "binding_uvs_SetPixel",
+    "value": "Avrunda till Pixel"
+  },
+  {
+    "id": "binding_uvs_SetPixel_Desc",
+    "value": "Avrundar UV -koordinater till närmaste Pixel."
+  },
+  {
+    "id": "binding_uvs_SetToCrosshair",
+    "value": "Flytta till Sikte"
+  },
+  {
+    "id": "binding_uvs_SetToCrosshair_Desc",
+    "value": "Flytta UV -koordinater till uv siktets position."
+  },
+  {
+    "id": "binding_uvs_CopyFrames",
+    "value": "Koperia Bilder"
+  },
+  {
+    "id": "binding_uvs_CopyFrames_Desc",
+    "value": "Kopierar de valda bilder i nuvarade UV animering."
+  },
+  {
+    "id": "binding_uvs_PasteFrames",
+    "value": "Klistra in bilder"
+  },
+  {
+    "id": "binding_uvs_PasteFrames_Desc",
+    "value": "Klistrar in de kopierade bilder i nuvarande UV animeriong."
+  },
+  {
+    "id": "binding_uvs_RemoveFrames",
+    "value": "Ta bort bilder"
+  },
+  {
+    "id": "binding_uvs_RemoveFrames_Desc",
+    "value": "Raderar de valda bilderna från nuvarande vald UV animering."
+  },
+  {
+    "id": "binding_painting_Eraser",
+    "value": "Radergummi"
+  },
+  {
+    "id": "binding_painting_Eraser_Desc",
+    "value": "Byt till radergummi."
+  },
+  {
+    "id": "binding_painting_Pencil",
+    "value": "Penna"
+  },
+  {
+    "id": "binding_painting_Pencil_Desc",
+    "value": "Byt till Penna."
+  },
+  {
+    "id": "binding_painting_Eyedropper",
+    "value": "Pipett"
+  },
+  {
+    "id": "binding_painting_Eyedropper_Desc",
+    "value": "Byt till Pipett."
+  },
+  {
+    "id": "binding_painting_Paintbucket",
+    "value": "Färghink"
+  },
+  {
+    "id": "binding_painting_Paintbucket_Desc",
+    "value": "Byt till Färghink."
+  },
+  {
+    "id": "binding_painting_Marquee",
+    "value": "Marquee"
+  },
+  {
+    "id": "binding_painting_Marquee_Desc",
+    "value": "Switch to the Marquee tool."
+  },
+  {
+    "id": "binding_painting_Lasso",
+    "value": "Lasso"
+  },
+  {
+    "id": "binding_painting_Lasso_Desc",
+    "value": "Byt till markering med Lasso."
+  },
+  {
+    "id": "binding_painting_Magicwand",
+    "value": "Trollspö"
+  },
+  {
+    "id": "binding_painting_Magicwand_Desc",
+    "value": "Byt till Trollspö."
+  },
+  {
+    "id": "binding_painting_Hand",
+    "value": "Hand"
+  },
+  {
+    "id": "binding_painting_Hand_Desc",
+    "value": "Byt till Hand."
+  },
+  {
+    "id": "binding_painting_Arrow",
+    "value": "Pil"
+  },
+  {
+    "id": "binding_painting_Arrow_Desc",
+    "value": "Byt till Pil."
+  },
+  {
+    "id": "binding_painting_Mirror",
+    "value": "Spegla"
+  },
+  {
+    "id": "binding_painting_Mirror_Desc",
+    "value": "Spegla markering."
+  },
+  {
+    "id": "binding_painting_Flip",
+    "value": "Vänd"
+  },
+  {
+    "id": "binding_painting_Flip_Desc",
+    "value": "Vänd markering."
+  },
+  {
+    "id": "binding_painting_RotateLeft",
+    "value": "Rotera Vänster"
+  },
+  {
+    "id": "binding_painting_RotateLeft_Desc",
+    "value": "Rotera markering Vänster."
+  },
+  {
+    "id": "binding_painting_RotateRight",
+    "value": "Rotera Höger"
+  },
+  {
+    "id": "binding_painting_RotateRight_Desc",
+    "value": "Rotera markering Höger."
+  },
+  {
+    "id": "binding_painting_Deselect",
+    "value": "Avmarkera"
+  },
+  {
+    "id": "binding_painting_Deselect_Desc",
+    "value": "Deselect the selection."
+  },
+  {
+    "id": "binding_painting_Cut",
+    "value": "Klipp ut"
+  },
+  {
+    "id": "binding_painting_Cut_Desc",
+    "value": "Klipp ut markering från canvas."
+  },
+  {
+    "id": "binding_painting_Copy",
+    "value": "Koperia"
+  },
+  {
+    "id": "binding_painting_Copy_Desc",
+    "value": "Kopierar vald markering från canvas."
+  },
+  {
+    "id": "binding_painting_Paste",
+    "value": "Klistra in"
+  },
+  {
+    "id": "binding_painting_Paste_Desc",
+    "value": "Klistra in kopia från canvas eller från clipboard."
+  },
+  {
+    "id": "binding_painting_SwitchColors",
+    "value": "Byt Färger"
+  },
+  {
+    "id": "binding_painting_SwitchColors_Desc",
+    "value": "Byt plats på primär och sekundär färg."
+  },
+  {
+    "id": "binding_painting_MoveLeft",
+    "value": "Flytta Vänster"
+  },
+  {
+    "id": "binding_painting_MoveLeft_Desc",
+    "value": "Flytta markering åt vänster."
+  },
+  {
+    "id": "binding_painting_MoveRight",
+    "value": "Flytta Höger"
+  },
+  {
+    "id": "binding_painting_MoveRight_Desc",
+    "value": "Flytta markering åt höger."
+  },
+  {
+    "id": "binding_painting_MoveUp",
+    "value": "Flytta Upp"
+  },
+  {
+    "id": "binding_painting_MoveUp_Desc",
+    "value": "Flytta markering uppåt."
+  },
+  {
+    "id": "binding_painting_MoveDown",
+    "value": "Flytta Ned"
+  },
+  {
+    "id": "binding_painting_MoveDown_Desc",
+    "value": "Flytta markering nedåt."
+  },
+  {
+    "id": "binding_painting_Delete",
+    "value": "Radera"
+  },
+  {
+    "id": "binding_painting_Delete_Desc",
+    "value": "Raderar markering."
+  }
+]
