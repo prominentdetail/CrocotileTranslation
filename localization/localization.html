@@ -296,6 +296,7 @@ h1{
 						<ul>
 							<li id="menubarSelectImage" contenteditable="true">Select Image</li>
 							<li id="menubarShowHide" contenteditable="true">Show/Hide</li>
+							<li id="exportSkybox" contenteditable="true">Export Skybox</li>
 						</ul>
 					<li id="menubarRender" contenteditable="true">Render</li>
 						<ul>
@@ -456,15 +457,30 @@ h1{
 				<hr>
 				<li id="exportEmbedTextures" contenteditable="true">Embed Textures</li>
 				<hr>
+				<li id="exportBakedPose" contenteditable="true">Export Static Pose</li>
+				<hr>
 				<li id="exportAllTextures" contenteditable="true">Export all textures/.mtl</li>
 				<hr>
 				<li id="exportTexturePrefix" contenteditable="true">Texture prefix</li>
 				<hr>
+				<li id="none" contenteditable="true">None</li>
+				<hr>
+				<li id="projectName" contenteditable="true">Project name</li>
+				<hr>
 				<li id="exportTileSpacing" contenteditable="true">Tile Spacing</li>
+				<hr>
+				<li id="tilesize" contenteditable="true">Tilesize</li>
+					<ul>
+						<li id="auto" contenteditable="true">Auto</li>
+						<hr>
+						<li id="unique" contenteditable="true">Unique</li>
+					</ul>
 				<hr>
 				<li id="exportPowerOfTwo" contenteditable="true">Use power of 2 textures</li>
 				<hr>
 				<li id="exportUVAnimations" contenteditable="true">Export UV Animations</li>
+				<hr>
+				<li id="exportLights" contenteditable="true">Export Lights</li>
 				<hr>
 				<li id="exportScale" contenteditable="true">Scale</li>
 				<hr>
@@ -668,9 +684,18 @@ h1{
 			<br>
 			<span id="settingsWireframe" contenteditable="true">
 				Wireframe
-			</span>		
+			</span>	
+			<br>	
 			<span id="settingsWireframeColor" contenteditable="true">
 				Wireframe Color
+			</span>	
+			<br>	
+			<span id="settingsWireframeHighlightColor" contenteditable="true">
+				Wireframe Highlight Color
+			</span>	
+			<br>	
+			<span id="settingsCrosshairColor" contenteditable="true">
+				Crosshair Color
 			</span>	
 			<hr>
 			<span id="settingsBackgroundColor" contenteditable="true">
@@ -689,8 +714,28 @@ h1{
 				Color is Transparent
 			</span>
 			<hr>
+			<span id="viewCube" contenteditable="true">
+				ViewCube
+			</span>
+			<hr>
+			<span id="viewCubeModelScale" contenteditable="true">
+				ViewCube Model Scale
+			</span>
+			<hr>
+			<span id="viewCubeViewportRatio" contenteditable="true">
+				ViewCube Viewport Ratio
+			</span>
+			<hr>
 			<span id="settingsScreenshotFolder" contenteditable="true">
 				Screenshot folder
+			</span>
+			<hr>
+			<span id="settingsFileDialogPaths" contenteditable="true">
+				File Dialog Paths
+			</span>
+			<hr>
+			<span id="shared" contenteditable="true">
+				Shared
 			</span>
 			<br>
 			<u><span id="settingsChoose" contenteditable="true">
@@ -779,6 +824,22 @@ h1{
 			<span id="settingsCameraUpVector" contenteditable="true">
 				Camera Up Vector
 			</span>
+			<br>
+			<span id="freeLookSensitivity" contenteditable="true">
+				Freelook Sensitivity
+			</span>
+			<br>
+			<span id="freeLookSpeed" contenteditable="true">
+				Freelook Movement Speed
+			</span>
+			<br>
+			<span id="freeLookFlat" contenteditable="true">
+				Freelook Flat Movement
+			</span>
+			<br>
+			<span id="freeLookInverted" contenteditable="true">
+				Freelook Inverted
+			</span>
 			
 			<h4><span id="settingsDrawMode" contenteditable="true">
 				Draw Mode
@@ -804,6 +865,10 @@ h1{
 			</span></h4>
 			<span id="settingsCameraBasedSelection" contenteditable="true">
 				Camera Based Selection
+			</span>
+			<br>
+			<span id="settingsAutoDeselect" contenteditable="true">
+				Deselect when single-clicking
 			</span>
 			<br>
 			<span id="settingsDeselectWithClick" contenteditable="true">
@@ -867,6 +932,14 @@ h1{
 			<br>
 			<span id="settingsDragMultipleUVs" contenteditable="true">
 				Drag Multiple UVs
+			</span>
+			<br>
+			<span id="settingsRestrictToCurrentTileset" contenteditable="true">
+				Hide UVs of non-active Tilesets
+			</span>
+			<br>
+			<span id="settingsDeselectUVsWithSingleClick" contenteditable="true">
+				Deselect all UVs with single click
 			</span>
 			<br>
 			<span id="settingsSubtractPadding" contenteditable="true">
@@ -975,6 +1048,10 @@ h1{
 				Block
 			</span>
 			<br>
+			<span id="primitive" contenteditable="true">
+				Primitive
+			</span>
+			<br>
 			<span id="vertexColor" contenteditable="true">
 				Vertex Color
 			</span>
@@ -1033,6 +1110,22 @@ h1{
 			<br>
 			<span id="straightenRelativeToTiles" contenteditable="true">
 				Straighten relative to their own tiles
+			</span>
+			<br>
+			<span id="selectUnweightedVertices" contenteditable="true">
+				Select all unweighted Vertices
+			</span>
+			<br>
+			<span id="selectWeightedVertices" contenteditable="true">
+				Select all weighted Vertices
+			</span>
+			<br>
+			<span id="selectUnweightedVerticesBone" contenteditable="true">
+				Select unweighted Vertices (for selected bones)
+			</span>
+			<br>
+			<span id="selectWeightedVerticesBone" contenteditable="true">
+				Select weighted Vertices (for selected bones)
 			</span>
 			<br>
 			<span id="selectVerticesXAxis" contenteditable="true">
@@ -1186,6 +1279,60 @@ h1{
 			<span id="rotateCounterClockwise" contenteditable="true">
 				Rotate c-clockwise
 			</span>
+		</div>
+		
+		<br><br>
+		
+		<div class="block">
+			<h2>
+			<span id="bakeLighting" contenteditable="true">
+				Bake lighting
+			</span></h2>
+			
+			<span id="selectAllVerts" contenteditable="true">
+				Select all verts
+			</span>
+			<br>
+			<span id="lights" contenteditable="true">
+				Lights
+			</span>
+			<br>
+			<span id="ambientOcclusion" contenteditable="true">
+				Ambient Occlusion
+			</span>
+			<br>
+			<span id="raysPerVertex" contenteditable="true">
+				Rays per vertex
+			</span>
+			<br>
+			<span id="rayDistance" contenteditable="true">
+				Ray distance
+			</span>
+			<br>
+			<span id="backfaces" contenteditable="true">
+				Backfaces
+			</span>
+			<br>
+			<span id="mode" contenteditable="true">
+				Mode
+			</span>
+			<br>
+			<span id="nearest" contenteditable="true">
+				Nearest
+			</span>
+			<br>
+			<span id="balanced" contenteditable="true">
+				Balanced
+			</span>
+			<br>
+			<span id="luminance" contenteditable="true">
+				Luminance
+			</span>
+			<br>
+			<span id="cancel" contenteditable="true">
+				Cancel
+			</span>
+			<br>
 		</div>
 		
 		<br><br>
@@ -1449,7 +1596,7 @@ h1{
 			</span>
 			<br>
 			<span id="refreshTilesets" contenteditable="true">
-				Refresh Tilesets
+				Reload/Refresh Tilesets
 			</span>
 			<br>
 			<span id="magnification" contenteditable="true">
@@ -1799,6 +1946,14 @@ h1{
 			<span id="seconds" contenteditable="true">
 				Seconds
 			</span>
+			<br>
+			<span id="padding" contenteditable="true">
+				Padding
+			</span>
+			<br>
+			<span id="addPadding" contenteditable="true">
+				Add Padding
+			</span>
 		</div>
 		
 		<br><br>
@@ -1985,6 +2140,10 @@ h1{
 				Against
 			</span>
 			<br>
+			<span id="groupAgainst" contenteditable="true">
+				Group Against
+			</span>
+			<br>
 			<span id="moveSelection" contenteditable="true">
 				Move selection
 			</span>
@@ -2015,6 +2174,10 @@ h1{
 			<br>
 			<span id="tilt" contenteditable="true">
 				Tilt
+			</span>
+			<br>
+			<span id="distanceToGizmo" contenteditable="true">
+				Distance to Gizmo
 			</span>
 			<br>
 			<span id="camera" contenteditable="true">
@@ -2071,6 +2234,30 @@ h1{
 			<br>
 			<span id="zoomCamera" contenteditable="true">
 				Zoom Camera
+			</span>
+			<br>
+			<span id="primitive" contenteditable="true">
+				Primitive
+			</span>
+			<br>
+			<span id="wedge" contenteditable="true">
+				Wedge
+			</span>
+			<br>
+			<span id="cone" contenteditable="true">
+				Cone
+			</span>
+			<br>
+			<span id="size" contenteditable="true">
+				Size
+			</span>
+			<br>
+			<span id="sides" contenteditable="true">
+				Sides
+			</span>
+			<br>
+			<span id="segments" contenteditable="true">
+				Segments
 			</span>
 			<br>
 			<span id="extrude" contenteditable="true">
@@ -2237,6 +2424,10 @@ h1{
 			<br>
 			<span id="removeLight" contenteditable="true">
 				Remove Light
+			</span>
+			<br>
+			<span id="cloneLight" contenteditable="true">
+				Clone Light
 			</span>
 			<br>
 			<span id="object" contenteditable="true">
@@ -2427,12 +2618,20 @@ h1{
 					Mirrored Tiles
 				</span>
 				<br>
+				<span id="skinning" contenteditable="true">
+					Skinning
+				</span>
+				<br>
 				<span id="objectSkin" contenteditable="true">
 					Skin
 				</span>
 				<br>
 				<span id="objectSkinEnabled" contenteditable="true">
 					Skinned Mesh
+				</span>
+				<br>
+				<span id="rootBone" contenteditable="true">
+					Root Bone
 				</span>
 				<br>
 				<span id="custom" contenteditable="true">
@@ -2442,10 +2641,42 @@ h1{
 				<span id="instances" contenteditable="true">
 					Instances
 				</span>
+				<br>
+				<span id="boneProperties" contenteditable="true">
+					Bone Properties
+				</span>
+				<br>
+				<span id="restorePose" contenteditable="true">
+					Restore Pose
+				</span>
+				<br>
+				<span id="restorePoseAll" contenteditable="true">
+					Restore Pose All
+				</span>
+				<br>
+				<span id="weight" contenteditable="true">
+					Weight
+				</span>
+				<br>
+				<span id="boneLength" contenteditable="true">
+					Bone Length
+				</span>
+				<br>
+				<span id="boneThickness" contenteditable="true">
+					Bone Thickness
+				</span>
+				<br>
+				<span id="restrictive" contenteditable="true">
+					Restrictive
+				</span>
 			</div>
 			<br>
 			<span id="hideShowAll" contenteditable="true">
 				Hide/Show All
+			</span>
+			<br>
+			<span id="replaceSelectedInstances" contenteditable="true">
+				Replace Selected Instances
 			</span>
 			<br>
 			<span id="cloneObject" contenteditable="true">
@@ -2796,6 +3027,10 @@ h1{
 			<span id="rightMouse" contenteditable="true">
 				Right Mouse
 			</span>
+			<br>
+			<span id="button" contenteditable="true">
+				Button
+			</span>
 			<hr>
 			
 			<span id="binding_close" contenteditable="true">Close Program</span><br>
@@ -2858,6 +3093,10 @@ h1{
 			<span id="binding_selectAllObjects_Desc" contenteditable="true">Select all object instances.</span><br>
 			<span id="binding_selectEdgeLoop" contenteditable="true">Select Edge Loop</span><br>
 			<span id="binding_selectEdgeLoop_Desc" contenteditable="true">Select any open edges that connect with the currently selected edges.</span><br>
+			<span id="binding_selectUVGroupFaces" contenteditable="true">Select Faces in same UV group</span><br>
+			<span id="binding_selectUVGroupFaces_Desc" contenteditable="true">Select any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</span><br>
+			<span id="binding_deselectUVGroupFaces" contenteditable="true">Deselect Faces in same UV group</span><br>
+			<span id="binding_deselectUVGroupFaces_Desc" contenteditable="true">Deselect any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</span><br>
 			<span id="binding_selectVertexFace" contenteditable="true">Select Faces connected to Vertices</span><br>
 			<span id="binding_selectVertexFace_Desc" contenteditable="true">Select any faces that connect with the currently selected vertices. First time selects only faces that belong to the same tile. Second time selects any faces that do not belong to the same tile.</span><br>
 			<span id="binding_deselectVertexFace" contenteditable="true">Deselect Faces connected to Vertices</span><br>
@@ -2866,6 +3105,14 @@ h1{
 			<span id="binding_selectFaceVertex_Desc" contenteditable="true">Select any vertices that connect with the currently selected faces. First time selects only vertices that belong to the same tile. Second time selects any vertices that do not belong to the same tile.</span><br>
 			<span id="binding_deselectFaceVertex" contenteditable="true">Deselect Vertices connected to Faces</span><br>
 			<span id="binding_deselectFaceVertex_Desc" contenteditable="true">Deselect any vertices that connect with the currently selected faces. First time deselects only vertices that belong to the same tile. Second time deselects any vertices that do not belong to the same tile.</span><br>
+			<span id="binding_selectFFCAxis" contenteditable="true">Select Faces Facing Camera Axis</span><br>
+			<span id="binding_selectFFCAxis_Desc" contenteditable="true">Select any faces that face towards the camera along the nearest cardinal direction.</span><br>
+			<span id="binding_deselectFFCAxis" contenteditable="true">Deselect Faces Facing Camera Axis</span><br>
+			<span id="binding_deselectFFCAxis_Desc" contenteditable="true">Deselect any faces that face towards the camera along the nearest cardinal direction.</span><br>
+			<span id="binding_selectWFNR" contenteditable="true">Select within Face Normal range</span><br>
+			<span id="binding_selectWFNR_Desc" contenteditable="true">Select all connecting faces that have face normals within the range of other selected faces.</span><br>
+			<span id="binding_deselectWFNR" contenteditable="true">Deselect within Face Normal range</span><br>
+			<span id="binding_deselectWFNR_Desc" contenteditable="true">Deselect all connecting faces that have face normals within the range of other selected faces.</span><br>
 			<span id="binding_triangleDivide" contenteditable="true">Triangle Divide</span><br>
 			<span id="binding_triangleDivide_Desc" contenteditable="true">Divide selected faces into two triangular tiles. Each tile will still consist of two triangles, however, one will be collapsed onto itself.</span><br>
 			<span id="binding_applyTilebrushToFaces" contenteditable="true">Apply Tilebrush UVs to Faces</span><br>
@@ -2946,6 +3193,8 @@ h1{
 			<span id="binding_tilesetUp_Desc" contenteditable="true">Select next Tileset.</span><br>
 			<span id="binding_tilesetDown" contenteditable="true">Previous Tileset</span><br>
 			<span id="binding_tilesetDown_Desc" contenteditable="true">Select previous Tileset.</span><br>
+			<span id="binding_reloadTilesets" contenteditable="true">Reload/Refresh all Tilesets</span><br>
+			<span id="binding_reloadTilesets_Desc" contenteditable="true">Reload/Refresh all the Tilesets. Any changes you have made to the tileset inside Crocotile may be lost.</span><br>
 			
 			<hr>
 
@@ -2979,7 +3228,21 @@ h1{
 			<span id="binding_moveCameraLeft_Desc" contenteditable="true">Move/strafe the camera left.</span><br>
 			<span id="binding_moveCameraRight" contenteditable="true">Move Camera Right</span><br>
 			<span id="binding_moveCameraRight_Desc" contenteditable="true">Move/strafe the camera right.</span><br>
-
+			<span id="binding_freeLook" contenteditable="true">Freelook Mode</span><br>
+			<span id="binding_freeLook_Desc" contenteditable="true">Toggle Freelook mode on/off.</span><br>
+			<span id="binding_freeLookForward" contenteditable="true">Freelook Forward</span><br>
+			<span id="binding_freeLookForward_Desc" contenteditable="true">Move forward while in Freelook mode.</span><br>
+			<span id="binding_freeLookBackward" contenteditable="true">Freelook Backward</span><br>
+			<span id="binding_freeLookBackward_Desc" contenteditable="true">Move backward while in Freelook mode.</span><br>
+			<span id="binding_freeLookLeft" contenteditable="true">Freelook Left</span><br>
+			<span id="binding_freeLookLeft_Desc" contenteditable="true">Move left while in Freelook mode.</span><br>
+			<span id="binding_freeLookRight" contenteditable="true">Freelook Right</span><br>
+			<span id="binding_freeLookRight_Desc" contenteditable="true">Move right while in Freelook mode.</span><br>
+			<span id="binding_freeLookUp" contenteditable="true">Freelook Up</span><br>
+			<span id="binding_freeLookUp_Desc" contenteditable="true">Move up while in Freelook mode.</span><br>
+			<span id="binding_freeLookDown" contenteditable="true">Freelook Down</span><br>
+			<span id="binding_freeLookDown_Desc" contenteditable="true">Move down while in Freelook mode.</span><br>
+			
 			<hr>
 
 			<span id="binding_toggleCameraMode" contenteditable="true">Toggle Camera</span><br>
@@ -3023,6 +3286,12 @@ h1{
 			<span id="binding_drawToolSticky_Desc" contenteditable="true">Select the Sticky tool.</span><br>
 			<span id="binding_drawToolBlock" contenteditable="true">Select Block Tool</span><br>
 			<span id="binding_drawToolBlock_Desc" contenteditable="true">Select the Block tool.</span><br>
+			<span id="binding_drawToolPrimitive" contenteditable="true">Select Primitive Tool</span><br>
+			<span id="binding_drawToolPrimitive_Desc" contenteditable="true">Select the Primitive tool.</span><br>
+			<span id="binding_drawToolVertexColor" contenteditable="true">Select Vertex Color Tool</span><br>
+			<span id="binding_drawToolVertexColor_Desc" contenteditable="true">Select the Vertex Color tool.</span><br>
+			<span id="binding_drawToolPencil" contenteditable="true">Select Pencil Tool</span><br>
+			<span id="binding_drawToolPencil_Desc" contenteditable="true">Select the Pencil tool.</span><br>
 			<span id="binding_stickyScale" contenteditable="true">Scale to Fit Sticky</span><br>
 			<span id="binding_stickyScale_Desc" contenteditable="true">Scales the tile to the edge of existing tiles while using the Sticky tool.</span><br>
 			
@@ -3042,10 +3311,10 @@ h1{
 			<span id="binding_gizmoScale_Desc" contenteditable="true">Change Gizmo mode to Resize.</span><br>
 			<span id="binding_toggleGizmoAlignment" contenteditable="true">Toggle Gizmo Alignment</span><br>
 			<span id="binding_toggleGizmoAlignment_Desc" contenteditable="true">Toggle the Gizmo alignment between World, and Object.</span><br>
-			<span id="binding_centerCrosshair" contenteditable="true">Center Crosshair</span><br>
-			<span id="binding_centerCrosshair_Desc" contenteditable="true">Center the crosshair to the currently selected vertices, faces, and objects.</span><br>
+			<span id="binding_centerCrosshair" contenteditable="true">Center Crosshair Average</span><br>
+			<span id="binding_centerCrosshair_Desc" contenteditable="true">Position the crosshair to an averaged position between the currently selected vertices, faces, and objects. It basically adds all the positions together and divides by the number of selected elements.</span><br>
 			<span id="binding_centerCrosshairBounds" contenteditable="true">Center Crosshair Bounds</span><br>
-			<span id="binding_centerCrosshairBounds_Desc" contenteditable="true">Center the crosshair to the bounds of the currently selected vertices, faces, and objects.</span><br>
+			<span id="binding_centerCrosshairBounds_Desc" contenteditable="true">Center the crosshair between the bounds of the currently selected vertices, faces, and objects.</span><br>
 			<span id="binding_nearestVert" contenteditable="true">Select Nearest Vertex</span><br>
 			<span id="binding_nearestVert_Desc" contenteditable="true">Hold this key down and click on a tile. It will select the nearest vertex belonging to that tile.</span><br>
 			<span id="binding_vertSnap" contenteditable="true">Vertex Snapping</span><br>
@@ -3062,16 +3331,22 @@ h1{
 			<span id="binding_spotSelectFace_Desc" contenteditable="true">Select tiles by hovering the mouse pointer over them. Hold the keys down and then click+drag to select.</span><br>
 			<span id="binding_spotDeselectFace" contenteditable="true">Spot Deselect Faces</span><br>
 			<span id="binding_spotDeselectFace_Desc" contenteditable="true">Deselect tiles by hovering the mouse pointer over them. Hold the keys down and then click+drag to deselect.</span><br>
+			<span id="binding_selectMultiple" contenteditable="true">Select Multiple</span><br>
+			<span id="binding_selectMultiple_Desc" contenteditable="true">If auto-deselect is toggled on, this key will prevent deselecting when selecting a single vert, face, edge, or entity.</span><br>
 			<span id="binding_lassoFace" contenteditable="true">Select Marquee Quads</span><br>
 			<span id="binding_lassoFace_Desc" contenteditable="true">Selection marquee for tiles. Hold then click+drag to select.</span><br>
 			<span id="binding_lassoDeselectFace" contenteditable="true">Deselect Marquee Quads</span><br>
 			<span id="binding_lassoDeselectFace_Desc" contenteditable="true">Deselection marquee for tiles. Hold then click+drag to deselect faces.</span><br>
 			<span id="binding_lassoDeselect" contenteditable="true">Deselect Marquee Verts</span><br>
 			<span id="binding_lassoDeselect_Desc" contenteditable="true">Deselection marquee for vertices. Hold then click+drag to deselect vertices.</span><br>
+			<span id="binding_lassoEdge" contenteditable="true">Select Marquee Edges</span><br>
+			<span id="binding_lassoEdge_Desc" contenteditable="true">Selection marquee for edges. Hold then click+drag to select.</span><br>
+			<span id="binding_lassoDeselectEdge" contenteditable="true">Deselect Marquee Edges</span><br>
+			<span id="binding_lassoDeselectEdge_Desc" contenteditable="true">Deselection marquee for edges. Hold then click+drag to deselect edges.</span><br>
 			<span id="binding_lassoObject" contenteditable="true">Select Marquee Objects</span><br>
 			<span id="binding_lassoObject_Desc" contenteditable="true">Selection marquee for object instances. Hold then click+drag to select.</span><br>
 			<span id="binding_lassoDeselectObject" contenteditable="true">Deselect Marquee Objects</span><br>
-			<span id="binding_lassoDeselectObject_Desc" contenteditable="true">Deselection marquee for object instances. Hold then click+drag to deselect faces.</span><br>
+			<span id="binding_lassoDeselectObject_Desc" contenteditable="true">Deselection marquee for object instances. Hold then click+drag to deselect object instances.</span><br>
 			<span id="binding_rotatePartRight" contenteditable="true">Rotate Selection Right</span><br>
 			<span id="binding_rotatePartRight_Desc" contenteditable="true">Rotate the selection rightwards based on camera angle.</span><br>
 			<span id="binding_rotatePartLeft" contenteditable="true">Rotate Selection Left</span><br>
@@ -3093,7 +3368,7 @@ h1{
 			<span id="binding_subdivideFace" contenteditable="true">Subdivide Face</span><br>
 			<span id="binding_subdivideFace_Desc" contenteditable="true">Subdivide the face of the active tile.</span><br>
 			<span id="binding_extrude" contenteditable="true">Extrude</span><br>
-			<span id="binding_extrude_Desc" contenteditable="true">Extrude the faces or the edges of tiles.</span><br>
+			<span id="binding_extrude_Desc" contenteditable="true">Extrude the faces or the edges of tiles. Hold down the keys while clicking and dragging the mouse to extrude.</span><br>
 			<span id="binding_hideTiles" contenteditable="true">Hide Tiles</span><br>
 			<span id="binding_hideTiles_Desc" contenteditable="true">Hide the selected tiles from view.</span><br>
 			<span id="binding_showTiles" contenteditable="true">Show Tiles</span><br>
@@ -3102,6 +3377,8 @@ h1{
 			<span id="binding_combineVerts_Desc" contenteditable="true">Moves all selected vertices to the crosshair position.</span><br>
 			<span id="binding_alignAgainst" contenteditable="true">Push Against</span><br>
 			<span id="binding_alignAgainst_Desc" contenteditable="true">Push the selected vertices and objects against existing tiles in the scene, along the cardinal direction the camera faces.</span><br>
+			<span id="binding_alignGroupAgainst" contenteditable="true">Push Group Against</span><br>
+			<span id="binding_alignGroupAgainst_Desc" contenteditable="true">Push the selected vertices and objects (as a group) against existing tiles in the scene, along the cardinal direction the camera faces. This shifts the entire group and retains their positions relative to each other.</span><br>
 			<span id="binding_straightenVertTiles" contenteditable="true">Straighten relative to their tiles</span><br>
 			<span id="binding_straightenVertTiles_Desc" contenteditable="true">Straightens the vertices relative to their tiles that they belong to. It straightens to the opposite triangle\'s face normal, or the average if both vertices are selected. This results in flat tiles.</span><br>
 			<span id="binding_flattenSelection" contenteditable="true">Flatten Selection</span><br>
@@ -3114,12 +3391,18 @@ h1{
 			<span id="binding_pullSelection_Desc" contenteditable="true">Pull the selection towards the 3d crosshair plane so that it touches and aligns with it.</span><br>
 			<span id="binding_roundVertices" contenteditable="true">Align Vertices To Grid</span><br>
 			<span id="binding_roundVertices_Desc" contenteditable="true">Align the selected vertices to the grid based on the current grid-rounding value.</span><br>
+			<span id="binding_roundVerticesPixel" contenteditable="true">Align Vertices To Pixel</span><br>
+			<span id="binding_roundVerticesPixel_Desc" contenteditable="true">Align the selected vertices to the nearest pixel (A grid-rounding value of 1).</span><br>
+			<span id="binding_lookAtCrosshair" contenteditable="true">Look At Crosshair</span><br>
+			<span id="binding_lookAtCrosshair_Desc" contenteditable="true">Point any selected instances or entities at the current crosshair position.</span><br>
 			<span id="binding_selectX" contenteditable="true">Select X Axis</span><br>
 			<span id="binding_selectX_Desc" contenteditable="true">Select vertices along the X axis of the 3d crosshair.</span><br>
 			<span id="binding_selectY" contenteditable="true">Select Y Axis</span><br>
 			<span id="binding_selectY_Desc" contenteditable="true">Select vertices along the Y axis of the 3d crosshair.</span><br>
 			<span id="binding_selectZ" contenteditable="true">Select Z Axis</span><br>
 			<span id="binding_selectZ_Desc" contenteditable="true">Select vertices along the Z axis of the 3d crosshair.</span><br>
+			<span id="binding_bakeLighting" contenteditable="true">Bake Lighting</span><br>
+			<span id="binding_bakeLighting_Desc" contenteditable="true">Alters the vertex colors of selected vertices based on lights in the scene, or ambient occlusion.</span><br>
 			<span id="binding_paintSelectedVertexColors" contenteditable="true">Paint Selected Vertex Colors</span><br>
 			<span id="binding_paintSelectedVertexColors_Desc" contenteditable="true">Paint the selected vertices with the current paint color.</span><br>
 			<span id="binding_eraseSelectedVertexColors" contenteditable="true">Erase Selected Vertex Colors</span><br>
@@ -3159,6 +3442,14 @@ h1{
 			
 			<span id="binding_panTileset" contenteditable="true">Pan Tileset</span><br>
 			<span id="binding_panTileset_Desc" contenteditable="true">Pan the tileset.</span><br>
+			<span id="binding_scrollTileset_Left" contenteditable="true">Scroll Tileset Left</span><br>
+			<span id="binding_scrollTileset_Left_Desc" contenteditable="true">Scroll the tileset to the left.</span><br>
+			<span id="binding_scrollTileset_Right" contenteditable="true">Scroll Tileset Right</span><br>
+			<span id="binding_scrollTileset_Right_Desc" contenteditable="true">Scroll the tileset to the right.</span><br>
+			<span id="binding_scrollTileset_Up" contenteditable="true">Scroll Tileset Up</span><br>
+			<span id="binding_scrollTileset_Up_Desc" contenteditable="true">Scroll the tileset up.</span><br>
+			<span id="binding_scrollTileset_Down" contenteditable="true">Scroll Tileset Down</span><br>
+			<span id="binding_scrollTileset_Down_Desc" contenteditable="true">Scroll the tileset down.</span><br>
 			<span id="binding_tileset_MoveLeft" contenteditable="true">Move Selection Left</span><br>
 			<span id="binding_tileset_MoveLeft_Desc" contenteditable="true">Move the tile selection left a number of pixels based on the UV Precision value.</span><br>
 			<span id="binding_tileset_MoveRight" contenteditable="true">Move Selection Right</span><br>
@@ -3175,6 +3466,10 @@ h1{
 			<span id="binding_tileset_MoveUpOne_Desc" contenteditable="true">Move the tile selection up one pixel.</span><br>
 			<span id="binding_tileset_MoveDownOne" contenteditable="true">Move Selection Down a Pixel</span><br>
 			<span id="binding_tileset_MoveDownOne_Desc" contenteditable="true">Move the tile selection down one pixel.</span><br>
+			<span id="binding_tileset_addToPalette" contenteditable="true">Add Tiles to Palette</span><br>
+			<span id="binding_tileset_addToPalette_Desc" contenteditable="true">Adds the selected tiles to the currently selected palette.</span><br>
+			<span id="binding_tileset_removeFromPalette" contenteditable="true">Remove Tiles from Palette</span><br>
+			<span id="binding_tileset_removeFromPalette_Desc" contenteditable="true">Removes the selected tiles from the currently selected palette.</span><br>
 			
 			<hr>
 			
@@ -3212,6 +3507,8 @@ h1{
 			<span id="binding_uvs_ToggleMultiple_Desc" contenteditable="true">Select one or multiple overlapping UVs.</span><br>
 			<span id="binding_uvs_SetFlat" contenteditable="true">Flatten UVs</span><br>
 			<span id="binding_uvs_SetFlat_Desc" contenteditable="true">Flatten the selected UVs of a tile or tiles so that their pixels are not stretched (Must have all four UVs of the tiles selected).</span><br>
+			<span id="binding_uvs_Unwrap" contenteditable="true">Unwrap UVs</span><br>
+			<span id="binding_uvs_Unwrap_Desc" contenteditable="true">Unwrap the selected UVs of a group of tiles so that they connect with each other (Must have all four UVs of the tiles selected and the tiles in the scene must have their edges touching).</span><br>
 			<span id="binding_uvs_SetPixel" contenteditable="true">Round to Pixel</span><br>
 			<span id="binding_uvs_SetPixel_Desc" contenteditable="true">Round the UV coordinates to the nearest pixel.</span><br>
 			<span id="binding_uvs_SetToCrosshair" contenteditable="true">Set to Crosshair</span><br>
@@ -3231,6 +3528,8 @@ h1{
 			<span id="binding_painting_Pencil_Desc" contenteditable="true">Switch to the Pencil tool.</span><br>
 			<span id="binding_painting_Eyedropper" contenteditable="true">Eyedropper</span><br>
 			<span id="binding_painting_Eyedropper_Desc" contenteditable="true">Switch to the Eyedropper tool.</span><br>
+			<span id="binding_painting_EyedropperMod" contenteditable="true">Eyedropper Modifier</span><br>
+			<span id="binding_painting_EyedropperMod_Desc" contenteditable="true">When using a paint tool (pencil,eraser,paint bucket), holding this key down will temporarily switch to the Eyedropper tool. Releasing the key will switch it back to the paint tool.</span><br>
 			<span id="binding_painting_Paintbucket" contenteditable="true">Paintbucket</span><br>
 			<span id="binding_painting_Paintbucket_Desc" contenteditable="true">Switch to the Paintbucket tool.</span><br>
 			<span id="binding_painting_Marquee" contenteditable="true">Marquee</span><br>
