@@ -372,11 +372,16 @@ h1{
 				<li id="generalF1" contenteditable="true"><u>F1</u> Open configuration settings</li>
 				<li id="generalF2" contenteditable="true"><u>F2</u> Open activation/info window</li>
 				<li id="generalF3" contenteditable="true"><u>F3</u> Open keyboard configuration settings</li>
+				<li id="generalRenderCamera" contenteditable="true"><u>unassigned</u> Open the Render Camera panel.</li>
+				<li id="generalRenderSpin" contenteditable="true"><u>unassigned</u> Open the Render Spinning Gif panel.</li>
+				<li id="generalRenderMovie" contenteditable="true"><u>unassigned</u> Open the Render Movie panel.</li>
 				<li id="generalF12" contenteditable="true"><u>F12</u> Take screenshot</li>
 				<li id="general9" contenteditable="true"><u>9</u> Toggle double-sided mode for current tileset (backface culling)</li>
 				<li id="generalCtrl9" contenteditable="true"><u>Ctrl+9</u> Toggle wireframe mode</li>
 				<li id="generalAlt9" contenteditable="true"><u>Alt+9</u> Toggle Camera Style</li>
 				<li id="generalToggleRenderTexture" contenteditable="true"><u>Unassigned</u> Toggle on/off the texture of currently selected tilesets. This allows vertex colors to be seen clearly. To assign a key, go to: Edit > Buttons > General > Toggle Render Texture.</li>
+				<li id="generalToggleRenderVertexColors" contenteditable="true"><u>Unassigned</u> Toggle on/off the vertex colors of currently selected tilesets. To assign a key, go to: Edit > Buttons > General > Toggle Render Vertex Colors.</li>
+				<li id="generalToggleRenderBones" contenteditable="true"><u>Unassigned</u> Toggle on/off the rendering of bones. To assign a key, go to: Edit > Buttons > General > Show/Hide All Bones.</li>
 				<li id="general0" contenteditable="true"><u>0</u> Hide/Show origin,crosshair lines</li>
 				<li id="generalEsc" contenteditable="true"><u>Esc</u> Close opened panels</li>
 				<li id="generalAltF4" contenteditable="true"><u>Alt+F4</u> Exit the program</li>
@@ -384,6 +389,13 @@ h1{
 				<li id="generalonly3d" contenteditable="true"><u>Shift+`</u> Only show 3d viewport. This will hide/show the sidebars.</li>
 				<li id="generalDel" contenteditable="true"><u>Delete</u> Removes any selected tiles. The tile's face must be selected.</li>
 				<li id="generalReloadTilesets" contenteditable="true"><u>Unassigned</u> Reload/Refresh all Tilesets. Changes made to any tilesets will be lost.</li>
+				<li id="generalOpenNextPanel" contenteditable="true"><u>Unassigned</u> Open the next panel in the sidepanel.</li>
+				<li id="generalOpenPrevPanel" contenteditable="true"><u>Unassigned</u> Open the previous panel in the sidepanel.</li>
+				<li id="generalOpenTilesetPanel" contenteditable="true"><u>Unassigned</u> Open the Tileset panel.</li>
+				<li id="generalOpenUVsPanel" contenteditable="true"><u>Unassigned</u> Open the UVs panel.</li>
+				<li id="generalOpenPaintingPanel" contenteditable="true"><u>Unassigned</u> Open the Painting panel.</li>
+				<li id="generalOpenTransformPanel" contenteditable="true"><u>Unassigned</u> Open the Transform panel.</li>
+				<li id="generalOpenScenePanel" contenteditable="true"><u>Unassigned</u> Open the Scene panel.</li>
 			</ul>
 			
 			<span id="generalHotkeys" contenteditable="true">
@@ -395,6 +407,7 @@ h1{
 				<li id="generalCtrlShiftS" contenteditable="true"><u>Ctrl+Shift+S</u> Save scene as a new Crocotile 3D file</li>
 				<li id="generalCtrlL" contenteditable="true"><u>Ctrl+L</u> Load a Crocotile 3D file</li>
 				<li id="generalCtrlE" contenteditable="true"><u>Ctrl+E</u> Export scene as a .obj, .gltf, .glb, .dae</li>
+				<li id="generalCtrlShiftE" contenteditable="true"><u>Ctrl+Shift+E</u> Export objects separately as .obj, .gltf, .glb, .dae files.</li>
 				<li id="generalCtrlZ" contenteditable="true"><u>Ctrl+Z</u> Undo</li>
 				<li id="generalCtrlY" contenteditable="true"><u>Ctrl+Y</u> Redo</li>
 			</ul>
@@ -549,7 +562,8 @@ h1{
 			<li id="gizmoCtrlShiftX" contenteditable="true"><u>Ctrl+Shift+X</u> Toggle between the World and Object alignment for the Gizmo.</li>
 			<li id="gizmoAltX" contenteditable="true"><u>Alt+X</u> Snap the gizmo to the nearest vertex, object or any other entity that the mouse is hovering over, or the 3d crosshair (press twice).</li>
 			<li id="gizmoShiftAltX" contenteditable="true"><u>Shift+Alt+X</u> Snap the gizmo to the center of the selection.</li>
-			<li id="gizmoShift" contenteditable="true"><u>Shift</u> Move the Gizmo without moving the selection (When you hold Shift prior to dragging). If you press Shift after dragging, the Gizmo/Selection will snap to vertices that are hovered over.</li>
+			<li id="gizmoShift" contenteditable="true"><u>Shift</u> (While in Translate mode) Move the Gizmo without moving the selection (When you hold Shift prior to dragging). If you press Shift after dragging, the Gizmo/Selection will snap to vertices that are hovered over.</li>
+			<li id="gizmoShift2" contenteditable="true"><u>Shift</u> (While in Rotation mode) This will keep the selection proportional while scaling in two axis.</li>
 			<li id="gizmoAlt" contenteditable="true"><u>Alt</u> Transform the Crosshair relative to the Gizmo. This allows you to move and rotate the Crosshair via the mouse. This will activate Tilt mode. You can press <u>T</u> to deactivate Tilt mode.</li>
 				
 			<br><br clear="right">			
@@ -687,8 +701,10 @@ h1{
 				<li id="editModeRightClick" contenteditable="true"><u>Right Mouse Click</u> Open context menu to select from various commands</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/SSMQnHP4O4s?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftEnter" contenteditable="true"><u>Shift+Enter</u> Active selection mode. Only vertices on the highlighted faces are editable.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/LR2FFTx9kHo?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeEnter" contenteditable="true"><u>Enter</u> Edit a selected instance if one is selected, or stop editing the instance if all verts and faces are deselected.</li></div>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/idE2cFgZ1tU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeQE" contenteditable="true"><u>Q,E</u> Rotate selection around 3d crosshair</li></div>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/idE2cFgZ1tU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftQShiftE" contenteditable="true"><u>Shift+Q, Shift+E</u> Rotate selection clockwise / counter-clockwise around 3d crosshair</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/idE2cFgZ1tU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeQE" contenteditable="true"><u>Q,E</u> Rotate selection 90 degrees around 3d crosshair</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/idE2cFgZ1tU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftQShiftE" contenteditable="true"><u>Shift+Q, Shift+E</u> Rotate selection 90 degrees clockwise / counter-clockwise around 3d crosshair</li></div>
+				<li id="editRotateSelectionInterval" contenteditable="true"><u>Unassigned</u> Rotate selection a number of degrees around 3d crosshair based on the rotation interval value.</li>
+				<li id="editRotateSelectionClockwiseInterval" contenteditable="true"><u>Unassigned</u> Rotate selection clockwise / counter-clockwise a number of degrees around 3d crosshair based on the rotation interval value.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/gpD1fIKtBno?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeFR" contenteditable="true"><u>F,R</u> Flip/Mirror selection</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/T_iXHpEPr_8?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeLeftRightUpDown" contenteditable="true"><u>Left,Right,Up,Down</u> Adust UVs of selected verts</li></div>
 			</ul>
@@ -718,7 +734,7 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/TXNRPOfpUWg?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeP" contenteditable="true"><u>P</u> Center the selected vertices and faces on the crosshair plane</li></div>
 				<li id="editModePushAgainst" contenteditable="true"><u>/</u> Push the selected vertices and objects against existing tiles in the scene, along the cardinal direction the camera faces.</li>
 				<li id="editModePushGroupAgainst" contenteditable="true"><u>Shift+/</u> Push the selected vertices and objects (as a group) against existing tiles in the scene, along the cardinal direction the camera faces. This shifts the entire group and retains their positions relative to each other.</li>
-				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ohnYAk4ycNU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeAltS" contenteditable="true"><u>Alt+S</u> Split a tile along the yellow line while in active mode.</li></div>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ohnYAk4ycNU?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeAltS" contenteditable="true"><u>Alt+S</u> Hold down keys and left click a tile to split it.</li></div>
 				<li id="editModeAltD" contenteditable="true"><u>Alt+D</u> Subdivide a tile or a group of tiles that are selected.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/PVShdtpDAP8?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeAltE" contenteditable="true"><u>Alt+E + Click and drag</u> Extrude tile faces or edges. You can also click and drag the Gizmo to extrude linearly along a specific direction. Read the Transform section for details about more Extrude options.</li></div>
 				<li id="editModeCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy quads</li>
@@ -747,9 +763,21 @@ h1{
 				<li id="editSelectWithinNormalRange2" contenteditable="true"><u>Unassigned</u> Deselect within Face Normal range. This will deselect all faces connecting together, beginning with the face you last hovered over, as long as their face normals are within range of each other (specified by the "Rotation angle" in the Tileset panel).</li>
 				<li id="editSelectFaceSameUVGroup" contenteditable="true"><u>Unassigned</u> Select Faces in same UV group. This will select any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
 				<li id="editSelectFaceSameUVGroup2" contenteditable="true"><u>Unassigned</u> Deselect Faces in same UV group. This will deselect any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
+				<li id="editSelectTilesUsingTileset" contenteditable="true"><u>Unassigned</u> Select tile Faces that use the currently selected Tileset.</li>
+				<li id="editDeselectTilesUsingTileset" contenteditable="true"><u>Unassigned</u> Deselect tile Faces that use the currently selected Tileset.</li>
+				<li id="editSelectTileUVs" contenteditable="true"><u>Unassigned</u> Select the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
+				<li id="editDeselectTileUVs" contenteditable="true"><u>Unassigned</u> Deselect the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
+				<li id="editDivideTriangles" contenteditable="true"><u>Unassigned</u> Divide a tile into two triangles. Each triangle is a single tile with one side collapsed.</li>
+				<li id="editMergeTrianglesSafe" contenteditable="true"><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. The UVs of the overlapping vertices must match.</li>
+				<li id="editMergeTrianglesForced" contenteditable="true"><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. Merges even if UVs of overlapping vertices do not match.</li>
+				<li id="editSelectTriangles" contenteditable="true"><u>Unassigned</u> Select any triangular tiles.</li>
 				<li id="editFaceVertex" contenteditable="true"><u>Unassigned</u> Select vertices connected to currently selected faces.</li>
 				<li id="editFaceVertex2" contenteditable="true"><u>Unassigned</u> Deselect vertices connected to currently selected faces.</li>
 				<li id="editModeHideShowTiles" contenteditable="true"><u>Unassigned</u> Hide or Show the selected tiles. This can also be accessed in the context-menu; Faces > Hide, Show.</li>
+				<li id="editModeCreateObject" contenteditable="true"><u>Unassigned</u> Group together the selected tiles into their own Object. Object will also be listed in the Scene panel. Check the Objects section of this documentation for more information.</li>
+				<li id="editModeAddToScene" contenteditable="true"><u>Unassigned</u> Adds the selected Object or Instance to the scene at the position of the 3d crosshair. The Object/Instance must be selected in the Scene panel list.</li>
+				<li id="editModeDeconstructInstance" contenteditable="true"><u>Unassigned</u> Deconstruct the selected Instance in the 3d scene back into individual tiles.</li>
+				<li id="editModeDuplicateInstances" contenteditable="true"><u>Unassigned</u> Duplicate the selected Instances.</li>
 				<li id="editModeMoveOriginToCrosshair" contenteditable="true"><u>Unassigned</u> Take the Origin point of a selected Object or an Object being edited and move it to the current position of the 3d crosshair.</li>
 			</ul>
 			
@@ -775,6 +803,12 @@ h1{
 			
 			<span id="editModeMergeEdges" contenteditable="true">
 				You can merge tiles together by using the <u>Merge Edges</u> actions from the context-menu. This will remove the edges between two tiles and combine the tiles into one single tile. This action is located within the sub-menu of <u>Edges</u> when you right-click the 3d scene. There is a <u>safe</u> merge and a <u>forced</u> merged. The safe merge requires that the UV coordinates match where two tiles touch. The forced merge will merge them regardless.
+			</span>
+			
+			<br><br clear="right">		
+			
+			<span id="editModeOrientUVs" contenteditable="true">
+				If you place down tiles and their UVs aren't oriented the same way, there is a way to orient all of them so that they match. Select their faces and then open the context-menu. Go to <u>UVs</u>, and select <u>Orient UVs</u>.
 			</span>
 			
 			<br><br clear="right">		
@@ -918,6 +952,25 @@ h1{
 				<li id="sceneCommandsRightClick" contenteditable="true"><u>Right Mouse Click</u> Open menus by right clicking the items in the list</li>
 				<li id="sceneCommandsDoubleLeftClick" contenteditable="true"><u>Double Left Click</u> Double clicking the name of a listed item will let you rename it. Double clicking off to the side of the name will open the object's properties.</li>
 			</ul>
+			
+			<br clear="right">		
+			<hr>
+			
+			<span id="animationCommands" contenteditable="true">
+				<h4>Animation</h4>
+			</span>
+			
+			<ul>
+				<li id="animationCommandsDelete" contenteditable="true"><u>Delete</u> Remove any selected keyframes from the animation timeline.</li>
+				<li id="animationCommandsCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy any selected keyframes in the timeline relative to the playhead position.</li>
+				<li id="animationCommandsCtrlV" contenteditable="true"><u>Ctrl+V</u> Paste keyframes to the timeline relative the playhead position.</li>
+				<li id="animationCommandsCtrlA" contenteditable="true"><u>Ctrl+A</u> Select all the keyframes, segments, weights in the timeline.</li>
+				<li id="animationCommandsCtrlD" contenteditable="true"><u>Ctrl+D</u> Deselect all the keyframes, segments, weights in the timeline.</li>
+				<li id="animationCommandsAltLM" contenteditable="true"><u>Alt+Left Mouse Click/Drag</u> Duplicate keyframes by clicking and dragging selected keyframes while holding Alt.</li>
+				<li id="animationCommandsCtrlWheel" contenteditable="true"><u>Ctrl+Mousewheel</u> Move the playhead position to the next/previous keyframe in the animation panel.</li>
+				<li id="animationCommandsPrevKey" contenteditable="true"><b><i>Previous Keyframe: </i></b><u>Unassigned</u> Move playhead to previous keyframe in timeline.</li>
+				<li id="animationCommandsNextKey" contenteditable="true"><b><i>Next Keyframe: </i></b><u>Unassigned</u> Move playhead to next keyframe in timeline.</li>
+			</ul>
 
 		</div>
 		
@@ -945,6 +998,11 @@ h1{
 			
 			<img src="docImg/settings.png" class="blockImage" align="right" hspace="16" vspace="16">
 			
+			<ul>
+				<li id="settingsSaveLoad" contenteditable="true"><u>Save & Load</u><br>There are Save and Load buttons that will allow you to save and load your settings.</li>
+				<li id="settingsResetSettings" contenteditable="true"><u>Reset Settings</u><br>This will reset all the settings back to their default values.</li>
+			</ul>
+			
 			<span id="settingsGeneral" contenteditable="true">
 				General
 			</span>
@@ -968,6 +1026,7 @@ h1{
 				<li id="settingsGeneralViewCubeRatio" contenteditable="true"><u>ViewCube Viewport Ratio</u><br>The percentage of the screen that the viewcube viewport covers. The default value is 0.25</li>
 				<li id="settingsGeneralRuler" contenteditable="true"><u>Show Ruler</u><br>If enabled, visual guides extend from the 3d tilebrush to help measure distances.</li>
 				<li id="settingsGeneralLockCrosshair" contenteditable="true"><u>Lock Crosshair to the Grid</u><br>Keep the crosshair position rounded to the nearest grid point based on the grid-rounding value.</li>
+				<li id="settingsGeneralSnapCrosshairToInstanceOrigin" contenteditable="true"><u>Snap Crosshair to Instance Origin</u><br>Snaps the crosshair to the instance origin instead of its vertices.</li>
 				<li id="settingsGeneralIncrementGridRoundingCustom" contenteditable="true"><u>Increment Grid-Rounding Custom</u><br>The amount to increment/decrement the grid-rounding value when pressing <u>Shift+[</u> or <u>Shift+]</u>.</li>
 			</ul>
 			
@@ -982,6 +1041,8 @@ h1{
 				<li id="settingsProjectDefaultTilesets" contenteditable="true"><u>Tilesets</u><br>The default tileset images to use for new projects. You can pick multiple images and they will load when a new project is created.</li>
 				<li id="settingsGeneralBackgroundColor" contenteditable="true"><u>Background Color</u><br>This will set the background color of the scene</li>
 				<li id="settingsGeneralBackgroundTransparency" contenteditable="true"><u>Background Transparency</u><br>This will make the background become more or less opaque. A value of 1 is fully opaque, while a value of 0 is fully transparent. When taking screenshots, it will use this value to determine the transparency of the background in the images.</li>
+				<li id="settingsProjectSaveLoadUVTilesize" contenteditable="true"><u>Save/Load UV Tilesize</u><br>If this is enabled, projects will store the UV Tilesize and set it when loaded.</li>
+				<li id="settingsProjectSaveLoadGridRounding" contenteditable="true"><u>Save/Load Grid rounding</u><br>If this is enabled, projects will store the Grid rounding value and set it when loaded.</li>
 			</ul>
 			
 			<span id="settingsCamera" contenteditable="true">
@@ -1005,7 +1066,7 @@ h1{
 			<ul>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/cCYtilF13dk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsDrawModeOverlapBrush" contenteditable="true"><u>Overlap Tilebrush</u><br>If toggled on, the tilebrush will overlap itself when drawing with a group of tiles.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/DzqA0rttGFI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsDrawModeAlignBrushCrosshair" contenteditable="true"><u>Align Brush to Crosshair</u><br>If toggled on, the brush will position itself next to the crosshair so that its edge aligns with it.</li></div>
-				<li id="settingsDrawModeOrientPrefabBrushToCamera" contenteditable="true"><u>Orient Prefab Brush to Camera</u><br>When this is enabled, the Prefab Brush will align itself relative to the camera direction.</li>
+				<li id="settingsDrawModeOrientPrefabBrushToCamera" contenteditable="true"><u>Orient Prefab/Primitive Brush to Camera and Tilt</u><br>When this is enabled, the Prefab Brush & Primitive Brush will align itself relative to the camera direction as well as the tilt.</li>
 				<li id="settingsDrawModeStickyEdgeProportionate" contenteditable="true"><u>Sticky Edge Proportionate</u><br>When using the Sticky tool, the tilebrush will keep the proportions of the tile selection if this option is enabled.</li>
 			</ul>
 			
@@ -1025,8 +1086,9 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/AnSh9meR4XI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeObjectModeConstraint" contenteditable="true"><u>Object mode constraint</u><br>If toggled on, this will prevent editing tiles outside of a prefab object while you are editing an instance.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/CTGhR4LcCac?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeVertexSize" contenteditable="true"><u>Vertex Size</u><br>Adjust the size of the vertices.</li></div>
 				<li id="settingsEditwModeDisableFaceSelection" contenteditable="true"><u>Disable Face Selection</u><br>Disables the ability to select faces.</li>
-				<li id="settingsEditwModeDisableVertexSelection" contenteditable="true"><u>Disable Vertex Selection</u><br>Disables the ability to select vertices.</li>
 				<li id="settingsEditwModeDisableEdgeSelection" contenteditable="true"><u>Disable Edge Selection</u><br>Disables the ability to select edges.</li>
+				<li id="settingsEditwModeDisableVertexSelection" contenteditable="true"><u>Disable Vertex Selection</u><br>Disables the ability to select vertices.</li>
+				<li id="settingsEditwModeOverlappedVertexSelection" contenteditable="true"><u>Overlapped Vertex Selection</u><br>When selecting/deselecting multiple vertices, it will select vertices belonging to a face that is facing away from camera as long as they share a position with a vertex that would normally be selected.</li>
 				<li id="settingsEditwModeSelectedFaceColor" contenteditable="true"><u>Selected Face Color</u><br>Sets the color of selected faces.</li>
 				<li id="settingsEditwModeSelectedFaceTransparency" contenteditable="true"><u>Selected Face Transparency</u><br>Sets the opacity amount of selected faces. A value between 0 and 1. 0 is fully transparent, and 1 is fully opaque.</li>
 				<li id="settingsEditwModeActiveEditFaceColor" contenteditable="true"><u>Active Edit Face Color</u><br>Sets the color of selected faces in Active Edit mode.</li>
@@ -1044,10 +1106,30 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1DcOkEg5gvc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsTilesetsDragMultipleUVs" contenteditable="true"><u>Drag multiple UVs</u><br>If toggled on, this will allow you to drag multiple UVs that are overlapping or sharing a coordinate in the UVs panel.</li></div>
 				<li id="settingsTilesetsRestrictUVsToActive" contenteditable="true"><u>Hide UVs of non-active Tilesets</u><br>You can choose to hide UVs belonging to other tilesets and display only the UVs belonging to the currently selected Tileset. Or you can choose to display any UVs regardless of with Tileset is active.</li>
 				<li id="settingsTilesetsDeselectUVsUsingSingleClick" contenteditable="true"><u>Deselect all UVs with single click</u><br>Deselect all UVs with a single-click as opposed to a double-click when clicking outside of any UVs.</li>
+				<li id="settingsTilesetsKeepPixelScaleReassignTileset" contenteditable="true"><u>Keep UV pixel scale when reassigned tileset</u><br>When reassigning tiles to the currently selected tileset, this will prevent the UVs from becoming stretched if the tileset dimensions are different.</li>
 				<li id="settingsTilesetsCheckeredSize" contenteditable="true"><u>Checkered Size</u><br>This controls the size of the squares when drawing a checkered pattern to a tileset.</li>
+				<li id="settingsTilesetsEyedropAlphaColor" contenteditable="true"><u>Eyedrop Alpha Color</u><br>If this is enabled, the paint eyedropper tool will sample the alpha of the color as well. If it is disabled, it will keep the current alpha value.</li>
 				<li id="settingsTilesetsSubtractPadding" contenteditable="true"><u>Subtract Padding from Tilebrush</u><br>If using UV Padding, this will ensure that the Tilebrush is scaled accurately when selecting tiles from the Tileset.</li>
 				<li id="settingsTilesetsMultiplyPadding" contenteditable="true"><u>Multiply Padding by Tile selection</u><br>If using UV Padding, this will keep the Tilebrush size correct when selecting multiple rows/columns in the Tileset.</li>
 				<li id="settingsTilesetsShowEntireTileset" contenteditable="true"><u>Show entire Tileset in Painting panel</u><br>If this is enabled the entire tileset will be visible when the Painting panel is open. Otherwise, only the section of the tileset selected from the Tileset panel will be visible.</li>
+			</ul>
+			
+			<span id="settingsScene" contenteditable="true">
+				Scene
+			</span>
+			
+			<ul>
+				<li id="settingsSceneAddToSceneTilted" contenteditable="true"><u>Add To Scene based on Camera and Tilt</u><br>When an Object or Instance is added to the scene via the Scene panel lists, this option will decide whether to orient it relative to the camera and tilt.</li>
+			</ul>
+			
+			<span id="settingsAnimation" contenteditable="true">
+				Animation
+			</span>
+			
+			<ul>
+				<li id="settingsAnimationAutoKeyPausedOnly" contenteditable="true"><u>Auto Keyframe only when paused</u><br>Controls whether auto-keyframes are added in both stopped mode and paused mode or just in paused mode.</li>
+				<li id="settingsAnimationDeselectKeyframesWithSingleClick" contenteditable="true"><u>Deselect all Keyframes with single click</u><br>If enabled, keyframes will be deselected when you single-click the timeline otherwise they will be deselected when double-clicking.</li>
+				<li id="settingsAnimationDeselectKeyframesBeforeMultiSelecting" contenteditable="true"><u>Deselect all Keyframes before multi-selecting</u><br>If enabled, keyframes will be deselected prior to selecting multiple keyframes when clicking and dragging the mouse.</li>
 			</ul>
 
 			<br clear="right">		
@@ -1070,6 +1152,8 @@ h1{
 			<ul>
 				<li id="buttonsSaveLoad" contenteditable="true"><u>Save & Load</u><br>There are Save and Load buttons that will allow you to save and load your keybindings. Default bindings are supplied with the program for qwerty, azerty, and qzerty keyboards (they are located in the "misc" folder where Crocotile is installed). The main difference between them is that Q gets swapped with A, and W swapped with Z.</li>
 				<li id="buttonsResetBindings" contenteditable="true"><u>Reset Bindings</u><br>The Reset Bindings button will reset all the controls back to their default settings.</li>
+				<li id="buttonsSaveLoadPins" contenteditable="true"><u>Save & Load Pinned</u><br>There are Save and Load buttons that will allow you to save and load your pinned buttons.</li>
+				<li id="buttonsResetPins" contenteditable="true"><u>Reset Pins</u><br>The Reset Pins button will remove all the pinned buttons.</li>
 				<li id="buttonsKeyGroups" contenteditable="true"><u>Key Groups</u><br>Selecting a group from the drop-down list will reveal a list of specific actions that you can set key bindings for. Clicking on one will display a short description and textbox with the binding. To change the binding, simply click in the textbox and then press the key(s) on your keyboard. After releasing the keys the binding will be applied. You can also click on the <u>Clear</u> button to clear and remove/disable the binding completely.</li>
 				<li id="buttonsToggleCameraMode" contenteditable="true"><u>Toggle Camera Mode</u><br>If enabled, pressing spacebar (or whichever key you've bound for this action) will keep camera mode toggled even if spacebar is released. Pressing again will toggle camera mode off. If this is disabled, when spacebar is held down Camera mode will be toggled on and when it is released camera mode will be toggled off.</li>
 			</ul>
@@ -1190,7 +1274,9 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/skdg2A0VCfI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesetsMenuMaterialSettings" contenteditable="true"><u>Tileset Material Settings</u><br>This will open a window where you can choose the type of material the tileset uses, as well as set any material properties. If you want to use lights and shadows in your scene, you'll have to use a material that interacts with lights, such as the Phong material. You can also change the name of the tilesets in this panel.</li></div>
 				<li id="tilesetsMenuReplaceTileset" contenteditable="true"><u>Replace Tileset</u><br>This opens a window to select an image that will replace the current Tileset that is selected. Tiles in the scene that use the old image will get this new image applied to them.</li>
 				<li id="tilesetsMenuRemoveTileset" contenteditable="true"><u>Remove Tileset</u><br>Removes the currently selected Tileset and also all the tiles in the scene that use the Tileset. This choice as well as the others can be undone/redone by clicking the undo/redo buttons or pressing <u>Ctrl+Z</u> or <u>Ctrl+Y</u>.</li>
+				<li id="tilesetsMenuRemoveUnusedTilesets" contenteditable="true"><u>Remove Unused Tilesets</u><br>Removes any Tilesets that haven't been used in the scene or are being used by any objects, including objects that haven't been added to the scene.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/sA6Qqa_W6gA?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="tilesetsMenuCombineTileset" contenteditable="true"><u>Combine Tileset</u><br>If you have duplicate tilesets, you can use this to combine them into one. Tiles and objects that use a tileset being combined, will then use the one after being combined. There is an option to merge the tileset down (the top tileset selected will be over the bottom tileset selected). There is also a choice of whether to discard the bottom tileset or the top tileset, which may be important if you aren't merging them.</li></div>
+				<li id="tilesetsMenuCombineMatchingTilesets" contenteditable="true"><u>Combine Matching Tilesets</u><br>This will combine all the tilesets that match the currently selected tileset so that only one remains. This is useful for removing multiple duplicates of the same tileset.</li>
 			</ul>
 
 			<hr>
@@ -1201,6 +1287,12 @@ h1{
 						
 			<span id="tilesetsMenuApplySelectedFacesContent" contenteditable="true">
 				This will switch the tileset of any selected tiles to the currently selected tileset. It essentially reassigns the tile texture to another texture (the currently selected tileset).
+			</span>
+			
+			<br><br>
+			
+			<span id="tilesetsMenuApplySelectedFacesContent2" contenteditable="true">
+				The <u>Keep UV pixel scale when reassigned tileset</u> setting ensures that the UV coordinates don't become stretched if the tileset dimensions don't match. You can toggle this option on/off by going to Edit > Settings > Tilesets > Keep UV pixel scale when reassigned tileset.
 			</span>
 
 			<br><br clear="right">
@@ -1625,6 +1717,12 @@ h1{
 							Automatically flattens the selected UVs and connects them together edge to edge. Note: Any edges that are currently selected in the 3d scene will be treated as a UV seam and won't be connected.
 						</span>
 					</div>
+					<li id="uvsContextMenuPack" contenteditable="true">Pack</li>
+					<div class="inset">
+						<span id="uvsContextMenuPackDesc" contenteditable="true">
+							Organizes the UVs within the tileset bounds without overlapping any. Connected UVs will stay grouped together. If UVs can't fit within the bounds they will be set outside the bounds.
+						</span>
+					</div>
 					<li id="uvsContextMenuSetToTile" contenteditable="true">Set to tile</li>
 					<div class="inset">
 						<span id="uvsContextMenuSetToTileDesc" contenteditable="true">
@@ -1779,6 +1877,20 @@ h1{
 			
 			<span id="uvsRotatingContent3" contenteditable="true">
 				Hovering over other UVs while hold <u>Shift</u> will snap the angle to that UV coordinate.
+			</span>
+			
+			<span id="uvsScaling" contenteditable="true">
+				<h4>Scaling</h4>
+			</span>
+			
+			<span id="uvsScalingContent" contenteditable="true">
+				To scale the selected UVs via the mouse, hold <u>Shift+Alt</u> and then click and drag one of the resize handles that appears or within a UV tile or one of the UV coordinates. The UV coordinates will be scaled relative to the crosshair position.
+			</span>
+			
+			<br><br>
+			
+			<span id="uvsScalingContent2" contenteditable="true">
+				While scaling, if you continue to hold <u>Shift</u> the increments will be rounded to the pixel, whereas if you release the <u>Shift</u> key, it will be rounded to the UV Precision value.
 			</span>
 			
 			<span id="uvsCrosshair" contenteditable="true">
@@ -2109,6 +2221,11 @@ h1{
 					<img src="docImg/checkered.png" class="lineImage">
 				</div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/tnXMic06CBo?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="paintingDrawingToolsEyeDropper" contenteditable="true"><u>Eyedropper</u> Sample a color from the image and replace current color in the color swatch. Holding alt key while using the other drawing tools will allow you to sample colors without changing to this tool.</li></div>
+				<div class="inset">
+					<span id="paintingDrawingToolsEyeDropperDesc" contenteditable="true">
+						When using this tool, there is a button at the top of the panel that can toggle whether to sample the alpha value or not. If it is disabled, then it will keep the current alpha value while sampling colors.
+					</span>
+				</div>
 			</ul>
 			
 			<hr>
@@ -2318,6 +2435,24 @@ h1{
 			
 			<hr>
  
+			<span id="transformsRandomize" contenteditable="true">
+				<h4>Randomize</h4>
+			</span>
+
+			<a class="video" href="https://www.youtube.com/embed/ZGfKNra_XjA?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+			
+			<span id="transformsRandomizeContent" contenteditable="true">
+				The selected vertices and objects can have their positions translated a randomized amount. Selected objects' rotation and scale can also be randomized. The transform unit type (pixels or meters) applies only to positions.
+			</span>
+
+			<ul>
+				<li id="transformsRandomizeMin" contenteditable="true"><u>Min</u> The minimum x,y,z values the randomized values can have.</li>			
+				<li id="transformsRandomizeMax" contenteditable="true"><u>Max</u> The maximum x,y,z values the randomized values can have.</li>			
+				<li id="transformsRandomizeRounding" contenteditable="true"><u>Rounding</u> The randomized values are rounded to increments of this value.</li>			
+			</ul>
+			
+			<hr>
+ 
 			<span id="transformsCrosshair" contenteditable="true">
 				<h4>Crosshair</h4>
 			</span>
@@ -2490,6 +2625,12 @@ h1{
 						Instances in the scene can be deconstructed into separate tiles again. This may be useful if you want to make a change to an instance without affecting all of the instances. While in Edit mode, select the object instance in the scene. When it is highlighted, right-click to open a context menu and choose Deconstruct Instance.
 					</span>
 				</div>
+				<li id="exportSelectedObjectsContextMenu" contenteditable="true"><u>Export Selected Objects</u></li>
+				<div class="inset">
+					<span id="exportSelectedObjectsContextMenuDesc" contenteditable="true">
+						If you select objects in the 3d scene, you can right click them to open a context-menu and choose <u>Export Selected Objects</u> to open the Export panel and have the selected objects be automatically checkmarked in the list.
+					</span>
+				</div>	
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/LR2FFTx9kHo?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="objectsEditingInstance" contenteditable="true"><u>Editing an Instance</u></li></div>		
 				<div class="inset">
 					<img src="docImg/editobject.png" class="blockImage" align="right" hspace="16" vspace="16">
@@ -2547,7 +2688,14 @@ h1{
 			<span id="objectsNestedInstancesContent" contenteditable="true">
 				Below the Objects list is the Instance list. All of the instances in the scene are listed in this section. You can click and drag instances into other instances to nest them inside each other. This essentially groups them together and allows for more control. When clicking on an instance from the Instance list, it will change the prefab brush to represent the current instance and any nested instances while in Draw mode. This way you can add a group of instances to the scene and maintain the same nesting order! You can toggle between World and Local space when nesting Instances via the button in the lower right of the Scene panel.
 			</span>
-
+			
+			<br><br>
+			
+			<span id="objectsNestedInstancesContent2" contenteditable="true">
+				There is also an option to hide/show the instance list. It is located via the menu button located in the lower right corner of the Scene panel.
+			</span>
+			
+			<br><br>
 			<hr>
 
 			<span id="objectsPoints" contenteditable="true">
@@ -2615,7 +2763,7 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/Fvucx-C3P0o?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="objectsMenuAdd" contenteditable="true"><u>Add to Scene</u></li></div>
 				<div class="inset">
 					<span id="objectsMenuAddDesc" contenteditable="true">
-						This will place an instance of the object at the location of the 3d cursor in the scene without any rotation applied.
+						This will place an instance of the object at the location of the 3d cursor in the scene without any rotation applied. If you are using Tilt mode, you can enable an option in the Settings > Miscellaneous panel to orient it relative to the camera and tilt. 
 					</span>	
 				</div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/EcXw4yG77Ow?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="objectsMenuRename" contenteditable="true"><u>Rename Object</u></li></div>
@@ -2779,7 +2927,7 @@ h1{
 				<li id="instanceListMenuProperties" contenteditable="true"><u>Add to Scene</u></li>
 				<div class="inset">
 					<span id="instanceListMenuAddDesc" contenteditable="true">
-						This will place an instance (including nested instances) at the location of the 3d cursor in the scene without any rotation applied.
+						This will place an instance (including nested instances) at the location of the 3d cursor in the scene without any rotation applied. If you are using Tilt mode, you can enable an option in the Settings > Miscellaneous panel to orient it relative to the camera and tilt.
 					</span>	
 				</div>
 				<li id="instanceListMenuRename" contenteditable="true"><u>Rename Instance</u></li>
@@ -2930,6 +3078,15 @@ h1{
 					<span id="objectsPropertiesBillboardingDesc" contenteditable="true">
 						With Billboarding enabled, instances of the object will always face the camera. You can also choose to lock it to the Y axis, which will make it keep its Y orientation while facing the camera. With this toggled you can rotate the object and it will keep its local Y orientation. When enabling billboarding, it is important to understand that the object should face down the Z axis. If you have tiles facing down a different axis, it may appear invisible when enabled because those will face away from the camera.
 					</span>
+					<ul>
+						<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/3XB4GFrJGF0?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="objectsPropertiesDirectional" contenteditable="true"><u>8 Direction</u></li></div>
+						<div class="inset">
+							<span id="objectsPropertiesDirectionalDesc" contenteditable="true">
+								This setting allows you to change the UV Animation based on the camera angle. You also can choose which directions to use. Simply add the appropriate suffix (_N, _NE, _E, _SE, _S, _SW, _W, _NW) to the end of your UV Animations. When the camera rotates, the UV Animation will automatically change to the appropriate one. Check the video for a more in-depth look at how it all works.
+							</span>
+							<a class="video" href="https://www.youtube.com/embed/3XB4GFrJGF0?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
+						</div>
+					</ul>
 					<br clear="right">
 				</div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/PWObClKJ7Vw?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="objectsPropertiesMirroring" contenteditable="true"><u>Mirroring</u></li></div>
@@ -3164,6 +3321,32 @@ h1{
 					<span id="camerasRenderingSkyboxDesc" contenteditable="true">
 						This property determines if the skybox will be rendered.
 					</span>	
+				</div>
+				<li id="camerasRenderingFrustumAdjustment" contenteditable="true"><u>Frustum Adjustment</u></li>
+				<div class="inset">
+					<span id="camerasRenderingFrustumAdjustmentDesc" contenteditable="true">
+						When rendering an Orthographic camera, this setting can adjust the frustum to help control how the image looks. You can choose between <u>None</u>, <u>Viewport</u>, and <u>Base Pixel Unit</u>.
+					</span>	
+					<ul>
+						<li id="camerasRenderingFrustumAdjustmentNone" contenteditable="true"><u>None</u></li>
+						<div class="inset">
+							<span id="camerasRenderingFrustumAdjustmentNoneDesc" contenteditable="true">
+								No adjustmenst are made. The frustum uses whatever values in the camera's properties. This might result with a stretched image if the frustum dimensions don't share an aspect ratio with the dimensions of the image being rendered.
+							</span>	
+						</div>
+						<li id="camerasRenderingFrustumAdjustmentViewport" contenteditable="true"><u>Viewport</u></li>
+						<div class="inset">
+							<span id="camerasRenderingFrustumAdjustmentViewportDesc" contenteditable="true">
+								The frustum dimensions get altered so that it shares the same aspect ratio with the output image. This ensures the image doesn't look stretched.
+							</span>	
+						</div>
+						<li id="camerasRenderingFrustumAdjustmentBasePixelUnit" contenteditable="true"><u>Base Pixel Unit</u></li>
+						<div class="inset">
+							<span id="camerasRenderingFrustumAdjustmentBasePixelUnitDesc" contenteditable="true">
+								The width and height of the frustum is divided by the Base Pixel Unit amount. This allows the pixels of a tile to appear unscaled when faced directly at the camera. The camera's zoom is also set to 1. A 16x16 pixel tile will appear as 16x16 pixels in the rendered image for example, regardless of the output image dimensions.
+							</span>	
+						</div>
+					</u>
 				</div>
 			</ul>
 			
@@ -3752,6 +3935,12 @@ h1{
 				Alternatively, you can simply press <u>Alt+S</u> to split the tile along the yellow line without using the menu.
 			</span>
 			
+			<br><br>
+			
+			<span id="activeSelectionModeSplittingContent3" contenteditable="true">
+				As of version 2.2.0 you can now just hold <u>Alt+S</u> and <u>Left click</u> tiles to split them without having to be in Active Selection mode.
+			</span>
+			
 			<br clear="right">
 			
 			<span id="activeSelectionModeSubdivide" contenteditable="true">
@@ -3811,7 +4000,7 @@ h1{
 			<br><br>
 			 
 			<span id="animationAnimationContent2" contenteditable="true">
-				On the right side there will be a horizontal bar next to the listed instances that extends across the timeline. The first dropdown box is where the Actions for an instance are listed. To create a new Action, click the gear icon located next to the list. The gear icon provides options to add a new Action, remove an Action, and rename an Action. You can also Copy and Paste an entire Action. When you have created an Action and have it selected, you will then be able to add new Keyframes to the Action. You can use the dropdown boxes towards the right of the bar to select the type of Keyframe and which attributes of the instance it influences. There are plus and minus icons to the right that you can click on to add or remove Keyframes. You can also choose the interpolation type located in the dropdown box in the header of the panel. Keyframes that are added will use the specified interpolation.
+				On the right side there will be a horizontal bar next to the listed instances that extends across the timeline. The first dropdown box is where the Actions for an instance are listed. To create a new Action, click the gear icon located next to the list. The gear icon provides options to add a new Action, remove an Action, and rename an Action. You can also Copy and Paste an entire Action. Above the timeline there are similar menus that allow you to add/remove/rename actions to all the listed entities in one step. When you have created an Action and have it selected, you will then be able to add new Keyframes to the Action. You can use the dropdown boxes towards the right of the bar to select the type of Keyframe and which attributes of the instance it influences. There are plus and minus icons to the right that you can click on to add or remove Keyframes. You can also choose the interpolation type located in the dropdown box in the header of the panel. Keyframes that are added will use the specified interpolation.
 			</span>
 			
 			<br><br>
@@ -3836,6 +4025,12 @@ h1{
 			
 			<br><br>
 			
+			<span id="animationTheatreContent1" contenteditable="true">
+				If you select the <u>*</u> option in the Actor list, this will reference any Actor. This will allow you to play all the Actions with the same name simultaneously regardless of which Actor they belong to. Just choose the name of the Action that you want to play from the Action list and add it to the timeline.
+			</span>
+			
+			<br><br>
+			
 			<span id="animationTheatreContent2" contenteditable="true">
 				Once an Action is added to the Act, you will see it listed in the timeline. You can resize the segment by clicking and dragging the beginning or end of the segment. You can also click and drag the segment itself to reposition it. You can click and drag a marquee selection box around multiple segments and weights to select and move multiple at the same time. Double-clicking the timeline will deselect everything. To the left, the name of the Action is displayed, and there is an eye icon to disable/enable the Action. There is also a loop icon to enable/disable the looping mode. If it is set to loop, the action will loop through the duration of the segment. So to make it loop longer, you would need to extend the length of the segment by clicking and dragging the end of the segment.
 			</span>
@@ -3843,7 +4038,7 @@ h1{
 			<br><br>
 			
 			<span id="animationTheatreActionProperties" contenteditable="true">
-				You can double-click the Action listed to the left of the timeline to open the properties for the specific segment. Here you can change which action gets played during the segment and also set the looping mode. You can also disable/enable the segment from within the properties as well. If the segment represents a UV animation, you can specify which UV animation to play here.
+				You can double-click the Action listed to the left of the timeline to open the properties for the specific segment. Here you can change which action gets played during the segment and also set the looping mode and timescale value. The timescale value allows you to adjust the speed of the action, and you can use negative values to play the action in reverse. You can also disable/enable the segment from within the properties as well. If the segment represents a UV animation, you can specify which UV animation to play here.
 			</span>
 			
 			<span id="animationTheatreWeights" contenteditable="true">
@@ -3950,7 +4145,32 @@ h1{
 						This controls the quality of the files. This doesn't appear to affect the .webm option.
 					</span>
 				</div>
-			
+				<li id="animationMovieFrustumAdjustment" contenteditable="true"><u>Frustum Adjustment</u></li>
+				<div class="inset">
+					<span id="animationMovieFrustumAdjustmentDesc" contenteditable="true">
+						When rendering an Orthographic camera, this setting can adjust the frustum to help control how the image looks. You can choose between <u>None</u>, <u>Viewport</u>, and <u>Base Pixel Unit</u>.
+					</span>	
+					<ul>
+						<li id="animationMovieFrustumAdjustmentNone" contenteditable="true"><u>None</u></li>
+						<div class="inset">
+							<span id="animationMovieFrustumAdjustmentNoneDesc" contenteditable="true">
+								No adjustmenst are made. The frustum uses whatever values in the camera's properties. This might result with a stretched image if the frustum dimensions don't share an aspect ratio with the dimensions of the image being rendered.
+							</span>	
+						</div>
+						<li id="animationMovieFrustumAdjustmentViewport" contenteditable="true"><u>Viewport</u></li>
+						<div class="inset">
+							<span id="animationMovieFrustumAdjustmentViewportDesc" contenteditable="true">
+								The frustum dimensions get altered so that it shares the same aspect ratio with the output image. This ensures the image doesn't look stretched.
+							</span>	
+						</div>
+						<li id="animationMovieFrustumAdjustmentBasePixelUnit" contenteditable="true"><u>Base Pixel Unit</u></li>
+						<div class="inset">
+							<span id="animationMovieFrustumAdjustmentBasePixelUnitDesc" contenteditable="true">
+								The width and height of the frustum is divided by the Base Pixel Unit amount. This allows the pixels of a tile to appear unscaled when faced directly at the camera. The camera's zoom is also set to 1. A 16x16 pixel tile will appear as 16x16 pixels in the rendered image for example, regardless of the output image dimensions.
+							</span>	
+						</div>
+					</u>
+				</div>
 			</ul>
 			
 			<span id="animationFFmpeg" contenteditable="true">
@@ -4021,6 +4241,12 @@ h1{
 			
 			<span id="skinBonesManipulatedContent" contenteditable="true">
 				Bones can be manipulated just like Object Instances can be. You can select them as you would select any instances, and move them with the WASD keys or the Gizmo. You can move, rotate, and scale bones, and they can also be animated just as you would animate an Object Instance.
+			</span>
+			
+			<br><br>
+			
+			<span id="skinBonesHideShow" contenteditable="true">
+				Within the Scene dropdown menu, there is an option to <u>Hide/Show All Bones</u>. This allows you to toggle on/off the rendering of the bones. If you have any instances nested inside bones, those will still be visible.
 			</span>
 			
 			<span id="boneProperties" contenteditable="true">
@@ -4327,6 +4553,12 @@ h1{
 						You can choose between flat or smooth normals. Flat will set all vertex normals to be the same as the face normal. This will give the impression of sharp edges to each polygon. Smooth will average the vertex normals based on all polygon faces connected to that vertex. With Smooth selected you can specify the angle threshold to control which face normals affect the vertex normals. Specify the angle in degrees. If the angle between surfaces are within this angle, the vertex normals will be averaged betweeen them.
 					</span>
 				</div>
+				<li id="exportVertexColorSpace" contenteditable="true"><u>Vertex Color Space</u></li>
+				<div class="inset">
+					<span id="exportVertexColorSpaceDesc" contenteditable="true">
+						The color space for the Vertex colors can be set to either <u>sRGB</u> or <u>Linear</u>. This applies only to the <u>.obj</u> and <u>.dae</u> formats. The <u>.gltf/.glb</u> files store them as Linear based on the standard specifications of that file format.
+					</span>
+				</div>
 				<li id="exportDecalOffset" contenteditable="true"><u>Decal Offset</u></li>
 				<div class="inset">
 					<span id="exportDecalOffsetDesc" contenteditable="true">
@@ -4623,8 +4855,27 @@ h1{
 			
 			<br>
 			
+			<span id="importScenes" contenteditable="true">
+				<h4>Crocotile Scenes</h4>
+			</span>
+			
+			<span id="importScenesContent" contenteditable="true">
+				You can import other crocotile scenes into the currently opened crocotile scene. You can also choose which objects in the scene get imported in-case you do not want to import everything. There are also extra options to help customize what gets imported.
+			</span>
+			
+			<ol>
+				<li id="importSceneStep1" contenteditable="true">Click <u>File</u> on the menubar and select <u>Import Scene</u></li>		
+				<li id="importSceneStep2" contenteditable="true">Select the .crocotile file you want to import and then click open.</li>			
+				<li id="importSceneStep3" contenteditable="true">A panel will appear with options for you to customize the import.</li>			
+				<li id="importSceneStep4" contenteditable="true">When you are ready to import, click the Import button and everything will begin loading into your scene.</li>	
+			</ol>
+			
+			<span id="importModels" contenteditable="true">
+				<h4>Models</h4>
+			</span>
+			
 			<span id="importContent" contenteditable="true">
-				You can import .obj , .gltf , .glb , .dae, and .fbx files. This allows you to take models that have been made in other programs and continue working with them in Crocotile.
+				You can import .obj , .gltf , .glb , .dae, .fbx, and .c3dp files. This allows you to take models that have been made in other programs and continue working with them in Crocotile.
 			</span>
 			
 			<br><br>
