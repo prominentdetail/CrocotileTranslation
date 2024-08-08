@@ -234,6 +234,10 @@ h1{
 				<span id="translationNote2" contenteditable="true">
 					To translate this document click on any text and replace it with your translation. Click <u>Save</u> at the top of the document to export the data. You can import the data you've previously saved by clicking <u>Load</u>.
 				</span>
+				<br>
+				<span id="translationNote2b" contenteditable="true">
+					If you press <u>F8</u>, you can quickly switch between the current language you are editing and English.
+				</span>
 			</div>
 			<span id="translationNote3" contenteditable="true">
 				Place the saved translated file inside the localization folder and then run Crocotile. Open the About panel by going to Help > About, or press F2. Choose the translation from the Language drop down menu.
@@ -771,6 +775,10 @@ h1{
 				ViewCube Viewport Ratio
 			</span>
 			<hr>
+			<span id="settingsBackupFolder" contenteditable="true">
+				Backup folder
+			</span>
+			<hr>
 			<span id="settingsScreenshotFolder" contenteditable="true">
 				Screenshot folder
 			</span>
@@ -897,12 +905,20 @@ h1{
 				Align Brush to Crosshair
 			</span>
 			<br>
+			<span id="settingsRelativeUVSampling" contenteditable="true">
+				Copy/Apply UVs (relative mode)
+			</span>
+			<br>
 			<span id="settingsOrientPrefabToCamera" contenteditable="true">
 				Orient Prefab/Primitive Brush to Camera & Tilt
 			</span>
 			<br>
 			<span id="settingsStickyEdgeProportionate" contenteditable="true">
 				Sticky Edge Proportionate
+			</span>
+			<br>
+			<span id="tileBrushTransparent" contenteditable="true">
+				Use Transparent mode for Tilebrush
 			</span>
 			
 			<h4><span id="settingsEditMode" contenteditable="true">
@@ -964,6 +980,10 @@ h1{
 				Overlapped Vertex Selection
 			</span>
 			<br>
+			<span id="autoFlattenUVs" contenteditable="true">
+				Auto-Flatten UVs when editing Vertices
+			</span>
+			<br>
 			<span id="settingsSelectedFaceColor" contenteditable="true">
 				Selected Face Color
 			</span>
@@ -987,12 +1007,20 @@ h1{
 				Auto refresh Tilesets
 			</span>
 			<br>
+			<span id="settingsLinkExportedTilesets" contenteditable="true">
+				Link exported Tilesets
+			</span>
+			<br>
 			<span id="settingsDragMultipleUVs" contenteditable="true">
 				Drag Multiple UVs
 			</span>
 			<br>
 			<span id="settingsRestrictToCurrentTileset" contenteditable="true">
 				Hide UVs of non-active Tilesets
+			</span>
+			<br>
+			<span id="settingsShowUnselectedUVs" contenteditable="true">
+				Show UVs of unselected tiles
 			</span>
 			<br>
 			<span id="settingsDeselectUVsWithSingleClick" contenteditable="true">
@@ -1027,13 +1055,29 @@ h1{
 				Checkered Size
 			</span>
 			<br>
+			<span id="settingsPaintingRightMouseFunction" contenteditable="true">
+				Painting Right-Mouse Function
+			</span>
+			<br>
+			<span id="secondaryColor" contenteditable="true">
+				Secondary Color
+			</span>
+			<br>
 			<span id="settingsEyedropAlphaColor" contenteditable="true">
 				Eyedrop Alpha Color
 			</span>
 			<br>
 			
+			<span id="settingsImportScale" contenteditable="true">
+				Import Scale (non-native files)
+			</span>
+			<br>
 			<span id="settingsAddToSceneTilted" contenteditable="true">
 				Add To Scene based on Camera and Tilt
+			</span>
+			<br>
+			<span id="keepInstanceNamesUnique" contenteditable="true">
+				Keep Instance Names Unique
 			</span>
 			<br>
 			<span id="autoKeyPausedOnly" contenteditable="true">
@@ -1396,6 +1440,14 @@ h1{
 				Backfaces
 			</span>
 			<br>
+			<span id="castAgainst" contenteditable="true">
+				Cast Against
+			</span>
+			<br>
+			<span id="tilesAndObjects" contenteditable="true">
+				Tiles & Objects
+			</span>
+			<br>
 			<span id="mode" contenteditable="true">
 				Mode
 			</span>
@@ -1485,6 +1537,10 @@ h1{
 			<br>
 			<span id="addSelectedTilesToNewTileset" contenteditable="true">
 				Add selected tiles to new Tileset
+			</span>
+			<br>
+			<span id="cloneTileset" contenteditable="true">
+				Clone Tileset
 			</span>
 			<br>
 			<span id="tilesetMaterialSettings" contenteditable="true">
@@ -1830,6 +1886,14 @@ h1{
 				Flip
 			</span>
 			<br>
+			<span id="mirrorSeparately" contenteditable="true">
+				Mirror Separately
+			</span>
+			<br>
+			<span id="flipSeparately" contenteditable="true">
+				Flip Separately
+			</span>
+			<br>
 			<span id="rotateLeft" contenteditable="true">
 				Rotate Left
 			</span>
@@ -1966,6 +2030,10 @@ h1{
 				3d
 			</span>
 			<br>
+			<span id="selectTilesUvsContainMouse" contenteditable="true">
+				Select tiles (UVs contain mouse position)
+			</span>
+			<br>
 			<span id="deselectTilesUvsSelected" contenteditable="true">
 				Deselect tiles (UVs selected)
 			</span>
@@ -1980,6 +2048,14 @@ h1{
 			<br>
 			<span id="deselectAll" contenteditable="true">
 				Deselect All
+			</span>
+			<br>
+			<span id="selectAllSpecific" contenteditable="true">
+				Select All (specific)
+			</span>
+			<br>
+			<span id="deselectAllSpecific" contenteditable="true">
+				Deselect All (specific)
 			</span>
 			<br>
 			<span id="exportUVMap" contenteditable="true">
@@ -2645,6 +2721,34 @@ h1{
 				Properties
 			</span>
 			<div class="inset">			
+				<span id="audioProperties" contenteditable="true">
+					Audio Properties
+				</span>	
+				<br>		
+				<span id="duration" contenteditable="true">
+					Duration
+				</span>
+				<br>		
+				<span id="volume" contenteditable="true">
+					Volume
+				</span>	
+				<br>		
+				<span id="timelineStart" contenteditable="true">
+					Timeline Start
+				</span>	
+				<br>		
+				<span id="enableDisableAudio" contenteditable="true">
+					Enable/Disable Audio
+				</span>	
+				<br>		
+				<span id="renameAudio" contenteditable="true">
+					Rename Audio
+				</span>	
+				<br>		
+				<span id="removeAudio" contenteditable="true">
+					Remove Audio
+				</span>	
+				<br>	
 				<span id="lightProperties" contenteditable="true">
 					Light Properties
 				</span>	
@@ -2882,6 +2986,10 @@ h1{
 				Duplicate
 			</span>
 			<br>
+			<span id="duplicateAll" contenteditable="true">
+				Duplicate All
+			</span>
+			<br>
 			<span id="removeInstance" contenteditable="true">
 				Remove Instance
 			</span>
@@ -2923,6 +3031,10 @@ h1{
 				Animation
 			</span></h2>
 			
+			<span id="animations" contenteditable="true">
+				Animations
+			</span>
+			<br>
 			<span id="backToBeginning" contenteditable="true">
 				Back to the Beginning
 			</span>
@@ -3060,6 +3172,18 @@ h1{
 				Ease In Out Cubic
 			</span>
 			<br>
+			<span id="easeInSine" contenteditable="true">
+				Ease In Sine
+			</span>
+			<br>
+			<span id="easeOutSine" contenteditable="true">
+				Ease Out Sine
+			</span>
+			<br>
+			<span id="easeInOutSine" contenteditable="true">
+				Ease In Out Sine
+			</span>
+			<br>
 			<span id="action" contenteditable="true">
 				Action
 			</span>
@@ -3079,6 +3203,14 @@ h1{
 			<br>
 			<span id="pasteKeyframes" contenteditable="true">
 				Paste Keyframes
+			</span>
+			<br>
+			<span id="posrot" contenteditable="true">
+				Pos/Rot
+			</span>
+			<br>
+			<span id="posrotsca" contenteditable="true">
+				Pos/Rot/Sca
 			</span>
 			<br>
 			
@@ -3252,6 +3384,10 @@ h1{
 			<span id="binding_selectAllObjects_Desc" contenteditable="true">Select all object instances.</span><br>
 			<span id="binding_selectEdgeLoop" contenteditable="true">Select Edge Loop</span><br>
 			<span id="binding_selectEdgeLoop_Desc" contenteditable="true">Select any open edges that connect with the currently selected edges.</span><br>
+			<span id="binding_mergeEdgeSafe" contenteditable="true">Merge Edges (safe)</span><br>
+			<span id="binding_mergeEdgeSafe_Desc" contenteditable="true">Merge together two overlapping edges so that two tiles become one. The UVs of the overlapping vertices must match.</span><br>
+			<span id="binding_mergeEdgeForced" contenteditable="true">Merge Edges (forced)</span><br>
+			<span id="binding_mergeEdgeForced_Desc" contenteditable="true">Merge together two overlapping edges so that two tiles become one. Merges even if UVs of overlapping vertices do not match.</span><br>
 			<span id="binding_selectUVGroupFaces" contenteditable="true">Select Faces in same UV group</span><br>
 			<span id="binding_selectUVGroupFaces_Desc" contenteditable="true">Select any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</span><br>
 			<span id="binding_deselectUVGroupFaces" contenteditable="true">Deselect Faces in same UV group</span><br>
@@ -3268,6 +3404,8 @@ h1{
 			<span id="binding_selectFaceVertex_Desc" contenteditable="true">Select any vertices that connect with the currently selected faces. First time selects only vertices that belong to the same tile. Second time selects any vertices that do not belong to the same tile.</span><br>
 			<span id="binding_deselectFaceVertex" contenteditable="true">Deselect Vertices connected to Faces</span><br>
 			<span id="binding_deselectFaceVertex_Desc" contenteditable="true">Deselect any vertices that connect with the currently selected faces. First time deselects only vertices that belong to the same tile. Second time deselects any vertices that do not belong to the same tile.</span><br>
+			<span id="binding_selectOverlappingFaces" contenteditable="true">Select Overlapping Faces</span><br>
+			<span id="binding_selectOverlappingFaces_Desc" contenteditable="true">Select tiles that overlap and are facing the same direction but will also leave one of the tiles unselected so that you can remove the extras easily.</span><br>
 			<span id="binding_selectFFCAxis" contenteditable="true">Select Faces Facing Camera Axis</span><br>
 			<span id="binding_selectFFCAxis_Desc" contenteditable="true">Select any faces that face towards the camera along the nearest cardinal direction.</span><br>
 			<span id="binding_deselectFFCAxis" contenteditable="true">Deselect Faces Facing Camera Axis</span><br>
@@ -3503,12 +3641,12 @@ h1{
 			<span id="binding_nearestVert" contenteditable="true">Select Nearest Vertex</span><br>
 			<span id="binding_nearestVert_Desc" contenteditable="true">Hold this key down and click on a tile. It will select the nearest vertex belonging to that tile.</span><br>
 			<span id="binding_vertSnap" contenteditable="true">Vertex Snapping</span><br>
-			<span id="binding_vertSnap_Desc" contenteditable="true">Hold this key when dragging a single vertex to snap it to nearby vertices.</span><br>
+			<span id="binding_vertSnap_Desc" contenteditable="true">Hold this key when dragging a single vertex to snap it to nearby vertices. You can also use the Gizmo to snap a whole selection.</span><br>
 			<span id="binding_hollowVert" contenteditable="true">Hollow Vertex</span><br>
 			<span id="binding_hollowVert_Desc" contenteditable="true">Hold this key and click a vertex to reposition the crosshair without the vertex being selected.</span><br>
-			<span id="binding_disableFaceSelection" contenteditable="true">Disable Face Selection</span><br>
-			<span id="binding_disableVertexSelection" contenteditable="true">Disable Vertex Selection</span><br>
-			<span id="binding_disableEdgeSelection" contenteditable="true">Disable Edge Selection</span><br>
+			<span id="binding_disableFaceSelection" contenteditable="true">Disable/Enable Face Selection</span><br>
+			<span id="binding_disableVertexSelection" contenteditable="true">Disable/Enable Vertex Selection</span><br>
+			<span id="binding_disableEdgeSelection" contenteditable="true">Disable/Enable Edge Selection</span><br>
 			<span id="binding_disableFaceSelection_Desc" contenteditable="true">Toggle the ability to select faces.</span><br>
 			<span id="binding_disableVertexSelection_Desc" contenteditable="true">Toggle the ability to select vertices.</span><br>
 			<span id="binding_disableEdgeSelection_Desc" contenteditable="true">Toggle the ability to select edges.</span><br>
@@ -3600,6 +3738,10 @@ h1{
 			<span id="binding_paintSelectedVertexColors_Desc" contenteditable="true">Paint the selected vertices with the current paint color.</span><br>
 			<span id="binding_eraseSelectedVertexColors" contenteditable="true">Erase Selected Vertex Colors</span><br>
 			<span id="binding_eraseSelectedVertexColors_Desc" contenteditable="true">Erase the vertex colors of the selected vertices.</span><br>
+			<span id="binding_selectUsingVertexColor" contenteditable="true">Select Vertices using current Color</span><br>
+			<span id="binding_selectUsingVertexColor_Desc" contenteditable="true">Select all vertices that use the current paint color.</span><br>
+			<span id="binding_deselectUsingVertexColor" contenteditable="true">Deselect Vertices using current Color</span><br>
+			<span id="binding_deselectUsingVertexColor_Desc" contenteditable="true">Deselect all vertices that use the current paint color.</span><br>
 			<span id="binding_toggleObjectMode" contenteditable="true">Toggle Object Mode</span><br>
 			<span id="binding_toggleObjectMode_Desc" contenteditable="true">Toggle on/off Object mode.</span><br>
 			<span id="binding_toggleActiveMode" contenteditable="true">Toggle Active Mode</span><br>
@@ -3622,6 +3764,8 @@ h1{
 			<span id="binding_adjustVertexUVLeftOne_Desc" contenteditable="true">Shift UVs of selected vertices left a pixel.</span><br>
 			<span id="binding_adjustVertexUVRightOne" contenteditable="true">Move Vertex UVs Right a Pixel</span><br>
 			<span id="binding_adjustVertexUVRightOne_Desc" contenteditable="true">Shift UVs of selected vertices right a pixel.</span><br>
+			<span id="binding_toggleAutoFlatten" contenteditable="true">Toggle Auto Flatten</span><br>
+			<span id="binding_toggleAutoFlatten_Desc" contenteditable="true">When enabled, the UVs will be auto flattened when vertices are transformed. The UVs will expand or contract to match the shape of the tile.</span><br>
 			<span id="binding_createObject" contenteditable="true">Create Object</span><br>
 			<span id="binding_createObject_Desc" contenteditable="true">Group together the selected tiles into their own Object.</span><br>
 			<span id="binding_addToScene" contenteditable="true">Add to Scene</span><br>
@@ -3630,6 +3774,8 @@ h1{
 			<span id="binding_deconstructInstance_Desc" contenteditable="true">Deconstruct the selected object instance into separate tiles.</span><br>
 			<span id="binding_duplicateInstances" contenteditable="true">Duplicate Instances</span><br>
 			<span id="binding_duplicateInstances_Desc" contenteditable="true">Duplicate the selected object instances.</span><br>
+			<span id="binding_instanceToCrosshair" contenteditable="true">Move Instance to Crosshair</span><br>
+			<span id="binding_instanceToCrosshair_Desc" contenteditable="true">Moves the selected Object Instance to the current position of the 3d crosshair.</span><br>
 			<span id="binding_originToCrosshair" contenteditable="true">Move Origin to Crosshair</span><br>
 			<span id="binding_originToCrosshair_Desc" contenteditable="true">Moves the Origin point of the selected Object to the current position of the 3d crosshair.</span><br>
 			
@@ -3674,6 +3820,10 @@ h1{
 			<span id="binding_uvs_Mirror_Desc" contenteditable="true">Mirror the selected UVs</span><br>
 			<span id="binding_uvs_Flip" contenteditable="true">Flip</span><br>
 			<span id="binding_uvs_Flip_Desc" contenteditable="true">Flip the selected UVs</span><br>
+			<span id="binding_uvs_MirrorSeparately" contenteditable="true">Mirror Separately</span><br>
+			<span id="binding_uvs_MirrorSeparately_Desc" contenteditable="true">Mirrors each individual selected UV part separately instead of as a group.</span><br>
+			<span id="binding_uvs_FlipSeparately" contenteditable="true">Flip Separately</span><br>
+			<span id="binding_uvs_FlipSeparately_Desc" contenteditable="true">Flips each individual selected UV part separately instead of as a group.</span><br>
 			<span id="binding_uvs_RotateLeft" contenteditable="true">Rotate Left</span><br>
 			<span id="binding_uvs_RotateLeft_Desc" contenteditable="true">Rotate the selected UVs counter-clockwise.</span><br>
 			<span id="binding_uvs_RotateRight" contenteditable="true">Rotate Right</span><br>
@@ -3745,6 +3895,8 @@ h1{
 			<span id="binding_painting_RotateLeft_Desc" contenteditable="true">Rotate the selection counter-clockwise.</span><br>
 			<span id="binding_painting_RotateRight" contenteditable="true">Rotate Right</span><br>
 			<span id="binding_painting_RotateRight_Desc" contenteditable="true">Rotate the selection clockwise.</span><br>
+			<span id="binding_painting_SelectAll" contenteditable="true">Select All</span><br>
+			<span id="binding_painting_SelectAll_Desc" contenteditable="true">Select the whole canvas.</span><br>
 			<span id="binding_painting_Deselect" contenteditable="true">Deselect</span><br>
 			<span id="binding_painting_Deselect_Desc" contenteditable="true">Deselect the selection.</span><br>
 			<span id="binding_painting_Cut" contenteditable="true">Cut</span><br>
@@ -3924,6 +4076,9 @@ elementsArray.forEach(function(elem) {
 document.getElementById('inputfile').addEventListener('change', function() { 	  
 	var fr = new FileReader(); 
 	fr.onload = function(){ 
+		//save first
+		language.selectElem.dispatchEvent(new Event('change'));
+		
 		//document.getElementById('output').textContent=fr.result; 
 		//console.log(fr.result);
 		var name = "Translation_"+(language.data.length+1);
@@ -3968,6 +4123,24 @@ document.getElementById('inputfile').addEventListener('change', function() {
 	  
 	fr.readAsText(this.files[0]); 
 	this.value = '';	//reset the input value so we can load the same file again if we need to.
+});
+
+let f8index = 0;
+document.addEventListener("keydown", e => {
+	if(e.key === "F8") {
+		
+		if( language.selectElem.options[0].selected && f8index < language.selectElem.options.length ){
+			language.selectElem.options[f8index].selected = 'selected';
+			language.selectElem.dispatchEvent(new Event('change'));
+		}else{
+			f8index = language.currentIndex;
+			language.selectElem.options[0].selected = 'selected';
+			language.selectElem.dispatchEvent(new Event('change'));
+		}
+		
+		// Suppress default behaviour 
+		e.preventDefault()
+	}
 });
 
 var textFile = null,

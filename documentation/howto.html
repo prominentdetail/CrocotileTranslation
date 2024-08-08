@@ -232,10 +232,11 @@ h1{
 			<a id="glossaryobjects" href="#anchorobjects">Objects</a><br>
 			<a id="glossarycameras" href="#anchorcameras">Cameras</a><br>
 			<a id="glossarylightsandshadows" href="#anchorlightsandshadows">Lights and Shadows</a><br>
-			<a id="glossarylayers" href="#anchorbakedlighting">Bake Lighting</a><br>
+			<a id="glossarybakedlighting" href="#anchorbakedlighting">Bake Lighting</a><br>
 			<a id="glossarylayers" href="#anchorlayers">Layers</a><br>
 			<a id="glossaryeffects" href="#anchoreffects">Effects</a><br>
 			<a id="glossaryactiveSelectionMode" href="#anchoractiveselectionmode">Active Selection Mode</a><br>
+			<a id="glossaryaudio" href="#anchoraudio">Audio</a><br>
 			<a id="glossaryanimation" href="#anchoranimation">Animation</a><br>
 			<a id="glossaryskinning" href="#anchorskinning">Skinning & Rigging</a><br>
 			<a id="glossaryexport" href="#anchorexport">Exporting</a><br>
@@ -273,6 +274,10 @@ h1{
 			<div class="inset">
 				<span id="translationNote2" contenteditable="true">
 					To translate this document click on any text and replace it with your translation. Click <u>Save</u> at the top of the document to export the data. You can import the data you've previously saved by clicking <u>Load</u>.
+				</span>
+				<br>
+				<span id="translationNote2b" contenteditable="true">
+					If you press <u>F8</u>, you can quickly switch between the current language you are editing and English.
 				</span>
 			</div>
 		</div>
@@ -747,38 +752,45 @@ h1{
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/Wal6akWzvLY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeShiftClickDragVertex" contenteditable="true"><u>Shift+Click drag Vertex</u> Snap dragged vertex to another vertex. You can also perform this operation with the Gizmo to snap an entire selection. You can also snap to the nearest vertex on an object being hovered over.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/V_r2I8I2BiQ?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeB" contenteditable="true"><u>B</u> Toggle camera-based selection</li></div>
 				<li id="editMode8" contenteditable="true"><u>8</u> Select vertices along the x,y,z axis. You can customize the key-bindings for each axis in the buttons settings.</li>
+				<li id="editSelectVerticesUsingCurrentColor" contenteditable="true"><b><i>Select Vertices using current Color: </i></b><u>Unassigned</u> Select all vertices that use the current paint color.</li>
+				<li id="editDeselectVerticesUsingCurrentColor" contenteditable="true"><b><i>Deselect Vertices using current Color: </i></b><u>Unassigned</u> Deselect all vertices that use the current paint color.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/GzGGFCTAAIY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeBakeLighting" contenteditable="true"><u>Alt+B</u> Open the Bake Lighting panel that is used for baking the lighting/ambient occlusion to the selected vertex colors.</li></div>
 				<li id="editModeLookAtCrosshair" contenteditable="true"><u>L</u> Point any selected Instances or Entities at the current Crosshair position.</li>
 				<li id="editModeOPixel" contenteditable="true"><u>O</u> Realign the selected vertices/faces/objects or any other entity to the nearest pixel (equal to a grid-rounding value of one).</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/ygEhxej3hUY?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeO" contenteditable="true"><u>Ctrl+O</u> Realign the selected vertices/faces/objects or any other entity to the grid using the current grid-rounding value.</li></div>
-				<li id="editModeDisableFaceSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select faces.</li>
-				<li id="editModeDisableVertSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select vertices.</li>
-				<li id="editModeDisableEdgeSelection" contenteditable="true"><u>Unassigned</u> Disable/enable the ability to select edges.</li>
-				<li id="editModeEdgeLoop" contenteditable="true"><u>Unassigned</u> Select Edge Loop. Select any open edges that connect with the currently selected edges.</li>
-				<li id="editVertexFace" contenteditable="true"><u>Unassigned</u> Select faces connected to currently selected vertices.</li>
-				<li id="editVertexFace2" contenteditable="true"><u>Unassigned</u> Deselect faces connected to currently selected vertices.</li>
-				<li id="editSelectFacesFacing" contenteditable="true"><u>Unassigned</u> Select faces facing camera axis. This will select faces that face along the nearest cardinal direction closest to the camera.</li>
-				<li id="editSelectFacesFacing2" contenteditable="true"><u>Unassigned</u> Deselect faces facing camera axis. This will deselect faces that face along the nearest cardinal direction closest to the camera.</li>
-				<li id="editSelectWithinNormalRange" contenteditable="true"><u>Unassigned</u> Select within Face Normal range. This will select all faces connecting together, beginning with the currently selected faces, as long as their face normals are within range of each other (specified by the "Rotation angle" in the Tileset panel).</li>
-				<li id="editSelectWithinNormalRange2" contenteditable="true"><u>Unassigned</u> Deselect within Face Normal range. This will deselect all faces connecting together, beginning with the face you last hovered over, as long as their face normals are within range of each other (specified by the "Rotation angle" in the Tileset panel).</li>
-				<li id="editSelectFaceSameUVGroup" contenteditable="true"><u>Unassigned</u> Select Faces in same UV group. This will select any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
-				<li id="editSelectFaceSameUVGroup2" contenteditable="true"><u>Unassigned</u> Deselect Faces in same UV group. This will deselect any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
-				<li id="editSelectTilesUsingTileset" contenteditable="true"><u>Unassigned</u> Select tile Faces that use the currently selected Tileset.</li>
-				<li id="editDeselectTilesUsingTileset" contenteditable="true"><u>Unassigned</u> Deselect tile Faces that use the currently selected Tileset.</li>
-				<li id="editSelectTileUVs" contenteditable="true"><u>Unassigned</u> Select the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
-				<li id="editDeselectTileUVs" contenteditable="true"><u>Unassigned</u> Deselect the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
-				<li id="editDivideTriangles" contenteditable="true"><u>Unassigned</u> Divide a tile into two triangles. Each triangle is a single tile with one side collapsed.</li>
-				<li id="editMergeTrianglesSafe" contenteditable="true"><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. The UVs of the overlapping vertices must match.</li>
-				<li id="editMergeTrianglesForced" contenteditable="true"><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. Merges even if UVs of overlapping vertices do not match.</li>
-				<li id="editSelectTriangles" contenteditable="true"><u>Unassigned</u> Select any triangular tiles.</li>
-				<li id="editFaceVertex" contenteditable="true"><u>Unassigned</u> Select vertices connected to currently selected faces.</li>
-				<li id="editFaceVertex2" contenteditable="true"><u>Unassigned</u> Deselect vertices connected to currently selected faces.</li>
-				<li id="editModeHideShowTiles" contenteditable="true"><u>Unassigned</u> Hide or Show the selected tiles. This can also be accessed in the context-menu; Faces > Hide, Show.</li>
-				<li id="editModeCreateObject" contenteditable="true"><u>Unassigned</u> Group together the selected tiles into their own Object. Object will also be listed in the Scene panel. Check the Objects section of this documentation for more information.</li>
-				<li id="editModeAddToScene" contenteditable="true"><u>Unassigned</u> Adds the selected Object or Instance to the scene at the position of the 3d crosshair. The Object/Instance must be selected in the Scene panel list.</li>
-				<li id="editModeDeconstructInstance" contenteditable="true"><u>Unassigned</u> Deconstruct the selected Instance in the 3d scene back into individual tiles.</li>
-				<li id="editModeDuplicateInstances" contenteditable="true"><u>Unassigned</u> Duplicate the selected Instances.</li>
-				<li id="editModeMoveOriginToCrosshair" contenteditable="true"><u>Unassigned</u> Take the Origin point of a selected Object or an Object being edited and move it to the current position of the 3d crosshair.</li>
+				<li id="editModeDisableFaceSelection" contenteditable="true"><b><i>Disable Face Selection: </i></b><u>Unassigned</u> Disable/enable the ability to select faces.</li>
+				<li id="editModeDisableVertSelection" contenteditable="true"><b><i>Disable Vertex Selection: </i></b><u>Unassigned</u> Disable/enable the ability to select vertices.</li>
+				<li id="editModeDisableEdgeSelection" contenteditable="true"><b><i>Disable Edge Selection: </i></b><u>Unassigned</u> Disable/enable the ability to select edges.</li>
+				<li id="editModeEdgeLoop" contenteditable="true"><b><i>Select Edge Loop: </i></b><u>Unassigned</u> Select any open edges that connect with the currently selected edges.</li>
+				<li id="editModeMergeEdgeSafe" contenteditable="true"><b><i>Merge Edge (safe): </i></b><u>Unassigned</u> Merge together two overlapping edges so that two tiles become one. The UVs of the overlapping vertices must match.</li>
+				<li id="editModeMergeEdgeSafe" contenteditable="true"><b><i>Merge Edge (forced): </i></b><u>Unassigned</u> Merge together two overlapping edges so that two tiles become one. Merges even if UVs of overlapping vertices do not match.</li>
+				<li id="editVertexFace" contenteditable="true"><b><i>Select Faces connected to Vertices: </i></b><u>Unassigned</u> Select faces connected to currently selected vertices.</li>
+				<li id="editVertexFace2" contenteditable="true"><b><i>Deselect Faces connected to Vertices: </i></b><u>Unassigned</u> Deselect faces connected to currently selected vertices.</li>
+				<li id="editFaceVertex" contenteditable="true"><b><i>Select Vertices connected to Faces: </i></b><u>Unassigned</u> Select vertices connected to currently selected faces.</li>
+				<li id="editFaceVertex2" contenteditable="true"><b><i>Deselect Vertices connected to Faces: </i></b><u>Unassigned</u> Deselect vertices connected to currently selected faces.</li>
+				<li id="editSelectOverlappingFaces" contenteditable="true"><b><i>Select Overlapping Faces: </i></b><u>Unassigned</u> This will select tiles that overlap and are facing the same direction but will also leave one of the tiles unselected so that you can easily remove the extras.</li>
+				<li id="editSelectFacesFacing" contenteditable="true"><b><i>Select Faces facing Camera Axis: </i></b><u>Unassigned</u> This will select faces that face along the nearest cardinal direction closest to the camera.</li>
+				<li id="editSelectFacesFacing2" contenteditable="true"<b><i>Deselect Faces facing Camera Axis: </i></b>><u>Unassigned</u> This will deselect faces that face along the nearest cardinal direction closest to the camera.</li>
+				<li id="editSelectWithinNormalRange" contenteditable="true"><b><i>Select within Face Normal range: </i></b><u>Unassigned</u> This will select all faces connecting together, beginning with the currently selected faces, as long as their face normals are within range of each other (specified by the "Rotation angle" in the Tileset panel).</li>
+				<li id="editSelectWithinNormalRange2" contenteditable="true"><b><i>Deselect within Face Normal range: </i></b><u>Unassigned</u> This will deselect all faces connecting together, beginning with the face you last hovered over, as long as their face normals are within range of each other (specified by the "Rotation angle" in the Tileset panel).</li>
+				<li id="editSelectFaceSameUVGroup" contenteditable="true"><b><i>Select Faces in same UV group: </i></b><u>Unassigned</u> This will select any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
+				<li id="editSelectFaceSameUVGroup2" contenteditable="true"><b><i>Deselect Faces in same UV group: </i></b><u>Unassigned</u> Deselect Faces in same UV group. This will deselect any faces that are in the same UV groups as the currently selected faces and if none are selected then the face currently hovered over.</li>
+				<li id="editSelectTilesUsingTileset" contenteditable="true"><b><i>Select Tiles using current Tileset: </i></b><u>Unassigned</u> Select tile Faces that use the currently selected Tileset.</li>
+				<li id="editDeselectTilesUsingTileset" contenteditable="true"><b><i>Deselect Tiles using current Tileset: </i></b><u>Unassigned</u> Deselect tile Faces that use the currently selected Tileset.</li>
+				<li id="editSelectTileUVs" contenteditable="true"><b><i>Select Tile UVs: </i></b><u>Unassigned</u> Select the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
+				<li id="editDeselectTileUVs" contenteditable="true"><b><i>Deselect Tile UVs: </i></b><u>Unassigned</u> Deselect the UVs of a tile hovered over. The tile's face must first be selected so that the UVs are shown in the UVs panel.</li>
+				<li id="editDivideTriangles" contenteditable="true"><b><i>Triangle Divide: </i></b><u>Unassigned</u> Divide a tile into two triangles. Each triangle is a single tile with one side collapsed.</li>
+				<li id="editMergeTrianglesSafe" contenteditable="true"><b><i>Triangle Merge (safe): </i></b><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. The UVs of the overlapping vertices must match.</li>
+				<li id="editMergeTrianglesForced" contenteditable="true"><b><i>Triangle Merge (forced): </i></b><u>Unassigned</u> Merge together triangular tiles so that two triangles become one tile. Merges even if UVs of overlapping vertices do not match.</li>
+				<li id="editSelectTriangles" contenteditable="true"><b><i>Select Triangular Tiles: </i></b><u>Unassigned</u> Select any triangular tiles.</li>
+				<li id="editModeHideTiles" contenteditable="true"><b><i>Hide Tiles: </i></b><u>Unassigned</u> Hide the selected tiles. This can also be accessed in the context-menu; Faces > Hide.</li>
+				<li id="editModeShowTiles" contenteditable="true"><b><i>Show Tiles: </i></b><u>Unassigned</u> Show any hidden tiles. This can also be accessed in the context-menu; Faces > Show.</li>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/wTo-3lQ007M?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="editModeToggleAutoFlatten" contenteditable="true"><b><i>Toggle Auto Flatten: </i></b><u>Unassigned</u> When enabled, the UVs will be auto flattened when vertices are transformed. The UVs will expand or contract to match the shape of the tile.</li></div>
+				<li id="editModeCreateObject" contenteditable="true"><b><i>Create Object: </i></b><u>Unassigned</u> Group together the selected tiles into their own Object. Object will also be listed in the Scene panel. Check the Objects section of this documentation for more information.</li>
+				<li id="editModeAddToScene" contenteditable="true"><b><i>Add to Scene: </i></b><u>Unassigned</u> Adds the selected Object or Instance to the scene at the position of the 3d crosshair. The Object/Instance must be selected in the Scene panel list.</li>
+				<li id="editModeDeconstructInstance" contenteditable="true"><b><i>Deconstruct Instance: </i></b><u>Unassigned</u> Deconstruct the selected Instance in the 3d scene back into individual tiles.</li>
+				<li id="editModeDuplicateInstances" contenteditable="true"><b><i>Duplicate Instances: </i></b><u>Unassigned</u> Duplicate the selected Instances.</li>
+				<li id="editModeMoveOriginToCrosshair" contenteditable="true"><b><i>Move Origin to Crosshair: </i></b><u>Unassigned</u> Take the Origin point of a selected Object or an Object being edited and move it to the current position of the 3d crosshair.</li>
 			</ul>
 			
 			<a class="video" href="https://www.youtube.com/embed/ijYxLGE3los?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
@@ -791,6 +803,12 @@ h1{
 			
 			<span id="editModeSelectTriangular" contenteditable="true">
 				You can select all triangular tiles by opening the context-menu, and going to Faces > Select triangular tiles. This will select any tiles that have one or more of their polygons hidden. This may be useful in cases where you export the scene with polygon type set to Quads and Merge Vertices enabled, as triangular tiles could mess up the export in that case.
+			</span>
+			
+			<br><br clear="right">		
+			
+			<span id="editModeSelectOverlappedFaces" contenteditable="true">
+				You can select all overlapping tiles by opening the context-menu, and going to Faces > Select > Select Overlapping Faces. This will select tiles that overlap and are facing the same direction but will also leave one of the tiles unselected. This is useful if you accidentally create duplicate tiles and need to remove the duplicates.
 			</span>
 			
 			<br><br clear="right">		
@@ -873,6 +891,8 @@ h1{
 				<li id="uvCommandsCtrlAltClickDrag" contenteditable="true"><u>Alt or Ctrl+Alt+Click drag</u> Subtract marquee UV coordinates without dragging/clicking UV tiles in the UVs panel</li>
 				<li id="uvCommandsR" contenteditable="true"><u>R</u> Mirror</li>
 				<li id="uvCommandsF" contenteditable="true"><u>F</u> Flip</li>
+				<li id="uvCommandsAltR" contenteditable="true"><u>Alt+R</u> Mirror Separately</li>
+				<li id="uvCommandsAltF" contenteditable="true"><u>Alt+F</u> Flip Separately</li>
 				<li id="uvCommandsQ" contenteditable="true"><u>Q</u> Rotate left</li>
 				<li id="uvCommandsE" contenteditable="true"><u>E</u> Rotate right</li>
 				<li id="uvCommandsB" contenteditable="true"><u>B</u> Toggle between singular/multiple UV selections</li>
@@ -925,6 +945,8 @@ h1{
 				<li id="paintCommandsCtrlX" contenteditable="true"><u>Ctrl+X</u> Cut Selection</li>
 				<li id="paintCommandsCtrlC" contenteditable="true"><u>Ctrl+C</u> Copy Selection</li>
 				<li id="paintCommandsCtrlV" contenteditable="true"><u>Ctrl+V</u> Paste Selection</li>
+				<li id="paintCommandsCtrlV" contenteditable="true"><u>Ctrl+A</u> Select All</li>
+				<li id="paintCommandsCtrlV" contenteditable="true"><u>Ctrl+D</u> Deselect Selection</li>
 				<li id="paintCommandsR" contenteditable="true"><u>R</u> Mirror Selection</li>
 				<li id="paintCommandsF" contenteditable="true"><u>F</u> Flip Selection</li>
 				<li id="paintCommandsRotateLeft" contenteditable="true"><u>Unassigned</u> Rotate the selection counter-clockwise</li>
@@ -1012,6 +1034,7 @@ h1{
 				<li id="settingsGeneralWindowSize" contenteditable="true"><u>Window Size</u><br>Setting these values will adjust the size of the main window. Close the settings to apply the changes.</li>
 				<li id="settingsGeneralFPS" contenteditable="true"><u>FPS</u><br>The value you set here will determine how many frames get rendered per second. A higher FPS will make the scene appear smoother when moving around the scene.</li>
 				<li id="settingsGeneralColorTheme" contenteditable="true"><u>Color Theme</u><br>Select between a Light or Dark color theme for the interface.</li>
+				<li id="settingsGeneralBackupFolder" contenteditable="true"><u>Backup folder</u><br>This specifies where the backup files get saved.</li>
 				<li id="settingsGeneralBackupStates" contenteditable="true"><u>Backup states</u><br>This value defines how many backup files to save. These are saved to the Crocotile folder and saved every 5 minutes if changes have been made.</li>
 				<li id="settingsGeneralUndoStates" contenteditable="true"><u>Undo states</u><br>This value defines how many undo and redo states to allow. A low value is recommended.</li>
 				<li id="settingsGeneralFileDialodPaths" contenteditable="true"><u>File Dialog Paths</u><br>Determines whether each File Dialog type will remember its own directory (Unique) or if it will just store one directory for them all (Shared).</li>
@@ -1066,8 +1089,10 @@ h1{
 			<ul>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/cCYtilF13dk?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsDrawModeOverlapBrush" contenteditable="true"><u>Overlap Tilebrush</u><br>If toggled on, the tilebrush will overlap itself when drawing with a group of tiles.</li></div>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/DzqA0rttGFI?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsDrawModeAlignBrushCrosshair" contenteditable="true"><u>Align Brush to Crosshair</u><br>If toggled on, the brush will position itself next to the crosshair so that its edge aligns with it.</li></div>
+				<li id="settingsRelativeUVSampling" contenteditable="true"><u>Copy/Apply UVs (relative mode)</u><br>When copying the UVs from existing tiles onto the tilebrush, or applying the UVs of the tilebrush to existing tiles, this option when enabled will apply it relatively. This may help prevent you from having to rotate the tilebrush to find the correct orientation. This works best on tiles that are rectangular and facing a cardinal direction.</li>
 				<li id="settingsDrawModeOrientPrefabBrushToCamera" contenteditable="true"><u>Orient Prefab/Primitive Brush to Camera and Tilt</u><br>When this is enabled, the Prefab Brush & Primitive Brush will align itself relative to the camera direction as well as the tilt.</li>
 				<li id="settingsDrawModeStickyEdgeProportionate" contenteditable="true"><u>Sticky Edge Proportionate</u><br>When using the Sticky tool, the tilebrush will keep the proportions of the tile selection if this option is enabled.</li>
+				<li id="settingsDrawModeUseTransparentTilebrush" contenteditable="true"><u>Use Transparent mode for Tilebrush</u><br>If this is enabled and a tileset has transparent mode on, the Tilebrush will also use transparent mode.</li>
 			</ul>
 			
 			<span id="settingsEditwMode" contenteditable="true">
@@ -1089,6 +1114,7 @@ h1{
 				<li id="settingsEditwModeDisableEdgeSelection" contenteditable="true"><u>Disable Edge Selection</u><br>Disables the ability to select edges.</li>
 				<li id="settingsEditwModeDisableVertexSelection" contenteditable="true"><u>Disable Vertex Selection</u><br>Disables the ability to select vertices.</li>
 				<li id="settingsEditwModeOverlappedVertexSelection" contenteditable="true"><u>Overlapped Vertex Selection</u><br>When selecting/deselecting multiple vertices, it will select vertices belonging to a face that is facing away from camera as long as they share a position with a vertex that would normally be selected.</li>
+				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/wTo-3lQ007M?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsEditwModeAutoFlattenUVs" contenteditable="true"><u>Auto-Flatten UVs when editing Vertices</u><br>If this option is enabled, the UVs of a tile will be auto-flattened if the vertex positions are transformed or edited. This may be useful if you want to change the dimensions of a tile while keeping the UVs square. It will basically expand or contract the UV coordinates to match the geometry while you are editing the vertices.</li></div>
 				<li id="settingsEditwModeSelectedFaceColor" contenteditable="true"><u>Selected Face Color</u><br>Sets the color of selected faces.</li>
 				<li id="settingsEditwModeSelectedFaceTransparency" contenteditable="true"><u>Selected Face Transparency</u><br>Sets the opacity amount of selected faces. A value between 0 and 1. 0 is fully transparent, and 1 is fully opaque.</li>
 				<li id="settingsEditwModeActiveEditFaceColor" contenteditable="true"><u>Active Edit Face Color</u><br>Sets the color of selected faces in Active Edit mode.</li>
@@ -1103,11 +1129,15 @@ h1{
 				<li id="settingsTilesetsMaxDimensions" contenteditable="true"><u>Max Tileset Dimensions</u><br>The maximum dimensions for any tilesets. The default is 4096x4096 pxels. Setting this higher may cause the program to crash, or cause broken tilesets if your hardware can't support it.</li>
 				<li id="settingsTilesetsMargins" contenteditable="true"><u>Tileset Margins</u><br>The amount of blank space surrounding tilesets in the Tileset, UVs, and Painting panels.</li>
 				<li id="settingsTilesetsAutoRefreshTilesets" contenteditable="true"><u>Auto-refresh Tilesets</u><br>If enabled, tilesets will be refreshed every couple of minutes if their corresponding image file has been modified outside of the program, or refreshed immediately when returning to the program.</li>
+				<li id="settingsTilesetsLinkImportedTilesets" contenteditable="true"><u>Link imported Tilesets</u><br>If enabled, a tileset will store the file path to the original image file when imported. If auto-refresh tilesets is enabled, it will retrieve updates to this file and refresh it in Crocotile.</li>
+				<li id="settingsTilesetsLinkExportedTilesets" contenteditable="true"><u>Link exported Tilesets</u><br>If enabled, a tileset will store the file path if it is exported to an external file. If auto-refresh tilesets is enabled, it will retrieve updates to this file and refresh it in Crocotile.</li>
 				<div class="bulletDiv"><a class="bulletVideo" href="https://www.youtube.com/embed/1DcOkEg5gvc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a><li id="settingsTilesetsDragMultipleUVs" contenteditable="true"><u>Drag multiple UVs</u><br>If toggled on, this will allow you to drag multiple UVs that are overlapping or sharing a coordinate in the UVs panel.</li></div>
 				<li id="settingsTilesetsRestrictUVsToActive" contenteditable="true"><u>Hide UVs of non-active Tilesets</u><br>You can choose to hide UVs belonging to other tilesets and display only the UVs belonging to the currently selected Tileset. Or you can choose to display any UVs regardless of with Tileset is active.</li>
+				<li id="settingsTilesetsShowUnselectedUVs" contenteditable="true"><u>Show UVs of unselected tiles</u><br>When enabled, all tiles will have their UVs shown even if they aren't selected.</li>
 				<li id="settingsTilesetsDeselectUVsUsingSingleClick" contenteditable="true"><u>Deselect all UVs with single click</u><br>Deselect all UVs with a single-click as opposed to a double-click when clicking outside of any UVs.</li>
 				<li id="settingsTilesetsKeepPixelScaleReassignTileset" contenteditable="true"><u>Keep UV pixel scale when reassigned tileset</u><br>When reassigning tiles to the currently selected tileset, this will prevent the UVs from becoming stretched if the tileset dimensions are different.</li>
 				<li id="settingsTilesetsCheckeredSize" contenteditable="true"><u>Checkered Size</u><br>This controls the size of the squares when drawing a checkered pattern to a tileset.</li>
+				<li id="settingsTilesetsPaintingRightMouseFunction" contenteditable="true"><u>Painting Right-Mouse Function</u><br>This option determines how the right-mouse button will act in the painting panel. Here you can set it to paint with the secondary/background color.</li>
 				<li id="settingsTilesetsEyedropAlphaColor" contenteditable="true"><u>Eyedrop Alpha Color</u><br>If this is enabled, the paint eyedropper tool will sample the alpha of the color as well. If it is disabled, it will keep the current alpha value.</li>
 				<li id="settingsTilesetsSubtractPadding" contenteditable="true"><u>Subtract Padding from Tilebrush</u><br>If using UV Padding, this will ensure that the Tilebrush is scaled accurately when selecting tiles from the Tileset.</li>
 				<li id="settingsTilesetsMultiplyPadding" contenteditable="true"><u>Multiply Padding by Tile selection</u><br>If using UV Padding, this will keep the Tilebrush size correct when selecting multiple rows/columns in the Tileset.</li>
@@ -1119,7 +1149,9 @@ h1{
 			</span>
 			
 			<ul>
+				<li id="settingsSceneImportScale" contenteditable="true"><u>Import Scale (non-native files)</u><br>When importing non-native models, such as .obj, .gltf, .glb, .dae, .fbx, this value will control the scale of the geometry. This may be useful to use if importing multiple models that are too large or small.</li>
 				<li id="settingsSceneAddToSceneTilted" contenteditable="true"><u>Add To Scene based on Camera and Tilt</u><br>When an Object or Instance is added to the scene via the Scene panel lists, this option will decide whether to orient it relative to the camera and tilt.</li>
+				<li id="settingsSceneKeepInstanceNamesUnique" contenteditable="true"><u>Keep Instance Names Unique</u><br>This option will prevent Instances from having the same name.</li>
 			</ul>
 			
 			<span id="settingsAnimation" contenteditable="true">
@@ -1155,6 +1187,7 @@ h1{
 				<li id="buttonsSaveLoadPins" contenteditable="true"><u>Save & Load Pinned</u><br>There are Save and Load buttons that will allow you to save and load your pinned buttons.</li>
 				<li id="buttonsResetPins" contenteditable="true"><u>Reset Pins</u><br>The Reset Pins button will remove all the pinned buttons.</li>
 				<li id="buttonsKeyGroups" contenteditable="true"><u>Key Groups</u><br>Selecting a group from the drop-down list will reveal a list of specific actions that you can set key bindings for. Clicking on one will display a short description and textbox with the binding. To change the binding, simply click in the textbox and then press the key(s) on your keyboard. After releasing the keys the binding will be applied. You can also click on the <u>Clear</u> button to clear and remove/disable the binding completely.</li>
+				<li id="buttonsSearchBar" contenteditable="true"><u>Search Bar</u><br>You can type in the search bar to help find specific keybindings/actions. You can search for the key combinations and mouse options by typing those in. You can also exclude words by prefixing them with a <u>-</u> sign. You can also search for pinned actions by including the <u>pinned</u> word.</li>
 				<li id="buttonsToggleCameraMode" contenteditable="true"><u>Toggle Camera Mode</u><br>If enabled, pressing spacebar (or whichever key you've bound for this action) will keep camera mode toggled even if spacebar is released. Pressing again will toggle camera mode off. If this is disabled, when spacebar is held down Camera mode will be toggled on and when it is released camera mode will be toggled off.</li>
 			</ul>
 
@@ -1670,6 +1703,18 @@ h1{
 			<ul>
 				<li id="uvsContextMenuR" contenteditable="true"><u>R</u> Mirror</li>
 				<li id="uvsContextMenuF" contenteditable="true"><u>F</u> Flip</li>
+				<li id="uvsContextMenuMirrorSeparately" contenteditable="true"><u>Alt+R</u> Mirror Separately</li>
+				<div class="inset">
+					<span id="uvsContextMenuMirrorSeparatelyDesc" contenteditable="true">
+						Mirrors each individual selected UV part separately instead of as a group.
+					</span>
+				</div>
+				<li id="uvsContextMenuFlipSeparately" contenteditable="true"><u>Alt+F</u> Flip Separately</li>
+				<div class="inset">
+					<span id="uvsContextMenuFlipSeparatelyDesc" contenteditable="true">
+						Flips each individual selected UV part separately instead of as a group.
+					</span>
+				</div>
 				<li id="uvsContextMenuQ" contenteditable="true"><u>Q</u> Rotate left</li>
 				<li id="uvsContextMenuE" contenteditable="true"><u>E</u> Rotate right</li>
 				<li id="uvsContextMenuCtrlA" contenteditable="true"><u>Ctrl+A</u> Select all</li>
@@ -1720,7 +1765,7 @@ h1{
 					<li id="uvsContextMenuPack" contenteditable="true">Pack</li>
 					<div class="inset">
 						<span id="uvsContextMenuPackDesc" contenteditable="true">
-							Organizes the UVs within the tileset bounds without overlapping any. Connected UVs will stay grouped together. If UVs can't fit within the bounds they will be set outside the bounds.
+							Organizes the UVs within the tileset bounds without overlapping any. Connected UVs will stay grouped together. If UVs can't fit within the bounds they will be set outside the bounds. You can also specify the amount of padding to keep between the UVs.
 						</span>
 					</div>
 					<li id="uvsContextMenuSetToTile" contenteditable="true">Set to tile</li>
@@ -1772,6 +1817,12 @@ h1{
 				</ul>
 				<li id="uvsContextMenu3d" contenteditable="true">3d</li>
 				<ul>
+					<li id="uvsContextMenu3dSelectContainsMouse" contenteditable="true">Select tiles (UVs contain mouse position)</li>
+					<div class="inset">
+						<span id="uvsContextMenu3dSelectContainsMouseDesc" contenteditable="true">
+							Selects the tiles in the scene that have UVs overlapping the mouse position in the UV panel.
+						</span>
+					</div>
 					<li id="uvsContextMenu3dDeselectSelected" contenteditable="true">Deselect tiles (UVs selected)</li>
 					<div class="inset">
 						<span id="uvsContextMenu3dDeselectSelectedDesc" contenteditable="true">
@@ -1891,6 +1942,12 @@ h1{
 			
 			<span id="uvsScalingContent2" contenteditable="true">
 				While scaling, if you continue to hold <u>Shift</u> the increments will be rounded to the pixel, whereas if you release the <u>Shift</u> key, it will be rounded to the UV Precision value.
+			</span>
+			
+			<br><br>
+			
+			<span id="uvsScalingContent3" contenteditable="true">
+				While scaling, if you continue to hold <u>Alt</u> the aspect ratio of the selected UVs will remain the same.
 			</span>
 			
 			<span id="uvsCrosshair" contenteditable="true">
@@ -2107,7 +2164,7 @@ h1{
 			<a name="godotUVAnimation"></a>
 			<a class="video" href="https://www.youtube.com/embed/TozJ2k0-xmc?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1" target="_blank">🐊</a>
 			
-			<span id="animatedTilesExportGodot" contenteditable="true">
+			<span id="godotUVAnimationExportGodot" contenteditable="true">
 				To demonstrate how to work with this data, a Godot project has been created using this data to animate UVs of a 3d model. Godot is a free and open-source program for developing games, and it is an excellent engine for importing your Crocotile work into if you are comfortable with more technical processes. You can just as easily do this with other engines, such as Unity, if you like. Watch the video for a demonstration on how to import your animated scenes into Godot!
 			</span>
 			
@@ -2117,6 +2174,10 @@ h1{
 				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DTileAnimationGodot.zip">Godot 3.4.2 Project (Crocotile3DTileAnimationGodot.zip) 532 kb</a></li>
 				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DTileAnimationGodot4.zip">Godot 4.0.0 Project (Crocotile3DTileAnimationGodot4.zip) 698 kb</a></li>
 			</ul>
+			
+			<span id="godotUVAnimationExportGodot2" contenteditable="true">
+				Note! New versions of Godot may require setting the "force disable mesh compression" in the import settings of the .obj so that the UVs and alpha scissors work correctly (if using .obj files).
+			</span>
 			
 			<a id="godotSpriteAnimation"></a>
 			<span id="animatedTilesSpriteAnimations" contenteditable="true">
@@ -2135,6 +2196,11 @@ h1{
 				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DSpriteAnimationGodot.zip">Godot 3.4.2 Project (Crocotile3DSpriteAnimationGodot.zip) 186 kb</a></li>
 				<li><a href="http://www.crocotile3d.com/misc/Crocotile3DSpriteAnimationGodot4.zip">Godot 4.0.0 Project (Crocotile3DSpriteAnimationGodot4.zip) 152 kb</a></li>
 			</ul>
+			
+			<span id="godotUVAnimationExportGodot2" contenteditable="true">
+				Note! New versions of Godot may require setting the "force disable mesh compression" in the import settings of the .obj so that the UVs and alpha scissors work correctly (if using .obj files).
+			</span>
+			
 			
 		</div>
 		
@@ -2960,6 +3026,70 @@ h1{
 						The instance and all of its nested instances will become unhighlighted/deselected.
 					</span>	
 				</div>
+				<li id="instanceListMenuSelectAllSpecific" contenteditable="true"><u>Select all (specific)</u></li>
+				<div class="inset">
+					<span id="instanceListMenuSelectAllSpecificDesc" contenteditable="true">
+						All the nested instances of a specific object type that you choose will become highlighted/selected.
+					</span>	
+				</div>
+				<li id="instanceListMenuDeselectAllSpecific" contenteditable="true"><u>Deselect All (specific)</u></li>
+				<div class="inset">
+					<span id="instanceListMenuDeselectAllSpecificDesc" contenteditable="true">
+						All the nested instances of a specific object type that you choose will become unhighlighted/deselected.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuDuplicate" contenteditable="true"><u>Duplicate</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuDuplicateDesc" contenteditable="true">
+						Duplicates this specific instance, including any animations.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuDuplicateAll" contenteditable="true"><u>Duplicate All</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuDuplicateAllDesc" contenteditable="true">
+						Duplicates this specific instance plus any nested objects/bones, including any animations.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuMirror" contenteditable="true"><u>Mirror</u></li>
+				<div class="inset">
+					<ul>
+						<li id="instances3dContextMenuMirrorXAxis" contenteditable="true"><u>X Axis</u></li>
+						<div class="inset">
+							<ul>
+								<li id="instances3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+								<li id="instances3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+								<li id="instances3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+								<li id="instances3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+								<li id="instances3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+								<li id="instances3dContextMenuMirrorXAxisAnimations" contenteditable="true"><u>Animations</u></li>
+								<div class="inset">
+									<ul>
+										<li id="instances3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+										<li id="instances3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+										<li id="instances3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+										<li id="instances3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+										<li id="instances3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+						<li id="instances3dContextMenuMirrorYAxis" contenteditable="true"><u>Y Axis</u></li>
+						<div class="inset">
+							<span id="instances3dContextMenuMirrorYAxisDesc" contenteditable="true">
+								Same options as X axis.
+							</span>	
+						</div>
+					</ul>
+					<span id="instances3dContextMenuMirrorDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this instance.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuMirrorAll" contenteditable="true"><u>Mirror All</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuMirrorAllDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this instance as well as any nested object/bones.
+					</span>	
+				</div>
 				<li id="instanceListMenuDelete" contenteditable="true"><u>Delete Instance</u></li>
 				<div class="inset">
 					<span id="instanceListMenuDeleteDesc" contenteditable="true">
@@ -2999,6 +3129,12 @@ h1{
 						This will move the 3d crosshair to the position of the object's origin point.
 					</span>	
 				</div>
+				<li id="scene3dContextMenuMoveInstanceToCrosshair" contenteditable="true"><u>Move Instance to Crosshair</u></li>
+				<div class="inset">
+					<span id="scene3dContextMenuMoveInstanceToCrosshairDesc" contenteditable="true">
+						This will move the selected instance to the position of the 3d crosshair.
+					</span>	
+				</div>
 				<li id="scene3dContextMenuSetTiltToInstance" contenteditable="true"><u>Set Tilt to Instance</u></li>
 				<div class="inset">
 					<span id="scene3dContextMenuSetTiltToInstanceDesc" contenteditable="true">
@@ -3033,6 +3169,58 @@ h1{
 				<div class="inset">
 					<span id="scene3dContextMenuDuplicateInstancesAreaDesc" contenteditable="true">
 						This opens a panel where you can specific the number of duplicates to make along the x,y,z axis, as well as the spacing along the x,y,z axis.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuDuplicate" contenteditable="true"><u>Duplicate</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuDuplicateDesc" contenteditable="true">
+						Duplicates this specific instance, including any animations.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuDuplicateAll" contenteditable="true"><u>Duplicate All</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuDuplicateAllDesc" contenteditable="true">
+						Duplicates this specific instance plus any nested objects/bones, including any animations.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuMirror" contenteditable="true"><u>Mirror</u></li>
+				<div class="inset">
+					<ul>
+						<li id="instances3dContextMenuMirrorXAxis" contenteditable="true"><u>X Axis</u></li>
+						<div class="inset">
+							<ul>
+								<li id="instances3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+								<li id="instances3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+								<li id="instances3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+								<li id="instances3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+								<li id="instances3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+								<li id="instances3dContextMenuMirrorXAxisAnimations" contenteditable="true"><u>Animations</u></li>
+								<div class="inset">
+									<ul>
+										<li id="instances3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+										<li id="instances3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+										<li id="instances3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+										<li id="instances3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+										<li id="instances3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+						<li id="instances3dContextMenuMirrorYAxis" contenteditable="true"><u>Y Axis</u></li>
+						<div class="inset">
+							<span id="instances3dContextMenuMirrorYAxisDesc" contenteditable="true">
+								Same options as X axis.
+							</span>	
+						</div>
+					</ul>
+					<span id="instances3dContextMenuMirrorDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this instance.
+					</span>	
+				</div>
+				<li id="instances3dContextMenuMirrorAll" contenteditable="true"><u>Mirror All</u></li>
+				<div class="inset">
+					<span id="instances3dContextMenuMirrorAllDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this instance as well as any nested object/bones.
 					</span>	
 				</div>
 				<li id="scene3dContextMenuRemoveInstance" contenteditable="true"><u>Remove Instance</u></li>
@@ -3252,9 +3440,29 @@ h1{
 				<li id="camerasPropertiesGeneral" contenteditable="true"><u>General</u></li>
 				<div class="inset">
 					<span id="camerasPropertiesGeneralDesc" contenteditable="true">
-						Here you can choose the type of camera, either Perspective of Orthographic. You can also choose whether the camera automatically looks at the target, and if enabled it will make the camera's target visible and the camera will be kept orientated towards it with its local up vector pointing up. When enabled, you can select the target and move it like you would any other selection and the camera will automatically oreientate itself towards it.
+						Here you can choose the type of camera, either Perspective of Orthographic. 
 					</span>
 					<br clear="right">
+					<ul>
+						<li id="cameraPropertiesGeneralParent" contenteditable="true"><u>Parent</u></li>
+						<div class="inset">
+							<span id="cameraPropertiesGeneralParentDesc" contenteditable="true">
+								The parent of this camera. You can choose an object/bone to nest this camera within.
+							</span>
+						</div>
+						<li id="cameraPropertiesGeneralTargetParent" contenteditable="true"><u>Target Parent</u></li>
+						<div class="inset">
+							<span id="cameraPropertiesGeneralTargetParentDesc" contenteditable="true">
+								The parent of this camera's target. You can choose an object/bone to nest the target within.
+							</span>
+						</div>
+						<li id="cameraPropertiesGeneralLookAtTarget" contenteditable="true"><u>Look At Target</u></li>
+						<div class="inset">
+							<span id="cameraPropertiesGeneralLookAtTargetDesc" contenteditable="true">
+								You can also choose whether the camera automatically looks at the target, and if enabled it will make the camera's target visible and the camera will be kept orientated towards it with its local up vector pointing up. When enabled, you can select the target and move it like you would any other selection and the camera will automatically orient itself towards it.
+							</span>
+						</div>
+					</ul>
 				</div>
 				<li id="camerasPropertiesPerspective" contenteditable="true"><u>Perspective</u></li>
 				<div class="inset">
@@ -3513,6 +3721,18 @@ h1{
 						The properties in this section control the characteristics of the light. Some lights have more properties than other lights. The following list are properties a light might have.
 					</span>
 					<ul>
+						<li id="lightPropertiesGeneralParent" contenteditable="true"><u>Parent</u></li>
+						<div class="inset">
+							<span id="lightPropertiesGeneralParentDesc" contenteditable="true">
+								The parent of this light. You can choose an object/bone to nest this light within.
+							</span>
+						</div>
+						<li id="lightPropertiesGeneralTargetParent" contenteditable="true"><u>Target Parent</u></li>
+						<div class="inset">
+							<span id="lightPropertiesGeneralTargetParentDesc" contenteditable="true">
+								The parent of this light's target. You can choose an object/bone to nest the target within.
+							</span>
+						</div>
 						<li id="lightPropertiesGeneralColor" contenteditable="true"><u>Color</u></li>
 						<div class="inset">
 							<span id="lightPropertiesGeneralColorDesc" contenteditable="true">
@@ -3692,6 +3912,12 @@ h1{
 								If the casted rays will collide with backfaces (the backside of tiles). Otherwise, if this is disabled, the rays will pass through the backside of tiles.
 							</span>
 						</div>
+						<li id="bakedLightingAOCastAgainst" contenteditable="true"><u>Cast Against</u></li>
+						<div class="inset">
+							<span id="bakedLightingAOCastAgainstDesc" contenteditable="true">
+								This option controls what the rays cast against. If set to <u>Tiles</u>, they will only hit the visible tiles. If it is set to <u>Tiles & Objects</u> they will also hit visible object instances.
+							</span>
+						</div>
 					</ul>
 					<br clear="right">
 				</div>
@@ -3712,6 +3938,7 @@ h1{
 						<div class="inset">
 							<span id="bakeLightingPaletteModeDesc" contenteditable="true">
 								Specifies how to pick colors from the palette when baking the vertex colors. The modes are listed below.
+							</span>
 								<ul>
 									<li id="bakeLightingPaletteModeNearest" contenteditable="true"><u>Nearest</u></li>
 									<div class="inset">
@@ -3732,7 +3959,6 @@ h1{
 										</span>
 									</div>
 								</ul>
-							</span>
 						</div>
 					</ul>
 					<br clear="right">
@@ -3965,6 +4191,63 @@ h1{
 			
 		</div>
 				
+		<br><br>
+		
+		<div class="block">
+			<div class="blockHeader">
+				<a id="anchoraudio"></a>
+				<span id="audio" contenteditable="true">
+					Audio
+				</span>
+			</div>
+				
+			<br>
+			
+			<span id="audioContent" contenteditable="true">
+				As of version 2.3.7 some basic audio support has been implemented. You can now link audio files to your project and play them while the Animation or Theatre panel is running. This is useful if you want to sync some animation keyframes up with some sounds.
+			</span>
+			
+			<br><br>
+			
+			<span id="audioContentAdd" contenteditable="true">
+				You can add audio files by going to the Scene panel, and clicking the dropdown menu there. Then click the <u>Add Audio</u> option and then pick the audio file you want to link to your project.
+			</span>
+			
+			<br><br>
+			
+			<span id="audioContentEdit" contenteditable="true">
+				Each audio file has the following properties that can be set. To edit the properties, double-click the audio item listed in the Scene panel or right-click on it and choose Properties.
+			</span>
+			
+			<ul>
+				<li id="audioPropertiesFile" contenteditable="true"><u>File</u></li>
+				<div class="inset">
+					<span id="audioPropertiesFileDesc" contenteditable="true">
+						The filepath to the audio sample that the project stores.
+					</span>
+				</div>
+				<li id="audioPropertiesVolume" contenteditable="true"><u>Volume</u></li>
+				<div class="inset">
+					<span id="audioPropertiesVolumeDesc" contenteditable="true">
+						How loud or soft the sound is. Value can be between 0 and 1.
+					</span>
+				</div>
+				<li id="audioPropertiesTimelineStart" contenteditable="true"><u>Timeline Start</u></li>
+				<div class="inset">
+					<span id="audioPropertiesTimelineStartDesc" contenteditable="true">
+						Specifies when the sound will begin to play in the timeline. Value is measured in seconds.
+					</span>
+				</div>
+				<li id="audioPropertiesLoop" contenteditable="true"><u>Loop</u></li>
+				<div class="inset">
+					<span id="audioPropertiesLoopDesc" contenteditable="true">
+						Whether the sound will loop or not.
+					</span>
+				</div>
+			</ul>
+			
+		</div>
+		
 		<br><br>
 		
 		<div class="block">
@@ -4259,6 +4542,131 @@ h1{
 			
 			<br clear="right">
 			
+			<span id="bonesContextMenu" contenteditable="true">
+				<h4>Scene Context Menu</h4>
+			</span>
+
+			<span id="bonesContextMenuContent" contenteditable="true">
+				Right-clicking a bone listed in the Scene panel will reveal a context-menu with the following options.
+			</span>
+			
+			<br>
+
+			<ul>
+				<li id="bonesMenuShowHide" contenteditable="true"><u>Show/Hide Bone</u></li>
+				<div class="inset">
+					<span id="bonesMenuShowHideDesc" contenteditable="true">
+						This will show/hide the bone, essentially turning it on/off.
+					</span>	
+				</div>
+				<li id="bonesMenuRename" contenteditable="true"><u>Rename Bone</u></li>
+				<div class="inset">
+					<span id="bonesMenuRenameDesc" contenteditable="true">
+						This will show an input box to type in the new name for the bone. Another way is to simply double-click the bone's name.
+					</span>	
+				</div>
+				<li id="bonesMenuProperties" contenteditable="true"><u>Properties</u></li>
+				<div class="inset">
+					<span id="bonesMenuPropertiesDesc" contenteditable="true">
+						This will open the Properties panel for a bone. From there you can set the properties of the bone. Alternatively you can Double-click the listed bone (to the side of the name) to open the properties.
+					</span>	
+				</div>
+				<li id="bonesMenuSelect" contenteditable="true"><u>Select</u></li>
+				<div class="inset">
+					<span id="bonesMenuSelectDesc" contenteditable="true">
+						Selects this bone located in the 3d scene.
+					</span>	
+				</div>
+				<li id="bonesMenuSelect" contenteditable="true"><u>Deselect</u></li>
+				<div class="inset">
+					<span id="bonesMenuDeselectDesc" contenteditable="true">
+						Deselects this bone located in the 3d scene.
+					</span>	
+				</div>
+				<li id="bonesMenuSelectAll" contenteditable="true"><u>Select All</u></li>
+				<div class="inset">
+					<span id="bonesMenuSelectAllDesc" contenteditable="true">
+						Selects this bone and all nested bones located in the 3d scene.
+					</span>	
+				</div>
+				<li id="bonesMenuSelectAll" contenteditable="true"><u>Deselect All</u></li>
+				<div class="inset">
+					<span id="bonesMenuDeselectDesc" contenteditable="true">
+						Deselects this bone and all nested bones located in the 3d scene.
+					</span>	
+				</div>
+				<li id="bonesContextMenuDuplicate" contenteditable="true"><u>Duplicate</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuDuplicateDesc" contenteditable="true">
+						Duplicates this specific bone, including any animations.
+					</span>	
+				</div>
+				<li id="bonesContextMenuDuplicateAll" contenteditable="true"><u>Duplicate All</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuDuplicateAllDesc" contenteditable="true">
+						Duplicates this specific bone plus any nested objects/bones, including any animations.
+					</span>	
+				</div>
+				<li id="bonesContextMenuMirror" contenteditable="true"><u>Mirror</u></li>
+				<div class="inset">
+					<ul>
+						<li id="bonesContextMenuMirrorXAxis" contenteditable="true"><u>X Axis</u></li>
+						<div class="inset">
+							<ul>
+								<li id="bonesContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+								<li id="bonesContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+								<li id="bonesContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+								<li id="bonesContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+								<li id="bonesContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+								<li id="bonesContextMenuMirrorXAxisAnimations" contenteditable="true"><u>Animations</u></li>
+								<div class="inset">
+									<ul>
+										<li id="bonesContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+										<li id="bonesContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+										<li id="bonesContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+										<li id="bonesContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+										<li id="bonesContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+						<li id="bonesContextMenuMirrorYAxis" contenteditable="true"><u>Y Axis</u></li>
+						<div class="inset">
+							<span id="bonesContextMenuMirrorYAxisDesc" contenteditable="true">
+								Same options as X axis.
+							</span>	
+						</div>
+					</ul>
+					<span id="bonesContextMenuMirrorDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this bone.
+					</span>	
+				</div>
+				<li id="bonesContextMenuMirrorAll" contenteditable="true"><u>Mirror All</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuMirrorAllDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this bone as well as any nested object/bones.
+					</span>	
+				</div>
+				<li id="bonesContextMenuRestorePose" contenteditable="true"><u>Restore Pose</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuRestorePoseDesc" contenteditable="true">
+						If a bone is posed differently from its base pose, this will reset it. The base pose of a bone is set while editing the Skinned Object that the bone is bound to.
+					</span>	
+				</div>
+				<li id="bonesContextMenuRestorePoseAll" contenteditable="true"><u>Restore Pose All</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuRestorePoseAllDesc" contenteditable="true">
+						This will set the bone and all of its nested bones to their base pose. The base pose of a bone is set while editing the Skinned Object that the bone is bound to.
+					</span>	
+				</div>
+				<li id="bonesContextMenuRemoveBone" contenteditable="true"><u>Remove Bone</u></li>
+				<div class="inset">
+					<span id="bonesContextMenuRemoveBoneDesc" contenteditable="true">
+						Removes the bone from the scene.
+					</span>	
+				</div>
+			</ul>
+			
 			<span id="bones3dContextMenu" contenteditable="true">
 				<h4>3d Scene Context Menu</h4>
 			</span>
@@ -4299,6 +4707,58 @@ h1{
 				<div class="inset">
 					<span id="bones3dContextMenuLookAtCrosshairDesc" contenteditable="true">
 						This will point the bone towards the current crosshair position.
+					</span>	
+				</div>
+				<li id="bones3dContextMenuDuplicate" contenteditable="true"><u>Duplicate</u></li>
+				<div class="inset">
+					<span id="bones3dContextMenuDuplicateDesc" contenteditable="true">
+						Duplicates this specific bone, including any animations.
+					</span>	
+				</div>
+				<li id="bones3dContextMenuDuplicateAll" contenteditable="true"><u>Duplicate All</u></li>
+				<div class="inset">
+					<span id="bones3dContextMenuDuplicateAllDesc" contenteditable="true">
+						Duplicates this specific bone plus any nested objects/bones, including any animations.
+					</span>	
+				</div>
+				<li id="bones3dContextMenuMirror" contenteditable="true"><u>Mirror</u></li>
+				<div class="inset">
+					<ul>
+						<li id="bones3dContextMenuMirrorXAxis" contenteditable="true"><u>X Axis</u></li>
+						<div class="inset">
+							<ul>
+								<li id="bones3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+								<li id="bones3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+								<li id="bones3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+								<li id="bones3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+								<li id="bones3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+								<li id="bones3dContextMenuMirrorXAxisAnimations" contenteditable="true"><u>Animations</u></li>
+								<div class="inset">
+									<ul>
+										<li id="bones3dContextMenuMirrorXAxisPosition" contenteditable="true"><u>Position</u></li>
+										<li id="bones3dContextMenuMirrorXAxisRotation" contenteditable="true"><u>Rotation</u></li>
+										<li id="bones3dContextMenuMirrorXAxisScale" contenteditable="true"><u>Scale</u></li>
+										<li id="bones3dContextMenuMirrorXAxisPosRot" contenteditable="true"><u>Pos/Rot</u></li>
+										<li id="bones3dContextMenuMirrorXAxisPosRotSca" contenteditable="true"><u>Pos/Rot/Sca</u></li>
+									</ul>
+								</div>
+							</ul>
+						</div>
+						<li id="bones3dContextMenuMirrorYAxis" contenteditable="true"><u>Y Axis</u></li>
+						<div class="inset">
+							<span id="bones3dContextMenuMirrorYAxisDesc" contenteditable="true">
+								Same options as X axis.
+							</span>	
+						</div>
+					</ul>
+					<span id="bones3dContextMenuMirrorDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this bone.
+					</span>	
+				</div>
+				<li id="bones3dContextMenuMirrorAll" contenteditable="true"><u>Mirror All</u></li>
+				<div class="inset">
+					<span id="bones3dContextMenuMirrorAllDesc" contenteditable="true">
+						Mirrors the specific properties or animations of this bone as well as any nested object/bones.
 					</span>	
 				</div>
 				<li id="bones3dContextMenuRestorePose" contenteditable="true"><u>Restore Pose</u></li>
@@ -5058,6 +5518,9 @@ elementsArray.forEach(function(elem) {
 document.getElementById('inputfile').addEventListener('change', function() { 	  
 	var fr = new FileReader(); 
 	fr.onload = function(){ 
+		//save first
+		language.selectElem.dispatchEvent(new Event('change'));
+		
 		//document.getElementById('output').textContent=fr.result; 
 		//console.log(fr.result);
 		var name = "Translation_"+(language.data.length+1);
@@ -5065,6 +5528,8 @@ document.getElementById('inputfile').addEventListener('change', function() {
 		var opt = document.createElement('option');
 		opt.value = name;
 		opt.innerHTML = name;
+		
+		let oldIndex = language.currentIndex;
 		
 		language.data.push({'id': name,'value': fr.result});
 		language.currentIndex = language.data.length-1;
@@ -5098,12 +5563,32 @@ document.getElementById('inputfile').addEventListener('change', function() {
 		}
 		language.selectElem.appendChild(opt);
 		language.selectElem.options[language.currentIndex].selected = 'selected';
+		//language.selectElem.value = opt.value;
+		//language.selectElem.dispatchEvent(new Event('change'));
 	} 
 	  
 	fr.readAsText(this.files[0]); 
 	this.value = '';	//reset the input value so we can load the same file again if we need to.
 });
 
+let f8index = 0;
+document.addEventListener("keydown", e => {
+	if(e.key === "F8") {
+		
+		if( language.selectElem.options[0].selected && f8index < language.selectElem.options.length ){
+			language.selectElem.options[f8index].selected = 'selected';
+			language.selectElem.dispatchEvent(new Event('change'));
+		}else{
+			f8index = language.currentIndex;
+			language.selectElem.options[0].selected = 'selected';
+			language.selectElem.dispatchEvent(new Event('change'));
+		}
+		
+		// Suppress default behaviour 
+		e.preventDefault()
+	}
+});
+  
 var textFile = null,
 makeTextFile = function () {
 
